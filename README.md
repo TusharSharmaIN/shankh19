@@ -1,2 +1,2 @@
 # Shankhnaad'19 
-Go to https://www.shankhnaad.online
+Go to https://www.shankhnaad.org
