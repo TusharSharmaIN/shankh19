@@ -69,7 +69,7 @@ body{
 }
 .show {display: block;}
 .image{
-    padding-top: 2%;
+    margin: 5%;
     align-self: auto;
     text-align: center;
 }
@@ -130,15 +130,42 @@ body{
     font-size: 6rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    color: linear-gradient(270deg, #4959EF 1.11%, #B328E3 100%);
+    color: blueviolet;
 }
 .aboutContent{
     position: absolute;
     margin-left: 10%;
     margin-right: 10%;
+    color: #4959EF;
 }
 .aboutContent > p{
     font-size: 1.5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
+}
+#contact{
+    display: block;
+    background: linear-gradient(270deg, #4959EF 1.11%, #B328E3 100%);
+    width: 100%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+.middleContact > p {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 2%;
+}
+.rightContact > p {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 2%;
 }
