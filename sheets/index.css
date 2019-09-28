@@ -1,0 +1,156 @@
+html, body{
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section{
+    height: 100vh;
+}
+
+#home{
+    background: #3498DB;
+    scroll-snap-align: start;
+}
+
+#events{
+    background: #AE1438;
+    scroll-snap-align: start;
+}
+
+#about-us{
+    background: #26ae60;
+    scroll-snap-align: start;
+}
+
+#our-team{
+    background: #F3CC79;
+    scroll-snap-align: start;
+}
+
+#sponsors{
+    background: #7B8788;
+    scroll-snap-align: start;
+    height: 75vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img{
+    height: 50px;
+    width: 35px;
+    margin: 10px;
+}
+
+.nav-logo h1{
+    margin: 10px;
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: default;
+    color: #fff;
+}
+
+.nav-ul{
+    list-style: none;
+    justify-content: space-around;
+    width: 100px;
+    flex-wrap: wrap;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    height: 0vh;
+    top: 70px;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    transition: 0.5s;
+    padding: 0px;
+    z-index: 50;
+}
+
+.nav-ul.active{
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 0.5s;
+    height: calc(100vh - 70px);
+}
+
+.nav-ul-a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: white;
+    display: none;
+}
+
+.nav-ul-a.active{
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0; height: 0}
+    to{opacity: 1; height: calc(100vh - 70px)}
+}
+
+.burger{
+    cursor: pointer;
+    display: block;
+    margin: 10px;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    height: 25vh;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+}
