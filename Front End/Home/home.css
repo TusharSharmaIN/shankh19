@@ -54,8 +54,6 @@ body{
 .dropbtn {
     background-color: transparent;
     color: white;
-    height: 100%;
-    width: 100%;
     padding: 0px;
     font-size: 24px;
     border: none;
@@ -64,18 +62,22 @@ body{
     font-weight: bold;
 }
 .dropdown {
-    width: 10%;
+    width: auto;
     /* left: 78.92%; */
+    padding: 0.3%;
 }
 .dropdown-content {
-    position: relative;
-    width: 100%;
+    /* position: relative; */
+    width: 10%;
+    height: 97.33%;
     display: none;
     position: absolute;
     background-color: black;
     opacity: 0.3;
     overflow: auto;
     z-index: 1;
+    left: 90%;
+    top: 5%;
 }  
 .dropdown-content a {
     color: white;
