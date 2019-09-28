@@ -12,12 +12,11 @@ body{
     position: absolute;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 5%;;
+    grid-gap: 2%;
     align-items: stretch;
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    top: 20%;
+    margin: 10%;
+    top: 30%;
 }
 
 .flip-card {
@@ -49,7 +48,7 @@ body{
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     border: none;
     background: white;
-    border-radius: 8px;
+    border-radius: 15px;
     backface-visibility: hidden;
 }
 
@@ -65,8 +64,8 @@ body{
 }
 
 .flip-card-front > img {
-    width: 80%;
-    padding-top: 2%; 
+    width:70%;
+    padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
     align-items: center;
