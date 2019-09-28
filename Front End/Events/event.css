@@ -57,12 +57,12 @@ body{
 
 .flip-card-front {
     background-color: white;
-    color: black;
+    /* color: #4959EF; */
 }
 
 .flip-card-back {
     background-color: white;
-    color: black;
+    /* color: #4959EF; */
     transform: rotateY(180deg);
 }
 
@@ -71,7 +71,6 @@ body{
     width:70%;
     padding: 5%; 
     align-items: center;
-    fill: white;
 }
 
 @media (max-width: 600px){
