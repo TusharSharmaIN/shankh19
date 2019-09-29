@@ -5,7 +5,7 @@
         <script language="javascript" type="text/javascript" src="home.js"></script>
     </head>
     <body>
-        
+        <div id = overlay>
         <!-- First Page start-->
         <div id="home">
             <div class="header">
@@ -13,7 +13,7 @@
                     <img src="./images/shankh_white.svg">
                     <a href="#home">Shankhnaad</a>
                 </div>
-                <div class="signIn"><a href="#">Sign In</a></div>
+                <div class="signIn" onclick="openForm()"><a href="#">Sign In</a></div>
                 <div class="signUp"><a href="#">Sign Up</a></div>
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Menu</button>
@@ -102,6 +102,27 @@
                 <p>Details</p>
             </div>
         </div>
+        </div>
         <!--Fourth Page End-->
+
+        <!--        Log In Form Start-->
+
+        <div class="form-popup" id="myForm">
+            <form action="#" class="form-container">
+                <h1>Sign In</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+
+        <!--        Log In Form End-->
+
     </body>
 </html>
