@@ -6,7 +6,7 @@ function myFunction() {
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
-    document.getElementById("overlay").style.opacity = 0.1;
+    document.getElementById("overlay").style.opacity = 0.7;
 }
 
 function closeForm() {
