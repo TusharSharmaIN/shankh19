@@ -16,7 +16,7 @@ section{
 }
 
 #home{
-    background: #3498DB;
+    background: black;
     scroll-snap-align: start;
 }
 
