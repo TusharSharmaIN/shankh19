@@ -1,0 +1,124 @@
+body{
+    background: linear-gradient(270deg, #4959EF 1.11%, #B328E3 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    width: 98vw;
+    height: 100vh;
+}
+.header{
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+/* .grid > h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+} */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); 
+    grid-gap: 5vw;
+    align-items: stretch;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    /* top: 5vh; */
+    margin-bottom: 5vh;
+}
+
+.flip-card {
+    width: 100%;
+    height: 300px;
+    align-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border: none;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    border: none;
+    background: white;
+    border-radius: 16px;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: white;
+    /* color: #4959EF; */
+}
+
+.flip-card-back {
+    background-color: white;
+    /* color: #4959EF; */
+    transform: rotateY(180deg);
+}
+
+.flip-card-front > img {
+    position: relative;
+    width:70%;
+    padding: 5%; 
+    align-items: center;
+}
+
+@media (max-width: 600px){
+    .grid{
+        grid-gap: 5vw;
+        margin: 0;
+        margin-bottom: 5vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        width: 60vw;
+    }
+    .flip-card-front > img{
+        position: relative;
+        margin-top: 5vh;
+        margin-bottom: 10%;
+        width: 30vw;
+    }
+    .flip-card-front, .flip-card-back{
+        border-radius: 32px;
+    }
+    .flip-card-front > h1{
+        margin: 0;
+    }
+    .header{
+        font-size: 2rem;
+    }
+    .flip-card {
+        width: 40vw;
+        height: 300px;
+        align-content: center;
+        align-items: center;
+        perspective: 1000px;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 60vw;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        border: none;
+    }
+}
