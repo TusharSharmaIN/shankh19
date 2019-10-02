@@ -72,6 +72,8 @@ nav{
     height: 70px;
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    width: 99vw;
 }
 
 .nav-logo{
