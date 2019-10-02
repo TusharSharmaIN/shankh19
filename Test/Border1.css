@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px
+    height: 600px;
 }
 
 .categoryWrapper{
@@ -41,6 +41,7 @@ body{
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.9s ease 0s;
+    border-radius: 24px; 
 }
 
 .categoryWrapper:hover:after{
@@ -91,11 +92,9 @@ body{
     left: 50%;
     width: 20px;
     height: 0;
-
     border: 1px solid white;
     border-left: none;
     border-bottom: none;
-
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
 
@@ -112,11 +111,9 @@ body{
     right: 50%;
     width: 20px;
     height: 0;
-
     border: 1px solid white;
     border-right: none;
     border-bottom: none;
-
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
 
@@ -134,7 +131,6 @@ body{
     width: 1px;
     height: 1px;
     opacity: 0;
-
 }
 
 .categoryWrapper:hover button > span > span:before{
@@ -153,7 +149,6 @@ body{
     width: 1px;
     height: 1px;
     opacity: 0;
-
 }
 
 .categoryWrapper:hover button > span > span:after{
@@ -228,11 +223,9 @@ body{
     left: 50%;
     width: 20px;
     height: 0;
-
     border: 1px solid white;
     border-left: none;
     border-bottom: none;
-
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
 
@@ -249,11 +242,9 @@ body{
     right: 50%;
     width: 20px;
     height: 0;
-
     border: 1px solid white;
     border-right: none;
     border-bottom: none;
-
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
 
@@ -271,7 +262,6 @@ body{
     width: 1px;
     height: 1px;
     opacity: 0;
-
 }
 
 .categoryWrapper:hover button2 > span > span:before{
@@ -290,7 +280,6 @@ body{
     width: 1px;
     height: 1px;
     opacity: 0;
-
 }
 
 .categoryWrapper:hover button2 > span > span:after{
