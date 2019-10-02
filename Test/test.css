@@ -73,7 +73,7 @@ nav{
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 1);
     position: fixed;
-    width: 99vw;
+    width: 100vw;
     z-index: 999;
 }
 
@@ -154,6 +154,7 @@ nav{
     width: 25px;
     height: 3px;
     margin: 5px;
+    margin-right:25px; 
     background-color: white;
     border-radius: 10px;
     transition: all 0.3s ease;
