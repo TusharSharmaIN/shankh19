@@ -59,7 +59,7 @@ html, body{
     padding: 0;
 }
 section{
-    height: 100vh;
+    min-height: 100vh;
 }
 #sponsors{
     height: 75vh;
@@ -182,18 +182,20 @@ footer{
     background-color: rgba(0, 0, 0, 1);
     color: white;
 }
-
-.grid { 
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(5vw, 1fr));
-    grid-gap: 20vw;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); 
+    grid-gap: 10vw;
     width: 100vw;
-    height: 100vh;
-    /* margin-left: 10vw; */
-    /* margin-right: 10vw; */
+    margin-left: 5vw;
+    margin-right: 5vw;
     align-items: stretch;
     text-align: center;
+    /* top: 5vh; */
     align-content: center;
+    margin-bottom: 5vh;
+    margin-top: 10vh;
 }
 
 .flip-card {
@@ -279,4 +281,83 @@ footer{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     margin: 0;
+}
+
+@media (max-width: 600px){
+    .nav-logo h1{
+        margin: 10px;
+        font-size: 24px;
+        letter-spacing: 5px;
+        font-weight: 100;
+        text-transform: uppercase;
+        cursor: default;
+        color: #fff;
+    }
+    .grid{
+        grid-gap: 5vw;
+        margin: 0;
+        margin-bottom: 5vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-top: 20vh;
+        width: 60vw;
+    }
+    .flip-card-front > img{
+        position: relative;
+        /* margin-top: 0vh; */
+        /* margin-bottom: 10%; */
+        width: 30vw;
+    }
+    .flip-card-front, .flip-card-back{
+        border-radius: 32px;
+    }
+    .text-front, .text-back{
+        font-size: 24px;
+    }
+    .flip-card-front > h1{
+        margin: 0;
+    }
+    .header{
+        font-size: 2rem;
+    }
+    .flip-card {
+        width: 40vw;
+        height: 200px;
+        align-content: center;
+        align-items: center;
+        perspective: 1000px;
+        margin: 0;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 60vw;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        border: none;
+    }
+    .eventHead{
+        font-size: 3rem
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .aboutContent{
+        position: relative;
+        top: 15vh;
+        width: 90vw;
+        height: 80vh;
+        /* color: #4959EF; */
+        color: white;
+    }
+    .aboutContent > p{
+        width: 90vw;
+        font-size: 1.2rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.1;
+    }
 }
