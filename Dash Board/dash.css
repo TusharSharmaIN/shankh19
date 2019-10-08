@@ -128,12 +128,12 @@ nav{
 }
 .card{
     position: absolute;
-    width: 60vw;
+    width: 40vw;
     height: 70vh;
     background: #FFFFFF;
     border-radius: 50px;
     top: 20vh;
-    left: 35vw;
+    left: 55vw;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
 }
 .welcomeNote{
@@ -150,6 +150,7 @@ nav{
 }
 .welcomeNote > p{
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .nameField{
     width: 100%;
@@ -159,7 +160,7 @@ nav{
     justify-content: space-around;
 }
 .nameField > input {
-    width: 25vw;
+    width: 15vw;
     height: 5vh;
     border: 4px solid #504DFF;
     border-radius: 8px;
@@ -174,11 +175,11 @@ nav{
     width: 100%;
     display: flex;
     position: relative;
-    top: 10vh;
+    top: 7vh;
     justify-content: space-around;
 }
 .emailField > input {
-    width: 55vw;
+    width: 35vw;
     height: 5vh;
     border: 4px solid #504DFF;
     border-radius: 8px;
@@ -193,11 +194,11 @@ nav{
     width: 100%;
     display: flex;
     position: relative;
-    top: 15vh;
+    top: 9vh;
     justify-content: space-around;
 }
 .numberField > input {
-    width: 25vw;
+    width: 15vw;
     height: 5vh;
     border: 4px solid #504DFF;
     border-radius: 8px;
@@ -207,6 +208,43 @@ nav{
     align-items: center;
     padding: 10px;
 
+}
+.personalField{
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 12vh;
+    justify-content: space-around;
+}
+.personalField > input {
+    width: 15vw;
+    height: 5vh;
+    border: 4px solid #504DFF;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px;
+
+}
+.addressField{
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 15vh;
+    justify-content: space-around;
+}
+.addressField > textarea {
+    width: 35vw;
+    height: 15vh;
+    border: 4px solid #504DFF;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px;
 }
 @media (max-width: 600px){
     .nav-logo h1{
@@ -220,9 +258,9 @@ nav{
     }
     .card{
         width: 100vw;
-        height: 75vh;
+        height: 65vh;
         left: 0;
-        top: 24vh;
+        top: 34vh;
         border-radius: 0;
     }
     .welcomeNote{
@@ -255,6 +293,22 @@ nav{
     }
     .numberField > input {
         width: 45vw;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 16px;
+        align-items: center;
+        padding: 5px;
+    }
+    .personalField > input {
+        width: 45vw;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 16px;
+        align-items: center;
+        padding: 5px;
+    }
+    .addressField > textarea {
+        width: 95vw;
         font-family: Poppins;
         font-weight: normal;
         font-size: 16px;
