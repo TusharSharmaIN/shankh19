@@ -36,24 +36,27 @@
                     <p>Welcome!</p>
                 </div>
                 <div class="card">
-                        <div class="nameField">
-                            <input type="text" name="FirstName" placeholder="First Name">
-                            <input type="text" name="LastName" placeholder="Last Name">
-                        </div>
-                        <div class="emailField">
-                            <input type="email" name="email" placeholder="Email">
-                        </div>
-                        <div class="numberField">
-                            <input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number">
-                            <input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number">
-                        </div>
-                        <div class="personalField">
-                            <input type="date" name="dateofbirth" placeholder="Date of Birth">
-                            <input type="text" name="Gender" placeholder="Gender">
-                        </div>
-                        <div class="addressField">
-                            <textarea rows="10" name="address" placeholder="Address"></textarea>
-                        </div>
+                       <form>
+                            <div class="nameField">
+                                <input type="text" name="FirstName" placeholder="First Name">
+                                <input type="text" name="LastName" placeholder="Last Name">
+                            </div>
+                            <div class="emailField">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="numberField">
+                                <input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number">
+                                <input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number">
+                            </div>
+                            <div class="personalField">
+                                <input type="date" name="dateofbirth" placeholder="Date of Birth">
+                                <input type="text" name="Gender" placeholder="Gender">
+                            </div>
+                            <div class="addressField">
+                                <textarea rows="10" name="address" placeholder="Address"></textarea>
+                            </div>
+                            <input class="button" type="button" value="Submit" onclick="WriteToFile(this.form)">
+                       </form>
                 </div>
             </div>
         </section>
