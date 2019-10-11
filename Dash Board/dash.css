@@ -429,6 +429,30 @@ nav{
         align-items: center;
         padding: 5px;
     }
+    .collegeName > input {
+        width: 95vw;
+        font-size: 16px;
+        align-items: center;
+        padding: 5px;
+    }
+    .yearOfStudy > input {
+        width: 95vw;
+        font-size: 16px;
+        align-items: center;
+        padding: 5px;
+    }
+    .branch > input {
+        width: 95vw;
+        font-size: 16px;
+        align-items: center;
+        padding: 5px;
+    }
+    .collegeCity > input {
+        width: 95vw;
+        font-size: 16px;
+        align-items: center;
+        padding: 5px;
+    }
     .button{
         width: 40vw;
         left: 30%;
