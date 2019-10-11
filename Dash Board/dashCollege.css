@@ -266,9 +266,9 @@ nav{
     }
     .card{
         width: 100vw;
-        height: 65vh;
+        height: 45vh;
         left: 0;
-        top: 34vh;
+        top: 44vh;
         border-radius: 0;
     }
     .welcomeNote{
