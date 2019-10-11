@@ -12,3 +12,10 @@ function navSlide(){
   };
   
 navSlide();
+
+function display(){
+    $('.cardPersonal').bind('click', function(){
+        $('.cardPersonal').toggleClass('notactive');
+        $('.cardCollege').toggleClass('active');
+    });
+}
