@@ -36,7 +36,7 @@
                     <p>Welcome!</p>
                 </div>
                 <div class="card">
-                       <form>
+                       <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="../index.html">
                             <div class="nameField">
                                 <input type="text" name="FirstName" placeholder="First Name">
                                 <input type="text" name="LastName" placeholder="Last Name">
@@ -55,7 +55,7 @@
                             <div class="addressField">
                                 <textarea rows="10" name="address" placeholder="Address"></textarea>
                             </div>
-                            <input class="button" type="button" value="Submit" onclick="WriteToFile(this.form)">
+                            <button class="button">Next</button>
                        </form>
                 </div>
             </div>
