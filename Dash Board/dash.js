@@ -14,7 +14,7 @@ function navSlide(){
 navSlide();
 
 function display(){
-    $('.cardPersonal').bind('click', function(){
+    $('.cardPersonal').on('click', function(){
         $('.cardPersonal').toggleClass('notactive');
         $('.cardCollege').toggleClass('active');
     });
