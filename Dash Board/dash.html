@@ -38,22 +38,22 @@
                 <div class="cardPersonal">
                        <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="javascript:display()">
                             <div class="nameField">
-                                <input type="text" name="FirstName" placeholder="First Name">
-                                <input type="text" name="LastName" placeholder="Last Name">
+                                <input type="text" name="FirstName" placeholder="First Name" required>
+                                <input type="text" name="LastName" placeholder="Last Name" required>
                             </div>
                             <div class="emailField">
-                                <input type="email" name="email" placeholder="Email">
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                             <div class="numberField">
-                                <input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number">
+                                <input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number" required>
                                 <input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number">
                             </div>
                             <div class="personalField">
-                                <input type="text" name="dateofbirth" placeholder="dd/mm/yyyy">
-                                <input type="text" name="Gender" placeholder="Gender">
+                                <input type="text" name="dateofbirth" placeholder="dd/mm/yyyy" required>
+                                <input type="text" name="Gender" placeholder="Gender" required>
                             </div>
                             <div class="addressField">
-                                <textarea rows="10" name="address" placeholder="Address"></textarea>
+                                <textarea rows="10" name="address" placeholder="Address" required></textarea>
                             </div>
                             <button class="button">Next</button>
                        </form>
@@ -61,16 +61,16 @@
                 <div class="cardCollege">
                         <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="../index.html">
                              <div class="collegeName">
-                                 <input type="text" name="collegeName" placeholder="College Name">
+                                 <input type="text" name="collegeName" placeholder="College Name" required>
                              </div>
                              <div class="yearOfStudy">
-                                 <input type="text" name="yearOfStudy" placeholder="Year of Study (dd/mm/yyyy)">
+                                 <input type="text" name="yearOfStudy" placeholder="Year of Study" required>
                              </div>
                              <div class="branch">
-                                 <input type="text" name="branch" placeholder="Branch">
+                                 <input type="text" name="branch" placeholder="Branch" required>
                              </div>
                              <div class="collegeCity">
-                                 <input type="text" name="collegeCity" placeholder="College City">
+                                 <input type="text" name="collegeCity" placeholder="College City" required>
                              </div>
                              <button class="button">Submit</button>
                         </form>
