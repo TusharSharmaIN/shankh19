@@ -13,7 +13,7 @@ function navSlide(){
   
 navSlide();
 
-function display(){
+function next(){
     $('.cardPersonal').on('click', function(){
         $('.cardPersonal').toggleClass('notactive');
         $('.cardCollege').toggleClass('active');
