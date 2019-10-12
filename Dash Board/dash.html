@@ -49,8 +49,13 @@
                                 <input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number">
                             </div>
                             <div class="personalField">
-                                <input type="text" name="dateofbirth" placeholder="dd/mm/yyyy" required>
-                                <input type="text" name="Gender" placeholder="Gender" required>
+                                <input type="text" name="dateofbirth" required pattern="?:(?:0[1-9]|1[0-2])[\/\\-. ]?(?:0[1-9]|[12][0-9])|(?:(?:0[13-9]|1[0-2])[\/\\-. ]?30)|(?:(?:0[13578]|1[02])[\/\\-. ]?31))[\/\\-. ]?(?:19|20)[0-9]{2}" placeholder="DD/MM/YYYY">
+                                <input name="Gender" list="gender" placeholder="Gender" required>
+                                <datalist id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </datalist>
                             </div>
                             <div class="addressField">
                                 <textarea rows="10" name="address" placeholder="Address" required></textarea>
@@ -64,10 +69,28 @@
                                  <input type="text" name="collegeName" placeholder="College Name" required>
                              </div>
                              <div class="yearOfStudy">
-                                 <input type="text" name="yearOfStudy" placeholder="Year of Study" required>
-                             </div>
+                                <input type="text" name="yearOfStudy" list="year" placeholder="Year of Study" required>
+                                <datalist id="year">
+                                    <option>First Year</option>
+                                    <option>Second Year</option>
+                                    <option>Third Year</option>
+                                    <option>Fourth Year</option>
+                                </datalist>
+                            </div>
                              <div class="branch">
-                                 <input type="text" name="branch" placeholder="Branch" required>
+                                <input type="text" name="branch" list="branches" placeholder="Branch" required>
+                                <datalist id="branches">
+                                    <option>Computer Science and Engineering</option>
+                                    <option>Information Tecnlology</option>
+                                    <option>Electronics Engineering</option>
+                                    <option>Electrical Engineering</option>
+                                    <option>Chemical Engineering</option>
+                                    <option>Bio-Technology</option>
+                                    <option>Civil Engineering</option>
+                                    <option>Mechanical Engineering</option>
+                                    <option>Electronics and Communication Engineering</option>
+                                    <option>Metallurgical Engineering</option>
+                                </datalist>
                              </div>
                              <div class="collegeCity">
                                  <input type="text" name="collegeCity" placeholder="College City" required>
