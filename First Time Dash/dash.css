@@ -459,4 +459,32 @@ input{
         width: 40vw;
         left: 30%;
     }
+    .switch{
+        position: absolute;
+        width: 50vw;
+        height: 5vh;
+        border-radius: 50px 0 0 50px;
+        top: 28vh;
+        left: 25vw;
+    }
+    .switch1{
+        position: relative;
+        width: 50%;
+        font-size: 16px;
+    }
+    .switch2{
+        position: relative;
+        width: 50%;
+        font-size: 16px;
+    }
+    .switch4{
+        position: relative;
+        width: 50%;
+        font-size: 16px;
+    }
+    .switch3{
+        position: relative;
+        width: 50%;
+        font-size: 16px;
+    }
 }
