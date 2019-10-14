@@ -17,5 +17,7 @@ function next(){
     $('.cardPersonal').on('click', function(){
         $('.cardPersonal').toggleClass('notactive');
         $('.cardCollege').toggleClass('active');
+        $('.switch1').toggleClass('switch3');
+        $('.switch2').toggleClass('switch4');
     });
 }
