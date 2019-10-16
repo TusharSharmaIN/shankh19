@@ -132,58 +132,50 @@ nav{
 .switch{
     position: absolute;
     width: 20vw;
-    height: 5vh;
+    height: 4vh;
     border-radius: 50px 0 0 50px;
     top: 18vh;
     left: 65vw;
     display: flex;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .switch1{
     position: relative;
     width: 50%;
     background: black;
+    border: black 2px solid;
     border-radius: 50px 0 0 50px;
     color: white;
     font-size: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    padding: 8px;
 }
 .switch2{
     position: relative;
     width: 50%;
     background: white;
-    border: black 5px solid;
+    border: black 2px solid;
     border-radius: 0 50px 50px 0;
     color: black;
     font-size: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    padding: 4px;
 }
 .switch4{
     position: relative;
     width: 50%;
     background: black;
+    border: black 2px solid;
     border-radius: 0 50px 50px 0;
     color: white;
     font-size: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    padding: 4px;
 }
 .switch3{
     position: relative;
     width: 50%;
     background: white;
-    border: black 5px solid;
+    border: black 2px solid;
     border-radius: 50px 0 0 50px;
     color: black;
     font-size: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    padding: 4px;
 }
 .cardPersonal{
     /* display: none; */
