@@ -1,41 +1,28 @@
-function navSlide(){
-    $('.nav-ul-a').bind('click', function(){
-        $('.nav-ul').toggleClass('active');
-        $('.nav-ul-a').toggleClass('active');
-        $('.burger').toggleClass('toggle');
-    });
-    $('.burger').bind('click', function(){
-        $('.nav-ul').toggleClass('active');
-        $('.nav-ul-a').toggleClass('active');
-        $('.burger').toggleClass('toggle');
-    });
-  };
-  
-navSlide();
+// Add event listener to next button in personal details form
+$('.cardPersonal .button').on('click', function(){
+    $('.cardPersonal').hide();
+    $('.cardCollege').show();
+    $('#switch-personal').removeClass('switch-btn-active');
+    $('#switch-college').addClass('switch-btn-active');
+});
 
-function next(){
-    $('.cardPersonal').on('click', function(){
-        $('.cardPersonal').toggleClass('notactive');
-        $('.cardCollege').toggleClass('active');
-        $('.switch1').toggleClass('switch3');
-        $('.switch2').toggleClass('switch4');
-    });
-}
+// Add event listener to switch button to switch between personal and college details form
+$('#switch-personal').on('click',function(){
+    $('#switch-college').removeClass('switch-btn-active');
+    $(this).addClass('switch-btn-active');
+    $('.cardCollege').hide();
+    $('.cardPersonal').show();
+});
 
-function personalForm(){
-    $('.switch1').on('click',function(){
-        $('.switch1').removeClass('switch3')
-        $('.switch2').removeClass('switch4')
-        $('.cardPersonal').removeClass('notactive');
-        $('.cardCollege').removeClass('active');
-    });
-}
+// Add event listener to switch button to switch between personal and college details form
+$('#switch-college').on('click',function(){
+    $('#switch-personal').removeClass('switch-btn-active');
+    $(this).addClass('switch-btn-active');    
+    $('.cardPersonal').hide();
+    $('.cardCollege').show();
+});
 
-function collegeForm(){
-    $('.switch2').on('click',function(){
-        $('.switch1').toggelClass('switch3')
-        $('.switch2').toggelClass('switch4')
-        $('.cardPersonal').toggelClass('notactive');
-        $('.cardCollege').toggelClass('active');
-    });
-}
+// Using jQuery datepicker API for Date of Birth field
+$(function(){
+    $(".datepicker").datepicker({dateFormat: 'dd-mm-yy', changeYear: true, changeMonth: true, defaultDate: new Date(2000, 0, 1)});
+});

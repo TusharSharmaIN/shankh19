@@ -1,3 +1,7 @@
+*{
+    outline: none;
+}
+
 body {
     color: #000;
     background-color: #f4f4f4;
@@ -12,14 +16,16 @@ html, body{
     margin: 0;
     padding: 0;
 }
+
 form {
     margin: 0;
 }
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 50px;
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 1);
     position: fixed;
@@ -33,93 +39,18 @@ nav{
 }
 
 .nav-logo img{
-    height: 50px;
-    width: 35px;
-    margin: 10px;
+    height: 40px;
+    margin: 5px;
 }
 
 .nav-logo h1{
-    margin: 10px;
+    margin: 0px 10px;
     font-size: 32px;
     letter-spacing: 5px;
     font-weight: 100;
     text-transform: uppercase;
     cursor: default;
     color: #fff;
-}
-
-.nav-ul{
-    list-style: none;
-    justify-content: space-around;
-    width: 100px;
-    flex-wrap: wrap;
-    margin: 0;
-    position: absolute;
-    right: 0px;
-    height: 0vh;
-    top: 70px;
-    background-color: rgba(0, 0, 0, .8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    transition: 0.5s;
-    padding: 0px;
-    z-index: 50;
-}
-
-.nav-ul.active{
-    display: flex;
-    opacity: 1;
-    animation: fadeIn 0.5s;
-    height: calc(100vh - 70px);
-}
-
-.nav-ul-a{
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: 500;
-    color: white;
-    display: none;
-}
-
-.nav-ul-a.active{
-    display: flex;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-@keyframes fadeIn{
-    from{opacity: 0; height: 0}
-    to{opacity: 1; height: calc(100vh - 70px)}
-}
-
-.burger{
-    cursor: pointer;
-    display: block;
-    margin: 10px;
-}
-
-.burger div{
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    margin-right:25px; 
-    background-color: white;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2{
-    opacity: 0;
-}
-
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .dashBoard{
@@ -143,40 +74,32 @@ nav{
     cursor: pointer;
 }
 
-.switch1{
-    position: relative;
-    width: 50%;
-    background: black;
-    border: black 2px solid;
-    border-radius: 50px 0 0 50px;
-    color: white;
-}
-.switch2{
-    position: relative;
+.switch-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     background: white;
-    border: black 2px solid;
-    border-radius: 0 50px 50px 0;
-    color: black;
-}
-.switch4{
-    position: relative;
-    width: 50%;
-    background: black;
-    border: black 2px solid;
-    border-radius: 0 50px 50px 0;
-    color: white;
-}
-.switch3{
-    position: relative;
-    width: 50%;
-    background: white;
-    border: black 2px solid;
     border-radius: 50px 0 0 50px;
     color: black;
+    font-size: 1em;
+    text-transform: uppercase;
 }
+
+.switch-btn:nth-child(1){
+    border-radius: 50px 0 0 50px;
+}
+
+.switch-btn:nth-child(2){
+    border-radius: 0px 50px 50px 0px;
+}
+
+.switch-btn-active{
+    background: black;
+    color: white;
+}
+
 .cardPersonal{
-    /* display: none; */
     position: absolute;
     width: 40vw;
     height: 60vh;
@@ -186,11 +109,9 @@ nav{
     left: 55vw;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
 }
-.notactive{
-    display: none;
-}
+
 .cardCollege{
-    z-index: -1;
+    display: none;
     position: absolute;
     width: 40vw;
     height: 45vh;
@@ -200,9 +121,7 @@ nav{
     left: 55vw;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
 }
-.active{
-    z-index: 1;
-}
+
 .welcomeNote{
     position: absolute;
     font-style: normal;
@@ -304,10 +223,10 @@ input{
     color: white;
     font-size: 20px;
     align-items: center;
-    /* padding: 10px; */
     background: #504DFF;
     cursor: pointer;
 }
+
 .button:hover {
     box-shadow: 0 0px 16px 0 rgba(0,0,0,0.15), 0 0px 16px 0 rgba(0,0,0,0.15);
 }
@@ -349,12 +268,16 @@ input{
     width: 100%;
     display: flex;
     position: relative;
-    top: 12vh;
+    top: 11vh;
     justify-content: space-around;
 }
 .collegeCity > input {
     width: 35vw;
     height: 5vh;
+}
+
+.cardCollege button{
+    top: 15vh;
 }
 
 @media (max-width: 600px){
@@ -371,14 +294,14 @@ input{
         width: 100vw;
         height: 60vh;
         left: 0;
-        top: 34vh;
+        top: 35vh;
         border-radius: 0;
     }
     .cardCollege{
         width: 100vw;
         height: 45vh;
         left: 0;
-        top: 44vh;
+        top: 35vh;
         border-radius: 0;
     }
     .welcomeNote{
@@ -389,7 +312,6 @@ input{
         font-size: 32px;
         color: #FFFFFF;
         top: 10vh;
-        left: 0;
     }
     .nameField > input {
         width: 45vw;
@@ -451,30 +373,12 @@ input{
     }
     .switch{
         position: absolute;
-        width: 50vw;
+        width: 60vw;
         height: 5vh;
-        border-radius: 50px 0 0 50px;
         top: 28vh;
-        left: 25vw;
+        left: 20vw;
     }
-    .switch1{
-        position: relative;
-        width: 50%;
-        font-size: 16px;
-    }
-    .switch2{
-        position: relative;
-        width: 50%;
-        font-size: 16px;
-    }
-    .switch4{
-        position: relative;
-        width: 50%;
-        font-size: 16px;
-    }
-    .switch3{
-        position: relative;
-        width: 50%;
-        font-size: 16px;
+    .switch-btn{
+        font-size: .8em;
     }
 }
