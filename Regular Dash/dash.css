@@ -23,7 +23,6 @@ nav {
     width: 100vw;
     z-index: 999;
 }
-
 .nav-logo {
     display: flex;
     align-items: center;
@@ -34,7 +33,6 @@ nav {
     width: 35px;
     margin: 10px;
 }
-
 .nav-logo h1 {
     margin: 10px;
     font-size: 32px;
@@ -44,7 +42,6 @@ nav {
     cursor: default;
     color: #fff;
 }
-
 .nav-ul {
     list-style: none;
     justify-content: space-around;
@@ -64,14 +61,12 @@ nav {
     padding: 0px;
     z-index: 50;
 }
-
 .nav-ul.active {
     display: flex;
     opacity: 1;
     animation: fadeIn 0.5s;
     height: calc(100vh - 70px);
 }
-
 .nav-ul-a {
     text-decoration: none;
     letter-spacing: 3px;
@@ -79,24 +74,20 @@ nav {
     color: white;
     display: none;
 }
-
 .nav-ul-a.active {
     display: flex;
     cursor: pointer;
     font-weight: bold;
 }
-
 @keyframes fadeIn {
     from{opacity: 0; height: 0}
     to{opacity: 1; height: calc(100vh - 70px)}
 }
-
 .burger {
     cursor: pointer;
     display: block;
     margin: 10px;
 }
-
 .burger div {
     width: 25px;
     height: 3px;
@@ -106,19 +97,15 @@ nav {
     border-radius: 10px;
     transition: all 0.3s ease;
 }
-
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
-
 .toggle .line2 {
     opacity: 0;
 }
-
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-
 .dashBoard {
     position: absolute;
     width: 60vw;
