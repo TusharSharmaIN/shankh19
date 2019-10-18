@@ -54,6 +54,8 @@ nav{
 }
 
 .dashBoard{
+    display: flex;
+    flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -305,14 +307,14 @@ input{
     }
     .cardPersonal{
         width: 100vw;
-        height: 450px;
+        height: 500px;
         left: 0;
         top: 260px;
         border-radius: 0;
     }
     .cardCollege{
         width: 100vw;
-        height: 320px;
+        height: 360px;
         left: 0;
         top: 260px;
         border-radius: 0;
@@ -328,16 +330,17 @@ input{
         width: 100vw;
     }
     input {
-        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .nameField > input, .numberField > input, .personalField > input {
         width: 45vw;
+        height: 40px;
     }
     .emailField > input, .collegeName > input, .yearOfStudy > input, .branch > input, .collegeCity > input {
         width: 95vw;
+        height: 40px;
     }
     .addressField > textarea {
         width: 95vw;
