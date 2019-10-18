@@ -352,6 +352,7 @@ input{
     .button{
         width: 40vw;
         left: 30%;
+        height: 40px;
     }
     .switch{
         position: absolute;
