@@ -31,18 +31,18 @@
                 </div>
                 <div class="cardPersonal">
                         <form class="myForm" enctype="application/x-www-form-urlencoded">
-                            <div class="nameField">
+                            <div class="inputField" id="nameField">
                                 <input type="text" name="FirstName" placeholder="First Name" required>
                                 <input type="text" name="LastName" placeholder="Last Name" required>
                             </div>
-                            <div class="emailField">
+                            <div class="inputField" id="emailField">
                                 <input type="email" name="email" placeholder="Email" required>
                             </div>
-                            <div class="numberField">
+                            <div class="inputField" id="numberField">
                                 <input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number" required>
                                 <input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number">
                             </div>
-                            <div class="personalField">
+                            <div class="inputField" id="personalField">
                                 <input type="text" class = "datepicker" name="dateofbirth" placeholder="Date of Birth">
                                 <input name="Gender" list="gender" placeholder="Gender" required>
                                 <datalist id="gender">
@@ -51,7 +51,7 @@
                                     <option>Other</option>
                                 </datalist>
                             </div>
-                            <div class="addressField">
+                            <div class="inputField" id="addressField">
                                 <textarea rows="10" name="address" placeholder="Address" required></textarea>
                             </div>
                             <button class="button">Next</button>
@@ -59,10 +59,10 @@
                 </div>
                 <div class="cardCollege">
                         <form class="myForm" enctype="application/x-www-form-urlencoded">
-                             <div class="collegeName">
+                             <div class="inputField" id="collegeName">
                                  <input type="text" name="collegeName" placeholder="College Name" required>
                              </div>
-                             <div class="yearOfStudy">
+                             <div class="inputField" id="yearOfStudy">
                                 <input type="text" name="yearOfStudy" list="year" placeholder="Year of Study" required>
                                 <datalist id="year">
                                     <option>First Year</option>
@@ -71,7 +71,7 @@
                                     <option>Fourth Year</option>
                                 </datalist>
                             </div>
-                            <div class="branch">
+                            <div class="inputField" id="branch">
                                 <input type="text" name="branch" list="branches" placeholder="Branch" required>
                                 <datalist id="branches">
                                     <option>Computer Science and Engineering</option>
@@ -86,7 +86,7 @@
                                     <option>Metallurgical Engineering</option>
                                 </datalist>
                             </div>
-                            <div class="collegeCity">
+                            <div class="inputField" id="collegeCity">
                                 <input type="text" name="collegeCity" placeholder="College City" required>
                             </div>
                             <button class="button">Submit</button>
