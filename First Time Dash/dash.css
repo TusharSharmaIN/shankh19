@@ -19,6 +19,7 @@ html, body{
 
 form {
     margin: 0;
+    position: relative;
 }
 
 nav{
@@ -57,7 +58,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: relative;
     background: linear-gradient(90.48deg, #504DFF 0.22%, #00E0FF 99.75%);
 }
@@ -104,7 +105,7 @@ nav{
 .cardPersonal{
     position: absolute;
     width: 40vw;
-    height: 60vh;
+    height: 580px;
     background: #FFFFFF;
     border-radius: 50px;
     top: 25vh;
@@ -116,7 +117,7 @@ nav{
     display: none;
     position: absolute;
     width: 40vw;
-    height: 45vh;
+    height: 42vh;
     background: #FFFFFF;
     border-radius: 50px;
     top: 30vh;
@@ -153,7 +154,26 @@ nav{
     color: #111;
 }
 
-input{
+.inputField > input{
+    position: relative;
+    border: 3px solid #504DFF;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 18px;
+    align-items: center;
+    padding: 10px;
+    width: 300px;
+}
+.inputField {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.inputField > textarea {
+    width: 670px;
+    height: 150px;
     border: 3px solid #504DFF;
     border-radius: 8px;
     font-family: Poppins;
@@ -162,73 +182,13 @@ input{
     align-items: center;
     padding: 10px;
 }
-.nameField{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 5vh;
-    justify-content: space-around;
-}
-.nameField > input {
-    width: 15vw;
-    height: 5vh;
-}
-.emailField{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 7vh;
-    justify-content: space-around;
-}
-.emailField > input {
-    width: 35vw;
-    height: 5vh;
-}
-.numberField{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 9vh;
-    justify-content: space-around;
-}
-.numberField > input {
-    width: 15vw;
-    height: 5vh;
-}
-.personalField{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 12vh;
-    justify-content: space-around;
-}
-.personalField > input {
-    width: 15vw;
-    height: 5vh;
-}
-.addressField{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 15vh;
-    justify-content: space-around;
-}
-.addressField > textarea {
-    width: 35vw;
-    height: 15vh;
-    border: 3px solid #504DFF;
-    border-radius: 8px;
-    font-family: Poppins;
-    font-weight: normal;
-    font-size: 18px;
-    align-items: center;
-    padding: 10px;
+#emailField > input, #collegeName > input, #yearOfStudy > input, #branch > input, #collegeCity > input {
+    width: 670px;
 }
 .button{
     position: relative;
     width: 10vw;
-    height: 5vh;
-    top: 17vh;
+    height: 40px;
     left: 40%;
     border: none;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
@@ -240,62 +200,63 @@ input{
     align-items: center;
     background: #504DFF;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .button:hover {
     box-shadow: 0 0px 16px 0 rgba(0,0,0,0.15), 0 0px 16px 0 rgba(0,0,0,0.15);
 }
 
-.collegeName{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 5vh;
-    justify-content: space-around;
-}
-.collegeName > input {
-    width: 35vw;
-    height: 5vh;
-}
-.yearOfStudy{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 7vh;
-    justify-content: space-around;
-}
-.yearOfStudy > input {
-    width: 35vw;
-    height: 5vh;
-}
-.branch{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 9vh;
-    justify-content: space-around;
-}
-.branch > input {
-    width: 35vw;
-    height: 5vh;
-}
-.collegeCity{
-    width: 100%;
-    display: flex;
-    position: relative;
-    top: 11vh;
-    justify-content: space-around;
-}
-.collegeCity > input {
-    width: 35vw;
-    height: 5vh;
-}
-
 .cardCollege button{
-    top: 15vh;
+    margin-top: 20px;
 }
-
-@media (max-width: 600px){
+@media (max-width: 1500px){
+    .cardPersonal {
+        height: 540px;
+    }
+    .cardCollege{
+        height: 390px;
+    }
+    #emailField > input, #collegeName > input, #yearOfStudy > input, #branch > input, #collegeCity > input {
+        width: 37vw;
+    }
+    .inputField > input{
+        width: 17vw;
+    }
+    .inputField {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+    .inputField > textarea {
+        width: 37vw;
+        height: 120px;
+    }
+}
+@media (max-width: 1300px){
+    .cardPersonal{
+        height: 490px;
+    }
+    .cardCollege{
+        height: 370px;
+        top: 260px;
+    }
+    #emailField > input, #collegeName > input, #yearOfStudy > input, #branch > input, #collegeCity > input {
+        width: 36vw;
+    }
+    .inputField > input{
+        width: 16vw;
+    }
+    .inputField {
+        margin-top: 20px;
+    }
+    .inputField > textarea {
+        width: 36vw;
+        height: 100px;
+    }
+}
+@media (max-width:600px) and (max-height: 1000px){
     .nav-logo h1{
         margin: 0px;
         font-size: 24px;
@@ -307,14 +268,14 @@ input{
     }
     .cardPersonal{
         width: 100vw;
-        height: 500px;
+        height: 450px;
         left: 0;
-        top: 260px;
+        top: 250px;
         border-radius: 0;
     }
     .cardCollege{
         width: 100vw;
-        height: 360px;
+        height: 320px;
         left: 0;
         top: 260px;
         border-radius: 0;
@@ -329,27 +290,27 @@ input{
         font-size: 20px;
         width: 100vw;
     }
-    input {
+    #emailField > input, #collegeName > input, #yearOfStudy > input, #branch > input, #collegeCity > input {
+        width: 95vw;
+    }
+    .inputField > input {
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
-    .nameField, .numberField, .emailField, .personalField, .collegeCity, .collegeName, .yearOfStudy, .branch, .addressField{
+    .inputField{
         top: 0;
-        margin-top: 25px;
+        margin-top: 20px;
 
     }
-    .nameField > input, .numberField > input, .personalField > input {
+    .inputField > input {
         width: 45vw;
         height: 40px;
     }
-    .emailField > input, .collegeName > input, .yearOfStudy > input, .branch > input, .collegeCity > input {
+    
+    .inputField > textarea {
         width: 95vw;
-        height: 40px;
-    }
-    .addressField > textarea {
-        width: 95vw;
-        height: 130px;
+        height: 110px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
