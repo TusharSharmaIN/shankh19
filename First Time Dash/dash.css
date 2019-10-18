@@ -305,22 +305,22 @@ input{
     }
     .cardPersonal{
         width: 100vw;
-        height: 60vh;
+        height: 450px;
         left: 0;
-        top: 35vh;
+        top: 260px;
         border-radius: 0;
     }
     .cardCollege{
         width: 100vw;
-        height: 45vh;
+        height: 320px;
         left: 0;
-        top: 35vh;
+        top: 260px;
         border-radius: 0;
     }
     .welcomeNote{
         width: 100vw;
         font-size: 32px;
-        top: 10vh;
+        top: 70px;
         height: auto;
     }
     .welcomeNote p:nth-child(2){
@@ -329,54 +329,63 @@ input{
     }
     .nameField > input {
         width: 45vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .emailField > input {
         width: 95vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .numberField > input {
         width: 45vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .personalField > input {
         width: 45vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .addressField > textarea {
         width: 95vw;
+        height: 130px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .collegeName > input {
         width: 95vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .yearOfStudy > input {
         width: 95vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .branch > input {
         width: 95vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
     }
     .collegeCity > input {
         width: 95vw;
+        height: 36px;
         font-size: 16px;
         align-items: center;
         padding: 5px;
@@ -388,11 +397,12 @@ input{
     .switch{
         position: absolute;
         width: 60vw;
-        height: 5vh;
-        top: 28vh;
+        height: 40px;
+        top: 200px;
         left: 20vw;
     }
     .switch-btn{
         font-size: .8em;
     }
+    
 }
