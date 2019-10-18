@@ -1,0 +1,245 @@
+/* Setting fade transition and default settings */
+body {
+    color: #000;
+    background-color: #000;
+    transition: background-color 1s ease;
+}
+  
+/* panel styles */
+.panel {
+    /* min height incase content is higher than window height */
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    font-family: sans-serif;
+}
+
+/* colours */
+.color-red {
+    background-color:#AE1438;
+}
+
+.color-green {
+    background-color: #26ae60;
+}
+
+.color-yellow {
+    background-color: #F3CC79;
+}
+
+.color-gray {
+    background-color: #7B8788;
+}
+
+html, body{
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: 100vh;
+}
+
+#home{
+    display: block;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 1);
+    width: 100%;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img{
+    height: 50px;
+    width: 35px;
+    margin: 10px;
+}
+
+.nav-logo h1{
+    margin: 10px;
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: default;
+    color: #fff;
+}
+
+.nav-ul{
+    list-style: none;
+    justify-content: space-around;
+    width: 100px;
+    flex-wrap: wrap;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    height: 0vh;
+    top: 70px;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    transition: 0.5s;
+    padding: 0px;
+    z-index: 50;
+}
+
+.nav-ul.active{
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 0.5s;
+    height: calc(100vh - 70px);
+}
+
+.nav-ul-a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: white;
+    display: none;
+}
+
+.nav-ul-a.active{
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0; height: 0}
+    to{opacity: 1; height: calc(100vh - 70px)}
+}
+
+.burger{
+    cursor: pointer;
+    display: block;
+    margin: 10px;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.photo-slider{
+    background: black;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+.slider-images
+{
+    height: inherit;
+    display: none;
+}
+
+.slider-images > img
+{
+    width: 100%;
+    height: inherit;
+}
+
+.active
+{
+    border-color: #ddd;
+}
+
+.fade
+{
+    -webkit-animation-name: fade-image;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade-image;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade-image
+{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade-image
+{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px)
+{
+    .text {font-size: 11px}
+}
+
+#events{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.sections{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    background: #000;
+    align-self: center;
+    width: 100%;
+}
+
+#sponsors-container{
+    height: 50vh;
+    background: none;
+}
+
+#events-heading{
+    grid-area: events-heading;
+    height: 30px;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    height: 25vh;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+}
