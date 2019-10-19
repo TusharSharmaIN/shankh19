@@ -33,14 +33,43 @@
         <section id="dashBoard">
             <div class="dashBoard">
                 <div class="dashMenu">
-                    <div class="name">Vivek Chauhan</div>
-                    <div class="detailsPersonal">Personal Details</div>
-                    <div class="detailsCollege">College Details</div>
-                    <div class="eventsregister">Events Register</div>
-                    <div class="logout">Log Out</div>
+                    <div class="name" id="name">Vivek Chauhan</div>
+                    <div class="menulist" id="personalDetail">Personal Details</div>
+                    <div class="menulist" id="collegeDetail">College Details</div>
+                    <div class="menulist" id="eventRegister">Events Register</div>
+                    <div class="menulist" id="logout">Log Out</div>
                 </div>
-                <div class="namesection">
-
+                <div class="details"> 
+                    <div class="section">
+                        <p>Name</p>
+                        <input type="text" name="name" placeholder="Name" disabled>
+                    </div>
+                    <div class="section">
+                        <p>E-mail</p>
+                        <input type="email" name="email" placeholder="Email" disabled>
+                    </div>
+                    <div class="section">
+                        <p>Phone Number</p>
+                        <input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" required>
+                        <input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled>
+                    </div>
+                    <div class="section">
+                        <p>Date of Birth</p>
+                        <input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled>
+                    </div>
+                    <div class="section">
+                            <p>Gender</p>
+                            <input type="text" list="gender" name="gender" placeholder="Gender" disabled>
+                            <datalist id="gender">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </datalist>
+                    </div>
+                    <div class="section">
+                        <p>Adress</p>
+                        <textarea rows="10" name="address" placeholder="Address" disabled></textarea>
+                    </div>
                 </div>
             </div>
         </section>
