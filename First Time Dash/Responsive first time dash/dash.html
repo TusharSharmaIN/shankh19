@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Dash Board</title>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta charset = "utf-8">
+        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+        <link rel = "stylesheet" href = "./dash.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    </head>
+    <body>
+        <section id = 'home'>
+            <nav>
+                <div class = "nav-logo">
+                    <img src = "./images/shankh-white.svg">
+                    <h1>Shankhnaad'19</h1>
+                </div>
+            </nav>
+        </section>
+        <section class = "dashboard">
+            <div class="welcomeNote">
+                <p>Hi, Shubham!</p>
+                <p>Please take a moment and fill out this form to help us know you better</p>
+            </div>
+            <div class = "form-container">
+                <div class="switch">
+                    <div class="switch-btn switch-btn-active" id = "switch-personal">Personal</div>
+                    <div class="switch-btn" id = "switch-college">College</div>
+                </div>
+                <form id = "card-personal" enctype="application/x-www-form-urlencoded">
+                    <div class="inputField" id="nameField">
+                        <input type="text" name="FirstName" placeholder="First Name" required>
+                        <input type="text" name="LastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="inputField" id="emailField">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="inputField" id="numberField">
+                        <input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number" required>
+                        <input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number">
+                    </div>
+                    <div class="inputField" id="personalField">
+                        <input type="text" class = "datepicker" name="dateofbirth" placeholder="Date of Birth">
+                        <input name="gender" list="gender" placeholder="Gender" required>
+                        <datalist id="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </datalist>
+                    </div>
+                    <div class="inputField" id="addressField">
+                        <textarea rows = "3" name="address" placeholder="Address" required></textarea>
+                    </div>
+                    <button class="button">Next</button>
+                </form>
+                <form id = "card-college" enctype="application/x-www-form-urlencoded">
+                     <div class="inputField" id="collegeName">
+                         <input type="text" name="collegeName" placeholder="College Name" required>
+                     </div>
+                     <div class="inputField" id="yearOfStudy">
+                        <input type="text" name="yearOfStudy" list="year" placeholder="Year of Study" required>
+                        <datalist id="year">
+                            <option>First Year</option>
+                            <option>Second Year</option>
+                            <option>Third Year</option>
+                            <option>Fourth Year</option>
+                        </datalist>
+                    </div>
+                    <div class="inputField" id="branch">
+                        <input type="text" name="branch" list="branches" placeholder="Branch" required>
+                        <datalist id="branches">
+                            <option>Computer Science and Engineering</option>
+                            <option>Information Tecnlology</option>
+                            <option>Electronics Engineering</option>
+                            <option>Electrical Engineering</option>
+                            <option>Chemical Engineering</option>
+                            <option>Bio-Technology</option>
+                            <option>Civil Engineering</option>
+                            <option>Mechanical Engineering</option>
+                            <option>Electronics and Communication Engineering</option>
+                            <option>Metallurgical Engineering</option>
+                        </datalist>
+                    </div>
+                    <div class="inputField" id="collegeCity">
+                        <input type="text" name="collegeCity" placeholder="College City" required>
+                    </div>
+                    <button class="button">Submit</button>
+                </form>
+            </div>
+        </section>
+        <script src = "./dash.js"></script>
+    </body>
+</html>
