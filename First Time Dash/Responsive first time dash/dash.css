@@ -212,6 +212,11 @@ form{
     
     #card-college > .inputField > input{
         width: 100%;
+        margin: 0 10px;
+    }
+    
+    #card-personal > .inputField > input{
+        margin: 0 10px;
     }
     
     form{
