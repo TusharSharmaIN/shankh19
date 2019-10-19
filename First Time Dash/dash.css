@@ -210,6 +210,30 @@ nav{
 .cardCollege button{
     margin-top: 20px;
 }
+@media (max-width: 1700px) {
+    .cardPersonal {
+        height: 540px;
+    }
+    .cardCollege{
+        height: 390px;
+    }
+    .inputField > input{
+        width: 17vw;
+    }
+    .inputField {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+    .large > input {
+        width: 37vw;
+    }
+    .inputField > textarea {
+        width: 37vw;
+        height: 120px;
+    }
+}
 @media (max-width: 1500px){
     .cardPersonal {
         height: 540px;
