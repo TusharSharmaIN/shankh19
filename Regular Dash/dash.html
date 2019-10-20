@@ -30,8 +30,8 @@
                 </div>
             </nav>
         </section>
-        <section id="dashBoard">
-            <div class="dashBoard">
+        <section id="dashboard-container">
+            <div class="dashboard">
                 <div class="dashMenu">
                     <div class="name" id="name">Vivek Chauhan</div>
                     <div class="menulist" id="personalDetail">Personal Details</div>
@@ -40,6 +40,43 @@
                     <div class="menulist" id="logout">Log Out</div>
                 </div>
                 <div class="form-container"> 
+                    <table id = "personal-details" class = "details-table">
+                        <caption>Personal Details</caption>
+                        <tr>
+                            <th scope = "row">Name</th>
+                            <td><input type="text" name="name" placeholder="Name" disabled value = "John Doe"></td>
+                        </tr>
+                        <tr>
+                            <th scope = "row">E-mail</th>
+                            <td><input type="email" name="email" placeholder="Email" disabled value = "johndoe@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <th scope = "row">Contact</th>
+                            <td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value = "0123456789"></td>
+                            <td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value = "0123456789"></td>
+                        </tr>
+                        <tr>
+                            <th scope = "row">Date of Birth</th>
+                            <td><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value = "01/02/2000"></td>
+                        </tr>
+                        <tr>
+                            <th scope = "row">Gender</th>
+                            <td>
+                                <input type="text" list="gender" name="gender" placeholder="Gender" disabled value = "Male">
+                                <datalist id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope = "row">Address</th>
+                            <td colspan="2"><textarea rows="3" name="address" placeholder="Address" disabled>AITH, Awadhpuri, Kanpur - 208024</textarea></td>
+                        </tr>
+                    </table>
+                    <button class="button">Edit</button>
+<!--
                     <div class="section">
                         <p>Name</p>
                         <input type="text" name="name" placeholder="Name" disabled>
@@ -67,9 +104,10 @@
                             </datalist>
                     </div>
                     <div class="section">
-                        <p>Adress</p>
-                        <textarea rows="10" name="address" placeholder="Address" disabled></textarea>
+                        <p>Address</p>
+                        <textarea rows="3" name="address" placeholder="Address" disabled></textarea>
                     </div>
+-->
                 </div>
             </div>
         </section>
