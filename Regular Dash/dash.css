@@ -237,3 +237,7 @@ nav{
 .form-container button:hover {
     background: #4834DF;
 }
+
+#college-details {
+    display: none;
+}
