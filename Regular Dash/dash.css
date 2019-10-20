@@ -112,7 +112,7 @@ nav {
 .dashBoard {
     position: absolute;
     width: 60vw;
-    height: 70vh;
+    height: 600px;
     background: white;
     margin: 0;
     top: 20vh;
@@ -121,6 +121,7 @@ nav {
     display: flex;
 }
 .dashMenu {
+    position: relative;
     width: 20%;
     height: 100%;
     background: black;
@@ -140,7 +141,12 @@ nav {
     position: relative;
     font-size: 20px;
 }
-.details {
+.form-container{
+    display: flex;
+    flex-direction: column;
+}
+.form-container{
+    display: flex;
     margin: 40px;
 }
 .section {
@@ -155,14 +161,12 @@ nav {
     background: none;
     font-size: 16px;
     border: none;
-    margin-left: 20px;
 }
 .section > textarea {
     background: none;
     font-size: 16px;
-    height: auto;
+    height: 50px;
     border: none;
-    margin-left: 20px;
 }
 @media (max-width: 1650px) {
     .name {
@@ -179,6 +183,14 @@ nav {
     }
 }
 @media (max-width: 1400px) {
+    .dashBoard {
+        height: 500px;
+    }
+    .dashMenu {
+        position: relative;
+        width: 35%;
+        height: 100%;
+    }
     .name {
         position: relative;
         font-size: 1.7em;
@@ -186,6 +198,12 @@ nav {
     .menulist {
         position: relative;
         font-size: 16px;
+    }
+    .section > p {
+        font-size: 16px;
+    }
+    .section > input {
+        font-size: 14px;
     }
 }
 @media (max-width: 1000px){
@@ -205,6 +223,7 @@ nav {
         left: 5vw;
     }
     .dashMenu {
+        position: relative;
         width: 30%;
         height: 100%;
     }
