@@ -204,7 +204,7 @@ nav{
     padding: 10px 20px;
     text-align: left;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: bold;
     vertical-align: top;
     text-align: right;
 }
@@ -265,9 +265,59 @@ nav{
 #change-password {
     display: none;
 }
-
+.mobileMenu {
+    display: none;
+}
 @media (max-width: 600px) {
     .dashMenu {
         display: none;
     }  
+    .dashboard {
+        width: 100vw;
+        height: max-content;
+        border-radius: 0;
+        margin: 0;
+        margin-top: 10px;
+        flex-basis: 100%;
+    }
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        flex-basis: calc(100%);
+    }
+    .details-table {
+        position: relative;
+        margin: 0;
+    }
+    .details-table th{
+        font-size: 16px;
+    }
+    
+    .details-table td{
+        font-size: 16px;
+    }
+    
+    .details-table input{
+        font-size: 16px;
+    }
+    .details-table textarea{
+        height: 100px;
+    }
+    .mobileMenu {
+        position: relative;
+        display: flex;
+        font-size: 18px;
+        height: max-content;
+        top: 60px;
+        background: black;
+        color: white;
+    }
+    .mobilelist {
+        padding: 10px;
+    }
+    .mobilelist-active {
+        background: #EAF0F1;
+        color: black;
+    }
 }
