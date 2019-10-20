@@ -33,7 +33,7 @@ $('#collegeDetail').on('click', function(){
 
 $('#eventRegister').on('click', function(){
     $(this).addClass('active');
-    $('#collegeDetails').removeClass('active');
+    $('#collegeDetail').removeClass('active');
     $('#changePassword').removeClass('active');
     $('#personalDetail').removeClass('active');
     $('#personal-details').hide();
@@ -44,7 +44,7 @@ $('#eventRegister').on('click', function(){
 
 $('#changePassword').on('click', function(){
     $(this).addClass('active');
-    $('#collegeDetails').removeClass('active');
+    $('#collegeDetail').removeClass('active');
     $('#eventRegister').removeClass('active');
     $('#personalDetail').removeClass('active');
     $('#personal-details').hide();
