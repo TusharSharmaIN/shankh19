@@ -191,6 +191,7 @@ nav{
 .details-table caption{
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .details-table tr:nth-child(odd){
