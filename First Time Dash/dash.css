@@ -1,12 +1,12 @@
 *{
-    outline: none;
+    outline: none;   
 }
 
 body {
     color: #000;
     background-color: #f4f4f4;
-    transition: background-color 1s ease;
     margin: 0;
+    overflow-x: hidden;
 }
 
 html, body{
@@ -18,21 +18,15 @@ html, body{
     background: linear-gradient(90.48deg, #504DFF 0.22%, #00E0FF 99.75%);
 }
 
-form {
-    margin: 0;
-    position: relative;
-}
-
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 1);
     position: fixed;
     width: 100vw;
-    z-index: 999;
+    z-index: 1;
 }
 
 .nav-logo{
@@ -54,39 +48,70 @@ nav{
     cursor: default;
     color: #fff;
 }
+
 .dashBoard{
+    width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    height: 100%;
     position: relative;
+    height: calc(100vh - 50px);
+    justify-content: space-around;
+    top: 50px;
+}
+
+.welcomeNote{
+    font-weight: 800;
+    font-size: 64px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.welcomeNote > p{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.welcomeNote p:nth-child(2){
+    font-size: 36px;
+    width: 300px;
+    font-weight: 400;
+    color: #111;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .switch{
-    position: absolute;
-    width: 20vw;
-    height: 4vh;
-    border-radius: 50px 0 0 50px;
-    top: 18vh;
-    left: 65vw;
     font-size: 20px;
-    display: flex;
-    text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    cursor: pointer;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 50px 50px 50px 50px;
 }
 
 .switch-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+    width: 100px;
+    text-align: center;
     background: white;
-    border-radius: 50px 0 0 50px;
     color: black;
-    font-size: 1em;
+    font-size: 18px;
+    padding: 5px 15px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .switch-btn:nth-child(1){
@@ -102,288 +127,113 @@ nav{
     color: white;
 }
 
-.cardPersonal{
-    position: absolute;
-    width: 40vw;
-    height: 580px;
+form{
+    padding: 20px;
+    width: 500px;
     background: #FFFFFF;
-    border-radius: 50px;
-    top: 25vh;
-    left: 55vw;
+    border-radius: 20px;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
-}
-
-.cardCollege{
-    display: none;
-    position: absolute;
-    width: 40vw;
-    height: 42vh;
-    background: #FFFFFF;
-    border-radius: 50px;
-    top: 30vh;
-    left: 55vw;
-    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
-}
-
-.welcomeNote{
-    position: absolute;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 64px;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-    width: 50vw;
-    top: 20vh;
-    height: 70vh;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.welcomeNote > p{
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#card-college{
+    display: none;
 }
 
-.welcomeNote p:nth-child(2){
-    font-size: 36px;
-    width: 250px;
-    font-weight: 400;
-    color: #111;
+.inputField{
+    display: flex;
+    margin: 10px 0px;
 }
 
 .inputField > input{
-    position: relative;
-    border: 3px solid #504DFF;
-    border-radius: 8px;
+    margin: 0 5px;
+    width: 50%;
+    border: 1px solid #504DFF;
+    border-radius: 5px;
     font-family: Poppins;
-    font-weight: normal;
     font-size: 18px;
     align-items: center;
-    padding: 10px;
-    width: 300px;
+    padding: 5px;
 }
-.inputField {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
+
+.inputField > input[name="email"]{
+    width: 100%;
 }
-.inputField > textarea {
-    width: 670px;
-    height: 150px;
-    border: 3px solid #504DFF;
-    border-radius: 8px;
+
+.inputField > textarea{
+    width: 100%;
+    margin: 0 5px;
+    border: 1px solid #504DFF;
+    border-radius: 5px;
     font-family: Poppins;
-    font-weight: normal;
     font-size: 18px;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
+    resize: none;
 }
-.large > input {
-    width: 670px;
+
+#card-college > .inputField > input{
+    width: 100%;
 }
+
 .button{
-    position: relative;
-    width: 10vw;
-    height: 40px;
-    left: 40%;
+    letter-spacing: 2px;
+    align-self: center;
+    width: 150px;
+    padding: 5px;
     border: none;
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    border-radius: 5px;
     font-family: Poppins;
-    font-weight: bolder;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
     background: #504DFF;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 20px 0px 10px 0px;
+    text-transform: uppercase;
 }
 
 .button:hover {
-    box-shadow: 0 0px 16px 0 rgba(0,0,0,0.15), 0 0px 16px 0 rgba(0,0,0,0.15);
+    background: #4834DF;
 }
 
-.cardCollege button{
-    margin-top: 20px;
-}
-@media (max-width: 1700px) {
-    .cardPersonal {
-        height: 540px;
+@media only screen and (max-width: 768px){
+    .form-container{
+        flex-direction: column;
     }
-    .cardCollege{
-        height: 390px;
+    
+    #card-college > .inputField > input{
+        width: 100%;
+        margin: 0 10px;
     }
-    .inputField > input{
-        width: 17vw;
+    
+    #card-personal > .inputField > input{
+        margin: 0 10px;
     }
-    .inputField {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 25px;
+    
+    .inputField > textarea{
+        margin: 0 10px;
     }
-    .large > input {
-        width: 37vw;
-    }
-    .inputField > textarea {
-        width: 37vw;
-        height: 120px;
-    }
-}
-@media (max-width: 1500px){
-    .cardPersonal {
-        height: 540px;
-    }
-    .cardCollege{
-        height: 390px;
-    }
-    .inputField > input{
-        width: 17vw;
-    }
-    .inputField {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 25px;
-    }
-    .large > input {
-        width: 37vw;
-    }
-    .inputField > textarea {
-        width: 37vw;
-        height: 120px;
-    }
-}
-@media (max-width: 1400px) and (max-height: 700px){
-    .cardPersonal{
-        height: 490px;
-        top: 150px;
-    }
-    .cardCollege{
-        height: 370px;
-        top: 200px;
-    }
-    .inputField > input{
-        width: 16vw1;
-    }
-    .inputField {
-        margin-top: 20px;
-    }
-    .large > input {
-        width: 37vw;
-    }
-    .inputField > textarea {
-        width: 37vw;
-        height: 100px;
-    }
-    .switch {
-        top: 15vh;
-        font-size: 16px; 
-    }
-}
-@media (max-width: 1300px){
-    .cardPersonal{
-        height: 490px;
-    }
-    .cardCollege{
-        height: 370px;
-        top: 260px;
-    }
-    .inputField > input{
-        width: 16vw;
-    }
-    .inputField {
-        margin-top: 20px;
-    }
-    .large > input {
-        width: 36vw;
-    }
-    .inputField > textarea {
-        width: 36vw;
-        height: 100px;
-    }
-}
-@media (max-width:600px) and (max-height: 1000px){
-    .nav-logo h1{
-        margin: 0px;
-        font-size: 24px;
-        letter-spacing: 1px;
-        font-weight: 100;
-        text-transform: uppercase;
-        cursor: default;
-        color: #fff;
-    }
-    .cardPersonal{
+    
+    form{
         width: 100vw;
-        height: 450px;
-        left: 0;
-        top: 270px;
+        margin: 0 0 10px 0;
+        padding: 0;
         border-radius: 0;
     }
-    .cardCollege{
-        width: 100vw;
-        height: 320px;
-        left: 0;
-        top: 300px;
-        border-radius: 0;
-    }
+    
     .welcomeNote{
-        width: 100vw;
-        font-size: 32px;
-        top: 70px;
-        height: auto;
+        width: 100%;
+        font-size: 36px;
     }
+    
     .welcomeNote p:nth-child(2){
-        font-size: 20px;
-        width: 100vw;
+        font-size: 24px;
+        width: 100%;
+        font-weight: 400;
+        color: #111;
     }
-    .inputField > input {
-        font-size: 16px;
-        align-items: center;
-        padding: 5px;
-    }
-    .inputField{
-        top: 0;
-        margin-top: 20px;
-
-    }
-    .inputField > input {
-        width: 45vw;
-        height: 40px;
-    }
-    .large > input {
-        width: 95vw;
-    }
-    .inputField > textarea {
-        width: 95vw;
-        height: 110px;
-        font-size: 16px;
-        align-items: center;
-        padding: 5px;
-    }
-    .button{
-        width: 40vw;
-        left: 30%;
-        height: 40px;
-        top: 0vh;
-        margin-top: 20px;
-    }
-    .cardCollege button{
-        top: 0;
-        margin-top: 20px;
-    }
-    .switch{
-        position: absolute;
-        width: 60vw;
-        height: 40px;
-        top: 200px;
-        left: 20vw;
-    }
-    .switch-btn{
-        font-size: .8em;
-    }   
 }

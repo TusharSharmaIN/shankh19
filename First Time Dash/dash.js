@@ -1,7 +1,7 @@
 // Add event listener to next button in personal details form
-$('.cardPersonal .button').on('click', function(){
-    $('.cardPersonal').hide();
-    $('.cardCollege').show();
+$('#card-personal button').on('click', function(){
+    $('#card-personal').hide();
+    $('#card-college').show();
     $('#switch-personal').removeClass('switch-btn-active');
     $('#switch-college').addClass('switch-btn-active');
 });
@@ -10,16 +10,16 @@ $('.cardPersonal .button').on('click', function(){
 $('#switch-personal').on('click',function(){
     $('#switch-college').removeClass('switch-btn-active');
     $(this).addClass('switch-btn-active');
-    $('.cardCollege').hide();
-    $('.cardPersonal').show();
+    $('#card-college').hide();
+    $('#card-personal').show();
 });
 
 // Add event listener to switch button to switch between personal and college details form
 $('#switch-college').on('click',function(){
     $('#switch-personal').removeClass('switch-btn-active');
     $(this).addClass('switch-btn-active');    
-    $('.cardPersonal').hide();
-    $('.cardCollege').show();
+    $('#card-personal').hide();
+    $('#card-college').show();
 });
 
 // Using jQuery datepicker API for Date of Birth field
