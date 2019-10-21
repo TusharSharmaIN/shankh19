@@ -268,7 +268,13 @@ nav{
 .mobileMenu {
     display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .nav-logo h1 {
+        font-size: 18px;
+    }
+    .nav-ul-a {
+        font-size: 14px;
+    }
     .dashMenu {
         display: none;
     }  
@@ -283,7 +289,7 @@ nav{
     .form-container{
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        margin: 16px;
         flex-basis: calc(100%);
     }
     .details-table {
@@ -291,15 +297,15 @@ nav{
         margin: 0;
     }
     .details-table th{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .details-table td{
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .details-table input{
-        font-size: 16px;
+        font-size: 14px;
     }
     .details-table textarea{
         height: 100px;
@@ -307,14 +313,15 @@ nav{
     .mobileMenu {
         position: relative;
         display: flex;
-        font-size: 18px;
+        font-size: 14px;
         height: max-content;
         top: 60px;
         background: black;
         color: white;
+        justify-content: space-around;
     }
     .mobilelist {
-        padding: 10px;
+        padding: 13px;
     }
     .mobilelist-active {
         background: #EAF0F1;
