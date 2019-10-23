@@ -317,7 +317,7 @@ nav{
         justify-content: space-around;
     }
     .mobilelist {
-        padding: 10px;
+        padding: 13px;
         cursor: pointer;
     }
     .mobilelist-active {
@@ -327,5 +327,9 @@ nav{
 
     .details-table caption{
         font-size: 20px;
+    }
+    #mobileLogout:hover{
+        background: #FF3031;
+        color: white;
     }
 }
