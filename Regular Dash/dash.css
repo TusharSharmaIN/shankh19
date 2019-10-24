@@ -281,7 +281,7 @@ nav{
     .dashboard {
         height: 530px;
         border-radius: 0;
-        margin: 40px 0px 0px 0px;
+        margin: 10px 0px;
         flex-basis: 100%;
     }
     .form-container{
@@ -311,7 +311,7 @@ nav{
         display: flex;
         flex-wrap: wrap;
         font-size: 14px;
-        top: 90px;
+        top: 60px;
         background: black;
         color: white;
         justify-content: space-around;
