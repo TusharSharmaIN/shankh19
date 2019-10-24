@@ -277,9 +277,9 @@ nav{
     }
     .dashMenu {
         display: none;
-    }  
+    }
     .dashboard {
-        height: max-content;
+        height: 530px;
         border-radius: 0;
         margin: 10px 0px;
         flex-basis: 100%;
