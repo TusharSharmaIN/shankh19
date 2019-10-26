@@ -53,25 +53,25 @@
                             <caption>Personal Details<hr></caption>
                             <tr>
                                 <th scope = "row">Name</th>
-                                <td colspan="2"><input type="text" name="name" placeholder="Name" disabled value = "John Doe"></td>
+                                <td colspan="2"><input type="text" name="name" placeholder="Name" disabled value = "John Doe" required></td>
                             </tr>
                             <tr>
                                 <th scope = "row">E-mail</th>
-                                <td colspan="2"><input type="email" name="email" placeholder="Email" disabled value = "johndoe@gmail.com"></td>
+                                <td colspan="2"><input type="email" name="email" placeholder="Email" disabled value = "johndoe@gmail.com" required></td>
                             </tr>
                             <tr>
                                 <th scope = "row">Contact</th>
-                                <td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value = "0123456789"></td>
+                                <td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value = "0123456789" required></td>
                                 <td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value = "0123456789"></td>
                             </tr>
                             <tr>
                                 <th scope = "row">Date of Birth</th>
-                                <td colspan="2"><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value = "01/02/2000"></td>
+                                <td colspan="2"><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value = "01/02/2000" required></td>
                             </tr>
                             <tr>
                                 <th scope = "row">Gender</th>
                                 <td colspan="2">
-                                    <input type="text" list="gender" name="gender" placeholder="Gender" disabled value = "Male">
+                                    <input type="text" list="gender" name="gender" placeholder="Gender" disabled value = "Male" required>
                                     <datalist id="gender">
                                         <option>Male</option>
                                         <option>Female</option>
@@ -81,7 +81,7 @@
                             </tr>
                             <tr>
                                 <th scope = "row">Address</th>
-                                <td colspan="2"><textarea rows="1" name="address" placeholder="Address" disabled>AITH, Awadhpuri, Kanpur - 208024</textarea></td>
+                                <td colspan="2"><textarea rows="1" name="address" placeholder="Address" disabled required>AITH, Awadhpuri, Kanpur - 208024</textarea></td>
                             </tr>
                         </table>
                         <button class="edit-btn">Edit</button>
@@ -91,12 +91,12 @@
                             <caption>College Details<hr></caption>
                             <tr>
                                 <th scope = "row">College Name</th>
-                                <td><input type="text" name="collegeName" placeholder="College Name" disabled value = "Dr. Ambedkar Institute of Technology for Handicapped"></td>
+                                <td><input type="text" name="collegeName" placeholder="College Name" disabled value = "Dr. Ambedkar Institute of Technology for Handicapped" required></td>
                             </tr>
                             <tr>
                                 <th scope = "row">Year of Study</th>
                                 <td>
-                                    <input type="text" name="yearOfStudy" placeholder="Year Of Study" disabled value = "First Year">
+                                    <input type="text" name="yearOfStudy" placeholder="Year Of Study" disabled value = "First Year" required>
                                     <datalist id="year">
                                         <option>First Year</option>
                                         <option>Second Year</option>
@@ -108,7 +108,7 @@
                             <tr>
                                 <th scope = "row">Branch</th>
                                 <td>
-                                    <input type="text" name="branch" list="branches" placeholder="Branch" disabled value = "Information Technology">
+                                    <input type="text" name="branch" list="branches" placeholder="Branch" disabled value = "Information Technology" required>
                                     <datalist id="branches">
                                         <option>Computer Science and Engineering</option>
                                         <option>Information Tecnlology</option>
@@ -125,7 +125,7 @@
                             </tr>
                             <tr>
                                 <th scope = "row">College City</th>
-                                <td><input type="text" name="collegeCity" placeholder="College City" disabled value = "Kanpur"></td>
+                                <td><input type="text" name="collegeCity" placeholder="College City" disabled value = "Kanpur" required></td>
                             </tr>
                         </table>
                         <button class="edit-btn">Edit</button>
@@ -165,15 +165,15 @@
                             <caption>Change Password<hr></caption>
                             <tr>
                                 <th scope = "row">Current Password</th>
-                                <td><input type="password" name="currentPassword" placeholder="Current Password"></td>
+                                <td><input type="password" name="currentPassword" placeholder="Current Password" required></td>
                             </tr>
                             <tr>
                                 <th scope = "row">New Password</th>
-                                <td><input type="password" name="newPassword" placeholder="New Password"></td>
+                                <td><input id="newPassword" type="password" name="newPassword" placeholder="New Password" required></td>
                             </tr>
                             <tr>
                                 <th scope = "row">Confirm Password</th>
-                                <td><input type="password" name="confirmPassword" placeholder="Confirm Password"></td>
+                                <td><input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" required></td>
                             </tr>
                         </table>
                         <button class="edit-btn">Confirm</button>
