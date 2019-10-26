@@ -289,9 +289,10 @@ nav{
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
+        margin: 0px 10px;
     }
     .details-table {
-        margin: 0;
+        margin: 10px 0px;
     }
     .details-table th{
         font-size: 14px;
