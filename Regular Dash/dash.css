@@ -182,6 +182,11 @@ nav{
     flex-basis: calc(100% - 240px);
 }
 
+.table-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .details-table{
     border-collapse: collapse;
     margin: 10px 20px;
@@ -235,7 +240,7 @@ nav{
     height: 100px;
 }
 
-.form-container button{
+.edit-btn{
     letter-spacing: 2px;
     align-self: center;
     width: 150px;
@@ -250,20 +255,20 @@ nav{
     background: #504DFF;
     cursor: pointer;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
-.form-container button:hover {
+.edit-btn:hover {
     background: #4834DF;
 }
 
-#college-details {
+#college-details-container {
     display: none;
 }
-#events-register {
+#events-registered-container {
     display: none;
 }
-#change-password {
+#change-password-container{
     display: none;
 }
 .mobileMenu {

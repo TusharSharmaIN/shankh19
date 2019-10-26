@@ -47,84 +47,90 @@
                     <div class="menulist" id="changePassword">Change Password</div>
                     <div class="menulist" id="logout">Log Out</div>
                 </div>
-                <div class="form-container"> 
-                    <table id = "personal-details" class = "details-table">
-                        <caption>Personal Details<hr></caption>
-                        <tr>
-                            <th scope = "row">Name</th>
-                            <td colspan="2"><input type="text" name="name" placeholder="Name" disabled value = "John Doe"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">E-mail</th>
-                            <td colspan="2"><input type="email" name="email" placeholder="Email" disabled value = "johndoe@gmail.com"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Contact</th>
-                            <td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value = "0123456789"></td>
-                            <td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value = "0123456789"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Date of Birth</th>
-                            <td colspan="2"><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value = "01/02/2000"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Gender</th>
-                            <td colspan="2">
-                                <input type="text" list="gender" name="gender" placeholder="Gender" disabled value = "Male">
-                                <datalist id="gender">
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </datalist>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Address</th>
-                            <td colspan="2"><textarea rows="1" name="address" placeholder="Address" disabled>AITH, Awadhpuri, Kanpur - 208024</textarea></td>
-                        </tr>
-                    </table>
-                <table id = "college-details" class = "details-table">
-                        <caption>College Details<hr></caption>
-                        <tr>
-                            <th scope = "row">College Name</th>
-                            <td><input type="text" name="collegeName" placeholder="College Name" disabled value = "Dr. Ambedkar Institute of Technology for Handicapped"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Year of Study</th>
-                            <td>
-                                <input type="text" name="yearOfStudy" placeholder="Year Of Study" disabled value = "First Year">
-                                <datalist id="year">
-                                    <option>First Year</option>
-                                    <option>Second Year</option>
-                                    <option>Third Year</option>
-                                    <option>Fourth Year</option>
-                                </datalist>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Branch</th>
-                            <td>
-                                <input type="text" name="branch" list="branches" placeholder="Branch" disabled value = "Information Technology">
-                                <datalist id="branches">
-                                    <option>Computer Science and Engineering</option>
-                                    <option>Information Tecnlology</option>
-                                    <option>Electronics Engineering</option>
-                                    <option>Electrical Engineering</option>
-                                    <option>Chemical Engineering</option>
-                                    <option>Bio-Technology</option>
-                                    <option>Civil Engineering</option>
-                                    <option>Mechanical Engineering</option>
-                                    <option>Electronics and Communication Engineering</option>
-                                    <option>Metallurgical Engineering</option>
-                                </datalist>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">College City</th>
-                            <td><input type="text" name="collegeCity" placeholder="College City" disabled value = "Kanpur"></td>
-                        </tr>
-                    </table>
-                    <table id = "events-register" class = "details-table">
+                <div class="form-container">
+                    <div id = "personal-details-container" class = "table-container">
+                        <table id = "personal-details" class = "details-table">
+                            <caption>Personal Details<hr></caption>
+                            <tr>
+                                <th scope = "row">Name</th>
+                                <td colspan="2"><input type="text" name="name" placeholder="Name" disabled value = "John Doe"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">E-mail</th>
+                                <td colspan="2"><input type="email" name="email" placeholder="Email" disabled value = "johndoe@gmail.com"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Contact</th>
+                                <td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value = "0123456789"></td>
+                                <td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value = "0123456789"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Date of Birth</th>
+                                <td colspan="2"><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value = "01/02/2000"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Gender</th>
+                                <td colspan="2">
+                                    <input type="text" list="gender" name="gender" placeholder="Gender" disabled value = "Male">
+                                    <datalist id="gender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Address</th>
+                                <td colspan="2"><textarea rows="1" name="address" placeholder="Address" disabled>AITH, Awadhpuri, Kanpur - 208024</textarea></td>
+                            </tr>
+                        </table>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div id = "college-details-container" class = "table-container">
+                        <table id = "college-details" class = "details-table">
+                            <caption>College Details<hr></caption>
+                            <tr>
+                                <th scope = "row">College Name</th>
+                                <td><input type="text" name="collegeName" placeholder="College Name" disabled value = "Dr. Ambedkar Institute of Technology for Handicapped"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Year of Study</th>
+                                <td>
+                                    <input type="text" name="yearOfStudy" placeholder="Year Of Study" disabled value = "First Year">
+                                    <datalist id="year">
+                                        <option>First Year</option>
+                                        <option>Second Year</option>
+                                        <option>Third Year</option>
+                                        <option>Fourth Year</option>
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Branch</th>
+                                <td>
+                                    <input type="text" name="branch" list="branches" placeholder="Branch" disabled value = "Information Technology">
+                                    <datalist id="branches">
+                                        <option>Computer Science and Engineering</option>
+                                        <option>Information Tecnlology</option>
+                                        <option>Electronics Engineering</option>
+                                        <option>Electrical Engineering</option>
+                                        <option>Chemical Engineering</option>
+                                        <option>Bio-Technology</option>
+                                        <option>Civil Engineering</option>
+                                        <option>Mechanical Engineering</option>
+                                        <option>Electronics and Communication Engineering</option>
+                                        <option>Metallurgical Engineering</option>
+                                    </datalist>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">College City</th>
+                                <td><input type="text" name="collegeCity" placeholder="College City" disabled value = "Kanpur"></td>
+                            </tr>
+                        </table>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div id = "events-registered-container" class = "table-container">
                         <table class = "details-table">
                             <caption>Cultural Events</caption>
                             <tr>
@@ -152,23 +158,26 @@
                                 <td>Cancle</td>
                             </tr>
                         </table>
-                    </table>
-                    <table id = "change-password" class = "details-table">
-                        <caption>Change Password<hr></caption>
-                        <tr>
-                            <th scope = "row">Current Password</th>
-                            <td><input type="password" name="currentPassword" placeholder="Current Password"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">New Password</th>
-                            <td><input type="password" name="newPassword" placeholder="New Password"></td>
-                        </tr>
-                        <tr>
-                            <th scope = "row">Confirm Password</th>
-                            <td><input type="password" name="confirmPassword" placeholder="Confirm Password"></td>
-                        </tr>
-                    </table>
-                    <button class="button">Edit</button>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <div id = "change-password-container" class = "table-container">
+                        <table id = "change-password" class = "details-table">
+                            <caption>Change Password<hr></caption>
+                            <tr>
+                                <th scope = "row">Current Password</th>
+                                <td><input type="password" name="currentPassword" placeholder="Current Password"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">New Password</th>
+                                <td><input type="password" name="newPassword" placeholder="New Password"></td>
+                            </tr>
+                            <tr>
+                                <th scope = "row">Confirm Password</th>
+                                <td><input type="password" name="confirmPassword" placeholder="Confirm Password"></td>
+                            </tr>
+                        </table>
+                        <button class="edit-btn">Edit</button>
+                    </div>
                 </div>
             </div>
         </section>
