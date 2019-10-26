@@ -108,16 +108,12 @@ $('#mobilePassword').on('click', function(){
 
 
 //Confirm Password validation
-var password = document.getElementById("newPassword")
-  , confirm_password = document.getElementById("confirmPassword");
-
-function validatePassword(){
-  if(newPassword.value != confirmPassword.value) {
-    confirmPassword.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirmPassword.setCustomValidity('');
-  }
+function Validate() {
+    var password = document.getElementById("newPassword").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    if (password != confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+    return true;
 }
-
-newPassword.onchange = validatePassword;
-confirmPassword.onkeyup = validatePassword;
