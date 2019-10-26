@@ -178,13 +178,13 @@ nav{
 .form-container{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 0px 20px;
     flex-basis: calc(100% - 240px);
 }
 
 .details-table{
     border-collapse: collapse;
-    margin: 0px 20px;
+    margin: 10px 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
