@@ -105,3 +105,19 @@ $('#mobilePassword').on('click', function(){
     $('#events-registered-container').hide();
     $('#change-password-container').css('display', 'flex');
 });
+
+
+//Confirm Password validation
+var password = document.getElementById("newPassword")
+  , confirm_password = document.getElementById("confirmPassword");
+
+function validatePassword(){
+  if(newPassword.value != confirmPassword.value) {
+    confirmPassword.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirmPassword.setCustomValidity('');
+  }
+}
+
+newPassword.onchange = validatePassword;
+confirmPassword.onkeyup = validatePassword;
