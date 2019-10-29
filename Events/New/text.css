@@ -1,0 +1,142 @@
+*{
+    outline: none;
+}
+
+body {
+    color: #000;
+    background: linear-gradient(90.48deg, #504DFF 0.22%, #00E0FF 99.75%);
+    transition: background-color 1s ease;
+    margin: 0;
+}
+
+html, body {
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+.nav-logo img{
+    height: 40px;
+    margin: 5px;
+}
+
+.nav-logo h1{
+    margin: 0px 10px;
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: default;
+    color: #fff;
+}
+
+.nav-ul {
+    list-style: none;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    height: 0vh;
+    top: 50px;
+    background-color: rgba(0, 0, 0, .8);
+    align-items: center;
+    width: 200px;
+    transition: 0.5s;
+    padding: 0px;
+    z-index: 50;
+}
+
+.nav-ul.active {
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 0.5s;
+    height: calc(100vh - 50px);
+}
+
+.nav-ul-a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: white;
+    display: none;
+}
+
+.nav-ul-a.active {
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from{opacity: 0; height: 0}
+    to{opacity: 1; height: calc(100vh - 50px)}
+}
+
+.burger {
+    cursor: pointer;
+    display: block;
+    margin: 10px 20px 10px 10px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.event-list {
+    position: relative;
+    width: 100vw;
+    background-color: white;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+}
+.event-list tr:nth-child(odd) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.event-list td {
+    height: 60px;
+    font-size: 1.4rem;
+}
+@media (max-width: 750px) {
+    .event-list td {
+        font-size: 1rem;
+    }
+}
