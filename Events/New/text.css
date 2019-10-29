@@ -135,6 +135,17 @@ nav{
     height: 60px;
     font-size: 1.4rem;
 }
+.event-list tr:last-child {
+    align-content: flex-end;
+}
+.register {
+    border: none;
+    background: blueviolet;
+    border-radius: 16px;
+    color: white;
+    font-size: 1.4rem;
+    width: 200px;
+}
 @media (max-width: 750px) {
     .event-list td {
         font-size: 1rem;
