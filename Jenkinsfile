@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('--BUILD--'){
       steps {
-        sh 'docker build -t shankh-server .'
+        sh 'ls -la'
       }
     }
     stage('--DEPLOY--') {
