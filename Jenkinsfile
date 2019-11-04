@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('--BUILD--'){
       steps {
-        sh 'docker ps'
+        sh 'BUILD COMPLETE'
       }
     }
     stage('--DEPLOY--') {
       steps { 
-        sh 'docker ps -a'
+        sh 'docker cp . shankhnaad.org:/var/www/shankhnaad.org/public_html/'
       }
     }
   }
