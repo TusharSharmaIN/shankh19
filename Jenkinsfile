@@ -8,7 +8,7 @@ pipeline {
     }
     stage('--DEPLOY--') {
       steps { 
-        sh 'whoami'
+        sh 'docker ps -a'
       }
     }
   }
