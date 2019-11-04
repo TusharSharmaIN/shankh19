@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('--BUILD--'){
       steps {
-        sh 'ls -la'
+        sh 'docker ps'
       }
     }
     stage('--DEPLOY--') {
