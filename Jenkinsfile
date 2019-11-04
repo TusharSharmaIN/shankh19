@@ -6,7 +6,7 @@ pipeline {
         sh 'echo "BUILD COMPLETE"'
       }
     }
-    stage('--DEPLOY--') {
+    stage('--DEPLOY--'){
       steps { 
 		sh 'echo DELETING OLD FILES...'
 		sh 'docker exec shankhnaad.org rm -rR /var/www/shankhnaad.org/public_html/*'
