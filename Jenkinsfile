@@ -1,14 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('myStage'){
+    stage('--BUILD--'){
       steps {
-        sh 'docker ps' 
+        sh 'echo "BUILD COMPLETE"' 
       }
     }
-    stage('Build') {
+    stage('--DEPLOY--') {
       steps { 
-        sh 'whoami' 
+        sh 'docker cp . admin.shankhnaad.org:/var/www/admin.shankhnaad.org/public_html/'
       }
     }
   }
