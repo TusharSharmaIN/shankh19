@@ -3,9 +3,13 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-    
-    
-    
+body {
+    background: #7894CA;
+    color: white;
+}
+span {
+    color: #fff;
+}
 ul.main { 
     list-style: none;
     max-width: 75%;
@@ -21,11 +25,11 @@ h3 {padding: 0; margin: 0;}
 }
     
 .date h3 {
-    font-size: 1.5em;
+    font-size: 2.5em;
 }
     
 .date p {
-    font-size: .8em;
+    font-size: 1.4em;
 }
     
 .events {
@@ -41,6 +45,7 @@ h3 {padding: 0; margin: 0;}
 }
     
 .events-detail li{
+    display: flex;
     padding: 10px;
     border-bottom: 1px dashed #ccc;
     line-height: 22px;
@@ -51,9 +56,13 @@ h3 {padding: 0; margin: 0;}
 .events-detail li:hover {
     background: #e9e9e9;
 }
-    
+.event-name {
+    font-size: 1.5rem;
+}
+
 .event-time {
     font-weight: 900;
+    font-size: 1.4rem;
 }
     
 .events-detail li a {
@@ -64,11 +73,6 @@ h3 {padding: 0; margin: 0;}
     display: block;
 }
 
-.event-location {
-    font-size: .8em;
-    color: tomato;
-    margin-left: 70px;
-}
 .button {
     border: none;
     background-color: black;
@@ -76,7 +80,7 @@ h3 {padding: 0; margin: 0;}
     border-radius: 8px;
     width: 60px;
     height: 30px;
-    margin: auto 15px;
+    margin: auto 100px;
 }
 @media all and (max-width: 641px) {
     .date {
@@ -97,5 +101,8 @@ h3 {padding: 0; margin: 0;}
       
     li.date p {
         margin:0;
+    }
+    .button {
+        margin: 15px auto 0px auto;
     }
 }
