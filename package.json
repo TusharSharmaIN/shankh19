@@ -1,0 +1,31 @@
+{
+  "name": "shankh19",
+  "version": "1.0.0",
+  "description": "Go to https://www.shankhnaad.org",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtusharsharma/shankh19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imtusharsharma/shankh19/issues"
+  },
+  "homepage": "https://github.com/imtusharsharma/shankh19#readme",
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "bcrypt": "^3.0.6",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.8",
+    "npm": "^6.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^1.19.4"
+  }
+}
