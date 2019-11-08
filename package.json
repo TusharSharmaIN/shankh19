@@ -4,7 +4,8 @@
   "description": "Go to https://www.shankhnaad.org",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "forever start index.js",
+    "devStart": "nodemon index.js"
   },
   "repository": {
     "type": "git",
