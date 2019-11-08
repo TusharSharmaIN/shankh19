@@ -8,7 +8,7 @@ pipeline {
     }
     stage('--DEPLOY--') {
       steps {
-        sh '/myscript.sh'
+        sh './myscript.sh'
         sh 'echo STOPPING CURRENTLY RUNNING SERVER...'
         //sh 'docker exec admin.shankhnaad.org forever stop 0'
         sh 'echo MOVING node_modules to a safe location...'
