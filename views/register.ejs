@@ -2,18 +2,21 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
     <link rel = "stylesheet" type = "text/css" href = "../assets/css/login.css">
+    
     <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script defer src = "../assets/script/login.js"></script>
-    <title>Admin Login</title>
+    <script defer src = "../assets/script/register.js"></script>
+    <title>Admin Registration</title>
 </head>
 <body>
-    <form id = "login-form" method = "POST" action = "/register">
-        <h2>Admin Login</h2>
+    <form id = "registration-form" method = "POST" action = "/register">
+        <h2>Admin Registration</h2>
         <label for = "id">Username</label>
         <input id = "username" name="username" type = "text" class = "fields" autocomplete = "off" required>
         <label for = "pass">Password</label>
         <input id="password" name = "password" type = "password" class = "fields" autocomplete = "off" required>
-        <input type = "submit" id = "login-btn" name = "login" value = "Login">
+        <label for = "token">Access Token</label>
+        <input id="token" name = "token" type = "password" class = "fields" autocomplete = "off" required>
+        <input type = "submit" id = "register-btn" name = "login" value = "Register">
         <div class = "response"></div>
     </form>
 </body>

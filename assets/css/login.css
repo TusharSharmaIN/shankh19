@@ -1,3 +1,5 @@
+/* This script contains CSS for both login and register page */
+
 *{
     margin: 0;
     padding: 0;
@@ -12,13 +14,13 @@ body{
 }
 
 form{
+    width: 350px;
     padding: 20px;
     background: rgba(0, 0, 0, .9);
-    /* min-height: 400px; */
-    /* min-width: 400px; */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 form h2{
@@ -40,10 +42,10 @@ form label{
     border-radius: 5px;
     font-size: 16px;
     padding: 3px 5px;
-    width: 300px;
+    margin: 0 0 10px 0;
 }
 
-#login-btn{
+#login-btn, #register-btn{
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -52,7 +54,20 @@ form label{
     cursor: pointer;
 }
 
-#login-btn:hover{
+#login-btn:hover, #register-btn:hover{
     background: #DFAF2B;
+}
 
+.response-error{
+    background: #FF362E;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.response-success{
+    background: #26ae60;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
 }

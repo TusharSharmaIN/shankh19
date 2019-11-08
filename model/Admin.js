@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const adminSchema = new mongoose.Schema({
-    _id: {
+    username: {
         type: String,
         required: true,
         min: 6,
@@ -13,10 +13,10 @@ const adminSchema = new mongoose.Schema({
         min: 6,
         max: 255
     },
-    lastLogin: {
+    lastAccess: {
         type: Date,
         default: Date.now
     }
-});
+}, { collection: 'credentials' });
 
 module.exports = mongoose.model('Admin', adminSchema);
