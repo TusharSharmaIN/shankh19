@@ -28,11 +28,16 @@ app.use('/', loginRoute);
 app.use('/', registerRoute);
 // Dashboard Router middleware
 app.use('/', dashboardRoute);
+// Redirect all https://admin.shankhnaad.org requests to login page
+app.get('/', (req, res) => {
+    res.redirect('/login');
+});
 
 // NOTE: This should be placed at the end of all routes
 // Redirect all 404 requests to login page
 app.get('*', (req, res) => {
-    res.redirect('/login');
+    res.render('404.ejs');
+    res.status(404).send();
 });
 
 // Make express listen on port number 3000

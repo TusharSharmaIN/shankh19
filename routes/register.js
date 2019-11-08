@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Admin = require('../model/Admin.js');
 const bcrypt = require('bcrypt');
-const {registerValidation} = require('../validation.js');
+const {registerValidation} = require('../misc/validation.js');
 
 /* Handle all registration requests */
 
