@@ -24,7 +24,7 @@ $(document).ready(function(){
                     $('.response').html(res.message);
                     $('input[name=username]').val('');
                     $('input[name=password]').val('');
-                    window.location.href = "/dashboard";
+                    //window.location.href = "/dashboard";
                 },
                 error: function(res){
                     $('.response').addClass('response-error');
