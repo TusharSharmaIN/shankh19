@@ -1,17 +1,13 @@
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const loginRoute = require('./routes/login.js');
 const registerRoute = require('./routes/register.js');
 const dashboardRoute = require('./routes/dashboard.js');
-
-// To be able to use keys
-dotenv.config();
-// Set view engine to render html pages
-app.set('view-engine', 'ejs');
-// To include css files in html
-app.use(express.static(__dirname + '/'));
 
 // Connect to MongoDB
 mongoose.connect(
@@ -21,7 +17,20 @@ mongoose.connect(
 );
 
 /* Middleware */
+app.set('view-engine', 'ejs');
+app.use(express.static(__dirname + '/'));
 app.use(express.json());
+app.use(cookieParser());
+app.use(session({
+    secret: process.env.SESSION_SECRET_KEY,
+    name: 'sid',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { sameSite: true },
+    store: new MongoStore({ mongooseConnection: mongoose.connection, ttl: 60 })
+}));
+
+/* Routes */
 // Login Route middleware
 app.use('/', loginRoute);
 // Register Route middleware
@@ -32,7 +41,6 @@ app.use('/', dashboardRoute);
 app.get('/', (req, res) => {
     res.redirect('/login');
 });
-
 // NOTE: This should be placed at the end of all routes
 // Redirect all 404 requests to login page
 app.get('*', (req, res) => {

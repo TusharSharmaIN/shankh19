@@ -10,7 +10,11 @@ const auth = (req, res, next) => {
         req.admin = admin;
         next();
     } catch(err){
-        res.status(403).send({ hasAccess: false, message: 'Invalid token'});
+        if(err.name === 'TokenExpiredError'){
+
+        }
+        else 
+            res.status(403).send({ hasAccess: false, message: 'Invalid token', error: err});
     }
 }
 
