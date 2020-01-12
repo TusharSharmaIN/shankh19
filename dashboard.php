@@ -1,32 +1,32 @@
 <?php
-session_start();
-if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
-	// User is not signed in
-	header('Location: login.php'); //Redirect to login page
-	exit();
-}
-// Include dependencies
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
+// session_start();
+// if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
+// 	// User is not signed in
+// 	header('Location: login.php'); //Redirect to login page
+// 	exit();
+// }
+// // Include dependencies
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
-$email = $_SESSION['email'];
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
+// $email = $_SESSION['email'];
+// $fname = $_SESSION['fname'];
+// $lname = $_SESSION['lname'];
 
-// Create a db instance
-$db = new Database();
-// Connect to db
-$userDB = $db->getUserDBConnection();
+// // Create a db instance
+// $db = new Database();
+// // Connect to db
+// $userDB = $db->getUserDBConnection();
 
-// Create a user instance
-$user = new User($userDB);
+// // Create a user instance
+// $user = new User($userDB);
 
-// Get user data from session variable
-$user->setEmail($email);
-$user->setFName($fname);
-$user->setLName($lname);
+// // Get user data from session variable
+// $user->setEmail($email);
+// $user->setFName($fname);
+// $user->setLName($lname);
 
-if (!$user->hasFilledDetailsForm()) {
+if (true || !$user->hasFilledDetailsForm()) {
 ?>
 
 	<!-- FIRST TIME DASHBOARD CODE HERE -->
@@ -73,7 +73,7 @@ if (!$user->hasFilledDetailsForm()) {
 					</div>
 					<div class="inputField" id="numberField">
 						<input type="tel" name="phoneNumber" maxlength="10" placeholder="Phone Number" autocomplete="tel-national">
-						<input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number" autocomplete="tel-national">
+						<input type="tel" name="alternateNumber" maxlength="10" placeholder="Alternate Number (Optional)" autocomplete="tel-national">
 					</div>
 					<div class="inputField" id="personalField">
 						<input type="text" class="datepicker" name="dateofbirth" placeholder="Date of Birth" autocomplete="off">
@@ -94,7 +94,7 @@ if (!$user->hasFilledDetailsForm()) {
 						<input type="text" name="collegeName" placeholder="College Name" autocomplete="off">
 					</div>
 					<div class="inputField" id="rollNumber">
-						<input type="text" name="rollNumber" placeholder="Roll number" autocomplete="off">
+						<input type="text" name="rollNumber" placeholder="Roll number (Optional)" autocomplete="off">
 					</div>
 					<div class="inputField" id="yearOfStudy">
 						<input type="text" name="yearOfStudy" list="year" placeholder="Year of Study" autocomplete="off">
