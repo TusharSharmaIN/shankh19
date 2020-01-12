@@ -243,9 +243,8 @@ $("#switch-personal").on("click", function() {
 $(function() {
 	$(".datepicker").datepicker({
 		dateFormat: "dd/mm/yy",
-		yearRange: "1950:2019",
+		yearRange: "1950:2020",
 		changeYear: true,
-		changeMonth: true,
-		minDate: new Date(1950, 0, 1)
+		changeMonth: true
 	});
 });
