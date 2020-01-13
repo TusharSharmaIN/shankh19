@@ -146,12 +146,15 @@ $.ajax({
 		if (response.status == 1) {
 			events = response.data;
 			events.forEach(event => {
+				let d = new Date(event.DOE + " " + event.TOE);
+				let date = d.toLocaleDateString("en-IN", {year: 'numeric', month: 'short', day: 'numeric'});
+				let time = d.toLocaleTimeString("en-IN", {timeStyle: "short"});
 				let html = `<tr>
 								<td>${event.Name}</td>
-								<td>${event.TOE}</td>
-								<td>${event.DOE}</td>
+								<td>${time}</td>
+								<td>${date}</td>
 								<td>${event.Venue}</td>
-								<td><button id="${event.EID} class="deregister-btn"><i class="fa fa-close"></i></button></td>
+								<td><button id="${event.EID}" class="deregister-btn"><i class="fa fa-close"></i></button></td>
 							</tr>`;
 				if (event.Type === "Cultural") {
 					$("#cultural-table").append(html);
@@ -163,13 +166,12 @@ $.ajax({
 			});
 			// Add event listener to all de-register buttons
 			$(".deregister-btn").on("click", event => {
-				
+				deregisterEvent(event.target.id);
 			});
 		}
 	}
 });
 
-
-function deregisterEvent(eid){
-	
+function deregisterEvent(eid) {
+	console.log(eid);
 }
