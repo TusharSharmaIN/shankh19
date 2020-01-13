@@ -145,6 +145,7 @@ if (!$user->hasFilledDetailsForm()) {
 		<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
 		<link rel="stylesheet" href="./assets/css/regular-dashboard.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script defer src="./assets/scripts/regular-dashboard.js"></script>
 	</head>
@@ -276,73 +277,40 @@ if (!$user->hasFilledDetailsForm()) {
 						<button class="edit-btn">Edit</button>
 					</div>
 					<div id="events-registered-container" class="table-container">
-						<table class="details-table">
+						<table id="cultural-table" class="details-table">
 							<caption>Cultural Events
 								<hr>
 							</caption>
 							<tr>
 								<th>Event</th>
+								<th>Time</th>
 								<th>Date</th>
 								<th>Venue</th>
-								<th>De-register</th>
-							</tr>
-							<tr>
-								<td>Dance Competition</td>
-								<td>01 Jan 2019</td>
-								<td>Community Hall</td>
-								<td>x</td>
-							</tr>
-							<tr>
-								<td>Dance Competition</td>
-								<td>01 Jan 2019</td>
-								<td>Community Hall</td>
-								<td>x</td>
+								<th>Deregister</th>
 							</tr>
 						</table>
-						<table class="details-table">
+						<table id="technical-table" class="details-table">
 							<caption>Tech Events
 								<hr>
 							</caption>
 							<tr>
 								<th>Event</th>
+								<th>Time</th>
 								<th>Date</th>
 								<th>Venue</th>
-								<th>De-register</th>
-							</tr>
-							<tr>
-								<td>Dance Competition</td>
-								<td>01 Jan 2019</td>
-								<td>Community Hall</td>
-								<td>x</td>
-							</tr>
-							<tr>
-								<td>Dance Competition</td>
-								<td>01 Jan 2019</td>
-								<td>Community Hall</td>
-								<td>x</td>
+								<th>Deregister</th>
 							</tr>
 						</table>
-						<table class="details-table">
+						<table id="literary-table" class="details-table">
 							<caption>Literary Events
 								<hr>
 							</caption>
 							<tr>
 								<th>Event</th>
+								<th>Time</th>
 								<th>Date</th>
 								<th>Venue</th>
-								<th>De-register</th>
-							</tr>
-							<tr>
-								<td>Dance Competition</td>
-								<td>01 Jan 2019</td>
-								<td>Community Hall</td>
-								<td>x</td>
-							</tr>
-							<tr>
-								<td>Dance Competition</td>
-								<td>01 Jan 2019</td>
-								<td>Community Hall</td>
-								<td>x</td>
+								<th>Deregister</th>
 							</tr>
 						</table>
 					</div>

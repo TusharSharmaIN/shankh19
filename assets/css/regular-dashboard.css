@@ -265,6 +265,12 @@ nav {
 	margin: 20px 0px;
 }
 
+.deregister-btn{
+	outline: none;
+	border: none;
+	background: none;
+}
+
 .edit-btn:hover {
 	background: #4834df;
 }

@@ -142,8 +142,34 @@ $.ajax({
 		getUserEvents: true
 	},
 	success: function(response) {
-		console.log(response);
-		if(response.status == 1)
+		// console.log(response);
+		if (response.status == 1) {
 			events = response.data;
+			events.forEach(event => {
+				let html = `<tr>
+								<td>${event.Name}</td>
+								<td>${event.TOE}</td>
+								<td>${event.DOE}</td>
+								<td>${event.Venue}</td>
+								<td><button id="${event.EID} class="deregister-btn"><i class="fa fa-close"></i></button></td>
+							</tr>`;
+				if (event.Type === "Cultural") {
+					$("#cultural-table").append(html);
+				} else if (event.Type === "Technical") {
+					$("#technical-table").append(html);
+				} else if (event.Type === "Literary") {
+					$("#literary-table").append(html);
+				}
+			});
+			// Add event listener to all de-register buttons
+			$(".deregister-btn").on("click", event => {
+				
+			});
+		}
 	}
 });
+
+
+function deregisterEvent(eid){
+	
+}
