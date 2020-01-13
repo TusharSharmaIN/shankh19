@@ -191,7 +191,7 @@ function deregisterEvent(eid) {
 		success: function(response) {
 			if (response.status == 1) {
 				// Remove row from table
-				$(`row-${eid}`).remove();
+				$(`#row-${eid}`).remove();
 			}
 		}
 	});
