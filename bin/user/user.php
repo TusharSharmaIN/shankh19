@@ -467,13 +467,14 @@ class User
             $str = str_replace($str, "EID='" . $str . "'", $str);
         }
         $joinedEID = join(' OR ', $eidArray);
-
+        print_r($joinedEID);
         // Create a db instance
         $db = new Database();
         // Create an admin DB connection to get data from Events_Details table
         $adminDB = $db->getAdminDBConnection();
         // Query database for eid and get all details
         $query = `SELECT * FROM Event_Details WHERE ` . $joinedEID . `;`;
+        print_r($query);
         // Prepare query statement
         $stmt = $adminDB->prepare($query);
         // Execute query
@@ -481,6 +482,6 @@ class User
         // Fetch all rows
         $result = $stmt->fetchAll();
 
-        return $result;
+        return array($query, $result);
     }
 }
