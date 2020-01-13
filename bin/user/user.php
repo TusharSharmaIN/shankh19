@@ -478,7 +478,7 @@ class User
         // Execute query
         $stmt->execute();
         // Fetch all rows
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $result;
     }
