@@ -116,3 +116,30 @@ function Validate() {
 	}
 	return true;
 }
+
+// Make AJAX request to logout
+$("#logout, #mobileLogout").on("click", function() {
+	$.ajax({
+		url: "/logout",
+		method: "POST",
+		dataType: "text",
+		data: {},
+		success: function(response) {
+			window.location.href = "/login";
+		}
+	});
+});
+
+// Make AJAX request to fetch all events
+$.ajax({
+	url: "/bin/event/process-event",
+	method: "GET",
+	dataType: "json",
+	contentType: "application/json",
+	data: {
+		getUserEvents: true
+	},
+	success: function(response) {
+		console.log(response);
+	}
+});

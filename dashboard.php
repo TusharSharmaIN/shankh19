@@ -42,6 +42,7 @@ if (!$user->hasFilledDetailsForm()) {
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<script defer src="./assets/scripts/first-time-dashboard.js"></script>
 	</head>
 
 	<body>
@@ -128,65 +129,6 @@ if (!$user->hasFilledDetailsForm()) {
 			</div>
 		</section>
 		<div id="alert" class="alert">Error</div>
-		<script src="./assets/scripts/first-time-dashboard.js"></script>
-		<script type="text/javascript">
-			//AJAX request to submit form
-			$("#submit-btn").on('click', function() {
-				//Check if all details in college form is valid
-				if (!validateCollegeDetails())
-					return;
-
-				var dob = $('input[name="dateofbirth"]').val();
-				var gender = $('input[name="gender"]').val();
-				var phoneNumber = $('input[name="phoneNumber"]').val();
-				var alternatePhone = $('input[name="alternateNumber"]').val();
-				var address = $('textarea[name="address"]').val();
-				var collegeName = $('input[name="collegeName"]').val();
-				var rollNumber = $('input[name="rollNumber"]').val();
-				var yearOfStudy = $('input[name="yearOfStudy"]').val();
-				var branch = $('input[name="branch"]').val();
-				var collegeCity = $('input[name="collegeCity"]').val();
-
-				//AJAX request for details form
-				$.ajax({
-					url: 'bin/user/process-user-details',
-					method: 'POST',
-					dataType: 'text',
-					data: {
-						gender: gender,
-						dob: dob,
-						address: address,
-						phoneNumber: phoneNumber,
-						alternatePhone: alternatePhone,
-						collegeName: collegeName,
-						rollNumber: rollNumber,
-						yearOfStudy: yearOfStudy,
-						branch: branch,
-						collegeCity: collegeCity
-					},
-					beforeSend: function() {
-						//Show loader before sending ajax request
-						$("#submit-btn").prop('disabled', true);
-						$("#submit-btn").css('cursor', 'not-allowed');
-						$("#submit-btn").val('Please Wait');
-					},
-					success: function(response) {
-						if (response == "UPDATE_SUCCESS") {
-							showSuccess('Details saved successfully');
-							setTimeout(function() {
-								window.location.href = "https://shankhnaad.org/dashboard";
-							}, 1000);
-						} else {
-							//Server error
-							showError(response);
-							$("#submit-btn").prop('disabled', false);
-							$("#submit-btn").css('cursor', 'pointer');
-							$("#submit-btn").val('Submit');
-						}
-					}
-				});
-			});
-		</script>
 	</body>
 
 	</html>
@@ -204,6 +146,7 @@ if (!$user->hasFilledDetailsForm()) {
 		<link rel="stylesheet" href="./assets/css/regular-dashboard.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer src="./assets/scripts/regular-dashboard.js"></script>
 	</head>
 
 	<body>
@@ -402,7 +345,6 @@ if (!$user->hasFilledDetailsForm()) {
 								<td>x</td>
 							</tr>
 						</table>
-						<button class="edit-btn">Edit</button>
 					</div>
 					<div id="change-password-container" class="table-container">
 						<table id="change-password" class="details-table">
@@ -427,12 +369,9 @@ if (!$user->hasFilledDetailsForm()) {
 				</div>
 			</div>
 		</section>
-		<script src="./assets/scripts/regular-dashboard.js"></script>
 	</body>
 
 	</html>
-
-
 <?php
 }
 ?>

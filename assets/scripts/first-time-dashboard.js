@@ -248,3 +248,59 @@ $(function() {
 		changeMonth: true
 	});
 });
+
+//AJAX request to submit form
+$("#submit-btn").on("click", function() {
+	//Check if all details in college form is valid
+	if (!validateCollegeDetails()) return;
+
+	var dob = $('input[name="dateofbirth"]').val();
+	var gender = $('input[name="gender"]').val();
+	var phoneNumber = $('input[name="phoneNumber"]').val();
+	var alternatePhone = $('input[name="alternateNumber"]').val();
+	var address = $('textarea[name="address"]').val();
+	var collegeName = $('input[name="collegeName"]').val();
+	var rollNumber = $('input[name="rollNumber"]').val();
+	var yearOfStudy = $('input[name="yearOfStudy"]').val();
+	var branch = $('input[name="branch"]').val();
+	var collegeCity = $('input[name="collegeCity"]').val();
+
+	//AJAX request for details form
+	$.ajax({
+		url: "bin/user/process-user-details",
+		method: "POST",
+		dataType: "text",
+		data: {
+			gender: gender,
+			dob: dob,
+			address: address,
+			phoneNumber: phoneNumber,
+			alternatePhone: alternatePhone,
+			collegeName: collegeName,
+			rollNumber: rollNumber,
+			yearOfStudy: yearOfStudy,
+			branch: branch,
+			collegeCity: collegeCity
+		},
+		beforeSend: function() {
+			//Show loader before sending ajax request
+			$("#submit-btn").prop("disabled", true);
+			$("#submit-btn").css("cursor", "not-allowed");
+			$("#submit-btn").val("Please Wait");
+		},
+		success: function(response) {
+			if (response == "UPDATE_SUCCESS") {
+				showSuccess("Details saved successfully");
+				setTimeout(function() {
+					window.location.href = "https://shankhnaad.org/dashboard";
+				}, 1000);
+			} else {
+				//Server error
+				showError(response);
+				$("#submit-btn").prop("disabled", false);
+				$("#submit-btn").css("cursor", "pointer");
+				$("#submit-btn").val("Submit");
+			}
+		}
+	});
+});
