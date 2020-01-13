@@ -50,7 +50,7 @@ if (!$user->hasFilledDetailsForm()) {
 			<nav>
 				<div class="nav-logo">
 					<img src="./images/shankh-white.svg">
-					<h1>Shankhnaad'19</h1>
+					<h1>Shankhnaad'20</h1>
 				</div>
 			</nav>
 		</section>
@@ -155,7 +155,7 @@ if (!$user->hasFilledDetailsForm()) {
 			<nav>
 				<div class="nav-logo">
 					<img src="./images/shankh-white.svg">
-					<h1>Shankhnaad'19</h1>
+					<h1>Shankhnaad'20</h1>
 				</div>
 				<ul class="nav-ul" id="nav">
 					<li><a class="nav-ul-a" href="../Test/Border1.html">Login/Register</a></li>

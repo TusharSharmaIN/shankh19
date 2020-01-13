@@ -307,8 +307,8 @@ class User
         $this->setHashFromDB();
         // Send an email having password reset link
         $ses = new SesApi();
-        //if($ses->sendEmail('no-reply@shankhnaad.org', array($this->email), 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
-        if ($ses->sendEmailUsingPHPMailer('no-reply@shankhnaad.org', 'Shankhnaad\'19', $this->email, 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
+        if($ses->sendEmail('no-reply@shankhnaad.org', array($this->email), 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
+        // if ($ses->sendEmailUsingPHPMailer('no-reply@shankhnaad.org', 'Shankhnaad\'20', $this->email, 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
             return 'EMAIL_SENT';
         return 'SERVER_ERROR';
     }
