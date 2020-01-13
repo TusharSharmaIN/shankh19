@@ -455,18 +455,17 @@ class User
     public function getAllEvents()
     {
         // Query to get all EIDs the user has registered to
-        $query1 = "SELECT EID FROM User_Event_Details WHERE Email='" . $this->email . "';";
+        $query = "SELECT EID FROM User_Event_Details WHERE Email='" . $this->email . "';";
         // Prepare query statement
-        $stmt = $this->conn->prepare($query1);
+        $stmt = $this->conn->prepare($query);
         // Execute query
         $stmt->execute();
         // Get all EIDs as an array of strings
         $eidArray = $stmt->fetchAll(PDO::FETCH_COLUMN, 0);
-        $eids = $eidArray;
-        foreach ($eids as &$str) {
+        foreach ($eidArray as &$str) {
             $str = str_replace($str, "EID='" . $str . "'", $str);
         }
-        $joinedEID = join(" OR ", $eids);
+        $joinedEID = join(" OR ", $eidArray);
 
         // Create a db instance
         $db = new Database();
@@ -481,6 +480,6 @@ class User
         // Fetch all rows
         $result = $stmt->fetchAll();
 
-        return array($eidArray, $eids, $query1, $query, $result);
+        return $result;
     }
 }

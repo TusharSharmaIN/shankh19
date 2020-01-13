@@ -111,7 +111,7 @@ class Event
         // Create an admin DB connection to get data from Events_Details table
         $adminDB = $db->getAdminDBConnection();
         // Query database for eid and get all details
-        $query = `SELECT * FROM Event_Details WHERE EID='` . $this->eid . `';`;
+        $query = "SELECT * FROM Event_Details WHERE EID='" . $this->eid . "';";
         // Prepare query statement
         $stmt = $adminDB->prepare($query);
         // Execute query
@@ -140,7 +140,7 @@ class Event
         // Create a user DB connection to get data from User_Event_Details table
         $userDB = $db->getUserDBConnection();
         // Query database for eid and get all details
-        $query = `INSERT INTO User_Event_Details (Email, EID) VALUES (:email, :eid);`;
+        $query = "INSERT INTO User_Event_Details (Email, EID) VALUES (:email, :eid);";
         // Prepare query statement
         $stmt = $userDB->prepare($query);
         // Bind values
@@ -162,7 +162,7 @@ class Event
         // Create a user DB connection to get data from User_Event_Details table
         $userDB = $db->getUserDBConnection();
         // Query database for eid and get all details
-        $query = `SELECT * FROM User_Event_Details WHERE Email='` . $email . `' AND EID='` . $this->eid . `';`;
+        $query = "SELECT * FROM User_Event_Details WHERE Email='" . $email . "' AND EID='" . $this->eid . "';";
         // Prepare query statement
         $stmt = $userDB->prepare($query);
         // Execute query
