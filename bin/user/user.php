@@ -455,9 +455,9 @@ class User
     public function getAllEvents()
     {
         // Query to get all EIDs the user has registered to
-        $query1 = "SELECT EID FROM User_Event_Details WHERE Email=\'" . $this->email . "\';";
+        $query1 = "SELECT EID FROM User_Event_Details WHERE Email='" . $this->email . "';";
         // Prepare query statement
-        $stmt = $this->conn->prepare($query);
+        $stmt = $this->conn->prepare($query1);
         // Execute query
         $stmt->execute();
         // Get all EIDs as an array of strings
