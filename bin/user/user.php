@@ -455,7 +455,7 @@ class User
     public function getAllEvents()
     {
         // Query to get all EIDs the user has registered to
-        $query = `SELECT EID FROM User_Event_Details WHERE Email='` . $this->email . `';`;
+        $query = "SELECT EID FROM User_Event_Details WHERE Email=\'" . $this->email . "\';";
         // Prepare query statement
         $stmt = $this->conn->prepare($query);
         // Execute query
@@ -466,14 +466,14 @@ class User
         foreach ($eidArray as &$str) {
             $str = str_replace($str, "EID='" . $str . "'", $str);
         }
-        $joinedEID = join(' OR ', $eidArray);
+        $joinedEID = join(" OR ", $eidArray);
         print_r($joinedEID);
         // Create a db instance
         $db = new Database();
         // Create an admin DB connection to get data from Events_Details table
         $adminDB = $db->getAdminDBConnection();
         // Query database for eid and get all details
-        $query = `SELECT * FROM Event_Details WHERE ` . $joinedEID . `;`;
+        $query = "SELECT * FROM Event_Details WHERE " . $joinedEID . ";";
         print_r($query);
         // Prepare query statement
         $stmt = $adminDB->prepare($query);
