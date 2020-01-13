@@ -154,7 +154,7 @@ $.ajax({
 								<td>${time}</td>
 								<td>${date}</td>
 								<td>${event.Venue}</td>
-								<td><button id="${event.EID}" class="deregister-btn"><i class="fa fa-close"></i></button></td>
+								<td><i id="${event.EID}" class="fa fa-close deregister-btn"></i></td>
 							</tr>`;
 				if (event.Type === "Cultural") {
 					$("#cultural-table").append(html);
@@ -165,7 +165,7 @@ $.ajax({
 				}
 			});
 			// Add event listener to all de-register buttons
-			$(".deregister-btn").on("click", event => {
+			$("fa.fa-close.deregister-btn").on("click", event => {
 				deregisterEvent(event.target.id);
 			});
 		}

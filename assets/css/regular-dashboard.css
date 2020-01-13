@@ -222,20 +222,24 @@ nav {
 	padding: 10px 20px;
 }
 
-td:nth-child(1){
+#events-registered-container th:nth-child(1) {
 	width: 30%;
 }
-td:nth-child(2){
+#events-registered-container th:nth-child(2) {
 	width: 15%;
 }
-td:nth-child(3){
+#events-registered-container th:nth-child(3) {
 	width: 20%;
 }
-td:nth-child(4){
+#events-registered-container th:nth-child(4) {
 	width: 25%;
 }
-td:nth-child(5){
+#events-registered-container th:nth-child(5) {
 	width: 10%;
+}
+
+#events-registered-container td:nth-child(5) {
+	text-align: center;
 }
 
 .details-table input {
@@ -260,7 +264,7 @@ td:nth-child(5){
 }
 
 #change-password input {
-	border-bottom: 2px solid black;
+	border-bottom: 1px solid black;
 	width: 50%;
 }
 
@@ -281,14 +285,10 @@ td:nth-child(5){
 	margin: 20px 0px;
 }
 
-.deregister-btn {
-	outline: none;
-	border: none;
-	background: none;
-	padding: 0;
-	font-size: 20px;
+fa.fa-close.deregister-btn {
 	cursor: pointer;
 	color: red;
+	font-size: 20px;
 }
 
 .edit-btn:hover {
@@ -380,5 +380,8 @@ td:nth-child(5){
 	#mobileLogout:hover {
 		background: #ff3031;
 		color: white;
+	}
+	#change-password input {
+		width: 100%;
 	}
 }
