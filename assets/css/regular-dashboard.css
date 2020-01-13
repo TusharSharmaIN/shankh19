@@ -285,7 +285,7 @@ nav {
 	margin: 20px 0px;
 }
 
-fa.fa-close.deregister-btn {
+.fa.fa-close.deregister-btn {
 	cursor: pointer;
 	color: red;
 	font-size: 20px;

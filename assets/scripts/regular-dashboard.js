@@ -142,19 +142,24 @@ $.ajax({
 		getUserEvents: true
 	},
 	success: function(response) {
-		// console.log(response);
 		if (response.status == 1) {
 			events = response.data;
 			events.forEach(event => {
 				let d = new Date(event.DOE + " " + event.TOE);
-				let date = d.toLocaleDateString("en-IN", {year: 'numeric', month: 'short', day: 'numeric'});
-				let time = d.toLocaleTimeString("en-IN", {timeStyle: "short"});
-				let html = `<tr>
+				let date = d.toLocaleDateString("en-IN", {
+					year: "numeric",
+					month: "short",
+					day: "numeric"
+				});
+				let time = d.toLocaleTimeString("en-IN", {
+					timeStyle: "short"
+				});
+				let html = `<tr id="row-${event.EID}">
 								<td>${event.Name}</td>
 								<td>${time}</td>
 								<td>${date}</td>
 								<td>${event.Venue}</td>
-								<td><i id="${event.EID}" class="fa fa-close deregister-btn"></i></td>
+								<td><i id="btn-${event.EID}" class="fa fa-close deregister-btn"></i></td>
 							</tr>`;
 				if (event.Type === "Cultural") {
 					$("#cultural-table").append(html);
@@ -165,13 +170,29 @@ $.ajax({
 				}
 			});
 			// Add event listener to all de-register buttons
-			$("fa.fa-close.deregister-btn").on("click", event => {
-				deregisterEvent(event.target.id);
+			$(".fa.fa-close.deregister-btn").on("click", event => {
+				deregisterEvent(event.target.id.substr(4));
 			});
 		}
 	}
 });
 
 function deregisterEvent(eid) {
-	console.log(eid);
+	// Make AJAX request to fetch all events
+	$.ajax({
+		url: "/bin/event/process-event",
+		method: "GET",
+		dataType: "json",
+		contentType: "application/json",
+		data: {
+			deregisterEvent: true,
+			EID: eid
+		},
+		success: function(response) {
+			if (response.status == 1) {
+				// Remove row from table
+				$(`row-${eid}`).remove();
+			}
+		}
+	});
 }

@@ -23,4 +23,18 @@ if (isset($_GET['getUserEvents'])) {
 	$user->setEmail($email);
 	$events = $user->getAllEvents();
 	exit(json_encode(array("status" => 1, "data" => $events)));
+} else if (isset($_GET['deregisterEvent'])) {
+	// Email of the user whose events have to be fetched
+	$email = $_SESSION['email'];
+	$eid = $_GET['EID'];
+
+	// Create a db instance
+	$db = new Database();
+	// Create a user DB connection to get data from User_Event_Details table
+	$userDB = $db->getUserDBConnection();
+	$user = new User($userDB);
+	$user->setEmail($email);
+	if ($user->deregisterEvent($eid))
+		exit(json_encode(array("status" => 1)));
 }
+exit(json_encode(array("status" => 0))); // Status 0 means request failed
