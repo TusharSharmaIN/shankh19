@@ -130,6 +130,8 @@ $("#logout, #mobileLogout").on("click", function() {
 	});
 });
 
+var events = {};
+
 // Make AJAX request to fetch all events
 $.ajax({
 	url: "/bin/event/process-event",
@@ -141,5 +143,7 @@ $.ajax({
 	},
 	success: function(response) {
 		console.log(response);
+		if(response.status == 1)
+			events = response.data;
 	}
 });
