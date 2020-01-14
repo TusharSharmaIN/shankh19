@@ -186,7 +186,7 @@ img {
 }
 
 .slider img {
-	height: 100vh;
+	height: auto;
 	width: 100%;
 	/* margin: 0 auto; */
 	box-sizing: border-box;
