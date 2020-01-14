@@ -11,6 +11,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/event/event.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
+$email = $_SESSION['email'];
+
 // Create a db instance
 $db = new Database();
 // Connect to db
@@ -21,8 +23,6 @@ $user = new User($userDB);
 
 // Get user data from session variable
 $user->setEmail($email);
-$user->setFName($fname);
-$user->setLName($lname);
 
 if (!isset($_GET['getAllUserDetails'])) {
     $details = $user->getAllUserDetails();
