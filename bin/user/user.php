@@ -133,18 +133,15 @@ class User
                 // Query to insert email, fname and lname into records table
                 $per_query = "INSERT INTO " . $this->user_per_details . "(Email, First_Name, Last_Name) VALUES(:email, :fname, :lname)";
                 $clg_query = "INSERT INTO " . $this->user_clg_details . "(Email) VALUES(:email)";
-                $evt_query = "INSERT INTO " . $this->user_evt_details . "(Email) VALUES(:email)";
                 // Prepare query
                 $per_stmt = $this->conn->prepare($per_query);
                 $clg_stmt = $this->conn->prepare($clg_query);
-                $evt_stmt = $this->conn->prepare($evt_query);
                 // Bind values
                 $per_stmt->bindParam(":email", $this->email);
                 $per_stmt->bindParam(":fname", $this->fname);
                 $per_stmt->bindParam(":lname", $this->lname);
                 $clg_stmt->bindParam(":email", $this->email);
-                $evt_stmt->bindParam(":email", $this->email);
-                if ($per_stmt->execute() == false || $clg_stmt->execute() == false || $evt_stmt->execute() == false)
+                if ($per_stmt->execute() == false || $clg_stmt->execute() == false)
                     return 'SIGNUP_FAILED';
                 else
                     return 'SIGNUP_SUCCESS';
