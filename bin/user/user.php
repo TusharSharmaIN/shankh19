@@ -307,8 +307,8 @@ class User
         $this->setHashFromDB();
         // Send an email having password reset link
         $ses = new SesApi();
-        if($ses->sendEmail('no-reply@shankhnaad.org', array($this->email), 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
-        // if ($ses->sendEmailUsingPHPMailer('no-reply@shankhnaad.org', 'Shankhnaad\'20', $this->email, 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
+        if ($ses->sendEmail('no-reply@shankhnaad.org', array($this->email), 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
+            // if ($ses->sendEmailUsingPHPMailer('no-reply@shankhnaad.org', 'Shankhnaad\'20', $this->email, 'Reset your password', 'Click <a href = "https://shankhnaad.org/bin/user/reset-password?email=' . $this->email . '&key=' . $this->hash . '">here</a> to reset your password.', 'Password reset link: '))
             return 'EMAIL_SENT';
         return 'SERVER_ERROR';
     }
@@ -451,6 +451,24 @@ class User
             return false;
     }
 
+    public function getAllUserDetails()
+    {
+        $per_query = "SELECT * FROM " . $this->user_per_details . " WHERE Email='" . $this->email . "';";
+        $clg_query = "SELECT * FROM " . $this->user_clg_details . " WHERE Email='" . $this->email . "';";
+        // Prepare personal details query statement
+        $stmt = $this->conn->prepare($per_query);
+        $stmt->execute();
+        $personalDetails = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Prepare college details query statement
+        $stmt = $this->conn->prepare($clg_query);
+        $stmt->execute();
+        $collegeDetails = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return array(
+            "personal" => $personalDetails,
+            "college" => $collegeDetails
+        );
+    }
+
     // Function to return all event details the user is registered to
     public function getAllEvents()
     {
@@ -486,7 +504,7 @@ class User
     public function deregisterEvent($eid)
     {
         // Query to get all EIDs the user has registered to
-        $query = "DELETE FROM User_Event_Details WHERE Email='" . $this->email . "' AND EID='" . $eid . "';";
+        $query = "DELETE FROM " . $this->user_evt_details . " WHERE Email='" . $this->email . "' AND EID='" . $eid . "';";
         // Prepare query statement
         $stmt = $this->conn->prepare($query);
         // Execute query

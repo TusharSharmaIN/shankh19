@@ -211,7 +211,7 @@ if (false && !$user->hasFilledDetailsForm()) {
 							<tr>
 								<th scope="row">Contact</th>
 								<td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value="0123456789" required></td>
-								<td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value="0123456789"></td>
+								<td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value="N/A"></td>
 							</tr>
 							<tr>
 								<th scope="row">Date of Birth</th>
@@ -243,6 +243,10 @@ if (false && !$user->hasFilledDetailsForm()) {
 							<tr>
 								<th scope="row">College Name</th>
 								<td><input type="text" name="collegeName" placeholder="College Name" disabled value="Dr. Ambedkar Institute of Technology for Handicapped" required></td>
+							</tr>
+							<tr>
+								<th scope="row">Roll Number</th>
+								<td><input type="text" name="rollNumber" placeholder="Roll Number" disabled value="N/A"></td>
 							</tr>
 							<tr>
 								<th scope="row">Year of Study</th>

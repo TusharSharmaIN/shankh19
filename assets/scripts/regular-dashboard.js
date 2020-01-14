@@ -191,8 +191,40 @@ function deregisterEvent(eid) {
 		success: function(response) {
 			if (response.status == 1) {
 				// Remove row from table
-				$(`#row-${eid}`).fadeOut().remove();
+				$(`#row-${eid}`)
+					.fadeOut()
+					.remove();
 			}
 		}
 	});
 }
+
+// Make AJAX request to fetch user personal and college details
+$.ajax({
+	url: "/bin/event/process-event",
+	method: "GET",
+	dataType: "json",
+	contentType: "application/json",
+	data: {
+		getAllUserDetails: true
+	},
+	success: function(response) {
+		if (response.status == 1) {
+			var personalDetails = response.data.personal;
+			var collegeDetails = response.data.college;
+
+			$('.details-table input[name="dateOfBirth"]').val(personalDetails.DOB);
+			$('.details-table input[name="gender"]').val(personalDetails.Gender);
+			$('.details-table input[name="phoneNumber"]').val(personalDetails.Contact_No);
+			if(personalDetails.Alternate_No)
+				$('.details-table input[name="alternateNumber"]').val(personalDetails.Alternate_No);
+			$('.details-table textarea[name="address"]').text(personalDetails.Address);
+			$('.details-table input[name="collegeName"]').val(collegeDetails.College_Name);
+			if(collegeDetails.Roll_Number)
+				$('.details-table input[name="rollNumber"]').val(collegeDetails.Roll_Number);
+			$('.details-table input[name="yearOfStudy"]').val(collegeDetails.Year);
+			$('.details-table input[name="branch"]').val(collegeDetails.Branch);
+			$('.details-table input[name="collegeCity"]').val(collegeDetails.College_City);
+		}
+	}
+});
