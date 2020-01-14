@@ -26,7 +26,7 @@ $user->setEmail($email);
 $user->setFName($fname);
 $user->setLName($lname);
 
-if (false && !$user->hasFilledDetailsForm()) {
+if (!$user->hasFilledDetailsForm()) {
 ?>
 
 	<!-- FIRST TIME DASHBOARD CODE HERE -->
