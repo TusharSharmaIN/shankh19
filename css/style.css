@@ -1,118 +1,124 @@
-@import url('https://fonts.googleapis.com/css?family=Hind');          /*--- Body Font --*/
-@import url('https://fonts.googleapis.com/css?family=Nobile');        /*--- Heading Font --*/
-@import url('https://fonts.googleapis.com/css?family=Martel');
+@import url("https://fonts.googleapis.com/css?family=Hind"); /*--- Body Font --*/
+@import url("https://fonts.googleapis.com/css?family=Nobile"); /*--- Heading Font --*/
+@import url("https://fonts.googleapis.com/css?family=Martel");
 
 * {
-    margin: 0;
-    border: 0;
-    padding: 0;
+	margin: 0;
+	border: 0;
+	padding: 0;
 }
 
 body {
-    background-color: #FFF;
-    font-family: 'Hind', sans-serif;
-    font-size: 16px;
-    position: relative;
+	background-color: #fff;
+	font-family: "Hind", sans-serif;
+	font-size: 16px;
+	position: relative;
 }
 
 h1 {
-    font-family: 'Nobile', sans-serif;
-    text-align: center;
-    font-size: 175%;
-    color: #4a4444;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 3% 0;
+	font-family: "Nobile", sans-serif;
+	text-align: center;
+	font-size: 175%;
+	color: #4a4444;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 3% 0;
 }
 
 h3 {
-    font-family: 'Martel', serif;
-    text-align: center;
-    color: #4a4444;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+	font-family: "Martel", serif;
+	text-align: center;
+	color: #4a4444;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 h4 {
-    font-family: 'Martel', sans-serif;
-    color: #000000;
-    letter-spacing: 1px;
-    text-align: justify;
-    text-align-last: center;
+	font-family: "Martel", sans-serif;
+	color: #000000;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-align-last: center;
 }
 
 p {
-    padding: 2%;
-    color: #4a4444;
-    text-align: justify;
+	padding: 2%;
+	color: #4a4444;
+	text-align: justify;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 #banner-wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 /*  Image Slider Style  */
 .slider {
-    width: 100%;
-    height: 90vh;
+	width: 100%;
+	/* height: 90vh; */
 }
 
 .slider img {
-    height: auto;
-    min-width: 100%;
-    margin: 0 auto;
+	height: 100vh;
+	width: 100%;
+	/* margin: 0 auto; */
+	box-sizing: border-box;
 }
 
 .one-one {
-    width: 90%;
-    float: center;
-    margin: 2% 0 3% 4%;
-    text-align: center;
+	width: 90%;
+	float: center;
+	margin: 2% 0 3% 4%;
+	text-align: center;
 }
 
 .one-half {
-    width: 44%;
-    float: left;
-    margin: 2% 0 3% 4%;
-    text-align: center;
+	width: 44%;
+	float: left;
+	margin: 2% 0 3% 4%;
+	text-align: center;
 }
 
 .one-third {
-    width: 28%;
-    float: left;
-    margin: 2% 0 3% 4%;
-    text-align: center;
+	width: 28%;
+	float: left;
+	margin: 2% 0 3% 4%;
+	text-align: center;
 }
 
 .left-col {
-    width: 60%;
-    float: left;
-    margin: 4% 0 4% 4%;
+	width: 60%;
+	float: left;
+	margin: 4% 0 4% 4%;
 }
 
 .sidebar {
-    width: 26%;
-    float: right;
-    margin: 4% 4%;
+	width: 26%;
+	float: right;
+	margin: 4% 4%;
 }
 
 .sidebar img {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 
-.slider .bx-wrapper{
-    margin: 0;
-    border: none;
+.slider .bx-wrapper {
+	margin: 0;
+	border: none;
+}
+
+.bx-wrapper {
+	border: none;
+	margin: 0;
 }
 
 .clearfix {
-    clear: both;
+	clear: both;
 }
 
 /*
@@ -124,89 +130,90 @@ img {
 
 /*  Start Parallax Section */
 .parallax-1 {
-    height: 400px;
-    background: url("../img/parallax-1.jpg") repeat fixed 100%;
-    text-align: center;
+	height: 400px;
+	background: url("../img/parallax-1.jpg") repeat fixed 100%;
+	text-align: center;
 }
 
 .parallax-2 {
-    height: 400px;
-    background: url("../img/parallax-2.jpg") repeat fixed 100%;
-    text-align: center;
+	height: 400px;
+	background: url("../img/parallax-2.jpg") repeat fixed 100%;
+	text-align: center;
 }
 
 .parallax-3 {
-    height: 400px;
-    background: url("../img/parallax-3.jpg") repeat fixed 100%;
-    text-align: center;
+	height: 400px;
+	background: url("../img/parallax-3.jpg") repeat fixed 100%;
+	text-align: center;
 }
 
 .parallax-inner {
-    padding-top: 90px;
-    padding-bottom: 300px;
+	padding-top: 90px;
+	padding-bottom: 300px;
 }
 
-.parallax-inner h3, .parallax-inner p {
-    color: #F1F1F1;
+.parallax-inner h3,
+.parallax-inner p {
+	color: #f1f1f1;
 }
 /*  End Parallax Section    */
 
-footer{
-    margin: 0;
-    padding: 0;
-    height: 15vh;
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 1);
-    color: white;
+footer {
+	margin: 0;
+	padding: 0;
+	height: 15vh;
+	padding: 10px;
+	font-size: 14px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 1);
+	color: white;
 }
 
 /*  Start Document Media */
 @media screen and (max-width: 768px) {
-    .slider {
-        width: 100%;
-    }
+	.slider {
+		width: 100%;
+	}
 
-    .parallax-1 {
-        display: none;
-    }
+	.parallax-1 {
+		display: none;
+	}
 
-    .parallax-2 {
-        display: none;
-    }
+	.parallax-2 {
+		display: none;
+	}
 
-    .parallax-3 {
-        display: none;
-    }
-    
-    .parallax-inner {
-        display: none;
-    }
-    .one-third {
-        width: 100%;
-        margin: 4% 0;
-    }
-    .one-half {
-        display: 100%;
-        margin: 2% 2%;
-    }
-    h1 {
-        font-size: 125%;
-    }
-    .left-col {
-        width: 100%;
-        margin: 0 0 3% 0;
-    }
-    .sidebar {
-        width: 100%;
-        margin: 0;
-    }
-    img {
-        width: 100%;
-    }
-    h3 {
-        padding-top: 3%;
-    }
+	.parallax-3 {
+		display: none;
+	}
+
+	.parallax-inner {
+		display: none;
+	}
+	.one-third {
+		width: 100%;
+		margin: 4% 0;
+	}
+	.one-half {
+		display: 100%;
+		margin: 2% 2%;
+	}
+	h1 {
+		font-size: 125%;
+	}
+	.left-col {
+		width: 100%;
+		margin: 0 0 3% 0;
+	}
+	.sidebar {
+		width: 100%;
+		margin: 0;
+	}
+	.slider img {
+		width: 100%;
+	}
+	h3 {
+		padding-top: 3%;
+	}
 }
 /*  End Document Media  */
