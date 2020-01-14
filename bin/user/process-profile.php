@@ -24,7 +24,7 @@ $user = new User($userDB);
 // Get user data from session variable
 $user->setEmail($email);
 
-if (!isset($_GET['getAllUserDetails'])) {
+if (isset($_GET['getAllUserDetails'])) {
     $details = $user->getAllUserDetails();
     exit(json_encode(array("status" => 1, "data" => $details)));
 }
