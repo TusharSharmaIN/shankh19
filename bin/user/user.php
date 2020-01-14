@@ -458,11 +458,11 @@ class User
         // Prepare personal details query statement
         $stmt = $this->conn->prepare($per_query);
         $stmt->execute();
-        $personalDetails = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $personalDetails = $stmt->fetch(PDO::FETCH_ASSOC);
         // Prepare college details query statement
         $stmt = $this->conn->prepare($clg_query);
         $stmt->execute();
-        $collegeDetails = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $collegeDetails = $stmt->fetch(PDO::FETCH_ASSOC);
         return array(
             "personal" => $personalDetails,
             "college" => $collegeDetails

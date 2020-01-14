@@ -213,18 +213,39 @@ $.ajax({
 			var personalDetails = response.data.personal;
 			var collegeDetails = response.data.college;
 
-			$('.details-table input[name="dateOfBirth"]').val(personalDetails.DOB);
-			$('.details-table input[name="gender"]').val(personalDetails.Gender);
-			$('.details-table input[name="phoneNumber"]').val(personalDetails.Contact_No);
-			if(personalDetails.Alternate_No)
-				$('.details-table input[name="alternateNumber"]').val(personalDetails.Alternate_No);
-			$('.details-table textarea[name="address"]').text(personalDetails.Address);
-			$('.details-table input[name="collegeName"]').val(collegeDetails.College_Name);
-			if(collegeDetails.Roll_Number)
-				$('.details-table input[name="rollNumber"]').val(collegeDetails.Roll_Number);
-			$('.details-table input[name="yearOfStudy"]').val(collegeDetails.Year);
+			$('.details-table input[name="dateOfBirth"]').val(
+				personalDetails.DOB
+			);
+			if (personalDetails.Gender === "M")
+				$('.details-table input[name="gender"]').val("Male");
+			if (personalDetails.Gender === "F")
+				$('.details-table input[name="gender"]').val("Female");
+			if (personalDetails.Gender === "O")
+				$('.details-table input[name="gender"]').val("Other");
+			$('.details-table input[name="phoneNumber"]').val(
+				personalDetails.Contact_No
+			);
+			if (personalDetails.Alternate_No)
+				$('.details-table input[name="alternateNumber"]').val(
+					personalDetails.Alternate_No
+				);
+			$('.details-table textarea[name="address"]').text(
+				personalDetails.Address
+			);
+			$('.details-table input[name="collegeName"]').val(
+				collegeDetails.College_Name
+			);
+			if (collegeDetails.Roll_Number)
+				$('.details-table input[name="rollNumber"]').val(
+					collegeDetails.Roll_Number
+				);
+			$('.details-table input[name="yearOfStudy"]').val(
+				collegeDetails.Year
+			);
 			$('.details-table input[name="branch"]').val(collegeDetails.Branch);
-			$('.details-table input[name="collegeCity"]').val(collegeDetails.College_City);
+			$('.details-table input[name="collegeCity"]').val(
+				collegeDetails.College_City
+			);
 		}
 	}
 });
