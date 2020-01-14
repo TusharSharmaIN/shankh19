@@ -201,7 +201,7 @@ function deregisterEvent(eid) {
 
 // Make AJAX request to fetch user personal and college details
 $.ajax({
-	url: "/bin/event/process-event",
+	url: "/bin/user/process-profile",
 	method: "GET",
 	dataType: "json",
 	contentType: "application/json",
