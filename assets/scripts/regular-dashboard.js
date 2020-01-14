@@ -213,6 +213,10 @@ $.ajax({
 			var personalDetails = response.data.personal;
 			var collegeDetails = response.data.college;
 
+			$('.details-table input[name="name"]').val(
+				personalDetails.First_Name + " " + personalDetails.Last_Name
+			);
+			$('.details-table input[name="email"]').val(personalDetails.Email);
 			$('.details-table input[name="dateOfBirth"]').val(
 				personalDetails.DOB
 			);
@@ -222,11 +226,11 @@ $.ajax({
 				$('.details-table input[name="gender"]').val("Female");
 			if (personalDetails.Gender === "O")
 				$('.details-table input[name="gender"]').val("Other");
-			$('.details-table input[name="phoneNumber"]').val(
+			$('.details-table input[name="phoneNumber1"]').val(
 				personalDetails.Contact_No
 			);
 			if (personalDetails.Alternate_No)
-				$('.details-table input[name="alternateNumber"]').val(
+				$('.details-table input[name="phoneNumber2"]').val(
 					personalDetails.Alternate_No
 				);
 			$('.details-table textarea[name="address"]').text(

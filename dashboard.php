@@ -202,25 +202,25 @@ if (false && !$user->hasFilledDetailsForm()) {
 							</caption>
 							<tr>
 								<th scope="row">Name</th>
-								<td colspan="2"><input type="text" name="name" placeholder="Name" disabled value="<?php echo $fname . " " . $lname; ?>" required></td>
+								<td colspan="2"><input type="text" name="name" placeholder="Name" disabled value="" required></td>
 							</tr>
 							<tr>
 								<th scope="row">E-mail</th>
-								<td colspan="2"><input type="email" name="email" placeholder="Email" disabled value=" <?php echo $email; ?>" required></td>
+								<td colspan="2"><input type="email" name="email" placeholder="Email" disabled value="" required></td>
 							</tr>
 							<tr>
 								<th scope="row">Contact</th>
-								<td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value="0123456789" required></td>
+								<td><input type="tel" name="phoneNumber1" maxlength="10" placeholder="Phone Number 1" disabled value="" required></td>
 								<td><input type="tel" name="phoneNumber2" maxlength="10" placeholder="Phone Number 2" disabled value="N/A"></td>
 							</tr>
 							<tr>
 								<th scope="row">Date of Birth</th>
-								<td colspan="2"><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value="01/02/2000" required></td>
+								<td colspan="2"><input type="text" name="dateOfBirth" placeholder="Date of Birth" disabled value="" required></td>
 							</tr>
 							<tr>
 								<th scope="row">Gender</th>
 								<td colspan="2">
-									<input type="text" list="gender" name="gender" placeholder="Gender" disabled value="Male" required>
+									<input type="text" list="gender" name="gender" placeholder="Gender" disabled value="" required>
 									<datalist id="gender">
 										<option>Male</option>
 										<option>Female</option>
@@ -230,7 +230,7 @@ if (false && !$user->hasFilledDetailsForm()) {
 							</tr>
 							<tr>
 								<th scope="row">Address</th>
-								<td colspan="2"><textarea rows="1" name="address" placeholder="Address" disabled required>AITH, Awadhpuri, Kanpur - 208024</textarea></td>
+								<td colspan="2"><textarea rows="1" name="address" placeholder="Address" disabled required></textarea></td>
 							</tr>
 						</table>
 						<button class="edit-btn">Edit</button>
@@ -242,7 +242,7 @@ if (false && !$user->hasFilledDetailsForm()) {
 							</caption>
 							<tr>
 								<th scope="row">College Name</th>
-								<td><input type="text" name="collegeName" placeholder="College Name" disabled value="Dr. Ambedkar Institute of Technology for Handicapped" required></td>
+								<td><input type="text" name="collegeName" placeholder="College Name" disabled value="" required></td>
 							</tr>
 							<tr>
 								<th scope="row">Roll Number</th>
@@ -251,7 +251,7 @@ if (false && !$user->hasFilledDetailsForm()) {
 							<tr>
 								<th scope="row">Year of Study</th>
 								<td>
-									<input type="text" name="yearOfStudy" placeholder="Year Of Study" disabled value="First Year" required>
+									<input type="text" name="yearOfStudy" placeholder="Year Of Study" disabled value="" required>
 									<datalist id="year">
 										<option>First Year</option>
 										<option>Second Year</option>
@@ -263,7 +263,7 @@ if (false && !$user->hasFilledDetailsForm()) {
 							<tr>
 								<th scope="row">Branch</th>
 								<td>
-									<input type="text" name="branch" list="branches" placeholder="Branch" disabled value="Information Technology" required>
+									<input type="text" name="branch" list="branches" placeholder="Branch" disabled value="" required>
 									<datalist id="branches">
 										<option>Computer Science and Engineering</option>
 										<option>Information Tecnlology</option>
@@ -280,7 +280,7 @@ if (false && !$user->hasFilledDetailsForm()) {
 							</tr>
 							<tr>
 								<th scope="row">College City</th>
-								<td><input type="text" name="collegeCity" placeholder="College City" disabled value="Kanpur" required></td>
+								<td><input type="text" name="collegeCity" placeholder="College City" disabled value="" required></td>
 							</tr>
 						</table>
 						<button class="edit-btn">Edit</button>
