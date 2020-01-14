@@ -49,7 +49,7 @@ if (!$user->hasFilledDetailsForm()) {
 		<section id='home'>
 			<nav>
 				<div class="nav-logo">
-					<img src="./images/shankh-white.svg">
+					<img src="./img/shankh-white.svg">
 					<h1>Shankhnaad'20</h1>
 				</div>
 			</nav>
@@ -154,7 +154,7 @@ if (!$user->hasFilledDetailsForm()) {
 		<section id='home'>
 			<nav>
 				<div class="nav-logo">
-					<img src="./images/shankh-white.svg">
+					<img src="./img/shankh-white.svg">
 					<h1>Shankhnaad'20</h1>
 				</div>
 				<ul class="nav-ul" id="nav">
