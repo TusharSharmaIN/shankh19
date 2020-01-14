@@ -23,7 +23,7 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	height: 50px;
-	background-color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0.8);
 	position: fixed;
 	width: 100vw;
 	z-index: 1;
@@ -139,12 +139,15 @@ nav {
 	background: white;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 40px;
-	background-color: #eaf0f1;
-	flex-basis: 90%;
+	margin: 20px;
+	background-color: white;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;
 }
 
 .dashMenu {
+	border-radius: 5px 0 0 5px;
 	background: black;
 	color: white;
 	display: flex;
@@ -161,7 +164,7 @@ nav {
 }
 
 .menulist {
-	font-size: 18px;
+	font-size: 16px;
 	cursor: pointer;
 }
 
@@ -171,12 +174,12 @@ nav {
 }
 
 .menulist:hover {
-	background: #eaf0f1;
+	background: white;
 	color: black;
 }
 
 .menulist.active {
-	background: #eaf0f1;
+	background: white;
 	color: black;
 }
 
@@ -195,7 +198,7 @@ nav {
 .details-table {
 	border-collapse: collapse;
 	margin: 10px 20px;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .details-table caption {
@@ -205,15 +208,15 @@ nav {
 }
 
 .details-table tr:nth-child(odd) {
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
 }
 
 .details-table th {
 	padding: 10px 20px;
 	text-align: left;
-	font-size: 20px;
-	background-color: #ddd;
+	font-size: 18px;
+	background-color: #bbbbbb42;
 	font-weight: 400;
 }
 
@@ -314,7 +317,7 @@ nav {
 
 @media (max-width: 768px) {
 	.nav-logo h1 {
-		font-size: 18px;
+		font-size: 22px;
 	}
 	.nav-ul-a {
 		font-size: 14px;
@@ -323,10 +326,11 @@ nav {
 		display: none;
 	}
 	.dashboard {
-		min-height: 530px;
+		/* min-height: 530px; */
 		border-radius: 0;
 		margin: 10px 0px;
 		flex-basis: 100%;
+		display: block;
 	}
 	.form-container {
 		display: flex;
@@ -356,22 +360,25 @@ nav {
 		font-size: 12px;
 	}
 	.mobileMenu {
-		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		font-size: 14px;
-		top: 60px;
 		background: black;
 		color: white;
 		justify-content: space-around;
 	}
 	.mobilelist {
+		height: 20px;
 		padding: 5px 10px;
 		cursor: pointer;
 	}
 	.mobilelist-active {
-		background: #eaf0f1;
+		background: white;
 		color: black;
+	}
+
+	.edit-btn {
+		font-size: 14px;
 	}
 
 	.details-table caption {

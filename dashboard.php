@@ -1,32 +1,36 @@
 <?php
-session_start();
-if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
-	// User is not signed in
-	header('Location: login.php'); //Redirect to login page
-	exit();
-}
-// Include dependencies
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
+// session_start();
+// if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
+// 	// User is not signed in
+// 	header('Location: login.php'); //Redirect to login page
+// 	exit();
+// }
+// // Include dependencies
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
-$email = $_SESSION['email'];
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
+// $email = $_SESSION['email'];
+// $fname = $_SESSION['fname'];
+// $lname = $_SESSION['lname'];
 
-// Create a db instance
-$db = new Database();
-// Connect to db
-$userDB = $db->getUserDBConnection();
+// // Create a db instance
+// $db = new Database();
+// // Connect to db
+// $userDB = $db->getUserDBConnection();
 
-// Create a user instance
-$user = new User($userDB);
+// // Create a user instance
+// $user = new User($userDB);
 
-// Get user data from session variable
-$user->setEmail($email);
-$user->setFName($fname);
-$user->setLName($lname);
+// // Get user data from session variable
+// $user->setEmail($email);
+// $user->setFName($fname);
+// $user->setLName($lname);
 
-if (!$user->hasFilledDetailsForm()) {
+$fname = 'Shubham';
+$lname = 'Singh';
+$email = 'shubhams.167@gmail.com';
+
+if (false && !$user->hasFilledDetailsForm()) {
 ?>
 
 	<!-- FIRST TIME DASHBOARD CODE HERE -->
@@ -172,15 +176,16 @@ if (!$user->hasFilledDetailsForm()) {
 				</div>
 			</nav>
 		</section>
-		<div class="mobileMenu">
-			<div class="mobilelist mobilelist-active" id="mobileEvents">Events</div>
-			<div class="mobilelist" id="mobilePersonal">Personal</div>
-			<div class="mobilelist" id="mobileCollege">College</div>
-			<div class="mobilelist" id="mobilePassword">Password</div>
-			<div class="mobilelist" id="mobileLogout">Log Out</div>
-		</div>
+
 		<section id="dashboard-container">
 			<div class="dashboard">
+				<div class="mobileMenu">
+					<div class="mobilelist mobilelist-active" id="mobileEvents">Events</div>
+					<div class="mobilelist" id="mobilePersonal">Personal</div>
+					<div class="mobilelist" id="mobileCollege">College</div>
+					<div class="mobilelist" id="mobilePassword">Password</div>
+					<div class="mobilelist" id="mobileLogout">Log Out</div>
+				</div>
 				<div class="dashMenu">
 					<div class="name" id="name"><?php echo $fname . " " . $lname; ?></div>
 					<div class="menulist active" id="eventRegister">Events Registered</div>
