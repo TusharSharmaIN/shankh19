@@ -8,6 +8,7 @@ $(".burger").on("click", function() {
 	$(".nav-ul").toggleClass("active");
 	$(".nav-ul-a").toggleClass("active");
 	$(".burger").toggleClass("toggle");
+	$("html").toggleClass("nav-active");
 });
 
 // Add event listener to switch button to switch personal details for desktop version

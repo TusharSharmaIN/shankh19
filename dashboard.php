@@ -1,32 +1,35 @@
 <?php
-session_start();
-if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
-	// User is not signed in
-	header('Location: login.php'); //Redirect to login page
-	exit();
-}
-// Include dependencies
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
+// session_start();
+// if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
+// 	// User is not signed in
+// 	header('Location: login.php'); //Redirect to login page
+// 	exit();
+// }
+// // Include dependencies
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
-$email = $_SESSION['email'];
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
+// $email = $_SESSION['email'];
+// $fname = $_SESSION['fname'];
+// $lname = $_SESSION['lname'];
 
-// Create a db instance
-$db = new Database();
-// Connect to db
-$userDB = $db->getUserDBConnection();
+// // Create a db instance
+// $db = new Database();
+// // Connect to db
+// $userDB = $db->getUserDBConnection();
 
-// Create a user instance
-$user = new User($userDB);
+// // Create a user instance
+// $user = new User($userDB);
 
-// Get user data from session variable
-$user->setEmail($email);
-$user->setFName($fname);
-$user->setLName($lname);
+// // Get user data from session variable
+// $user->setEmail($email);
+// $user->setFName($fname);
+// $user->setLName($lname);
 
-if (!$user->hasFilledDetailsForm()) {
+$fname = "Shubham";
+$lname = "Singh";
+
+if (false && !$user->hasFilledDetailsForm()) {
 ?>
 
 	<!-- FIRST TIME DASHBOARD CODE HERE -->
@@ -129,6 +132,13 @@ if (!$user->hasFilledDetailsForm()) {
 			</div>
 		</section>
 		<div id="alert" class="alert">Error</div>
+		<!--Start Footer-->
+		<footer>
+			Developed by HumbleFool.<br>
+			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
+			Contact - shankhnaad@aith.ac.in
+		</footer>
+		<!--End Footer-->
 	</body>
 
 	</html>
@@ -342,6 +352,13 @@ if (!$user->hasFilledDetailsForm()) {
 				</div>
 			</div>
 		</section>
+		<!--Start Footer-->
+		<footer>
+			Developed by HumbleFool.<br>
+			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
+			Contact - shankhnaad@aith.ac.in
+		</footer>
+		<!--End Footer-->
 	</body>
 
 	</html>

@@ -24,8 +24,7 @@ nav {
 	align-items: center;
 	height: 50px;
 	background-color: rgba(0, 0, 0, 0.8);
-	position: fixed;
-	width: 100vw;
+	width: 100%;
 	z-index: 1;
 }
 
@@ -56,22 +55,26 @@ nav {
 	flex-direction: column;
 	margin: 0;
 	position: absolute;
-	right: 0px;
+	/* right: 0px; */
 	height: 0vh;
-	top: 50px;
-	background-color: rgba(0, 0, 0, 0.8);
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.9);
 	align-items: center;
-	width: 200px;
+	width: 100%;
 	transition: 0.5s;
 	padding: 0px;
-	z-index: 50;
+	z-index: 1;
 }
 
 .nav-ul.active {
 	display: flex;
-	opacity: 1;
+	/* opacity: 1; */
 	animation: fadeIn 0.5s;
-	height: calc(100vh - 50px);
+	height: calc(100vh - 0px);
+}
+
+html.nav-active{
+	overflow: hidden;
 }
 
 .nav-ul-a {
@@ -95,7 +98,7 @@ nav {
 	}
 	to {
 		opacity: 1;
-		height: calc(100vh - 50px);
+		height: calc(100vh - 0px);
 	}
 }
 
@@ -103,6 +106,8 @@ nav {
 	cursor: pointer;
 	display: block;
 	margin: 10px 20px 10px 10px;
+	position: relative;
+	z-index: 2;
 }
 
 .burger div {
@@ -130,19 +135,18 @@ nav {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	height: calc(100vh - 50px);
+	min-height: calc(100vh - 50px - 10vh);
 	justify-content: center;
-	top: 50px;
+	box-sizing: border-box;
+	padding: 20px;
 }
 
 .dashboard {
 	background: white;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 20px;
 	background-color: white;
 	width: 100%;
-	box-sizing: border-box;
 	border-radius: 5px;
 }
 
@@ -186,8 +190,8 @@ nav {
 .form-container {
 	display: flex;
 	flex-direction: column;
-	margin: 0px 20px;
-	flex-basis: calc(100% - 240px);
+	/* margin: 0px 20px; */
+	flex-basis: calc(100% - 200px);
 }
 
 .table-container {
@@ -315,6 +319,20 @@ nav {
 	display: none;
 }
 
+footer {
+	margin: 0;
+	padding: 0;
+	min-height: 10vh;
+	font-size: 14px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	box-sizing: border-box;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
 @media (max-width: 768px) {
 	.nav-logo h1 {
 		font-size: 22px;
@@ -325,10 +343,11 @@ nav {
 	.dashMenu {
 		display: none;
 	}
+	#dashboard-container{
+		padding: 10px 0px;
+	}
 	.dashboard {
-		/* min-height: 530px; */
 		border-radius: 0;
-		margin: 10px 0px;
 		flex-basis: 100%;
 		display: block;
 	}
@@ -336,7 +355,8 @@ nav {
 		display: flex;
 		flex-direction: column;
 		flex-basis: 100%;
-		margin: 0px 10px;
+		/* margin: 0px 10px; */
+		padding: 0 10px;
 	}
 
 	.details-table {

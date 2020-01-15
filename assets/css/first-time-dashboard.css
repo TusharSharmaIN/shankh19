@@ -24,8 +24,7 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	height: 50px;
-	background-color: rgba(0, 0, 0, .8);
-	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
 	width: 100vw;
 	z-index: 1;
 }
@@ -52,13 +51,11 @@ nav {
 
 .dashBoard {
 	width: 100%;
-	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
-	height: calc(100vh - 50px);
+	min-height: calc(100vh - 50px - 10vh);
 	justify-content: space-around;
-	top: 50px;
 	align-items: center;
 }
 
@@ -303,4 +300,18 @@ textarea.input-error {
 	background-color: #dff2bf;
 	color: #270;
 	display: block;
+}
+
+footer {
+	margin: 0;
+	padding: 0;
+	min-height: 10vh;
+	font-size: 14px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	box-sizing: border-box;
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
