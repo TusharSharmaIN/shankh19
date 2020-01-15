@@ -3,6 +3,7 @@ $(".nav-ul-a").on("click", function() {
 	$(".nav-ul").toggleClass("active");
 	$(".nav-ul-a").toggleClass("active");
 	$(".burger").toggleClass("toggle");
+	$("html").toggleClass("nav-active");
 });
 $(".burger").on("click", function() {
 	$(".nav-ul").toggleClass("active");

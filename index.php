@@ -256,7 +256,7 @@
 	<!--Start Footer-->
 	<footer>
 		Developed by HumbleFool.<br>
-		Copyright &copy; 2019 Shankhnaad. All rights reserved.<br>
+		Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
 		Contact - shankhnaad@aith.ac.in
 	</footer>
 	<!--End Footer-->
