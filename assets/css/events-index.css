@@ -1,0 +1,265 @@
+* {
+	outline: none;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	color: black;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	overflow: overlay;
+	background: #feac5e; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to left,
+		#4bc0c8,
+		#c779d0,
+		#feac5e
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to left,
+		#4bc0c8,
+		#c779d0,
+		#feac5e
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* CSS FOR NAV STARTS HERE */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	z-index: 1;
+}
+
+.nav-logo {
+	display: flex;
+	align-items: center;
+}
+.nav-logo img {
+	height: 35px;
+	margin: 5px;
+}
+
+.nav-logo h1 {
+	margin: 0px 5px;
+	font-size: 28px;
+	letter-spacing: 5px;
+	font-weight: 100;
+	text-transform: uppercase;
+	cursor: default;
+	color: #000;
+}
+
+.nav-ul {
+	list-style: none;
+	justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 0;
+	position: absolute;
+	height: 0vh;
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.9);
+	align-items: center;
+	width: 100%;
+	transition: 0.5s;
+	padding: 0px;
+	z-index: 1;
+}
+
+.nav-ul.active {
+	display: flex;
+	animation: fadeIn 0.5s;
+	height: 100vh;
+}
+
+html.nav-active {
+	overflow: hidden;
+}
+
+.nav-ul-a {
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: 500;
+	color: white;
+	display: none;
+}
+
+.nav-ul-a.active {
+	display: flex;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		height: 0;
+	}
+	to {
+		opacity: 1;
+		height: 100vh;
+	}
+}
+
+.burger {
+	cursor: pointer;
+	display: block;
+	margin: 10px 20px 10px 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+	background-color: black;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+	background-color: white;
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+	background-color: white;
+}
+
+/* CSS FOR BODY OF THE PAGE */
+
+.events-container {
+	min-height: calc(100vh - 50px - 10vh);
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	padding: 0 0 10px 0;
+	width: 100vw;
+}
+
+h2 {
+	display: block;
+	width: 100%;
+}
+
+.events-list-container {
+	background-color: white;
+	width: 100%;
+	padding: 10px 25px 10px 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.events-list-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+
+caption {
+	font-size: 24px;
+}
+
+.event-list {
+	border: 1px solid #000;
+	padding: 10px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+	margin: 5px 0px;
+	cursor: default;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.event-list:hover {
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+td {
+	padding: 10px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+td:nth-child(1) {
+	border-left: 1px solid #bbb;
+}
+
+td:nth-last-child(1) {
+	border-right: 1px solid #bbb;
+}
+
+.event-doe,
+.event-details,
+.event-register {
+	text-align: center;
+}
+
+.event-details-btn,
+.event-register-btn {
+	padding: 5px 10px;
+	color: black;
+	border: 2px solid black;
+	background-color: rgba(255, 255, 255, 0);
+	cursor: pointer;
+}
+
+.event-details-btn:hover,
+.event-register-btn:hover {
+	color: white;
+	background-color: #000;
+}
+
+/* CSS FOR FOOTER */
+
+footer {
+	margin: 0;
+	padding: 0;
+	min-height: 10vh;
+	font-size: 14px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+	.nav-logo h1 {
+		font-size: 22px;
+	}
+	.nav-ul-a {
+		font-size: 14px;
+	}
+
+	.events-list-container {
+		padding: 10px;
+	}
+
+	caption {
+		font-size: 20px;
+	}
+
+	td,
+	button {
+		font-size: 12px;
+	}
+}
