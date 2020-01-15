@@ -55,7 +55,6 @@ nav {
 	flex-direction: column;
 	margin: 0;
 	position: absolute;
-	/* right: 0px; */
 	height: 0vh;
 	top: 0px;
 	background-color: rgba(0, 0, 0, 0.9);
@@ -68,12 +67,11 @@ nav {
 
 .nav-ul.active {
 	display: flex;
-	/* opacity: 1; */
 	animation: fadeIn 0.5s;
-	height: calc(100vh - 0px);
+	height: 100vh;
 }
 
-html.nav-active{
+html.nav-active {
 	overflow: hidden;
 }
 
@@ -98,7 +96,7 @@ html.nav-active{
 	}
 	to {
 		opacity: 1;
-		height: calc(100vh - 0px);
+		height: 100vh;
 	}
 }
 
@@ -343,7 +341,7 @@ footer {
 	.dashMenu {
 		display: none;
 	}
-	#dashboard-container{
+	#dashboard-container {
 		padding: 10px 0px;
 	}
 	.dashboard {
