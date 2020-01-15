@@ -288,12 +288,15 @@ img {
 footer {
 	margin: 0;
 	padding: 0;
-	height: 15vh;
-	padding: 10px;
+	min-height: 10vh;
 	font-size: 14px;
 	text-align: center;
 	background-color: rgba(0, 0, 0, 1);
 	color: white;
+	box-sizing: border-box;
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
 
 /*  Start Document Media */
