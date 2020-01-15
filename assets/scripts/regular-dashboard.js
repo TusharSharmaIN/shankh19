@@ -217,12 +217,6 @@ $.ajax({
 				personalDetails.First_Name + " " + personalDetails.Last_Name
 			);
 			$('.details-table input[name="email"]').val(personalDetails.Email);
-			let d = new Date(event.DOE + " " + event.TOE);
-				let date = d.toLocaleDateString("en-IN", {
-					year: "numeric",
-					month: "short",
-					day: "numeric"
-				});
 			$('.details-table input[name="dateOfBirth"]').val(
 				new Date(personalDetails.DOB).toLocaleDateString("en-IN", {
 					year: "numeric",
