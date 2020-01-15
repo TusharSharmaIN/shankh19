@@ -154,6 +154,21 @@ class Event
         return false;
     }
 
+    // Function to deregister a user for the event
+    public function deregisterUser($email)
+    {
+        // Create a db instance
+        $db = new Database();
+        // Create a user DB connection to get data from User_Event_Details table
+        $userDB = $db->getUserDBConnection();
+        // Query to delete user for the EID
+        $query = "DELETE FROM " . $this->user_evt_details . " WHERE Email='" . $email . "' AND EID='" . $this->eid . "';";
+        // Prepare query statement
+        $stmt = $userDB->prepare($query);
+        // Execute query
+        return $stmt->execute();
+    }
+
     // Check if a user is registered for this event
     public function isRegistered($email)
     {

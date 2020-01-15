@@ -496,15 +496,4 @@ class User
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
-
-    // Function to deregister the user for provided event
-    public function deregisterEvent($eid)
-    {
-        // Query to get all EIDs the user has registered to
-        $query = "DELETE FROM " . $this->user_evt_details . " WHERE Email='" . $this->email . "' AND EID='" . $eid . "';";
-        // Prepare query statement
-        $stmt = $this->conn->prepare($query);
-        // Execute query
-        return $stmt->execute();
-    }
 }
