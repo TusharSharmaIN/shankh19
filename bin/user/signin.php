@@ -70,6 +70,6 @@
     }
     else{
         // User has not submitted form
-        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED')));
+        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED', "post" => $_POST)));
     }
 ?>

@@ -128,11 +128,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                                 method: 'POST',
                                 dataType: "json",
                                 contentType: "application/json",
-                                data: {
+                                data: JSON.stringify({
                                     email: email,
                                     password: password,
                                     'g-recaptcha-response': recaptchaResponse
-                                },
+                                }),
                                 beforeSend: function() {
                                     //Show loader before sending ajax request
                                     $('.block-form').show();
@@ -182,8 +182,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                             $.ajax({
                                 url: 'bin/user/signup',
                                 method: 'POST',
-                                dataType: "json",
-                                contentType: "application/json",
+                                dataType: "text",
                                 data: {
                                     fname: fname,
                                     lname: lname,
