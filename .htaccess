@@ -1,6 +1,4 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^bigsniper.ml [NC]
-RewriteRule ^(.*)$ http://www.bigsniper.ml/$1 [L,R=301]
 
 RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
 RewriteRule ^ /%1 [NC,L,R]
@@ -13,5 +11,3 @@ RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
-
-
