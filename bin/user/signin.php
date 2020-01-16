@@ -12,6 +12,8 @@
     include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
     include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
+    $data = file_get_contents('php://input'); $data = json_decode($data, true);
+
     // Check if post has data
     if(isset($_POST['email']) && isset($_POST['password'])){
         // Google recaptcha server script
@@ -70,6 +72,6 @@
     }
     else{
         // User has not submitted form
-        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED', "post" => $_POST)));
+        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED', "post" => $_POST, "data" => $data)));
     }
 ?>
