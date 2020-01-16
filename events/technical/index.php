@@ -132,6 +132,7 @@
             </table>
         </div>
     </section>
+    <div class="alert"></div>
     <!--Start Footer-->
     <footer>
         Developed by HumbleFool.<br>

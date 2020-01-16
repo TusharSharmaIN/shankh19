@@ -90,16 +90,21 @@ html.nav-active {
 
 .nav-ul-a {
 	text-decoration: none;
-	letter-spacing: 3px;
-	font-weight: 500;
 	color: white;
 	display: none;
+	font-size: 20px;
+	border: 2px solid white;
+	padding: 5px 10px;
+}
+
+.nav-ul-a:hover {
+	background-color: white;
+	color: black;
 }
 
 .nav-ul-a.active {
 	display: flex;
 	cursor: pointer;
-	font-weight: bold;
 }
 
 @keyframes fadeIn {
