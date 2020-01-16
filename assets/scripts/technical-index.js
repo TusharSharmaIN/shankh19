@@ -16,6 +16,9 @@ $(".burger").on("click", function() {
 
 /* REST CODE HERE */
 
+// EID of the event for which the user wants to register
+var eid = null;
+
 // Make AJAX request to get all technical events list from DB which are active
 $.ajax({
 	url: "/bin/event/process-event",
@@ -47,34 +50,14 @@ $.ajax({
 							</tr>`;
 				$(".events-list-table").append(html);
 			});
-		}
-	}
-});
-
-// EID of the event for which the user wants to register
-var eid = null;
-
-// Add event handler to all event register buttons
-$(".event-register-btn").on("click", event => {
-	eid = event.target.id.substr(0, 8);
-	// Check if user is logged in or not. If not then redirect to login page
-	// Send a dummy request to the server
-	$.ajax({
-		url: "/bin/event/process-event",
-		method: "GET",
-		dataType: "json",
-		contentType: "application/json",
-		data: {},
-		success: function(response) {
-			if (response.status == 0 && !response.loggedIn) {
-				window.location.href = "/login";
-			} else {
-				// Show confirmation box as user is logged in
+			// Add event handler to all event register buttons
+			$(".event-register-btn").on("click", event => {
+				eid = event.target.id.substr(0, 8);
 				$(".dialog").addClass("active");
 				$(".overlay").toggle();
-			}
+			});
 		}
-	});
+	}
 });
 
 function registerEvent() {
@@ -90,7 +73,10 @@ function registerEvent() {
 			EID: eid
 		},
 		success: function(response) {
-			if (response.status == 0 && response.alreadyRegistered) {
+			if (response.status == 0 && !response.loggedIn) {
+				showError("You're not logged in. Please login.");
+				window.location.href = "/login";
+			} else if (response.status == 0 && response.alreadyRegistered) {
 				showError("You're already registered for this event.");
 			} else if (response.status == 1) {
 				showSuccess("Registration successful.");
@@ -153,7 +139,7 @@ function showSuccess(msg) {
 			},
 			500,
 			function() {
-				$(".alert").removeClass("error-alert");
+				$(".alert").removeClass("success-alert");
 			}
 		);
 	}, 2000);

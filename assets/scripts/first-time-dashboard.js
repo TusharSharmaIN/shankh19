@@ -74,7 +74,7 @@ function showSuccess(msg) {
 			},
 			500,
 			function() {
-				$(".alert").removeClass("error-alert");
+				$(".alert").removeClass("success-alert");
 			}
 		);
 	}, 2000);
