@@ -46,28 +46,30 @@
                 $_SESSION['email'] = $user->getEmail();
                 $_SESSION['fname'] = $user->getFName();
                 $_SESSION['lname'] = $user->getLName();
-                exit('SIGNIN_SUCCESS');
+                // Get HTTP referrer
+                $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+                exit(json_encode(array("code" => 'SIGNIN_SUCCESS', "referer" => $referer)));
             }
             else if($response == 'CREDENTIALS_INVALID'){
                 //User has provided either invalid credentials or is not registered
-                exit('SIGNIN_FAILED');
+                exit(json_encode(array("code" => 'SIGNIN_FAILED')));
             }
             else if($response == 'EMAIL_NOT_VERIFIED_IN_SES'){
                 //Ask user to verify the email and offer an email resend link
-                exit('EMAIL_NOT_VERIFIED');
+                exit(json_encode(array("code" => 'EMAIL_NOT_VERIFIED')));
             }
             else{
                 //Server error
-                exit('SERVER_ERROR');
+                exit(json_encode(array("code" => 'SERVER_ERROR')));
             }
         }
         else{
             // Recaptcha verification failed
-            exit('RECAPTCHA_FAILED');
+            exit(json_encode(array("code" => 'RECAPTCHA_FAILED')));
         }
     }
     else{
         // User has not submitted form
-        exit('FORM_NOT_SUBMITTED');
+        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED')));
     }
 ?>

@@ -126,7 +126,8 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                             $.ajax({
                                 url: 'bin/user/signin',
                                 method: 'POST',
-                                dataType: 'text',
+                                dataType: "json",
+                                contentType: "application/json",
                                 data: {
                                     email: email,
                                     password: password,
@@ -138,21 +139,22 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                                     $('.lds-grid').css('display', 'inline-block');
                                 },
                                 success: function(response) {
+                                    console.log(response);
                                     //Hide loader after receiving request
                                     $('.lds-grid').hide();
-                                    if (response == 'SIGNIN_SUCCESS') {
+                                    if (response.code == 'SIGNIN_SUCCESS') {
                                         //User credentials has been successfully validated
-                                        window.location.href = "https://shankhnaad.org/dashboard";
-                                    } else if (response == 'SIGNIN_FAILED') {
+                                        //window.location.href = "https://shankhnaad.org/dashboard";
+                                    } else if (response.code == 'SIGNIN_FAILED') {
                                         //User has provided invalid credentials or is not registered
                                         console.log('Invalid credentials');
-                                    } else if (response == 'EMAIL_NOT_VERIFIED') {
+                                    } else if (response.code == 'EMAIL_NOT_VERIFIED') {
                                         //User has not verified his email
                                         console.log('Verify your email');
-                                    } else if (response == 'RECAPTCHA_FAILED') {
+                                    } else if (response.code == 'RECAPTCHA_FAILED') {
                                         //Recaptcha verification has failed
                                         console.log('Recaptcha failed');
-                                    } else if (response == 'FORM_NOT_SUBMITTED') {
+                                    } else if (response.code == 'FORM_NOT_SUBMITTED') {
                                         //User has not submitted the form
                                         console.log('Form not submitted');
                                     } else {
@@ -180,7 +182,8 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                             $.ajax({
                                 url: 'bin/user/signup',
                                 method: 'POST',
-                                dataType: 'text',
+                                dataType: "json",
+                                contentType: "application/json",
                                 data: {
                                     fname: fname,
                                     lname: lname,

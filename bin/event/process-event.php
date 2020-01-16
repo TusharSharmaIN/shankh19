@@ -28,7 +28,7 @@ if (isset($_GET['registerEvent'])) {
 	$event = new Event($eid);
 	// Check if user is already registered to this event
 	if ($event->isRegistered($email))
-		exit(json_encode(array("status" => 0, "alreadyRegistered" => true)));
+		exit(json_encode(array("status" => 0, "alreadyRegistered" => true, "loggedIn" => true)));
 	// Register user for the event
 	if($event->registerUser($email))
 		exit(json_encode(array("status" => 1)));
