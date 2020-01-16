@@ -146,8 +146,13 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
                                     $('.lds-grid').hide();
                                     if (response.code == 'SIGNIN_SUCCESS') {
                                         //User credentials has been successfully validated
-                                        //window.location.href = "https://shankhnaad.org/dashboard";
-                                        console.log('<?php echo $referer ?>');
+                                        let referer = '<?php echo $referer ?>';
+                                        let patt = new RegExp('https://shankhnaad.org/events/*');
+                                        // Redirect to the referer or to the dashboard
+                                        if(patt.test(referer))
+                                            window.location.href = referer;
+                                        else
+                                            window.location.href = "https://shankhnaad.org/dashboard";
                                     } else if (response.code == 'SIGNIN_FAILED') {
                                         //User has provided invalid credentials or is not registered
                                         console.log('Invalid credentials');
