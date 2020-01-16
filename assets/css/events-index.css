@@ -232,6 +232,69 @@ td:nth-last-child(1) {
 	background-color: #000;
 }
 
+.overlay {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: none;
+}
+
+.dialog {
+	display: none;
+	position: fixed;
+	top: calc(50% - 75px);
+	left: calc(50% - 350px);
+	width: 700px;
+	min-height: 150px;
+	background: white;
+	justify-content: left;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.dialog.active {
+	display: flex;
+}
+
+.dialog h2 {
+	padding: 5px;
+	color: #feac5e;
+	font-weight: 100;
+}
+
+.dialog p {
+	padding: 5px;
+	font-size: 14px;
+}
+
+.dialog-btn-container {
+	padding: 5px;
+	text-align: right;
+}
+
+.dialog-btn-container button {
+	padding: 5px;
+	cursor: pointer;
+	background: white;
+	width: 100px;
+}
+
+#dialog-confirm-btn {
+	border: 2px solid #000;
+}
+
+#dialog-confirm-btn:hover {
+	border-color: #feac5e;
+	color: #feac5e;
+}
+
+#dialog-cancel-btn:hover {
+	border-color: #E71C23;
+	color: #E71C23;
+}
+
 /* CSS FOR FOOTER */
 
 footer {
@@ -245,6 +308,34 @@ footer {
 	align-items: center;
 	display: flex;
 	justify-content: center;
+}
+
+.alert {
+	padding: 10px;
+	box-sizing: border-box;
+	border: none;
+	font-size: 16px;
+	position: fixed;
+	top: 0px;
+	width: 300px;
+	height: auto;
+	color: white;
+	left: calc(50% - 150px);
+	text-align: center;
+	display: none;
+	opacity: 0;
+}
+
+.error-alert {
+	background-color: #ffbaba;
+	color: #d8000c;
+	display: block;
+}
+
+.success-alert {
+	background-color: #dff2bf;
+	color: #270;
+	display: block;
 }
 
 /* MEDIA QUERIES */
@@ -268,5 +359,11 @@ footer {
 	td,
 	button {
 		font-size: 12px;
+	}
+
+	.dialog {
+		top: calc(50% - 75px);
+		width: calc(100% - 20px);
+		left: 10px;
 	}
 }

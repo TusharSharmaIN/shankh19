@@ -190,4 +190,20 @@ class Event
         }
         return true;
     }
+
+    public static function getAllTechnicalEvents() {
+        // Create a db instance
+        $db = new Database();
+        // Create an admin DB connection to get data from Events_Details table
+        $adminDB = $db->getAdminDBConnection();
+        // Query database for eid and get all details
+        $query = "SELECT * FROM Event_Details WHERE Type='Technical' AND status=1;";
+        // Prepare query statement
+        $stmt = $adminDB->prepare($query);
+        // Execute query
+        $stmt->execute();
+        // Fetch all rows as associative array
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
