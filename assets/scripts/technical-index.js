@@ -66,7 +66,7 @@ $(".event-register-btn").on("click", event => {
 		contentType: "application/json",
 		data: {},
 		success: function(response) {
-			if (!response.loggedIn) {
+			if (response.status == 0 && !response.loggedIn) {
 				window.location.href = "/login";
 			} else {
 				// Show confirmation box as user is logged in

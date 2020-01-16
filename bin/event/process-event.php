@@ -57,4 +57,4 @@ if (isset($_GET['deregisterEvent'])) {
 	if ($event->deregisterUser($email))
 		exit(json_encode(array("status" => 1)));
 }
-exit(json_encode(array("status" => 0))); // Status 0 means request failed
+exit(json_encode(array("status" => 0, "loggedIn" => true))); // Status 0 means request failed
