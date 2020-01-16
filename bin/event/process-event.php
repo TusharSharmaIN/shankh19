@@ -14,7 +14,7 @@ session_start();
 
 // Check if user is signed in or not
 if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
-	exit(json_encode(array("status" => 0))); // Status 0 means request failed
+	exit(json_encode(array("status" => 0, "loggedIn" => false))); // Status 0 means request failed
 }
 
 // If request is to register a user for an event

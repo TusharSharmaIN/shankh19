@@ -41,7 +41,7 @@ $.ajax({
 				let html = `<tr id="row-${event.EID}" class="event-list">
 								<td class="event-doe">${date}</td>
 								<td class="event-toe">${time}</td>
-								<td class="event-name">${event.name}</td>
+								<td class="event-name">${event.Name}</td>
 								<td class="event-details"><button id="${event.EID}-details-btn" class="event-details-btn">Details</button></td>
 								<td class="event-register"><button id="${event.EID}-register-btn" class="event-register-btn">Register</button></td>
 							</tr>`;
@@ -56,15 +56,29 @@ var eid = null;
 
 // Add event handler to all event register buttons
 $(".event-register-btn").on("click", event => {
-	eid = event.target.id;
+	eid = event.target.id.substr(0, 8);
 	// Check if user is logged in or not. If not then redirect to login page
-	
-	// Show confirmation box
-	$(".dialog").addClass("active");
-	$(".overlay").toggle();
+	// Send a dummy request to the server
+	$.ajax({
+		url: "/bin/event/process-event",
+		method: "GET",
+		dataType: "json",
+		contentType: "application/json",
+		data: {},
+		success: function(response) {
+			if (!response.loggedIn) {
+				window.location.href = "/login";
+			} else {
+				// Show confirmation box as user is logged in
+				$(".dialog").addClass("active");
+				$(".overlay").toggle();
+			}
+		}
+	});
 });
 
 function registerEvent() {
+	if (!eid) return;
 	// Send AJAX request to register for the event
 	$.ajax({
 		url: "/bin/event/process-event",
@@ -72,7 +86,8 @@ function registerEvent() {
 		dataType: "json",
 		contentType: "application/json",
 		data: {
-			registerEvent: true
+			registerEvent: true,
+			EID: eid
 		},
 		success: function(response) {
 			if (response.status == 0 && response.alreadyRegistered) {
