@@ -12,14 +12,16 @@
     include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
     include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
-    $data = file_get_contents('php://input'); $data = json_decode($data, true);
+    // Get POST data from HTTP body
+    $body = file_get_contents('php://input');
+    $body = json_decode($body, true);
 
     // Check if post has data
-    if(isset($_POST['email']) && isset($_POST['password'])){
+    if(isset($body['email']) && isset($body['password'])){
         // Google recaptcha server script
         // Get secret key from greconfig.php file
         require $_SERVER['DOCUMENT_ROOT'] . '/../config/greconfig.php';
-        $responseKey = $_POST['g-recaptcha-response'];
+        $responseKey = $body['g-recaptcha-response'];
         $userIP = $_SERVER['REMOTE_ADDR'];
         $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
         $response = file_get_contents($url);
@@ -35,8 +37,8 @@
             $user = new User($userDB);
 
             // Get user data from sign up form
-            $user->setEmail($_POST['email']);
-            $user->setPassword($_POST['password']);
+            $user->setEmail($body['email']);
+            $user->setPassword($body['password']);
 
             // Try to login the user
             $response = $user->login();
@@ -72,6 +74,6 @@
     }
     else{
         // User has not submitted form
-        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED', "post" => $_POST, "data" => $data)));
+        exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED')));
     }
 ?>
