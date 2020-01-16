@@ -51,8 +51,7 @@
                 $_SESSION['fname'] = $user->getFName();
                 $_SESSION['lname'] = $user->getLName();
                 // Get HTTP referrer
-                $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-                exit(json_encode(array("code" => 'SIGNIN_SUCCESS', "referer" => $referer)));
+                exit(json_encode(array("code" => 'SIGNIN_SUCCESS')));
             }
             else if($response == 'CREDENTIALS_INVALID'){
                 //User has provided either invalid credentials or is not registered

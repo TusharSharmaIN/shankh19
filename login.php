@@ -5,6 +5,8 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     header('Location: dashboard.php'); //Redirect to dashboard
     exit();
 }
+$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
 ?>
 
 <!DOCTYPE html>
@@ -145,6 +147,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                                     if (response.code == 'SIGNIN_SUCCESS') {
                                         //User credentials has been successfully validated
                                         //window.location.href = "https://shankhnaad.org/dashboard";
+                                        console.log('<?php echo $referer ?>');
                                     } else if (response.code == 'SIGNIN_FAILED') {
                                         //User has provided invalid credentials or is not registered
                                         console.log('Invalid credentials');
