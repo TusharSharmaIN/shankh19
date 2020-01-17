@@ -322,6 +322,65 @@ html.nav-active {
 	display: none;
 }
 
+.overlay {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: none;
+}
+
+.dialog {
+	display: none;
+	position: fixed;
+	top: calc(50% - 120px);
+	left: calc(50% - 350px);
+	width: 700px;
+	min-height: 150px;
+	background: white;
+	justify-content: left;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 2px;
+}
+
+.dialog.active {
+	display: flex;
+}
+
+.dialog h2 {
+	padding: 5px;
+	color: #feac5e;
+	font-weight: 100;
+}
+
+.dialog p {
+	padding: 5px;
+	font-size: 14px;
+}
+
+.dialog-btn-container {
+	padding: 5px;
+	text-align: right;
+}
+
+.dialog-btn-container button {
+	padding: 5px;
+	cursor: pointer;
+	background: white;
+	width: 100px;
+}
+
+#dialog-confirm-btn {
+	border: 2px solid #000;
+}
+
+#dialog-confirm-btn:hover {
+	border-color: #feac5e;
+	color: #feac5e;
+}
+
 footer {
 	margin: 0;
 	padding: 0;
@@ -413,5 +472,10 @@ footer {
 	}
 	#change-password input {
 		width: 100%;
+	}
+	.dialog {
+		top: calc(50% - 75px);
+		width: calc(100% - 20px);
+		left: 10px;
 	}
 }

@@ -133,6 +133,7 @@ $("#logout, #mobileLogout").on("click", function() {
 });
 
 var events = {};
+var eid = null;
 
 // Make AJAX request to fetch all events
 $.ajax({
@@ -173,13 +174,16 @@ $.ajax({
 			});
 			// Add event listener to all de-register buttons
 			$(".fa.fa-close.deregister-btn").on("click", event => {
-				deregisterEvent(event.target.id.substr(4));
+				$(".dialog").addClass("active");
+				$(".overlay").toggle();
+				eid = event.target.id.substr(4);
 			});
 		}
 	}
 });
 
-function deregisterEvent(eid) {
+function deregisterEvent() {
+	if(!eid) return false;
 	// Make AJAX request to fetch all events
 	$.ajax({
 		url: "/bin/event/process-event",
@@ -259,3 +263,17 @@ $.ajax({
 		}
 	}
 });
+
+function closeDialog() {
+	$(".dialog").removeClass("active");
+	$(".overlay").toggle();
+}
+
+$(".overlay").on("click", closeDialog);
+
+$("#dialog-confirm-btn").on("click", () => {
+	deregisterEvent();
+	closeDialog();
+});
+
+$("#dialog-cancel-btn").on("click", closeDialog);

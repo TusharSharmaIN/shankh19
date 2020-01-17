@@ -349,6 +349,15 @@ if (!$user->hasFilledDetailsForm()) {
 				</div>
 			</div>
 		</section>
+		<div class="overlay"></div>
+		<div class="dialog">
+			<h2>Confirm registration</h2>
+			<p>By clicking on <strong>confirm</strong> button you agree to participate in the event and accept all the rules and regulations of this event</p>
+			<div class="dialog-btn-container">
+				<button id="dialog-confirm-btn">Confirm</button>
+				<button id="dialog-cancel-btn">Cancel</button>
+			</div>
+		</div>
 		<!--Start Footer-->
 		<footer>
 			Developed by HumbleFool.<br>
