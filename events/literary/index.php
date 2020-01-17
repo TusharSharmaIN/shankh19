@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/events-index.css">
-    <script defer src="/assets/scripts/technical-index.js"></script>
+    <script defer src="/assets/scripts/literary-index.js"></script>
     <title>Shankhnaad'20 - Literary Events</title>
 </head>
 
