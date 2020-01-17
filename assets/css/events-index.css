@@ -304,6 +304,7 @@ td:nth-last-child(1) {
 	justify-content: left;
 	flex-direction: column;
 	padding: 10px;
+	border-radius: 2px;
 }
 
 .dialog.active {
@@ -340,11 +341,6 @@ td:nth-last-child(1) {
 #dialog-confirm-btn:hover {
 	border-color: #feac5e;
 	color: #feac5e;
-}
-
-#dialog-cancel-btn:hover {
-	border-color: #e71c23;
-	color: #e71c23;
 }
 
 /* CSS FOR FOOTER */
