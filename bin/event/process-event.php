@@ -56,7 +56,7 @@ if (isset($_GET['registerEvent'])) {
 			<table class=\"content\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;background:#ffd89b;background:linear-gradient(to right, #ffeeee, #ddefbb);\">
 				<tr>
 					<td align=\"center\" style=\"padding:50px 0px 5px 0px;font-family:'Poppins',sans-serif;font-size:18px\">
-						You've been successfully registered for <strong>{$event->getName()}</strong>.
+						You've been successfully registered for the event <strong>{$event->getName()}</strong>.
 					</td>
 				</tr>
 				<tr>
@@ -196,7 +196,7 @@ if (isset($_GET['deregisterEvent'])) {
 			";
 	$text = "You've successfully deregistered from the event {$event->getName()}.";
 
-	if ($event->deregisterUser($email) && $ses->sendEmail('events@shankhnaad.org', array($email), 'Event Update', $html, $text))
+	if ($event->deregisterUser($email) && $ses->sendEmail('events@shankhnaad.org', array($email), 'Event update', $html, $text))
 		exit(json_encode(array("status" => 1)));
 }
 exit(json_encode(array("status" => 0, "loggedIn" => true))); // Status 0 means request failed
