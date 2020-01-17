@@ -78,8 +78,12 @@ $.ajax({
 			if (response.status == 1) {
 				events = response.data;
 				events.forEach(event => {
-					$(`#row-${event.EID}`).addClass('registered');
-					$(`#${event.EID}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
+					$(`#row-${event.EID}`).addClass("registered");
+					$(`#${event.EID}-register-btn`)
+						.addClass("registered")
+						.attr("disabled", true)
+						.text("Registered")
+						.off("click");
 				});
 			}
 		}
@@ -108,13 +112,17 @@ function registerEvent() {
 				showError("You're already registered for this event.");
 			} else if (response.status == 1) {
 				showSuccess("Registration successful.");
-				$(`#row-${eid}`).addClass('registered');
+				$(`#row-${eid}`).addClass("registered");
 				console.log(`#row-${eid} registered added`);
-				$(`#${eid}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
+				$(`#${eid}-register-btn`)
+					.addClass("registered")
+					.attr("disabled", true)
+					.text("Registered")
+					.off("click");
 			} else {
 				showError("Oops! Something went wrong.");
 			}
-			// eid = null;
+			eid = null;
 		}
 	});
 }
@@ -122,7 +130,6 @@ function registerEvent() {
 function closeDialog() {
 	$(".dialog").removeClass("active");
 	$(".overlay").toggle();
-	eid = null;
 }
 
 function showError(msg) {
