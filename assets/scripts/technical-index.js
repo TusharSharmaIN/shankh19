@@ -114,7 +114,7 @@ function registerEvent() {
 			} else {
 				showError("Oops! Something went wrong.");
 			}
-			eid = null;
+			// eid = null;
 		}
 	});
 }
