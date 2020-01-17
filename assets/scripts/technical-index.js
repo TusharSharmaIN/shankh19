@@ -109,6 +109,7 @@ function registerEvent() {
 			} else if (response.status == 1) {
 				showSuccess("Registration successful.");
 				$(`#row-${eid}`).addClass('registered');
+				console.log(`#row-${eid} registered added`);
 				$(`#${eid}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
 			} else {
 				showError("Oops! Something went wrong.");
