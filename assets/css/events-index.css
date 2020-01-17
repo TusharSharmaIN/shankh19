@@ -14,6 +14,9 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: overlay;
+}
+
+html.technical {
 	background: #feac5e; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to left,
@@ -26,6 +29,34 @@ body {
 		#4bc0c8,
 		#c779d0,
 		#feac5e
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+html.cultural {
+	background: #22c1c3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#fdbb2d,
+		#22c1c3
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#fdbb2d,
+		#22c1c3
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+html.literary {
+	background: #30e8bf; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#ff8235,
+		#30e8bf
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#ff8235,
+		#30e8bf
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

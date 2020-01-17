@@ -191,13 +191,13 @@ class Event
         return true;
     }
 
-    public static function getAllTechnicalEvents() {
+    public static function getAllEventsByType($type) {
         // Create a db instance
         $db = new Database();
         // Create an admin DB connection to get data from Events_Details table
         $adminDB = $db->getAdminDBConnection();
         // Query database for eid and get all details
-        $query = "SELECT * FROM Event_Details WHERE Type='Technical' AND status=1;";
+        $query = "SELECT * FROM Event_Details WHERE Type='" . $type . "' AND status=1;";
         // Prepare query statement
         $stmt = $adminDB->prepare($query);
         // Execute query

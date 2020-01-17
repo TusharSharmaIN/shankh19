@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="cultural">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/events-index.css">
-    <script defer src="/assets/scripts/cultural-index.js"></script>
+    <script defer src="/assets/scripts/technical-index.js"></script>
     <title>Shankhnaad'20 - Cultural Events</title>
 </head>
 
@@ -16,7 +16,7 @@
     <!--- Start Navigation -->
     <nav>
         <div class="nav-logo">
-            <img src="/img/shankh-white.svg">
+            <img src="/img/shankh-black.svg">
             <h1>Shankhnaad'20</h1>
         </div>
         <ul class="nav-ul" id="nav">
@@ -34,7 +34,22 @@
         </div>
     </nav>
     <!--- End Navigation -->
-    <section class="events-container"></section>
+    <section class="events-container">
+        <div class="events-list-container">
+            <table class="events-list-table">
+                <caption>Cultural Events</caption>
+            </table>
+        </div>
+    </section>
+    <div class="overlay"></div>
+    <div class="dialog">
+        <h2>Confirm registration</h2>
+        <p>By clicking on <strong>confirm</strong> button you agree to participate in the event and accept all the rules and regulation of this event</p>
+        <div class="dialog-btn-container">
+            <button id="dialog-confirm-btn">Confirm</button>
+            <button id="dialog-cancel-btn">Cancel</button>
+        </div>
+    </div>
     <!--Start Footer-->
     <footer>
         Developed by HumbleFool.<br>
@@ -42,6 +57,7 @@
         Contact - shankhnaad@aith.ac.in
     </footer>
     <!--End Footer-->
+    <div class="alert"></div>
 </body>
 
 </html>

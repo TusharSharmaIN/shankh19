@@ -6,7 +6,19 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
 // If request is to get list all technical events which are active
 if (isset($_GET['getAllTechnicalEvents'])) {
-	$events = Event::getAllTechnicalEvents();
+	$events = Event::getAllEventsByType('Technical');
+	exit(json_encode(array("status" => 1, "data" => $events)));
+}
+
+// If request is to get list all cultural events which are active
+if (isset($_GET['getAllCulturalEvents'])) {
+	$events = Event::getAllEventsByType('Cultural');
+	exit(json_encode(array("status" => 1, "data" => $events)));
+}
+
+// If request is to get list all literary events which are active
+if (isset($_GET['getAllLiteraryEvents'])) {
+	$events = Event::getAllEventsByType('Literary');
 	exit(json_encode(array("status" => 1, "data" => $events)));
 }
 
