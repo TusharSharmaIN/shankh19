@@ -352,7 +352,7 @@ if (!$user->hasFilledDetailsForm()) {
 		<div class="overlay"></div>
 		<div class="dialog">
 			<h2>Confirm deregistration</h2>
-			<p>By clicking on <strong>confirm</strong> button you will be deregistered from the event. You will not be able to register again once deadline is passed. Are you sure?</p>
+			<p>Upon clicking on <strong>confirm</strong> button you will be deregistered from the event. You will not be able to register again once the deadline is passed. Are you sure?</p>
 			<div class="dialog-btn-container">
 				<button id="dialog-confirm-btn">Confirm</button>
 				<button id="dialog-cancel-btn">Cancel</button>
