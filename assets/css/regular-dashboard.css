@@ -143,7 +143,7 @@ html.nav-active {
 	min-height: calc(100vh - 50px - 10vh);
 	justify-content: center;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 10px 0;
 }
 
 .dashboard {
@@ -152,11 +152,9 @@ html.nav-active {
 	flex-wrap: wrap;
 	background-color: white;
 	width: 100%;
-	border-radius: 5px;
 }
 
 .dashMenu {
-	border-radius: 5px 0 0 5px;
 	background: black;
 	color: white;
 	display: flex;
