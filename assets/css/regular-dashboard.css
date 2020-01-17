@@ -1,5 +1,9 @@
 * {
 	outline: none;
+	margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -351,7 +355,7 @@ html.nav-active {
 
 .dialog h2 {
 	padding: 5px;
-	color: #feac5e;
+	color: #3498DB;
 	font-weight: 100;
 }
 
@@ -370,6 +374,7 @@ html.nav-active {
 	cursor: pointer;
 	background: white;
 	width: 100px;
+	border: 0;
 }
 
 #dialog-confirm-btn {
@@ -377,8 +382,8 @@ html.nav-active {
 }
 
 #dialog-confirm-btn:hover {
-	border-color: #feac5e;
-	color: #feac5e;
+	border-color: #3498DB;
+	color: #3498DB;
 }
 
 footer {
@@ -450,7 +455,7 @@ footer {
 		justify-content: space-around;
 	}
 	.mobilelist {
-		height: 20px;
+		height: 30px;
 		padding: 5px 10px;
 		cursor: pointer;
 	}
