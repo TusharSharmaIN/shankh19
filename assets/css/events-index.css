@@ -250,11 +250,6 @@ td:nth-last-child(1) {
 	border-color: #fff;
 	color: #fff;
 	cursor: default;
-}
-
-.event-register-btn.registered:hover {
-	border-color: #e71c23;
-	color: #e71c23;
 	background: none;
 }
 
