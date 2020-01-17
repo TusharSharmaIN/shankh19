@@ -58,32 +58,32 @@ $.ajax({
 			});
 		}
 	}
-});
-
-// Make AJAX request to get all technical events list from DB which to which user is registered
-$.ajax({
-	url: "/bin/event/process-event",
-	method: "GET",
-	dataType: "json",
-	contentType: "application/json",
-	data: {
-		getUserEvents: true,
-		type: "Technical"
-	},
-	success: function(response) {
-		if (response.status == 0 && !response.loggedIn) {
-			showError(
-				"You're not logged in. Please login to register to any event."
-			);
+}).then(() => {
+	// Make AJAX request to get all technical events list from DB which to which user is registered
+	$.ajax({
+		url: "/bin/event/process-event",
+		method: "GET",
+		dataType: "json",
+		contentType: "application/json",
+		data: {
+			getUserEvents: true,
+			type: "Technical"
+		},
+		success: function(response) {
+			if (response.status == 0 && !response.loggedIn) {
+				showError(
+					"You're not logged in. Please login to register to any event."
+				);
+			}
+			if (response.status == 1) {
+				events = response.data;
+				events.forEach(event => {
+					$(`#row-${event.EID}`).addClass('registered');
+					$(`#${event.EID}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
+				});
+			}
 		}
-		if (response.status == 1) {
-			events = response.data;
-			events.forEach(event => {
-				$(`#row-${event.EID}`).addClass('registered');
-				$(`#${event.EID}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
-			});
-		}
-	}
+	});
 });
 
 function registerEvent() {
