@@ -108,9 +108,12 @@ function registerEvent() {
 				showError("You're already registered for this event.");
 			} else if (response.status == 1) {
 				showSuccess("Registration successful.");
+				$(`#row-${eid}`).addClass('registered');
+				$(`#${eid}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
 			} else {
 				showError("Oops! Something went wrong.");
 			}
+			eid = null;
 		}
 	});
 }

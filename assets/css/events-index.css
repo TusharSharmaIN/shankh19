@@ -249,6 +249,7 @@ td:nth-last-child(1) {
 .event-register-btn.registered {
 	border-color: #fff;
 	color: #fff;
+	cursor: default;
 }
 
 .event-register-btn.registered:hover {
