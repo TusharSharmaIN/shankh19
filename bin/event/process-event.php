@@ -45,21 +45,42 @@ if (isset($_GET['registerEvent'])) {
 	$event->fillDetailsFromDB();
 	// Create SesApi object to send email
 	$ses = new SesApi();
-	$html = "<h1
-				style=\"padding:5px;display:flex;color:#fff;background-color:#000;text-transform:uppercase;font-family:'Poppins',sans-serif;letter-spacing:10px;font-size:48px;justify-content:center;font-weight:100;\"
-			>
-				Shankhnaad'20
-			</h1>
-			<p style=\"text-align:center;font-family:\'Poppins\',sans-serif;\">You\'ve successfully registered for {$event->getName()}.</p>
-			<p style=\"text-align:center;font-family:\'Poppins\',sans-serif;\">Please go through the rules and regulations of the event.</p>
-			<footer
-				style=\"padding:10px;font-size: 14px;text-align:center;background-color:rgba(0, 0, 0, 1);color:white;font-family:\'Poppins\',sans-serif;\"
-			>
-				Developed by HumbleFool.<br />
-				Copyright &copy; 2020 Shankhnaad. All rights reserved.<br />
-				Contact - shankhnaad@aith.ac.in
-			</footer>";
-	$text = "You\'ve successfully registered for {$event->getName()}.";
+	$html = "
+			<table class=\"heading\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
+				<tr>
+					<td align=\"center\" style=\"background:#000;color:#fff;padding:10px;font-size:36px;text-transform:uppercase;font-family:'Poppins',sans-serif;letter-spacing:10px;font-weight:100;\">
+						Shankhnaad'20
+					</td>
+				</tr>
+			</table>
+			<table class=\"content\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;background:#ffd89b;background:linear-gradient(to right, #a1ffce, #faffd1);\">
+				<tr>
+					<td align=\"center\" style=\"padding:20px 10px 10px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
+						You've successfully registered for <strong>{$event->getName()}</strong>.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"padding:10px 10px 20px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
+						Please go through the rules and regulations of the event.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"padding:10px 10px 20px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
+						This is a system generated mail. Please do not reply to this email.
+					</td>
+				</tr>
+			</table>
+			<table class=\"footer\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
+				<tr>
+					<td align=\"center\" style=\"background:#000;background:linear-gradient(to right, #434343, #000000);color:#fff;padding:20px;font-family:Helvetica,Arial,sans-serif;font-size:14px;\">
+							www.shankhnaad.org<br />
+							Copyright &copy; 2020 Shankhnaad. All rights reserved.<br />
+							shankhnaad@aith.ac.in
+					</td>
+				</tr>
+			</table>
+			";
+	$text = "You've successfully registered for {$event->getName()}.";
 
 	// Register user for the event and send email
 	if ($event->registerUser($email) && $ses->sendEmail('events@shankhnaad.org', array($email), 'Event registration', $html, ''))
