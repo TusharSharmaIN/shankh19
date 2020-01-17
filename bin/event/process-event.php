@@ -41,8 +41,28 @@ if (isset($_GET['registerEvent'])) {
 	// Check if user is already registered to this event
 	if ($event->isRegistered($email))
 		exit(json_encode(array("status" => 0, "alreadyRegistered" => true, "loggedIn" => true)));
-	// Register user for the event
-	if ($event->registerUser($email))
+
+	$event->fillDetailsFromDB();
+	// Create SesApi object to send email
+	$ses = new SesApi();
+	$html = "<h1
+				style=\"padding:5px;display:flex;color:#fff;background-color:#000;text-transform:uppercase;font-family:'Poppins',sans-serif;letter-spacing:10px;font-size:48px;justify-content:center;font-weight:100;\"
+			>
+				Shankhnaad'20
+			</h1>
+			<p style=\"text-align:center;font-family:\'Poppins\',sans-serif;\">You\'ve successfully registered for {$event->getName()}.</p>
+			<p style=\"text-align:center;font-family:\'Poppins\',sans-serif;\">Please go through the rules and regulations of the event.</p>
+			<footer
+				style=\"padding:10px;font-size: 14px;text-align:center;background-color:rgba(0, 0, 0, 1);color:white;font-family:\'Poppins\',sans-serif;\"
+			>
+				Developed by HumbleFool.<br />
+				Copyright &copy; 2020 Shankhnaad. All rights reserved.<br />
+				Contact - shankhnaad@aith.ac.in
+			</footer>";
+	$text = "You\'ve successfully registered for {$event->getName()}.";
+
+	// Register user for the event and send email
+	if ($event->registerUser($email) && $ses->sendEmail('events@shankhnaad.org', array($email), 'Event registration', $html, ''))
 		exit(json_encode(array("status" => 1)));
 }
 // If request is to get list of user's registered events
@@ -55,7 +75,7 @@ if (isset($_GET['getUserEvents'])) {
 	$userDB = $db->getUserDBConnection();
 	$user = new User($userDB);
 	$user->setEmail($email);
-	if(isset($_GET['type'])) // If request has type of the event
+	if (isset($_GET['type'])) // If request has type of the event
 		$events = $user->getAllEventsByType($_GET['type']);
 	else // otherwise return all types of events
 		$events = $user->getAllEvents();
