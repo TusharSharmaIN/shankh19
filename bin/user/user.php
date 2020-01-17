@@ -496,4 +496,35 @@ class User
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    // Function to return all technical events details the user is registered to
+    public function getAllEventsByType($type)
+    {
+        // Query to get all EIDs the user has registered to
+        $query = "SELECT EID FROM User_Event_Details WHERE Email='" . $this->email . "';";
+        // Prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // Execute query
+        $stmt->execute();
+        // Get all EIDs as an array of strings
+        $eidArray = $stmt->fetchAll(PDO::FETCH_COLUMN, 0);
+        foreach ($eidArray as &$str) {
+            $str = str_replace($str, "EID='" . $str . "'", $str);
+        }
+        $joinedEID = join(" OR ", $eidArray);
+
+        // Create a db instance
+        $db = new Database();
+        // Create an admin DB connection to get data from Events_Details table
+        $adminDB = $db->getAdminDBConnection();
+        // Query database for eid and get all details
+        $query = "SELECT * FROM Event_Details WHERE Type='" . $type . "' AND " . $joinedEID . ";";
+        // Prepare query statement
+        $stmt = $adminDB->prepare($query);
+        // Execute query
+        $stmt->execute();
+        // Fetch all rows
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }

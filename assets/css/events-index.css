@@ -197,6 +197,20 @@ caption {
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.event-list.registered {
+	background: #67b26f; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#4ca2cd,
+		#67b26f
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#4ca2cd,
+		#67b26f
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 td {
 	padding: 10px;
 	border-top: 1px solid #bbb;
@@ -230,6 +244,17 @@ td:nth-last-child(1) {
 .event-register-btn:hover {
 	color: white;
 	background-color: #000;
+}
+
+.event-register-btn.registered {
+	border-color: #fff;
+	color: #fff;
+}
+
+.event-register-btn.registered:hover {
+	border-color: #e71c23;
+	color: #e71c23;
+	background: none;
 }
 
 .overlay {
@@ -291,8 +316,8 @@ td:nth-last-child(1) {
 }
 
 #dialog-cancel-btn:hover {
-	border-color: #E71C23;
-	color: #E71C23;
+	border-color: #e71c23;
+	color: #e71c23;
 }
 
 /* CSS FOR FOOTER */

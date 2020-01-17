@@ -30,7 +30,7 @@ if (isset($_GET['registerEvent'])) {
 	if ($event->isRegistered($email))
 		exit(json_encode(array("status" => 0, "alreadyRegistered" => true, "loggedIn" => true)));
 	// Register user for the event
-	if($event->registerUser($email))
+	if ($event->registerUser($email))
 		exit(json_encode(array("status" => 1)));
 }
 // If request is to get list of user's registered events
@@ -43,9 +43,11 @@ if (isset($_GET['getUserEvents'])) {
 	$userDB = $db->getUserDBConnection();
 	$user = new User($userDB);
 	$user->setEmail($email);
-	$events = $user->getAllEvents();
+	if(isset($_GET['type'])) // If request has type of the event
+		$events = $user->getAllEventsByType($_GET['type']);
+	else // otherwise return all types of events
+		$events = $user->getAllEvents();
 	exit(json_encode(array("status" => 1, "data" => $events)));
-
 }
 // If request is to deregister a user for an event
 if (isset($_GET['deregisterEvent'])) {

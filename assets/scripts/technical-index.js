@@ -60,6 +60,32 @@ $.ajax({
 	}
 });
 
+// Make AJAX request to get all technical events list from DB which to which user is registered
+$.ajax({
+	url: "/bin/event/process-event",
+	method: "GET",
+	dataType: "json",
+	contentType: "application/json",
+	data: {
+		getUserEvents: true,
+		type: "Technical"
+	},
+	success: function(response) {
+		if (response.status == 0 && !response.loggedIn) {
+			showError(
+				"You're not logged in. Please login to register to any event."
+			);
+		}
+		if (response.status == 1) {
+			events = response.data;
+			events.forEach(event => {
+				$(`#row-${event.EID}`).addClass('registered');
+				$(`#${event.EID}-register-btn`).addClass('registered').attr('disabled', true).text('Registered').off('click');
+			});
+		}
+	}
+});
+
 function registerEvent() {
 	if (!eid) return;
 	// Send AJAX request to register for the event
@@ -74,8 +100,10 @@ function registerEvent() {
 		},
 		success: function(response) {
 			if (response.status == 0 && !response.loggedIn) {
-				showError("You're not logged in. Please login.");
-				window.location.href = "/login";
+				showError("You're not logged in. Please login and try again.");
+				setTimeout(() => {
+					window.location.href = "/login";
+				}, 1000);
 			} else if (response.status == 0 && response.alreadyRegistered) {
 				showError("You're already registered for this event.");
 			} else if (response.status == 1) {
