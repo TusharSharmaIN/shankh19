@@ -104,7 +104,7 @@ function registerEvent() {
 		},
 		success: function(response) {
 			if (response.status == 0 && !response.loggedIn) {
-				showError("You're not logged in. Please login and try again.");
+				showError("You're not logged in. Redirecting to login page...");
 				setTimeout(() => {
 					window.location.href = "/login";
 				}, 1000);

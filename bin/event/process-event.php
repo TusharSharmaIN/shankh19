@@ -55,22 +55,22 @@ if (isset($_GET['registerEvent'])) {
 			</table>
 			<table class=\"content\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;background:#ffd89b;background:linear-gradient(to right, #ffeeee, #ddefbb);\">
 				<tr>
-					<td align=\"center\" style=\"padding:50px 0px 5px 0px;font-family:'Poppins',sans-serif;font-size:18px\">
+					<td align=\"center\" style=\"padding:50px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
 						You've been successfully registered for the event <strong>{$event->getName()}</strong>.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"padding:5px;font-family:'Poppins',sans-serif;font-size:18px\">
+					<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
 						Please go through the rules and regulations of the event.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"padding:5px;font-family:'Poppins',sans-serif;font-size:18px\">
+					<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
 						We'll keep you informed in case there is any update in the schedule of the event.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"padding:100px 0 5px 0;font-family:'Poppins',sans-serif;font-size:14px\">
+					<td align=\"center\" style=\"padding:100px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
 						This is a system generated mail. Please do not reply to this email.
 					</td>
 				</tr>
@@ -82,22 +82,22 @@ if (isset($_GET['registerEvent'])) {
 			</table>
 			<table class=\"footer\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:30px 0 5px 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:30px 5px 5px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 							<a href=\"https://www.shankhnaad.org\" style=\"color:#aaa;text-decoration:none;\">www.shankhnaad.org</a>
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:0px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 						Copyright &copy; 2020 Shankhnaad. All rights reserved.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 0 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 						Dr. Ambedkar Institute of Technology for Handicapped, Kanpur, U.P., India - 208024
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 0 30px 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 30px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 						<a href=\"mailto:shankhnaad@aith.ac.in\" style=\"color:#aaa;text-decoration:none;\">shankhnaad@aith.ac.in</a>
 					</td>
 				</tr>
@@ -146,22 +146,22 @@ if (isset($_GET['deregisterEvent'])) {
 			</table>
 			<table class=\"content\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;background:#ffd89b;background:linear-gradient(to right, #ffeeee, #ddefbb);\">
 				<tr>
-					<td align=\"center\" style=\"padding:50px 0px 5px 0px;font-family:'Poppins',sans-serif;font-size:18px\">
+					<td align=\"center\" style=\"padding:50px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
 						As per your request, you've been successfully deregistered from the event <strong>{$event->getName()}</strong>.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"padding:5px;font-family:'Poppins',sans-serif;font-size:18px\">
+					<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
 						In case you mistakenly deregistered from the event, go to the events page and register yourself again.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"padding:5px;font-family:'Poppins',sans-serif;font-size:18px\">
+					<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
 						Still having issues? Contact us, at the email given below, for any help.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"padding:100px 0 5px 0;font-family:'Poppins',sans-serif;font-size:14px\">
+					<td align=\"center\" style=\"padding:100px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
 						This is a system generated mail. Please do not reply to this email.
 					</td>
 				</tr>
@@ -173,22 +173,22 @@ if (isset($_GET['deregisterEvent'])) {
 			</table>
 			<table class=\"footer\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:30px 0 5px 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:30px 5px 5px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 							<a href=\"https://www.shankhnaad.org\" style=\"color:#aaa;text-decoration:none;\">www.shankhnaad.org</a>
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:0px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:0px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 						Copyright &copy; 2020 Shankhnaad. All rights reserved.
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 0 0 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 0 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 						Dr. Ambedkar Institute of Technology for Handicapped, Kanpur, U.P., India - 208024
 					</td>
 				</tr>
 				<tr>
-					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 0 30px 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 30px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
 						<a href=\"mailto:shankhnaad@aith.ac.in\" style=\"color:#aaa;text-decoration:none;\">shankhnaad@aith.ac.in</a>
 					</td>
 				</tr>

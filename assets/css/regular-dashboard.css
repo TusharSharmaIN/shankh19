@@ -20,6 +20,7 @@ body {
 	font-family: "Poppins", sans-serif;
 	margin: 0;
 	padding: 0;
+	overflow: overlay;
 }
 
 nav {
@@ -116,7 +117,7 @@ html.nav-active {
 	display: block;
 	margin: 10px 20px 10px 10px;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 }
 
 .burger div {
@@ -333,6 +334,7 @@ html.nav-active {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.9);
 	display: none;
+	z-index: 1;
 }
 
 .dialog {
@@ -347,6 +349,7 @@ html.nav-active {
 	flex-direction: column;
 	padding: 10px;
 	border-radius: 2px;
+	z-index: 2;
 }
 
 .dialog.active {
