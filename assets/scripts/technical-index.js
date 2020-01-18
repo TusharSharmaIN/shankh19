@@ -55,6 +55,7 @@ $.ajax({
 				eid = event.target.id.substr(0, 8);
 				$(".dialog").addClass("active");
 				$(".overlay").toggle();
+				$('#dialog-confirm-btn').focus();
 			});
 		}
 	}

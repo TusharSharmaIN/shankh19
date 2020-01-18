@@ -176,6 +176,7 @@ $.ajax({
 			$(".fa.fa-close.deregister-btn").on("click", event => {
 				$(".dialog").addClass("active");
 				$(".overlay").toggle();
+				$('#dialog-confirm-btn').focus();
 				eid = event.target.id.substr(4);
 			});
 		}
