@@ -36,6 +36,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
 			?>
 			<li><a class="nav-ul-a" href="/#events">Events</a></li>
+			<li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>
 			<li><a class="nav-ul-a" href="/#mentors">Mentors</a></li>
 			<li><a class="nav-ul-a" href="/#teams">Team</a></li>
 			<li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>

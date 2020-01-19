@@ -170,5 +170,18 @@ $(".burger").on("click", function() {
 	$("html").toggleClass("nav-active");
 });
 
-/* Google maps API code */
+/*	Brochure URL changes for different clients	*/
+function changeBrochureURL(x) {
+	if (x.matches) { // If media query matches
+		document.getElementById("brochure").href = "https://drive.google.com/file/d/1yWHvFuxK3XA9F_jDrT-2_z-cKGIRPjph/preview";
+	} else {
+		document.getElementById("brochure").href = "https://drive.google.com/file/d/1_yhtfiNugNTBvbuuTxWp1SOBCelP267s/preview";
+	}
+}
+  
+var x = window.matchMedia("(max-width: 768px)")
+changeBrochureURL(x) // Call listener function at run time
+x.addListener(changeBrochureURL) // Attach listener function on state changes
+/*	Ends Here	*/
 
+/* Google maps API code */
