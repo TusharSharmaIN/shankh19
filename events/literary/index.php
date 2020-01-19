@@ -1,3 +1,11 @@
+<?php
+$loggedIn = false;
+session_start();
+if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['lname'])) {
+    $loggedIn = true;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="literary">
 
@@ -20,12 +28,16 @@
             <h1>Shankhnaad'20</h1>
         </div>
         <ul class="nav-ul" id="nav">
-            <li><a class="nav-ul-a" href="/login">Login</a></li>
-            <li><a class="nav-ul-a" href="#">Events</a></li>
-            <li><a class="nav-ul-a" href="#">Brochure</a></li>
-            <li><a class="nav-ul-a" href="#">Team</a></li>
-            <li><a class="nav-ul-a" href="#">Sponsors</a></li>
-            <li><a class="nav-ul-a" href="#">About us</a></li>
+            <?php
+            if ($loggedIn) echo "<li><a class=\"nav-ul-a\" href=\"/dashboard\">Dashboard</a></li>";
+            else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
+            ?>
+            <li><a class="nav-ul-a" href="/#events">Events</a></li>
+            <li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>
+            <li><a class="nav-ul-a" href="/#mentors">Mentors</a></li>
+            <li><a class="nav-ul-a" href="/#teams">Team</a></li>
+            <li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>
+            <li><a class="nav-ul-a" href="/#about-us">About us</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
