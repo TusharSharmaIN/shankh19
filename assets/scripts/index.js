@@ -172,10 +172,11 @@ $(".burger").on("click", function() {
 
 /*	Brochure URL changes for different clients	*/
 function changeBrochureURL(x) {
-	if (x.matches) { // If media query matches
-		document.getElementById("brochure").href = "https://drive.google.com/file/d/1yWHvFuxK3XA9F_jDrT-2_z-cKGIRPjph/preview";
+	if (x.matches) {
+		//	compressed version
+		document.getElementById("brochure").href = "https://drive.google.com/file/d/1yWHvFuxK3XA9F_jDrT-2_z-cKGIRPjph/view?usp=sharing";
 	} else {
-		document.getElementById("brochure").href = "https://drive.google.com/file/d/1_yhtfiNugNTBvbuuTxWp1SOBCelP267s/preview";
+		document.getElementById("brochure").href = "https://drive.google.com/file/d/1_yhtfiNugNTBvbuuTxWp1SOBCelP267s/view?usp=sharing";
 	}
 }
   
