@@ -1,19 +1,26 @@
+<?php
+$loggedIn = false;
+session_start();
+if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['lname'])) {
+	$loggedIn = true;
+}
+?>
+
 <!DOCTYPE html>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Shankhnaad'20 - Home</title>
-	
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="stylesheet" href="/assets/css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>			<!--For Image Slider-->
-	<script defer src="/assets/scripts/index.js"></script>											<!--For Navigation-->
-
-
-	<link rel="shortcut icon" type="image/png" href="img/shankh-black.png"/>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/6c05aa3d79.js" crossorigin="anonymous"></script>
+	<script defer src="/assets/scripts/index.js"></script>
+	<link rel="shortcut icon" type="image/png" href="img/shankh-black.png" />
 </head>
 
 <body>
@@ -24,12 +31,15 @@
 			<h1>Shankhnaad'20</h1>
 		</div>
 		<ul class="nav-ul" id="nav">
-			<li><a class="nav-ul-a" href="/login">Login</a></li>
-			<li><a class="nav-ul-a" href="#">Events</a></li>
-			<li><a class="nav-ul-a" href="#">Brochure</a></li>
-			<li><a class="nav-ul-a" href="#">Team</a></li>
-			<li><a class="nav-ul-a" href="#">Sponsors</a></li>
-			<li><a class="nav-ul-a" href="#">About us</a></li>
+			<?php
+			if ($loggedIn) echo "<li><a class=\"nav-ul-a\" href=\"/dashboard\">Dashboard</a></li>";
+			else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
+			?>
+			<li><a class="nav-ul-a" href="/#events">Events</a></li>
+			<li><a class="nav-ul-a" href="/#mentors">Mentors</a></li>
+			<li><a class="nav-ul-a" href="/#teams">Team</a></li>
+			<li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>
+			<li><a class="nav-ul-a" href="/#about-us">About us</a></li>
 		</ul>
 		<div class="burger">
 			<div class="line1"></div>
@@ -42,7 +52,7 @@
 	<a name="home">
 		<!--- Start Slider -->
 		<script>
-			$(document).ready(function(){
+			$(document).ready(function() {
 				$('.slider').bxSlider({
 					mode: 'fade',
 					controls: false,
@@ -62,9 +72,9 @@
 		<!--- End Slider -->
 	</a>
 	<!--End Home-->
-	
+
 	<!--Start Events-->
-	<a name="events">
+	<a id="events" name="events">
 		<!--Start Banner Wrapper For Events-->
 		<div id="banner-wrapper">
 			<h1>This year Events</h1>
@@ -103,8 +113,8 @@
 
 	<div class="clear-fix"></div>
 
-	<!--Start Teams-->
-	<a name="mentors">
+	<!--Start Mentors-->
+	<a id="mentors" name="mentors">
 		<!--Start Banner Wrapper For Teams-->
 		<div id="banner-wrapper">
 			<h1>Mentors</h1>
@@ -132,27 +142,27 @@
 
 	<!--Start Parallax 2 Section-->
 	<section class="parallax-2">
-			<div class="parallax-inner">
-				<section class="one-third">
-					<h3>Heading title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-				</section>
-				<section class="one-third">
-					<h3>Heading title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-				</section>
-				<section class="one-third">
-					<h3>Heading title</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-				</section>
-			</div>
-		</section>
+		<div class="parallax-inner">
+			<section class="one-third">
+				<h3>Heading title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
+			</section>
+			<section class="one-third">
+				<h3>Heading title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
+			</section>
+			<section class="one-third">
+				<h3>Heading title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
+			</section>
+		</div>
+	</section>
 	<!--End Parallax 2 Section-->
 
 	<div class="clearfix"></div>
 
 	<!--Start Teams-->
-	<a name="teams">
+	<a id="teams" name="teams">
 		<!--Start Banner Wrapper For Teams-->
 		<div id="banner-wrapper">
 			<h1>Teams</h1>
@@ -188,12 +198,12 @@
 			</section>
 		</div>
 	</section>
-<!--End Parallax 2 Section-->
+	<!--End Parallax 2 Section-->
 
-<div class="clearfix"></div>
+	<div class="clearfix"></div>
 
 	<!--Start Sponsors-->
-	<a name="sponsors">
+	<a id="sponsors" name="sponsors">
 		<!--Start Banner Wrapper For Sponsors-->
 		<div id="banner-wrapper">
 			<h1>Sponsors</h1>
@@ -234,7 +244,7 @@
 	<div class="clearfix"></div>
 
 	<!--Start About Us-->
-	<a name="aboutus">
+	<a id="about-us" name="aboutus">
 		<!--Start Banner Wrapper-->
 		<section class="left-col">
 			<h1>About Us</h1>
@@ -255,11 +265,26 @@
 
 	<!--Start Footer-->
 	<footer>
-		Developed by HumbleFool.<br>
-		Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
-		Contact - shankhnaad@aith.ac.in
+		<div id="map">
+			<iframe width="100%" height="100%" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Dr.%20Ambedkar%20Institute%20of%20Technology%20for%20Handicapped+(Dr.%20Ambedkar%20Institute%20of%20Technology%20for%20Handicapped)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+				<style>
+					#gmap_canvas img {
+						max-width: none !important;
+						background: none !important
+					}
+				</style>
+		</div>
+		<div id="footer-text">
+			Developed by HumbleFool.<br>
+			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
+			Contact - shankhnaad@aith.ac.in
+			<div id="social-media-icons">
+				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fab fa-youtube"></i>
+			</div>
+		</div>
 	</footer>
-	<!--End Footer-->
-	
 </body>
+
 </html>

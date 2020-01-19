@@ -169,3 +169,6 @@ $(".burger").on("click", function() {
 	$(".burger").toggleClass("toggle");
 	$("html").toggleClass("nav-active");
 });
+
+/* Google maps API code */
+

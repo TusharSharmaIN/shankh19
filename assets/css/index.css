@@ -16,6 +16,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: overlay;
+	scroll-behavior: smooth;
 }
 
 /* CSS FOR NAV STARTS HERE */
@@ -304,7 +305,29 @@ footer {
 	box-sizing: border-box;
 	align-items: center;
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+#map {
+	padding: 20px;
+	height: 400px;
+	width: 400px;
+}
+
+#footer-text {
+	padding: 10px;
+}
+
+#social-media-icons i{
+	font-size: 24px;
+	padding: 10px;
+	cursor: pointer;
+	color: #4a4444;
+}
+
+#social-media-icons i:hover{
+	color: white;
 }
 
 /*  Start Document Media */
@@ -359,6 +382,10 @@ footer {
 	}
 	h3 {
 		padding-top: 3%;
+	}
+
+	#map {
+		width: calc(100% - 10px);
 	}
 }
 /*  End Document Media  */

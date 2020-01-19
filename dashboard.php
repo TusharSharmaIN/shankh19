@@ -1,32 +1,32 @@
 <?php
-session_start();
-if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
-	// User is not signed in
-	header('Location: login.php'); //Redirect to login page
-	exit();
-}
-// Include dependencies
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
+// session_start();
+// if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION['lname'])) {
+// 	// User is not signed in
+// 	header('Location: login.php'); //Redirect to login page
+// 	exit();
+// }
+// // Include dependencies
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
+// include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
-$email = $_SESSION['email'];
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
+// $email = $_SESSION['email'];
+// $fname = $_SESSION['fname'];
+// $lname = $_SESSION['lname'];
 
-// Create a db instance
-$db = new Database();
-// Connect to db
-$userDB = $db->getUserDBConnection();
+// // Create a db instance
+// $db = new Database();
+// // Connect to db
+// $userDB = $db->getUserDBConnection();
 
-// Create a user instance
-$user = new User($userDB);
+// // Create a user instance
+// $user = new User($userDB);
 
-// Get user data from session variable
-$user->setEmail($email);
-$user->setFName($fname);
-$user->setLName($lname);
+// // Get user data from session variable
+// $user->setEmail($email);
+// $user->setFName($fname);
+// $user->setLName($lname);
 
-if (!$user->hasFilledDetailsForm()) {
+if (false && !$user->hasFilledDetailsForm()) {
 ?>
 
 	<!-- FIRST TIME DASHBOARD CODE HERE -->
@@ -165,12 +165,12 @@ if (!$user->hasFilledDetailsForm()) {
 					<h1>Shankhnaad'20</h1>
 				</div>
 				<ul class="nav-ul" id="nav">
-					<li><a class="nav-ul-a" href="../Test/Border1.html">Login/Register</a></li>
-					<li><a class="nav-ul-a" href="../index.html#events">Events</a></li>
+					<li><a class="nav-ul-a" href="/dashboard">Dashboard</a></li>
+					<li><a class="nav-ul-a" href="/#events">Events</a></li>
 					<li><a class="nav-ul-a" href="#">Brochure</a></li>
-					<li><a class="nav-ul-a" href="../index.html#our-team">Team</a></li>
-					<li><a class="nav-ul-a" href="../index.html#sponsors">Sponsors</a></li>
-					<li><a class="nav-ul-a" href="../index.html#aboutus">About us</a></li>
+					<li><a class="nav-ul-a" href="#">Team</a></li>
+					<li><a class="nav-ul-a" href="#">Sponsors</a></li>
+					<li><a class="nav-ul-a" href="/#about-us">About us</a></li>
 				</ul>
 				<div class="burger">
 					<div class="line1"></div>
