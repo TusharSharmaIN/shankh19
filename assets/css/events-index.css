@@ -240,6 +240,8 @@ caption {
 		#4ca2cd,
 		#67b26f
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: 1;
+	animation: show .5s;
 }
 
 td {
@@ -309,6 +311,13 @@ td:nth-last-child(1) {
 
 .dialog.active {
 	display: flex;
+	opacity: 1;
+	animation: show .5s;
+}
+
+@keyframes show {
+	from {opacity: 0}
+	to {opacity: 1}
 }
 
 .dialog h2 {

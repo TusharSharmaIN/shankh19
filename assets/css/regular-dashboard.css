@@ -354,6 +354,13 @@ html.nav-active {
 
 .dialog.active {
 	display: flex;
+	opacity: 1;
+	animation: show .5s;
+}
+
+@keyframes show {
+	from {opacity: 0}
+	to {opacity: 1}
 }
 
 .dialog h2 {
