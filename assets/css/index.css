@@ -319,14 +319,15 @@ footer {
 	padding: 10px;
 }
 
-#social-media-icons i{
+#social-media-icons a{
 	font-size: 24px;
 	padding: 10px;
 	cursor: pointer;
 	color: #4a4444;
+	text-decoration: none;
 }
 
-#social-media-icons i:hover{
+#social-media-icons a:hover{
 	color: white;
 }
 

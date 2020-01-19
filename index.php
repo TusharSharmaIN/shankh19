@@ -64,11 +64,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			});
 		</script>
 		<div class="slider">
-			<div><img src="img/img-1.jpg"></div>
-			<div><img src="img/img-2.jpg"></div>
-			<div><img src="img/img-3.jpg"></div>
-			<div><img src="img/img-4.jpg"></div>
-			<div><img src="img/img-5.jpg"></div>
+			<div><img src="img/img-1.png"></div>
+			<div><img src="img/img-2.png"></div>
+			<div><img src="img/img-3.png"></div>
+			<div><img src="img/img-4.png"></div>
 		</div>
 		<!--- End Slider -->
 	</a>
@@ -121,7 +120,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			<h1>Mentors</h1>
 			<div class="one-third">
 				<h3 class="sub-heading">Mentor 1</h3>
-				<img src="img/man.png" alt="" width="100px" height="auto">
+				<img src="img/mentor-1.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Dr. Anuj Srivastva<br>(Cultural Convenor)</figcaption>
 			</div>
 			<div class="one-third">
@@ -280,9 +279,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
 			Contact - shankhnaad@aith.ac.in
 			<div id="social-media-icons">
-				<i class="fab fa-facebook-f"></i>
-				<i class="fab fa-instagram"></i>
-				<i class="fab fa-youtube"></i>
+				<a class="fab fa-facebook-f" href="https://www.facebook.com/shankhnaadAITH" target="_blank"></a>
+				<a class="fab fa-instagram" href="https://www.instagram.com/shankhnaadAITH/" target="_blank"></a>
+				<a class="fab fa-youtube" href="https://www.youtube.com/shankhnaadAITH" target="_blank"></a>
 			</div>
 		</div>
 	</footer>
