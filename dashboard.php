@@ -349,7 +349,14 @@ if (!$user->hasFilledDetailsForm()) {
 				</div>
 			</div>
 		</section>
-		<div class="overlay"></div>
+		<div class="overlay">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 		<div class="dialog">
 			<h2>Confirm deregistration</h2>
 			<p>Upon clicking the <strong>confirm</strong> button you will be deregistered from the event. You will not be able to register again once the deadline is passed. Are you sure?</p>

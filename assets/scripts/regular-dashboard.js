@@ -176,7 +176,7 @@ $.ajax({
 			$(".fa.fa-close.deregister-btn").on("click", event => {
 				$(".dialog").addClass("active");
 				$(".overlay").toggle();
-				$('#dialog-confirm-btn').focus();
+				$("#dialog-confirm-btn").focus();
 				eid = event.target.id.substr(4);
 			});
 		}
@@ -184,7 +184,7 @@ $.ajax({
 });
 
 function deregisterEvent() {
-	if(!eid) return false;
+	if (!eid) return false;
 	// Make AJAX request to fetch all events
 	$.ajax({
 		url: "/bin/event/process-event",
@@ -195,7 +195,13 @@ function deregisterEvent() {
 			deregisterEvent: true,
 			EID: eid
 		},
+		beforeSend: function() {
+			$(".dialog").removeClass("active");
+			$(".lds-ellipsis").fadeIn();
+		},
 		success: function(response) {
+			$(".lds-ellipsis").fadeOut();
+			$(".overlay").toggle();
 			if (response.status == 1) {
 				// Remove row from table
 				$(`#row-${eid}`)
@@ -274,7 +280,6 @@ $(".overlay").on("click", closeDialog);
 
 $("#dialog-confirm-btn").on("click", () => {
 	deregisterEvent();
-	closeDialog();
 });
 
 $("#dialog-cancel-btn").on("click", closeDialog);
