@@ -12,7 +12,7 @@ if (isset($body['fname']) && isset($body['lname']) && isset($body['email']) && i
     // Google recaptcha server script
     // Get secret key from greconfig.php file
     require $_SERVER['DOCUMENT_ROOT'] . '/../config/greconfig.php';
-    $responseKey = $_POST['g-recaptcha-response'];
+    $responseKey = $body['g-recaptcha-response'];
     $userIP = $_SERVER['REMOTE_ADDR'];
     $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
     $response = file_get_contents($url);

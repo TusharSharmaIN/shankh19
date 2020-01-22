@@ -141,7 +141,8 @@ function validateEmail(email) {
 }
 
 //AJAX request for signup form
-$("#signup-btn").on("click", function() {
+$("#signup-btn").on("click", function(event) {
+	event.preventDefault();
 	// Validate signup form details here
 	let name = $("#signup-name")
 		.val()
@@ -250,7 +251,8 @@ $("#signup-btn").on("click", function() {
 	});
 });
 
-$("#signin-btn").on("click", function() {
+$("#signin-btn").on("click", function(event) {
+	event.preventDefault();
 	let email = $("#login-email").val();
 	if (!validateEmail(email)) {
 		if (!email) showError("Please enter an email");
