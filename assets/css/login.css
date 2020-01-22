@@ -37,21 +37,21 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: #8360c3; /* fallback for old browsers */
+	background: #8360c3;
 	background: -webkit-linear-gradient(
 		to top,
 		#2ebf91,
 		#8360c3
-	); /* Chrome 10-25, Safari 5.1-6 */
+	);
 	background: linear-gradient(
 		to top,
 		#2ebf91,
 		#8360c3
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	);
 }
 .form-structor .signup {
-	position: absolute;
-	top: 50%;
+	position: relative;
+	top: 45%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	width: 65%;
@@ -103,7 +103,6 @@ body {
 	outline: none;
 	box-shadow: none;
 	display: block;
-	/* height: 30px; */
 	line-height: 30px;
 	padding: 5px 15px;
 	border-bottom: 1px solid #eee;
@@ -122,8 +121,6 @@ body {
 	border: 0;
 	border-radius: 5px;
 	display: block;
-	/* margin: 5px auto; */
-	/* padding: 15px 45px; */
 	width: 100%;
 	font-size: 13px;
 	font-weight: bold;
@@ -200,7 +197,6 @@ body {
 	outline: none;
 	box-shadow: none;
 	display: block;
-	/* height: 30px; */
 	line-height: 30px;
 	padding: 5px 15px;
 	border-bottom: 1px solid #eee;
@@ -220,7 +216,6 @@ body {
 	border-radius: 5px;
 	display: block;
 	margin: 5px auto;
-	/* padding: 15px 45px; */
 	width: 100%;
 	font-size: 13px;
 	font-weight: bold;
@@ -229,7 +224,6 @@ body {
 	visibility: visible;
 	-webkit-transition: all 0.3s ease;
 	height: 50px;
-	/* line-height: 10px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -299,7 +293,6 @@ body {
 
 .modal {
 	position: fixed;
-	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	transition: 200ms ease-in-out;
@@ -307,8 +300,11 @@ body {
 	border-radius: 5px;
 	z-index: 10;
 	background-color: white;
-	width: 80%;
-	height: 60%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .modal.active {
@@ -361,7 +357,6 @@ select {
 	outline: none;
 	box-shadow: none;
 	display: block;
-	/* height: 35px; */
 	line-height: 30px;
 	padding: 5px 15px;
 	border: 1px solid #eee;
@@ -376,12 +371,12 @@ select {
 	font-size: 12px;
 	font-weight: normal;
 	text-decoration: none;
-	font-family: "poppins";
+	font-family: "Poppins", sans-serif;
 }
 
 input,
 button {
-	font-family: "poppins";
+	font-family: "Poppins", sans-serif;
 }
 
 .overlay {
@@ -416,7 +411,7 @@ button {
 	text-align: center;
 	display: none;
 	opacity: 0;
-	font-family: "poppins";
+	font-family: "Poppins", sans-serif;
 }
 
 .error-alert {
@@ -435,7 +430,7 @@ button {
 #g-recaptcha-signup {
 	display: flex;
 	justify-content: center;
-	padding: 5px;
+	padding: 10px 5px;
 }
 
 .overlay {
@@ -453,7 +448,6 @@ button {
 	position: relative;
 	width: 80px;
 	top: 18px;
-	/* left: calc(50% - 40px); */
 	height: 50px;
 }
 .lds-ellipsis div {
