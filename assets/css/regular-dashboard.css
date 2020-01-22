@@ -204,7 +204,7 @@ html.nav-active {
 .table-container {
 	display: flex;
 	flex-direction: column;
-	animation: show .5s;
+	animation: show 0.5s;
 }
 
 .details-table {

@@ -201,39 +201,52 @@ $("#signup-btn").on("click", function(event) {
 		}),
 		beforeSend: function() {
 			//Show loader before sending ajax request
-			//$(".block-form").show();
-			//$(".lds-grid").css("display", "inline-block");
+			$("#signup-btn-loader").fadeIn();
+			//Show loader before sending ajax request
+			$("#signup-btn")
+				.html(
+					'<div id="signup-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+				)
+				.css("pointer-events", "none");
 		},
 		success: function(response) {
 			//Hide loader after receiving request
-			//$(".lds-grid").hide();
-			if (response == "EMPTY_FIELDS") {
-				//User has left atleast one field empty
-				console.log("Fill all fields");
-			} else if (response == "INVALID_EMAIL_FORMAT") {
+			$("#signup-btn-loader").fadeOut();
+			$("#signup-btn")
+				.html(
+					'Sign up<div id="signup-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+				)
+				.css("pointer-events", "auto");
+
+			if (response.code == "EMPTY_FIELDS") {
+				//User has left at least one field empty
+				showError("Fill all input fields.");
+			} else if (response.code == "INVALID_EMAIL_FORMAT") {
 				//User has provided invalid email
-				console.log("Check your email format");
-			} else if (response == "PASSWORDS_DO_NOT_MATCH") {
+				showError("Check your email format.");
+			} else if (response.code == "PASSWORDS_DO_NOT_MATCH") {
 				//Password and confirm password do not match
-				console.log("Passwords do not match");
-			} else if (response == "PASSWORD_EMPTY") {
+				showError("Passwords do not match.");
+			} else if (response.code == "PASSWORD_EMPTY") {
 				//User has not provided password
-				console.log("Password cannot be empty");
-			} else if (response == "SIGNUP_SUCCESS") {
+				showError("Password cannot be empty.");
+			} else if (response.code == "SIGNUP_SUCCESS") {
 				//Allow user to login now
-				console.log("Signup successful");
-			} else if (response == "USER_ALREADY_EXIST") {
+				showSuccess(
+					"Verify your email before logging in. Check your mail for the verification link."
+				);
+			} else if (response.code == "USER_ALREADY_EXIST") {
 				//User is already registered
-				console.log("User already exist");
-			} else if (response == "RECAPTCHA_FAILED") {
+				showError("User is already registered.");
+			} else if (response.code == "RECAPTCHA_FAILED") {
 				//Recaptcha verification has failed
-				console.log("Recaptcha failed");
-			} else if (response == "FORM_NOT_SUBMITTED") {
+				showError("reCAPTCHA failed. Try again.");
+			} else if (response.code == "FORM_NOT_SUBMITTED") {
 				//User has not submitted the form
-				console.log("Form not submitted");
+				showError("Server error. Try again later.");
 			} else {
 				//Server error
-				console.log("Server error");
+				showError("Server error. Try again later.");
 			}
 			//Reset recaptcha
 			grecaptcha.reset();
@@ -241,11 +254,17 @@ $("#signup-btn").on("click", function(event) {
 			$("#signup-email").val("");
 			$("#signup-password").val("");
 			$("#signup-cpassword").val("");
-			// $(".block-form").fadeOut();
 			grecaptcha.reset(0);
 		},
 		error: function(request, error) {
 			showError("Server error. Try again later.");
+			//Hide loader after receiving request
+			$("#signup-btn-loader").fadeOut();
+			$("#signup-btn")
+				.html(
+					'Sign up<div id="signup-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+				)
+				.css("pointer-events", "auto");
 			grecaptcha.reset(0);
 		}
 	});
@@ -291,13 +310,23 @@ $("#signin-btn").on("click", function(event) {
 		}),
 		beforeSend: function() {
 			//Show loader before sending ajax request
-			// $(".block-form").show();
-			// $(".lds-grid").css("display", "inline-block");
+			$("#signin-btn")
+				.html(
+					'<div id="signin-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+				)
+				.css("pointer-events", "none");
+			$("#signin-btn-loader").fadeIn();
 		},
 		success: function(response) {
-			// console.log(response);
 			//Hide loader after receiving request
-			// $(".lds-grid").hide();
+			$("#signin-btn-loader").fadeOut();
+			//Show loader before sending ajax request
+			$("#signin-btn")
+				.html(
+					'Log in<div id="signin-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+				)
+				.css("pointer-events", "auto");
+
 			if (response.code == "SIGNIN_SUCCESS") {
 				//User credentials has been successfully validated
 				let patt = new RegExp("https://shankhnaad.org/events/*");
@@ -306,28 +335,35 @@ $("#signin-btn").on("click", function(event) {
 				else window.location.href = "https://shankhnaad.org/dashboard";
 			} else if (response.code == "SIGNIN_FAILED") {
 				//User has provided invalid credentials or is not registered
-				console.log("Invalid credentials");
+				showError("Invalid email or password.");
 			} else if (response.code == "EMAIL_NOT_VERIFIED") {
 				//User has not verified his email
-				console.log("Verify your email");
+				showError("Verify your email before logging in.");
 			} else if (response.code == "RECAPTCHA_FAILED") {
 				//Recaptcha verification has failed
-				console.log("Recaptcha failed");
+				showError("reCAPTCHA failed.");
 			} else if (response.code == "FORM_NOT_SUBMITTED") {
 				//User has not submitted the form
-				console.log("Form not submitted");
+				showError("Server error. Try again later.");
 			} else {
 				//Server error
-				console.log("Server error");
+				showError("Server error. Try again later.");
 			}
 			//Reset recaptcha
 			grecaptcha.reset(1);
 			$("#login-email").val("");
 			$("#login-password").val("");
-			// $(".block-form").fadeOut();
 		},
 		error: function(request, error) {
 			showError("Server error. Try again later.");
+			//Hide loader after receiving request
+			$("#signin-btn-loader").fadeOut();
+			//Show loader before sending ajax request
+			$("#signin-btn")
+				.html(
+					'Log in<div id="signin-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
+				)
+				.css("pointer-events", "auto");
 			grecaptcha.reset(1);
 		}
 	});

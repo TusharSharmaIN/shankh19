@@ -39,6 +39,12 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
             <div id="g-recaptcha-signup"></div>
             <button class="submit-btn" id="signup-btn">
                 Sign up
+                <div id="signup-btn-loader" class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </button>
         </form>
         <div class="login slide-up">
@@ -88,7 +94,14 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
                     <div class="overlay" id="overlay-resend"></div>
                 </div>
                 <div id="g-recaptcha-signin"></div>
-                <button class="submit-btn" id="signin-btn">Log in</button>
+                <button class="submit-btn" id="signin-btn"> Log in
+                    <div id="signin-btn-loader" class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
             </div>
         </div>
     </div>
