@@ -36,7 +36,6 @@
             // Create a user instance
             $user = new User($userDB);
 
-            // Get user data from sign up form
             $user->setEmail($body['email']);
             $user->setPassword($body['password']);
 

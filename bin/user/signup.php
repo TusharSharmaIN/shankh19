@@ -3,8 +3,12 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/user/user.php';
 
+// Get POST data from HTTP body
+$body = file_get_contents('php://input');
+$body = json_decode($body, true);
+
 // Check if post has data
-if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['cpassword'])) {
+if (isset($body['fname']) && isset($body['lname']) && isset($body['email']) && isset($body['password']) && isset($body['cpassword'])) {
     // Google recaptcha server script
     // Get secret key from greconfig.php file
     require $_SERVER['DOCUMENT_ROOT'] . '/../config/greconfig.php';
@@ -15,18 +19,18 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) &
     $response = json_decode($response);
     // Only proceed when recaptcha is verified
     if ($response->success) {
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $cpassword = $_POST['cpassword'];
+        $fname = $body['fname'];
+        $lname = $body['lname'];
+        $email = $body['email'];
+        $password = $body['password'];
+        $cpassword = $body['cpassword'];
 
         //Validate email, password and confirm password
         $response = validate($fname, $lname, $email, $password, $cpassword);
 
         // If validation is failed
         if ($response != 'VALIDATED') {
-            exit($response);
+            exit(json_encode(array("code" => $response)));
         }
 
         // Create a db instance
@@ -38,31 +42,31 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) &
         $user = new User($userDB);
 
         // Get user data from sign up form
-        $user->setFName($_POST['fname']);
-        $user->setLName($_POST['lname']);
-        $user->setEmail($_POST['email']);
-        $user->setPassword($_POST['password']);
+        $user->setFName($fname);
+        $user->setLName($lname);
+        $user->setEmail($email);
+        $user->setPassword($password);
         $user->setCreated(date('Y-m-d H:i:s'));
 
         // Sign up the user
         $response = $user->signup();
         if ($response == 'SIGNUP_SUCCESS') {
             // User has been successfully signed up
-            exit($response);
+            exit(json_encode(array("code" => $response)));
         } else if ($response == 'USER_ALREADY_EXIST') {
             // User is already signed up
-            exit($response);
+            exit(json_encode(array("code" => $response)));
         } else {
             // Sign up failed
-            exit('SERVER_ERROR');
+            exit(json_encode(array("code" => 'SERVER ERROR')));
         }
     } else {
         //Recaptcha verification failed
-        exit('RECAPTCHA_FAILED');
+        exit(json_encode(array("code" => 'RECAPTCHA_FAILED')));
     }
 } else {
     // User has not submitted form
-    exit('FORM_NOT_SUBMITTED');
+    exit(json_encode(array("code" => 'FORM_NOT_SUBMITTED')));
 }
 
 // Function to validate if email is in correct format or not
