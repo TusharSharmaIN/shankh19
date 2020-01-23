@@ -372,7 +372,7 @@ $("#signin-btn").on("click", function(event) {
 	});
 });
 
-$("resend-email-btn").on("click", event => {
+$("#resend-email-btn").on("click", event => {
 	event.preventDefault();
 	let email = resendEmailVerificationTo;
 	if (!validateEmail(email)) {
@@ -390,11 +390,15 @@ $("resend-email-btn").on("click", event => {
 		},
 		success: function(response) {
 			if (response.code == "EMAIL_SENT") {
-				showSuccess('Verification email sent. Check your inbox or spam.');
-			}
-			else {
+				showSuccess(
+					"Verification email sent. Check your inbox or spam."
+				);
+			} else {
 				showError("Server error. Try again later.");
 			}
+			resendEmailVerificationTo = null;
+			let resendModal = document.getElementById("resend-modal");
+			closeModal(resendModal);
 		}
 	});
 });
