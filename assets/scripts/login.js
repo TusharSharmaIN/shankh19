@@ -32,7 +32,8 @@ overlayReset.addEventListener("click", () => {
 	});
 });
 
-resetBack.addEventListener("click", () => {
+resetBack.addEventListener("click", e => {
+	e.preventDefault();
 	const modals = document.querySelectorAll(".modal.active");
 	modals.forEach(modal => {
 		closeModal(modal);
@@ -46,7 +47,8 @@ overlayResend.addEventListener("click", () => {
 	});
 });
 
-resendBack.addEventListener("click", () => {
+resendBack.addEventListener("click", e => {
+	e.preventDefault();
 	const modals = document.querySelectorAll(".modal.active");
 	modals.forEach(modal => {
 		closeModal(modal);
@@ -106,7 +108,7 @@ function showError(msg) {
 				$(".alert").removeClass("error-alert");
 			}
 		);
-	}, 3000);
+	}, 5000);
 }
 
 function showSuccess(msg) {
@@ -132,7 +134,7 @@ function showSuccess(msg) {
 				$(".alert").removeClass("success-alert");
 			}
 		);
-	}, 2000);
+	}, 5000);
 }
 
 function validateEmail(email) {
@@ -201,13 +203,12 @@ $("#signup-btn").on("click", function(event) {
 		}),
 		beforeSend: function() {
 			//Show loader before sending ajax request
-			$("#signup-btn-loader").fadeIn();
-			//Show loader before sending ajax request
 			$("#signup-btn")
 				.html(
 					'<div id="signup-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
 				)
 				.css("pointer-events", "none");
+			$("#signup-btn-loader").fadeIn();
 		},
 		success: function(response) {
 			//Hide loader after receiving request
@@ -218,6 +219,11 @@ $("#signup-btn").on("click", function(event) {
 				)
 				.css("pointer-events", "auto");
 
+			$("#signup-name").val("");
+			$("#signup-email").val("");
+			$("#signup-password").val("");
+			$("#signup-cpassword").val("");
+			grecaptcha.reset(0);
 			if (response.code == "EMPTY_FIELDS") {
 				//User has left at least one field empty
 				showError("Fill all input fields.");
@@ -237,7 +243,9 @@ $("#signup-btn").on("click", function(event) {
 				);
 			} else if (response.code == "USER_ALREADY_EXIST") {
 				//User is already registered
-				showError("User is already registered.");
+				showError(
+					"This email is already registered with us. Please log in."
+				);
 			} else if (response.code == "RECAPTCHA_FAILED") {
 				//Recaptcha verification has failed
 				showError("reCAPTCHA failed. Try again.");
@@ -248,13 +256,6 @@ $("#signup-btn").on("click", function(event) {
 				//Server error
 				showError("Server error. Try again later.");
 			}
-			//Reset recaptcha
-			grecaptcha.reset();
-			$("#signup-name").val("");
-			$("#signup-email").val("");
-			$("#signup-password").val("");
-			$("#signup-cpassword").val("");
-			grecaptcha.reset(0);
 		},
 		error: function(request, error) {
 			showError("Server error. Try again later.");
@@ -269,6 +270,8 @@ $("#signup-btn").on("click", function(event) {
 		}
 	});
 });
+
+var resendEmailVerificationTo = null;
 
 $("#signin-btn").on("click", function(event) {
 	event.preventDefault();
@@ -320,25 +323,29 @@ $("#signin-btn").on("click", function(event) {
 		success: function(response) {
 			//Hide loader after receiving request
 			$("#signin-btn-loader").fadeOut();
-			//Show loader before sending ajax request
 			$("#signin-btn")
 				.html(
 					'Log in<div id="signin-btn-loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>'
 				)
 				.css("pointer-events", "auto");
 
+			$("#login-email").val("");
+			$("#login-password").val("");
+			grecaptcha.reset(1);
 			if (response.code == "SIGNIN_SUCCESS") {
 				//User credentials has been successfully validated
-				let patt = new RegExp("https://shankhnaad.org/events/*");
+				let pattern = new RegExp("https://shankhnaad.org/events/*");
 				// Redirect to the referer or to the dashboard
-				if (patt.test(referer)) window.location.href = referer;
+				if (pattern.test(referer)) window.location.href = referer;
 				else window.location.href = "https://shankhnaad.org/dashboard";
 			} else if (response.code == "SIGNIN_FAILED") {
 				//User has provided invalid credentials or is not registered
 				showError("Invalid email or password.");
 			} else if (response.code == "EMAIL_NOT_VERIFIED") {
 				//User has not verified his email
-				showError("Verify your email before logging in.");
+				let resendModal = document.getElementById("resend-modal");
+				openModal(resendModal);
+				resendEmailVerificationTo = email;
 			} else if (response.code == "RECAPTCHA_FAILED") {
 				//Recaptcha verification has failed
 				showError("reCAPTCHA failed.");
@@ -349,10 +356,6 @@ $("#signin-btn").on("click", function(event) {
 				//Server error
 				showError("Server error. Try again later.");
 			}
-			//Reset recaptcha
-			grecaptcha.reset(1);
-			$("#login-email").val("");
-			$("#login-password").val("");
 		},
 		error: function(request, error) {
 			showError("Server error. Try again later.");
@@ -365,6 +368,33 @@ $("#signin-btn").on("click", function(event) {
 				)
 				.css("pointer-events", "auto");
 			grecaptcha.reset(1);
+		}
+	});
+});
+
+$("resend-email-btn").on("click", event => {
+	event.preventDefault();
+	let email = resendEmailVerificationTo;
+	if (!validateEmail(email)) {
+		if (!email) showError("Please enter an email");
+		else showError("The email provided is invalid");
+		return false;
+	}
+	//AJAX request for signin form
+	$.ajax({
+		url: "/bin/user/verify-email",
+		method: "GET",
+		dataType: "json",
+		data: {
+			email: email
+		},
+		success: function(response) {
+			if (response.code == "EMAIL_SENT") {
+				showSuccess('Verification email sent. Check your inbox or spam.');
+			}
+			else {
+				showError("Server error. Try again later.");
+			}
 		}
 	});
 });

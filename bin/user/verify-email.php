@@ -3,7 +3,7 @@
 
     if(!isset($_GET['email'])){
         // Redirected to this page by an invalid link
-        exit('INVALID_LINK');
+        exit(json_encode(array('code' => 'INVALID_LINK')));
     }
 
     // Get user's email
@@ -12,7 +12,7 @@
     // Check email format
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         // Email provided in the link is invalid
-        exit('INVALID_EMAIL_FORMAT');
+        exit(json_encode(array('code' => 'INVALID_EMAIL_FORMAT')));
     }
     
     include_once $_SERVER['DOCUMENT_ROOT'] . '/bin/config/database.php';
@@ -29,5 +29,4 @@
     $user->setEmail($email);
     // Try to resend verification email
     $response = $user->resendVerificationEmail();
-    exit($response);
-?>
+    exit(json_encode(array('code' => $response)));

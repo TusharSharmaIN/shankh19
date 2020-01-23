@@ -77,13 +77,10 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
                     <div class="overlay" id="overlay-reset"></div>
                 </div>
                 <div class="resend-email">
-                    <button class="text-button" data-modal-target="#resend-modal">
-                        Resend Confirmation Link
-                    </button>
                     <div class="modal" id="resend-modal">
                         <div class="modal-body">
                             <p>
-                                Do you want to resend the Confirmation Link?
+                                Your email is not verified. Verify your email before login. Do you want to resend the verification email?
                             </p>
                             <form class="reset-form">
                                 <input type="submit" value="Yes" class="submit-btn" id="resend-email-btn" />
