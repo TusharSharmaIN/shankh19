@@ -64,10 +64,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			});
 		</script>
 		<div class="slider">
-			<div><img src="img/img-1.png"></div>
-			<div><img src="img/img-2.png"></div>
-			<div><img src="img/img-3.png"></div>
-			<div><img src="img/img-4.png"></div>
+			<div><img src="img/img-1.jpg"></div>
+			<div><img src="img/img-2.jpg"></div>
+			<div><img src="img/img-3.jpg"></div>
+			<div><img src="img/img-4.jpg"></div>
+			<div><img src="img/img-5.jpg"></div>
 		</div>
 		<!--- End Slider -->
 	</a>
@@ -79,19 +80,19 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		<div id="banner-wrapper">
 			<h1>This year Events</h1>
 			<section class="one-third">
-				<img src="img/cultural.jpg">
-				<h3>Cultural</h3>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam consequuntur iste est quasi magnam sequi vitae optio aspernatur ducimus eveniet fugit, inventore reprehenderit itaque. Dolores perspiciatis quibusdam praesentium quam sed!</p>
+				<img src="img/technical.jpg">
+				<h3>Technical</h3>
+				<p>Technology helps us to step into this new era with ease and engineers are known as the wizard of technology. So a shout out to all the technocrats out there here, it is big feed for all of you as you'll get a blow of microflora art to PC gaming. Check your expertise with us and adore these festivities.</p>
 			</section>
 			<section class="one-third">
 				<img src="img/literature.jpg">
-				<h3>Literature</h3>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam consequuntur iste est quasi magnam sequi vitae optio aspernatur ducimus eveniet fugit, inventore reprehenderit itaque. Dolores perspiciatis quibusdam praesentium quam sed!</p>
+				<h3>Literary</h3>
+				<p>We all somewhere empty our way too filled mind with our artistic qualities hidden somewhere within us. So it's high time to do it more skillfully. Process, nothing much shows the grace of eloquent mindset and content you have, and that's it. Come with us to this beautiful expedition of model United Nation to mockshashatkar and manifest your finesse.</p>
 			</section>
 			<section class="one-third">
-				<img src="img/technical.jpg">
-				<h3>Technical</h3>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam consequuntur iste est quasi magnam sequi vitae optio aspernatur ducimus eveniet fugit, inventore reprehenderit itaque. Dolores perspiciatis quibusdam praesentium quam sed!</p>
+				<img src="img/cultural.jpg">
+				<h3>Cultural</h3>
+				<p>It will be very sketchy without a touch of music, dance and some adventure. So to give this trip an extra dose of happiness and enthusiasm, we present you the elegance of the cultural interlude. From classical dance to hip hop, from rap to all sorts of mimicry and stand up comedies and to the chapter of mock CID it just contains each and everything to palliate you. So Gather to the arena and play a part in this delight.</p>
 			</section>
 		</div>
 		<!--End Banner Wrapper-->
@@ -117,21 +118,18 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<a id="mentors" name="mentors">
 		<!--Start Banner Wrapper For Teams-->
 		<div id="banner-wrapper">
-			<h1>Mentors</h1>
+			<h1>Executive Committee</h1>
 			<div class="one-third">
-				<h3 class="sub-heading">Mentor 1</h3>
+				<img src="img/man.png" alt="" width="100px" height="auto">
+				<figcaption>Sri Nath Dwivedi<br>(Chairman CECA)</figcaption>
+			</div>
+			<div class="one-third">
 				<img src="img/mentor-1.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Dr. Anuj Srivastva<br>(Cultural Convenor)</figcaption>
 			</div>
 			<div class="one-third">
-				<h3 class="sub-heading">Mentor 2</h3>
 				<img src="img/man.png" alt="" width="100px" height="auto">
 				<figcaption>Kapil Kumar Pandey<br>(Technical and Literary Convenor)</figcaption>
-			</div>
-			<div class="one-third">
-				<h3 class="sub-heading">Mentor 3</h3>
-				<img src="img/man.png" alt="" width="100px" height="auto">
-				<figcaption>Sri Nath Dwivedi<br>(Chairman CECA)</figcaption>
 			</div>
 		</div>
 		<!--End Banner Wrapper For Teams-->
