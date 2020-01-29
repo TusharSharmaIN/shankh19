@@ -11,7 +11,6 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Shankhnaad'20 - Home</title>
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="stylesheet" href="/assets/css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
@@ -32,13 +31,13 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		</div>
 		<ul class="nav-ul" id="nav">
 			<?php
-			if ($loggedIn) echo "<li><a class=\"nav-ul-a\" href=\"/dashboard\">Dashboard</a></li>";
-			else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
+				if ($loggedIn) echo "<li><a class=\"nav-ul-a\" href=\"/dashboard\">Dashboard</a></li>";
+				else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
 			?>
 			<li><a class="nav-ul-a" href="/#events">Events</a></li>
 			<li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>
-			<li><a class="nav-ul-a" href="/#mentors">Mentors</a></li>
-			<li><a class="nav-ul-a" href="/#teams">Team</a></li>
+			<li><a class="nav-ul-a" href="/#executive-comitee">Mentors</a></li>
+			<li><a class="nav-ul-a" href="/#testimonials">Testimonials</a></li>
 			<li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>
 			<li><a class="nav-ul-a" href="/#about-us">About us</a></li>
 		</ul>
@@ -49,6 +48,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		</div>
 	</nav>
 	<!--- End Navigation -->
+	
 	<!--Start Home-->
 	<a name="home">
 		<!--- Start Slider -->
@@ -77,7 +77,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<!--Start Events-->
 	<a id="events" name="events">
 		<!--Start Banner Wrapper For Events-->
-		<div id="banner-wrapper">
+		<div class="banner-wrapper">
 			<h1>This year Events</h1>
 			<section class="one-third">
 				<img src="img/technical.jpg">
@@ -102,12 +102,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<div class="clearfix"></div>
 
 	<!--Start Parallax 1 Section-->
-	<section class="parallax-1">
+	<section class="parallax" id="parallax-1">
 		<div class="parallax-inner">
-			<section class="one-one">
-				<h3>Content Heading</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis porro asperiores culpa ipsum illo soluta ipsam omnis, doloribus minus amet sint consequuntur facilis magni nulla. Similique, ipsa repellat. Laboriosam, sit.</p>
-			</section>
+			<blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote>
 		</div>
 	</section>
 	<!--End Parallax 1 Section-->
@@ -115,9 +112,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<div class="clear-fix"></div>
 
 	<!--Start Mentors-->
-	<a id="mentors" name="mentors">
+	<a id="executive-comitee" name="executive-comitee">
 		<!--Start Banner Wrapper For Teams-->
-		<div id="banner-wrapper">
+		<div class="banner-wrapper">
 			<h1>Executive Committee</h1>
 			<div class="one-third">
 				<img src="img/man.png" alt="" width="100px" height="auto">
@@ -139,80 +136,84 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<div class="clearfix"></div>
 
 	<!--Start Parallax 2 Section-->
-	<section class="parallax-2">
+	<section class="parallax" id="parallax-2">
 		<div class="parallax-inner">
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
 		</div>
 	</section>
 	<!--End Parallax 2 Section-->
 
 	<div class="clearfix"></div>
 
-	<!--Start Teams-->
-	<a id="teams" name="teams">
+	<!--Start Testimonials-->
+	<a id="testimonials" name="testimonials">
 		<!--Start Banner Wrapper For Teams-->
-		<div id="banner-wrapper">
-			<h1>Teams</h1>
-			<div class="one-half">
-				<h3>Team 1</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam eum illum laborum adipisci harum praesentium, doloremque quas reprehenderit aspernatur dolores non nam alias cupiditate labore. Quae, est libero! Enim?</p>
-			</div>
-			<div class="one-half">
-				<h3>Team 2</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam eum illum laborum adipisci harum praesentium, doloremque quas reprehenderit aspernatur dolores non nam alias cupiditate labore. Quae, est libero! Enim?</p>
+		<div class="banner-wrapper">
+			<div class="testimonial-section">
+				<div class="inner-width">
+					<h1>Testimonials</h1>
+					<div class="testimonial-pics">
+						<img src="img/test-1.jpg" alt="test-1" class="active">
+						<img src="img/test-2.jpg" alt="test-2">
+						<img src="img/test-3.jpg" alt="test-3">
+					</div>
+
+					<div class="testimonial-contents">
+						<div class="testimonial active" id="test-1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+						<span class="description">
+							<h3 class="name">Prof. Vinay Kumar Pathak</h3>
+							<h6>Vice Chancellor<br>AKTU, Lucknow</h6>
+						</span>
+						</div>
+
+						<div class="testimonial" id="test-2">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+						<span class="description">
+							<h3 class="name">Ira Singhal</h3>
+							<h6>Deputy Commissionor<br>Nagar Nigam, North Delhi</h6>
+						</span>
+						</div>
+
+						<div class="testimonial" id="test-3">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+							<span class="description">
+								<h3 class="name">Jon Doe</h3>
+								<h6>Bulku Monkey<br>Knowhere</h6>
+						</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!--End Banner Wrapper For Teams-->
+		<script type="text/javascript">
+    		$('.testimonial-pics img').click(function(){
+        	$(".testimonial-pics img").removeClass("active");
+        	$(this).addClass("active");
+        	$(".testimonial").removeClass("active");
+        	$("#"+$(this).attr("alt")).addClass("active");
+      		});
+    	</script>
+		<!--End Banner Wrapper For Testimonials-->
 	</a>
-	<!--End Teams-->
+	<!--End Testimonials-->
 
 	<div class="clearfix"></div>
 
-	<!--Start Parallax 2 Section-->
-	<section class="parallax-2">
+	<!--Start Parallax 3 Section-->
+	<section class="parallax" id="parallax-3">
 		<div class="parallax-inner">
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
 		</div>
 	</section>
-	<!--End Parallax 2 Section-->
+	<!--End Parallax 3 Section-->
 
 	<div class="clearfix"></div>
 
 	<!--Start Sponsors-->
 	<a id="sponsors" name="sponsors">
 		<!--Start Banner Wrapper For Sponsors-->
-		<div id="banner-wrapper">
-			<h1>Sponsors</h1>
-			<div class="one-half">
-				<h3>Sponsor 1</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam eum illum laborum adipisci harum praesentium, doloremque quas reprehenderit aspernatur dolores non nam alias cupiditate labore. Quae, est libero! Enim?</p>
-			</div>
-			<div class="one-half">
-				<h3>Sponsor 2</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam eum illum laborum adipisci harum praesentium, doloremque quas reprehenderit aspernatur dolores non nam alias cupiditate labore. Quae, est libero! Enim?</p>
-			</div>
+		<div class="banner-wrapper">
+			<h1>Our Sponsors</h1>
+			<!--img src="img/sponsors.jpg" alt="" width="60%" height="auto" class="image-center"-->
 		</div>
 		<!--End Banner Wrapper For Teams-->
 	</a>
@@ -220,24 +221,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 	<div class="clearfix"></div>
 
-	<!--Start Parallax 3 Section-->
-	<section class="parallax-3">
+	<!--Start Parallax 4 Section-->
+	<section class="parallax" id="parallax-4">
 		<div class="parallax-inner">
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
-			<section class="one-third">
-				<h3>Heading title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veritatis autem est sapiente consequuntur eum officia enim ratione laudantium reprehenderit sed officiis ipsa delectus nobis dicta voluptate. Tempora, possimus consectetur.</p>
-			</section>
 		</div>
 	</section>
-	<!--End Parallax 3 Section-->
+	<!--End Parallax 4 Section-->
 
 	<div class="clearfix"></div>
 
