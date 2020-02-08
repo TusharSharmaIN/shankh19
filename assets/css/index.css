@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Hind"); /*--- Body Font --*/
 @import url("https://fonts.googleapis.com/css?family=Nobile"); /*--- Heading Font --*/
 @import url("https://fonts.googleapis.com/css?family=Martel");
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 
 * {
 	outline: none;
@@ -29,7 +30,8 @@ nav {
 	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
 	z-index: 1;
-	position: absolute;
+	position: fixed;
+	top: 0;
 }
 
 .nav-logo {
@@ -153,13 +155,13 @@ body {
 }
 
 h1 {
-	font-family: "Nobile", sans-serif;
-	text-align: center;
-	font-size: 175%;
-	color: #4a4444;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
 	padding: 3% 0;
+	text-align: center;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 20px;
 }
 
 h3 {
@@ -287,7 +289,8 @@ img {
 	margin: auto;
 	padding: 0 20px;
 }
-  
+
+
 .testimonial-section h1 {
 	font-weight: 400;
 	letter-spacing: 10px;
@@ -337,9 +340,14 @@ img {
 	font-size: 15px;
 }
 
+#img-sponsors {
+	margin: 0 auto;
+	padding: 20px 50px;
+}
+
 /*  Start Parallax Section */
 .parallax {
-	height: auto;
+	height: 200px;
 	text-align: center;
 }
 
@@ -411,6 +419,7 @@ footer {
 	.nav-logo h1 {
 		font-size: 22px;
 	}
+
 	.nav-ul-a {
 		font-size: 16px;
 	}
@@ -420,34 +429,41 @@ footer {
 	}
 
 	.parallax {
-		display: none;
+		/*display: none;	*/
+		height: 300px;
 	}
 
 	.parallax-inner {
-		display: none;
 	}
+
 	.one-third {
 		width: 100%;
 		margin: 4% 0;
 	}
+
 	.one-half {
 		display: 100%;
 		margin: 2% 2%;
 	}
+
 	h1 {
 		font-size: 125%;
 	}
+
 	.left-col {
 		width: 100%;
 		margin: 0 0 3% 0;
 	}
+
 	.sidebar {
 		width: 100%;
 		margin: 0;
 	}
+
 	.slider img {
 		width: 100%;
 	}
+
 	h3 {
 		padding-top: 3%;
 	}

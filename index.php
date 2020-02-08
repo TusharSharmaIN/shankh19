@@ -159,7 +159,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 					<div class="testimonial-contents">
 						<div class="testimonial active" id="test-1">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+						<p>"The rate at which this college is enhancing makes me feel so proud. I am awestruck by these beautiful performances."</p>
 						<span class="description">
 							<h3 class="name">Prof. Vinay Kumar Pathak</h3>
 							<h6>Vice Chancellor<br>AKTU, Lucknow</h6>
@@ -167,7 +167,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 						</div>
 
 						<div class="testimonial" id="test-2">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+						<p>"To see physically challenged students performing so well makes me astound. It was a memorable episode to experience."</p>
 						<span class="description">
 							<h3 class="name">Ira Singhal</h3>
 							<h6>Deputy Commissionor<br>Nagar Nigam, North Delhi</h6>
@@ -175,10 +175,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 						</div>
 
 						<div class="testimonial" id="test-3">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+							<p>"To see this joyous  gathering even instrument beats are most elated. Thank you for a top musical experience and a wonderful night!"</p>
 							<span class="description">
-								<h3 class="name">Jon Doe</h3>
-								<h6>Bulku Monkey<br>Knowhere</h6>
+								<h3 class="name">Ankesh Jha</h3>
+								<h6>Lead Singer<br>The Mixtape Band</h6>
 						</span>
 						</div>
 					</div>
@@ -213,7 +213,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		<!--Start Banner Wrapper For Sponsors-->
 		<div class="banner-wrapper">
 			<h1>Our Sponsors</h1>
-			<!--img src="img/sponsors.jpg" alt="" width="60%" height="auto" class="image-center"-->
+			<img src="img/sponsors.jpg" alt="" width="60%" height="auto" class="image-center" id="img-sponsors">
 		</div>
 		<!--End Banner Wrapper For Teams-->
 	</a>
