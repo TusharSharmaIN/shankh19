@@ -51,16 +51,16 @@ $.ajax({
 							</tr>`;
                 setTimeout(() => {
                     $(".events-list-table").append(html);
+                    $(`#row-${event.EID}`)
+                        .css("opacity", 0)
+                        .animate(
+                            {
+                                opacity: 1
+                            },
+                            50
+                        );
                 }, 50 * i);
                 i++;
-                // $(`#row-${event.EID}`)
-                //     .css("opacity", 0)
-                //     .animate(
-                //         {
-                //             opacity: 1
-                //         },
-                //         200
-                //     );
             });
             // Add event handler to all event register buttons
             $(".event-register-btn").on("click", event => {
