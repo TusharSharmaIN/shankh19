@@ -31,6 +31,7 @@ $.ajax({
     success: function(response) {
         if (response.status == 1) {
             events = response.data;
+            let i = 1;
             events.forEach(event => {
                 let d = new Date(event.DOE + " " + event.TOE);
                 let date = d.toLocaleDateString("en-IN", {
