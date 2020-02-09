@@ -57,10 +57,10 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
                     <input type="password" class="input" id="login-password" autocomplete="current-password" placeholder="Password" />
                 </div>
                 <div class="frgt-pswd">
-                    <button class="text-button" data-modal-target="#modal">
+                    <button class="text-button" data-modal-target="#reset-modal">
                         Forgot Password
                     </button>
-                    <div class="modal" id="modal">
+                    <div class="modal" id="reset-modal">
                         <div class="modal-header">
                             <div class="title">Reset Password</div>
                         </div>

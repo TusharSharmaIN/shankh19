@@ -444,9 +444,8 @@ $("#password-reset-btn").on("click", event => {
             } else {
                 showError("Server error. Try again later.");
             }
-            resendEmailVerificationTo = null;
-            let resendModal = document.getElementById("resend-modal");
-            closeModal(resendModal);
+            let resetModal = document.getElementById("reset-modal");
+            closeModal(resetModal);
         }
     });
 });
