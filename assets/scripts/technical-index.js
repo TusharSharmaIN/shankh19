@@ -31,6 +31,7 @@ $.ajax({
     success: function(response) {
         if (response.status == 1) {
             events = response.data;
+            let i = 1;
             events.forEach(event => {
                 let d = new Date(event.DOE + " " + event.TOE);
                 let date = d.toLocaleDateString("en-IN", {
@@ -48,15 +49,18 @@ $.ajax({
 								<td class="event-details"><button id="${event.EID}-details-btn" class="event-details-btn">Details</button></td>
 								<td class="event-register"><button id="${event.EID}-register-btn" class="event-register-btn">Register</button></td>
 							</tr>`;
-                $(".events-list-table").append(html);
-                $(`#row-${event.EID}`)
-                    .css("opacity", 0)
-                    .animate(
-                        {
-                            opacity: 1
-                        },
-                        200
-                    );
+                setTimeout(() => {
+                    $(".events-list-table").append(html);
+                }, 50 * i);
+                i++;
+                // $(`#row-${event.EID}`)
+                //     .css("opacity", 0)
+                //     .animate(
+                //         {
+                //             opacity: 1
+                //         },
+                //         200
+                //     );
             });
             // Add event handler to all event register buttons
             $(".event-register-btn").on("click", event => {
