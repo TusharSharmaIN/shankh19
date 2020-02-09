@@ -209,6 +209,10 @@ $("#signup-btn").on("click", function(event) {
                 )
                 .css("pointer-events", "none");
             $("#signup-btn-loader").fadeIn();
+            $("#signup-name").val("");
+            $("#signup-email").val("");
+            $("#signup-password").val("");
+            $("#signup-cpassword").val("");
         },
         success: function(response) {
             //Hide loader after receiving request
@@ -319,6 +323,8 @@ $("#signin-btn").on("click", function(event) {
                 )
                 .css("pointer-events", "none");
             $("#signin-btn-loader").fadeIn();
+            $("#login-email").val("");
+            $("#login-password").val("");
         },
         success: function(response) {
             //Hide loader after receiving request
@@ -416,6 +422,9 @@ $("#password-reset-btn").on("click", event => {
         dataType: "json",
         data: {
             email: email
+        },
+        beforeSend: function() {
+            $("#password-reset-email").val("");
         },
         success: function(response) {
             if (response.code == "EMAIL_SENT") {
