@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BIO-FEST</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>      <!-- JQuery --> 
+	<script src="scripts/main.js"></script>														   <!-- For Navigation -->
+	<meta charset = "utf-8">
+	<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+</head>
+
+<body>
+	
+	<!--Start Home-->
+	<a name="home">
+		<!--- Start Navigation -->
+		<div class="nav-outer">
+			<div class="nav-wrap">
+				<nav class="navigation">
+					<div class="logo">
+						<!-- <img src="img/test-5.jpg"> -->
+						<h3><a href="#">BIO FEST 2020</a> </h3>
+					</div>
+					<div class="nav" nav-menu-style="burger">
+						<ul class="nav-menu">
+							<li><a href="#events">Events</a></li>
+							<li><a href="https://forms.gle/9jEN8C7hoLjQAKqk8" target="_blank">Registration</a></li>
+							<li><a href="#aboutus">About Us</a></li>
+							<li><a href="#contactus">Contact Us</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="nav-clear"></div>
+		<!--- End Navigation -->
+		
+		<div class="clearfix"></div>
+
+		<!--- Start Slider -->
+
+		<script>
+			
+			(function($) {
+			  	"use strict";
+			  	$.fn.sliderResponsive = function(settings) {
+			    	var set = $.extend( {
+			        	slidePause: 4000,
+			        	fadeSpeed: 800,
+			        	autoPlay: "on"
+			    	},settings); 
+			    	var $slider = $(this);
+			    	var size = $slider.find("> div").length; //number of slides
+			    	var position = 0; // current position of carousal
+			    	var sliderIntervalID; // used to clear autoplay
+			  
+			    	// Put .show on the first Slide
+			    	$slider.find("div:first-of-type").addClass("show");
+			  
+			     	//fadeout all items except .show
+			    	$slider.find("> div").not(".show").fadeOut();
+			  
+			    	// If Autoplay is set to 'on' than start it
+			    	if (set.autoPlay === "on") {
+			        	startSlider(); 
+			    	} 
+			
+			    	// function to start auto play
+			    	function startSlider() {
+			      		sliderIntervalID = setInterval(function() {
+			        		nextSlide();
+			      		}, set.slidePause);
+					}
+			
+			    	// Go to next slide
+			    	function nextSlide() {
+			     		position = $slider.find(".show").index() + 1;
+			      		if (position > size - 1) position = 0;
+			      		changeCarousel(position);
+			    	}
+			
+			    	// Go to previous slide
+			    	function prevSlide() {
+			      		position = $slider.find(".show").index() - 1;
+			      		if (position < 0) position = size - 1;
+			      		changeCarousel(position);
+			    	}
+			
+			    	//this changes the image and button selection
+			    	function changeCarousel() {
+			      		$slider.find(".show").removeClass("show").fadeOut();
+			      		$slider
+			        		.find("> div")
+			        		.eq(position)
+			        		.fadeIn(set.fadeSpeed)
+			        		.addClass("show");
+			    	}	
+			    	return $slider;
+				};
+			})(jQuery);
+			// Activate each slider - change options
+			$(document).ready(function() {
+				$("#slider1").sliderResponsive({});
+			}); 
+
+
+
+		</script>
+		<!-- Slider 1 -->
+		<div class="slider" id="slider1">
+    		<!-- Slides -->
+    		<div style="background-image:url(./img/img-1.jpg)"></div>
+    		<div style="background-image:url(./img/img-2.JPG)"></div>
+    		<div style="background-image:url(./img/img-4.jpg)"></div>
+    		<div style="background-image:url(./img/img-3.JPG)"></div>
+		</div>
+
+		<div class="container">
+			<h1>Countdown to Event</h1>
+			<ul>
+			  	<li><span id="days"></span>days</li>
+			  	<li><span id="hours"></span>Hours</li>
+			  	<li><span id="minutes"></span>Minutes</li>
+			  	<li><span id="seconds"></span>Seconds</li>
+			</ul>
+		</div>
+		<!--- End Slider -->
+	</a>
+	<!--End Home-->
+
+	<!-- Start Event Table -->
+	<div id = "events" class = "table-container">
+		<table class = "details-table">
+			<caption>EVENTS LISTS</caption>
+			<tr>
+				<td style="font-size: 18px;"><b>Date</b></td>
+				<td style="font-size: 18px;"><b>Events</b></td>
+				<td style="font-size: 18px;"><b>Timing</b></td>
+			</tr>
+			<tr>
+				<td>27-Feb-2020</td>
+				<td>Interaction with Experts</td>
+				<td>10am to 12pm</td>
+			</tr>
+			<tr>
+				<td>27-Feb-2020</td>
+				<td>Live Model</td>
+				<td>12pm to 1pm</td>
+			</tr>
+			<tr>
+				<td>27-Feb-2020</td>
+				<td>Poster Presentation</td>
+				<td>2pm to 4pm</td>
+			</tr>
+			<tr>
+				<td>28-Feb-2020</td>
+				<td>Interaction with Experts</td>
+				<td>10am to 12pm</td>
+			</tr>
+			<tr>
+				<td>28-Feb-2020</td>
+				<td>Extempore</td>
+				<td>12pm to 1pm</td>
+			</tr>
+			<tr>
+				<td>28-Feb-2020</td>
+				<td>Microflora Art</td>
+				<td>2pm to 3pm</td>
+			</tr>
+			<tr>
+				<td>28-Feb-2020</td>
+				<td>Bio-Quiz</td>
+				<td>3pm to 4pm</td>
+			</tr>
+		</table>
+	</div>	
+	<!-- End Event Table -->
+	
+	<!-- <script>
+		function blinker() {
+  			$('.blinker-card').fadeOut(500);
+  			$('.blinker-card').fadeIn(500);
+		}
+		setInterval(blinker, 1000);
+	</script>
+	<div class="blinker">
+		<div class="blinker-div">
+			<div class="blinker-card"><h3>*Talk With Experts*</h3></div>
+		</div>
+	</div> -->
+
+
+
+	<!-- Start testiminial -->
+	<div class="testimonial">
+		<h1>TESTIMONIALs</h1>
+		<div class="card">
+			<div class="card-img"><img src="./img/test-3.jpg"></div>
+			<div class="card-text">
+				<h3>Prof. Vinay Kumar Pathak (AKTU Vice-Chancellor)</h3>
+				<p>The rate at which this college is enhancing makes me feel so proud .I am awestruck by these beautiful performances.
+				</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-img"><img src="./img/test-2.jpg"></div>
+			<div class="card-text">
+				<h3>Dr. Rachna Asthana (Director)</h3>
+				<p>Biotechnology department always comes up with the new episodes of challenges and their face off in this developing era , this time biofest is organized by the department to bring out the hidden abilities of the students to show their caliber in inventive creativity they have , I wish them all the luck</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-img"><img src="./img/test-1.jpeg"></div>
+			<div class="card-text">
+				<h3>Manish Singh Rajput (HOD)</h3>
+				<p>Biofest is the the cherry on the top of all the technical fiesta's. It's full of novoice ideas of live models and onspot accuracy with quizzes.
+					Here the creative ideas are all supported by the faculty and colleagues . The efficiency of the brain is monitored , and fully acknowledged . Here it's the arena for innovation.
+				</p>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-img"><img src="./img/test-4.jpeg"></div>
+			<div class="card-text">
+				<h3>Dr. shubhash Chandra</h3>
+				<p>Subhas Chandra is an eminent retired professor of Indian Institute of Technology Delhi at the Department of Biochemical Engineering and Biotechnology. He has greatly contributed in the field of enzyme and provided special recognition to the enzymatic study in India at an international platform. The horizon of enzymes widened radically under his guidance.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- End Testionial -->
+
+	<!-- Start Prv Work -->
+	<div class="prv">
+		<h1>Previous Works</h1>
+		<div class="gallery">
+
+			<div>
+				<div class="gallery-item">
+					<img class="gallery-image" src="./img/kt1.jpg">
+				</div>
+				<div class="gallery-item">
+					<img class="gallery-image" src="./img/kt2.jpg">
+				</div>
+			</div>
+			<div>
+				<div class="gallery-item">
+					<img class="gallery-image" src="./img/kt4.jpg">
+				</div>
+				<div class="gallery-item">
+					<img class="gallery-image" src="./img/kt3.jpg">
+				</div>
+			</div>
+
+		
+	
+		</div>
+	</div>
+
+	<!-- End Prv Work -->
+
+	<!-- Start About Us -->
+
+	<div id="aboutus" class="about-us">
+		<h1>ABOUT US</h1>
+		<p class="about-us-p">
+			Biofest is the annual technical festival of the Department of Biotechnology, Dr AITH Kanpur. Biofest promotes and conducts numerous events aimed to enlighten the students of all spheres of education in the field of Biotechnology. Biofest 2020 is being organised from 27th to 28th March 2020 in Dr AITH Kanpur.
+			<br>It will contain all the enthusiasm and zest with the events like bioquiz , live model , on spot and microflora art it will be a great opportunity for the participants to explore more about their skills in this specific field. As biotechnology is the hot topic in the world regarding all the advance medical facilities it furnishes , so this event will mark ,all the current advancement going on. We have even utilized the tiny microbes in the work of art , via microflora art , so it will certainly tell you the way we make artistic furtherance along with technical skills.
+		</p>
+	</div>
+	<!-- End About Us -->
+	
+
+	<div class="clearfix"></div>
+
+	<!--Start Footer-->
+	<footer id="contactus">
+		<div class="contact">
+			<h3>Contact Us</h3>
+			<!-- Adress -->
+			<div><span>Dr. Ambedkar Institute of Technology for Handicapped, Kanpur</span></div>
+			<div><a href="www.aith.ac.in" style="text-decoration: none;color: white;">www.aith.ac.in</a></div>
+			<!-- Name -->
+			<div><span>Ayushi Singh</span></div>
+			<!-- Phone No and Email-->
+			<div>
+				<span><b>Mob No. -</b> +91-9026162719, +91-7800242976</span><br>
+				<span><b>E-mail -</b> biofest2k20@gmail.com</span>
+			</div>
+		<div class="follow">
+			<h3>Follow Us</h3>
+			<!-- Social Medai Images -->
+			<div>
+				<a href="https://www.instagram.com/biofest2020/?hl=en" target="_blank"><img src="./img/Insta.svg"></a>
+				<a href="https://www.facebook.com/Biofest-2020-107658307467162/" target="_blank"><img src="./img/Facebook.svg"></a>
+			</div>
+
+		</div>
+	</footer>
+	<!--End Footer-->
+	
+</body>
+</html>
