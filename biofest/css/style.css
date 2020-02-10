@@ -136,6 +136,7 @@ footer div img {
     color: #333232;
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 20px 0 80px 0;
 }
 
 .details-table tr:nth-child(odd){
