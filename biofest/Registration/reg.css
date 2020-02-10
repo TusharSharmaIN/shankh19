@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Hind);          /*--- Body Font --*/
+@import url(https://fonts.googleapis.com/css?family=Nobile);        /*--- Heading Font --*/
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../img/bt4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 175%;
+    color: #333232;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 3% 0;
+}
+
+h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #4a4444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    padding: 2%;
+    color: #4a4444;
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.clearfix {
+    clear: both;
+}
+/*  Start Document Media */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 125%;
+    }
+    img {
+        width: 100%;
+    }
+    h3 {
+        padding-top: 3%;
+    }
+    
+}
+/*  End Document Media  */
+.form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: calc(100vh - 50px);
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.form-container{
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.switch{
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.switch-btn{
+    width: 100px;
+    text-align: center;
+    background: white;
+    color: black;
+    font-size: 18px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.switch-btn:nth-child(1){
+    border-radius: 50px 0 0 50px;
+}
+
+.switch-btn:nth-child(2){
+    border-radius: 0px 50px 50px 0px;
+}
+
+.switch-btn-active{
+    background: black;
+    color: white;
+}
+
+form{
+    padding: 20px;
+    width: 500px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inputField{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.inputField > input{
+    margin: 0 5px;
+    width: 50%;
+    border: 1px solid #504DFF;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 18px;
+    align-items: center;
+    padding: 5px;
+}
+
+.inputField > input[name="email"],
+.inputField > input[name="event"],
+.inputField > input[name="collegeName"],
+.inputField > input[name="branchYearOfStudy"],
+.inputField > input[name="collegeCity"],
+.inputField > input[name="gender"]{
+    width: 100%;
+}
+
+#card-college > .inputField > input{
+    width: 100%;
+}
+
+.button{
+    letter-spacing: 2px;
+    align-self: center;
+    width: 150px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: Poppins;
+    color: white;
+    font-size: 18px;
+    align-items: center;
+    background: #504DFF;
+    cursor: pointer;
+    margin: 20px 0px 10px 0px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #4834DF;
+}
+
+@media only screen and (max-width: 768px){
+    .form-container{
+        flex-direction: column;
+    }
+    
+    .inputField > input{
+        width: 100%;
+        margin: 0 10px;
+    }
+    form{
+        width: 100vw;
+        margin: 0 0 10px 0;
+        padding: 0;
+        border-radius: 0;
+    }
+}

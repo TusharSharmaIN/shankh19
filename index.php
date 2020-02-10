@@ -34,9 +34,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 				if ($loggedIn) echo "<li><a class=\"nav-ul-a\" href=\"/dashboard\">Dashboard</a></li>";
 				else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
 			?>
+			<li><a class="nav-ul-a" href="/biofest">Bio-Fest 2020</a></li>
 			<li><a class="nav-ul-a" href="/#events">Events</a></li>
 			<li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>
-			<li><a class="nav-ul-a" href="/#executive-comitee">Mentors</a></li>
+			<!--li><a class="nav-ul-a" href="/#executive-comitee">Mentors</a></li-->
 			<li><a class="nav-ul-a" href="/#testimonials">Testimonials</a></li>
 			<li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>
 			<li><a class="nav-ul-a" href="/#about-us">About us</a></li>
@@ -74,6 +75,14 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	</a>
 	<!--End Home-->
 
+	<!--Start Parallax 1 Section-->
+	<section class="parallax" id="parallax-1">
+		<div class="parallax-inner">
+			<blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote>
+		</div>
+	</section>
+	<!--End Parallax 1 Section-->
+
 	<!--Start Events-->
 	<a id="events" name="events">
 		<!--Start Banner Wrapper For Events-->
@@ -104,7 +113,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<!--Start Parallax 1 Section-->
 	<section class="parallax" id="parallax-1">
 		<div class="parallax-inner">
-			<blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote>
+			<!--blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote-->
 		</div>
 	</section>
 	<!--End Parallax 1 Section-->
@@ -262,7 +271,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 				</style>
 		</div>
 		<div id="footer-text">
-			Developed by HumbleFool.<br>
+			Developed by HumbleFool Club.<br>
 			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
 			Contact - shankhnaad@aith.ac.in
 			<div id="social-media-icons">
