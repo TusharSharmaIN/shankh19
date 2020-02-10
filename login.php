@@ -28,7 +28,7 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
         var referer = "<?php echo $referer; ?>";
     </script>
     <div class="form-structor">
-        <form id="signup-form" class="signup">
+        <form id="signup-form" class="signup slide-up">
             <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
             <div class="form-holder">
                 <input type="text" class="input" id="signup-name" autocomplete="name" placeholder="Full Name" />
@@ -47,7 +47,7 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
                 </div>
             </button>
         </form>
-        <div class="login slide-up">
+        <div class="login">
             <div class="center">
                 <h2 class="form-title" id="login" name="login-heading">
                     <span>or</span>Log in
@@ -57,10 +57,10 @@ $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
                     <input type="password" class="input" id="login-password" autocomplete="current-password" placeholder="Password" />
                 </div>
                 <div class="frgt-pswd">
-                    <button class="text-button" data-modal-target="#modal">
+                    <button class="text-button" data-modal-target="#reset-modal">
                         Forgot Password
                     </button>
-                    <div class="modal" id="modal">
+                    <div class="modal" id="reset-modal">
                         <div class="modal-header">
                             <div class="title">Reset Password</div>
                         </div>
