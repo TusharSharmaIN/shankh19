@@ -303,6 +303,9 @@ footer div img {
     display: block;
     margin: auto;
 }
+.card-text > h3 {
+    text-transform: none;
+}
 
 @media screen and (max-width: 768px) {
     .card {
