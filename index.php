@@ -251,7 +251,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			</div>
 		</section>
 		<section class="sidebar">
-			<img src="img/college.jpg">
+			<img id="img-college" src="img/college.jpg">
 		</section>
 		<!--End Banner Wrapper-->
 	</a>
