@@ -125,11 +125,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		<div class="banner-wrapper">
 			<h1>Executive Committee</h1>
 			<div class="one-third">
-				<img src="img/man.png" alt="" width="100px" height="auto">
+				<img src="img/mentor-1.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Sri Nath Dwivedi<br>(Chairman CECA)</figcaption>
 			</div>
 			<div class="one-third">
-				<img src="img/mentor-1.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
+				<img src="img/mentor-2.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Dr. Anuj Srivastva<br>(Cultural Convenor)</figcaption>
 			</div>
 			<div class="one-third">
