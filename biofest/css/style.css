@@ -136,6 +136,7 @@ footer div img {
     color: #333232;
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 20px 0 50px 0;
 }
 
 .details-table tr:nth-child(odd){
@@ -302,6 +303,9 @@ footer div img {
     display: block;
     margin: auto;
 }
+.card-text > h3 {
+    text-transform: none;
+}
 
 @media screen and (max-width: 768px) {
     .card {
@@ -323,14 +327,15 @@ footer div img {
     padding: 20px;
     background-color: rgb(247, 182, 97);
     border-radius: 16px;
-}
+} 
 .blinker-card h3 {
     text-transform: none;
-    font-size: 40px;
+    font-size: 20px;
     color: rgb(224, 36, 36);
 }
 @media screen and (max-width: 768px) {
     .blinker-card h3 {
-        font-size: 32px;
+        font-weight: bold;
+        font-size: 16px;
     }
 }
