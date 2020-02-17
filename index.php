@@ -76,7 +76,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<!--End Home-->
 
 	<!--Start Parallax 1 Section-->
-	<section class="parallax" id="parallax-1">
+	<section class="parallax" id="parallax-intro">
 		<div class="parallax-inner">
 			<blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote>
 		</div>
@@ -110,13 +110,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 	<div class="clearfix"></div>
 
-	<!--Start Parallax 1 Section-->
-	<section class="parallax" id="parallax-1">
+	<!--Start Empty Parallax Section-->
+	<section class="parallax" id="parallax-empty">
 		<div class="parallax-inner">
-			<!--blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote-->
 		</div>
 	</section>
-	<!--End Parallax 1 Section-->
+	<!--End Empty Parallax Section-->
 
 	<div class="clear-fix"></div>
 
@@ -126,11 +125,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		<div class="banner-wrapper">
 			<h1>Executive Committee</h1>
 			<div class="one-third">
-				<img src="img/man.png" alt="" width="100px" height="auto">
+				<img src="img/mentor-1.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Sri Nath Dwivedi<br>(Chairman CECA)</figcaption>
 			</div>
 			<div class="one-third">
-				<img src="img/mentor-1.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
+				<img src="img/mentor-2.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Dr. Anuj Srivastva<br>(Cultural Convenor)</figcaption>
 			</div>
 			<div class="one-third">
@@ -144,12 +143,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 	<div class="clearfix"></div>
 
-	<!--Start Parallax 2 Section-->
-	<section class="parallax" id="parallax-2">
+	<!--Start Empty Parallax Section-->
+	<section class="parallax" id="parallax-empty">
 		<div class="parallax-inner">
 		</div>
 	</section>
-	<!--End Parallax 2 Section-->
+	<!--End Empty Parallax Section-->
 
 	<div class="clearfix"></div>
 
@@ -208,12 +207,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 	<div class="clearfix"></div>
 
-	<!--Start Parallax 3 Section-->
-	<section class="parallax" id="parallax-3">
+	<!--Start Empty Parallax Section-->
+	<section class="parallax" id="parallax-empty">
 		<div class="parallax-inner">
 		</div>
 	</section>
-	<!--End Parallax 3 Section-->
+	<!--End Empty Parallax Section-->
 
 	<div class="clearfix"></div>
 
@@ -230,12 +229,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 	<div class="clearfix"></div>
 
-	<!--Start Parallax 4 Section-->
-	<section class="parallax" id="parallax-4">
+	<!--Start Empty Parallax Section-->
+	<section class="parallax" id="parallax-empty">
 		<div class="parallax-inner">
 		</div>
 	</section>
-	<!--End Parallax 4 Section-->
+	<!--End Empty Parallax Section-->
 
 	<div class="clearfix"></div>
 
@@ -251,7 +250,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			</div>
 		</section>
 		<section class="sidebar">
-			<img src="img/college.jpg">
+			<img id="img-college" src="img/college.jpg">
 		</section>
 		<!--End Banner Wrapper-->
 	</a>

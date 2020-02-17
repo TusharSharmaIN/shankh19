@@ -187,9 +187,11 @@ p {
 }
 
 #shankhnaad-intro {
-	font-size: 16px;
+	font-size: 17px;
+	padding: auto;
 	color: #ffffff;
 	text-align: justify;
+	max-height: inherit;
 }
 
 img {
@@ -198,7 +200,7 @@ img {
 }
 
 .banner-wrapper {
-	max-width: 1280px;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -345,30 +347,26 @@ img {
 	padding: 20px 50px;
 }
 
+#img-college {
+	padding: 50% 0;
+}
+
 /*  Start Parallax Section */
 .parallax {
-	height: 200px;
 	text-align: center;
 }
 
-#parallax-1 {
+#parallax-intro {
 	background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;
 }
 
-#parallax-2 {
-	background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;
-}
-
-#parallax-3 {
-	background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;
-}
-
-#parallax-4 {
+#parallax-empty {
 	background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;
 }
 
 .parallax-inner {
-	padding: 20px 10%;
+	max-height: inherit;
+	padding: 50px 10%;
 }
 
 .parallax-inner h3,
@@ -428,14 +426,6 @@ footer {
 		width: 100%;
 	}
 
-	.parallax {
-		/*display: none;	*/
-		height: 300px;
-	}
-
-	.parallax-inner {
-	}
-
 	.one-third {
 		width: 100%;
 		margin: 4% 0;
@@ -472,4 +462,40 @@ footer {
 		width: calc(100% - 10px);
 	}
 }
+
+@media screen and (max-width: 1080px) {
+	#parallax-intro {
+		height: 250px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#parallax-intro {
+		height: 300px;
+	}
+	#shankhnaad-intro {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	#parallax-intro {
+		height: 350px;
+	}
+	#shankhnaad-intro {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	#parallax-intro {
+		height: 400px;
+	}
+	#shankhnaad-intro {
+		font-size: 14px;
+	}
+}
+
 /*  End Document Media  */
+
+

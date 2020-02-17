@@ -317,7 +317,7 @@ footer div img {
         max-width: 60px;
     }
 }
-/* .blinker {
+.blinker {
     width: 75vw;
     margin: auto;
 }
@@ -327,14 +327,15 @@ footer div img {
     padding: 20px;
     background-color: rgb(247, 182, 97);
     border-radius: 16px;
-}
+} 
 .blinker-card h3 {
     text-transform: none;
-    font-size: 40px;
+    font-size: 20px;
     color: rgb(224, 36, 36);
 }
 @media screen and (max-width: 768px) {
     .blinker-card h3 {
-        font-size: 32px;
+        font-weight: bold;
+        font-size: 16px;
     }
-} */
+}
