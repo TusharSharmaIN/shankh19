@@ -27,7 +27,7 @@ if (isset($_GET['getEvent'])) {
 	$eid = $_GET['EID'];
 	$event = new Event($eid);
 	if ($event->fillDetailsFromDB()) {
-		exit(json_encode(array("status" => 1, "data" => $event->getEventJSON())));
+		exit(json_encode(array("status" => 1, "data" => $event->getEvent())));
 	}
 	exit(json_encode(array("status" => 0)));
 }
