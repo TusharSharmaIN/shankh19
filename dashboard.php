@@ -166,10 +166,12 @@ if (!$user->hasFilledDetailsForm()) {
 				</div>
 				<ul class="nav-ul" id="nav">
 					<li><a class="nav-ul-a" href="/dashboard">Dashboard</a></li>
+					<li><a class="nav-ul-a" href="/biofest">Bio-Fest 2020</a></li>
 					<li><a class="nav-ul-a" href="/#events">Events</a></li>
-					<li><a class="nav-ul-a" href="#">Brochure</a></li>
-					<li><a class="nav-ul-a" href="#">Team</a></li>
-					<li><a class="nav-ul-a" href="#">Sponsors</a></li>
+					<li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>
+					<!--li><a class="nav-ul-a" href="/#executive-comitee">Mentors</a></li-->
+					<li><a class="nav-ul-a" href="/#testimonials">Testimonials</a></li>
+					<li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>
 					<li><a class="nav-ul-a" href="/#about-us">About us</a></li>
 				</ul>
 				<div class="burger">

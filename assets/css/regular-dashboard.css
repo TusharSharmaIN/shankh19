@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Hind"); /*--- Body Font --*/
+
 * {
 	outline: none;
 	margin: 0;
@@ -99,6 +101,8 @@ html.nav-active {
 .nav-ul-a.active {
 	display: flex;
 	cursor: pointer;
+	font-weight: bold;
+	font-family: "Hind", sans-serif;
 }
 
 @keyframes fadeIn {

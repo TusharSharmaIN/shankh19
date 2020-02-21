@@ -32,10 +32,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             if ($loggedIn) echo "<li><a class=\"nav-ul-a\" href=\"/dashboard\">Dashboard</a></li>";
             else echo "<li><a class=\"nav-ul-a\" href=\"/login\">Login</a></li>"
             ?>
+            <li><a class="nav-ul-a" href="/biofest">Bio-Fest 2020</a></li>
             <li><a class="nav-ul-a" href="/#events">Events</a></li>
             <li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>
-            <li><a class="nav-ul-a" href="/#mentors">Mentors</a></li>
-            <li><a class="nav-ul-a" href="/#teams">Team</a></li>
+            <!--li><a class="nav-ul-a" href="/#executive-comitee">Mentors</a></li-->
+            <li><a class="nav-ul-a" href="/#testimonials">Testimonials</a></li>
             <li><a class="nav-ul-a" href="/#sponsors">Sponsors</a></li>
             <li><a class="nav-ul-a" href="/#about-us">About us</a></li>
         </ul>
