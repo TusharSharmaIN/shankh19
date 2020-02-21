@@ -22,6 +22,16 @@ if (isset($_GET['getAllLiteraryEvents'])) {
 	exit(json_encode(array("status" => 1, "data" => $events)));
 }
 
+// If request is to get a specific event
+if (isset($_GET['getEvent'])) {
+	$eid = $_GET['EID'];
+	$event = new Event($eid);
+	if ($event->fillDetailsFromDB()) {
+		exit(json_encode(array("status" => 1, "data" => $event->getEventJSON())));
+	}
+	exit(json_encode(array("status" => 0)));
+}
+
 session_start();
 
 // Check if user is signed in or not
@@ -198,5 +208,16 @@ if (isset($_GET['deregisterEvent'])) {
 
 	if ($event->deregisterUser($email) && $ses->sendEmail('events@shankhnaad.org', array($email), 'Event update', $html, $text))
 		exit(json_encode(array("status" => 1)));
+}
+
+if (isset($_GET['isUserRegistered'])) {
+	$email = $_SESSION['email'];
+	$eid = $_GET['EID'];
+
+	$event = new Event($eid);
+	if ($event->isRegistered($email)) {
+		exit(json_encode(array("status" => 1)));
+	}
+	exit(json_encode(array("status" => 0)));
 }
 exit(json_encode(array("status" => 0, "loggedIn" => true))); // Status 0 means request failed
