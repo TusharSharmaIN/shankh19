@@ -218,6 +218,5 @@ if (isset($_GET['isUserRegistered'])) {
 	if ($event->isRegistered($email)) {
 		exit(json_encode(array("status" => 1)));
 	}
-	exit(json_encode(array("status" => 0)));
 }
 exit(json_encode(array("status" => 0, "loggedIn" => true))); // Status 0 means request failed
