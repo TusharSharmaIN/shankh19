@@ -143,7 +143,7 @@ $("#logout, #mobileLogout").on("click", function() {
 		dataType: "text",
 		data: {},
 		success: function(response) {
-			window.location.href = "/login";
+			window.location.href = "/";
 		}
 	});
 });
