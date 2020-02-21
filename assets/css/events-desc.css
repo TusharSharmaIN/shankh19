@@ -209,6 +209,17 @@ h2 {
 	align-items: center;
 }
 
+.event-desc-container > div {
+	/* max-width: 95%; */
+	width: 90%;
+	padding: 10px;
+}
+
+ul {
+	max-width: 80%;
+	font-size: 14px;
+}
+
 .event-name {
 	text-align: center;
 	font-weight: 500;
@@ -220,6 +231,10 @@ h2 {
 	font-size: 14px;
 	padding-top: 5px;
 	text-align: center;
+}
+
+.event-intro > p {
+	font-size: 14px;
 }
 
 .event-register-btn {
