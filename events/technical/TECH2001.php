@@ -51,7 +51,6 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div>
                 <h2 class="event-name">Name of the event</h2>
                 <div class="event-venue">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, ab.</p>
                 </div>
             </div>
             <div class="event-intro">

@@ -32,8 +32,9 @@ $.ajax({
 	success: function(response) {
 		if (response.status == 1) {
 			event = response.data;
-			if (event.DOE) {
-				let d = new Date(event.DOE + " " + event.TOE);
+			$(".event-name").text(event.name);
+			if (event.date) {
+				let d = new Date(event.date + " " + event.time);
 				let date = d.toLocaleDateString("en-IN", {
 					year: "numeric",
 					month: "short",
@@ -42,7 +43,7 @@ $.ajax({
 				let time = d.toLocaleTimeString("en-IN", {
 					timeStyle: "short"
 				});
-				$(".event-venue").text(`${date} ${time} at ${event.venue}`);
+				$(".event-venue").text(`${time}, ${date} at ${event.venue}`);
 			}
 			// Add event handler to register button
 			$(".event-register-btn").on("click", event => {

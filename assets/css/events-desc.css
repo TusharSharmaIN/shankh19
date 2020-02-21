@@ -216,9 +216,10 @@ h2 {
 	font-size: 32px;
 }
 
-.event-venue > p {
+.event-venue {
 	font-size: 14px;
 	padding-top: 5px;
+	text-align: center;
 }
 
 .event-register-btn {
