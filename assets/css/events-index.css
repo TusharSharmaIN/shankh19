@@ -222,7 +222,7 @@ caption {
 	margin: 5px 0px;
 	cursor: default;
 	background: rgba(255, 255, 255, 0.7);
-	transition: box-shadow .5s;
+	transition: box-shadow 0.5s;
 }
 
 .event-list:hover {
@@ -242,7 +242,7 @@ caption {
 		#67b26f
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	opacity: 1;
-	animation: show .5s;
+	animation: show 0.5s;
 }
 
 td {
@@ -257,6 +257,10 @@ td:nth-child(1) {
 
 td:nth-last-child(1) {
 	border-right: 1px solid #bbb;
+}
+
+a {
+	text-decoration: none;
 }
 
 .event-doe,
@@ -313,12 +317,16 @@ td:nth-last-child(1) {
 .dialog.active {
 	display: flex;
 	opacity: 1;
-	animation: show .5s;
+	animation: show 0.5s;
 }
 
 @keyframes show {
-	from {opacity: 0}
-	to {opacity: 1}
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .dialog h2 {

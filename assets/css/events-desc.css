@@ -236,8 +236,8 @@ h2 {
 }
 
 .event-register-btn.registered {
-	border-color: #fff;
-	color: #fff;
+	border-color: #000;
+	color: #000;
 	cursor: default;
 	background: none;
 }

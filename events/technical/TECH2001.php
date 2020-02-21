@@ -49,7 +49,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     <section class="event-desc">
         <div class="event-desc-container">
             <div>
-                <h2 class="event-name">Name of the event</h2>
+                <h2 class="event-name"></h2>
                 <div class="event-venue">
                 </div>
             </div>
