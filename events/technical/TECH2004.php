@@ -56,23 +56,23 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Unleash the creativity in yourself. The heat of this competition is purely based on the intensity of the participant‟s imagination. If the team has someone who‟s hands are skilled at designing logos with Corel Draw and team consists of a bunch of creative guys, they‟re welcome!</p>
+                <p>Get your hands dirty with android apps. The team with an app consisting best solution along with an elegant interface for the given problem statement will take the prize home.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The decision will be purely based on how accurately the logo is able to define its organization.</li>
-                    <li>Each judge will individually rate the logos, then they will rank each team based on the ratings. </li>
+                    <li>The app must be able to efficiently solve the problem.</li>
+                    <li>The usefulness of any extra feature the app has which was not mentioned in the problem statement directly would play a pivotal role in selecting the winner. </li>
+                    <li>In case a tie, the UI design will be taken into consideration to pick the winner.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team can be solo, duo or trio.</li>
-                    <li>The event will be of 1.5 hour.</li>
-                    <li>Participants must only use the software provided by us for designing purpose.</li>
-                    <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
-                    <li>The teams must explain their logos if asked.</li>
+                    <li>A team can have up to 4 members. </li>
+                    <li>The event team is supposed to submit their respective apps before 11 AM on the day of the event.</li>
+                    <li>The teams must explain anything regarding the app if asked.</li>
+                    <li>In case it is found that the code is copied from somewhere, the team will be immediately disqualified.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

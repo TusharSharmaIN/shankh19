@@ -267,6 +267,11 @@ a {
 	text-decoration: none;
 }
 
+.event-name {
+	font-size: 18px;
+	font-weight: 500;
+}
+
 .event-doe,
 .event-details,
 .event-register {
@@ -430,6 +435,10 @@ footer {
 	td,
 	button {
 		font-size: 12px;
+	}
+
+	.event-name {
+		font-size: 14px;
 	}
 
 	.dialog {
