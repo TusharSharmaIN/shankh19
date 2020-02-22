@@ -212,7 +212,6 @@ img {
 }
 
 /*  Image Slider Style  */
-
 .slider {
 	width: 100%;
 }
@@ -222,11 +221,9 @@ img {
 	width: 100%;
 	box-sizing: border-box;
 }
-
 /*	End Image Slider Style	*/
 
 /*	Column Style	*/
-
 .one-one {
 	width: 90%;
 	float: center;
@@ -277,8 +274,20 @@ img {
 .clearfix {
 	clear: both;
 }
-
 /*	End Columne Style	*/
+
+.event-button {
+	display: block;
+	width: 40%;
+	padding: 4px 20px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: #0C1D2F;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
 
 /*	Testimonials	*/
 .testimonial-section {
@@ -377,7 +386,7 @@ img {
 
 footer {
 	margin: 0;
-	padding: 0;
+	padding: 35px 100px;
 	min-height: 10vh;
 	font-size: 14px;
 	text-align: center;
@@ -385,24 +394,75 @@ footer {
 	color: white;
 	box-sizing: border-box;
 	align-items: center;
-	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 
-#map {
-	padding: 20px;
-	height: 400px;
-	width: 400px;
+.footer-content {
+	display: flex;
 }
 
-#footer-text {
-	padding: 10px;
+.footer-content .col {
+	padding: 0px 0;
+	margin: 0 auto;
+	height: 300px;
+}
+
+.footer-content #main {
+	padding: auto 0;
+	color: none;
+	text-decoration: none;
+}
+
+.footer-content #main h3{
+	color: rgba(255,255,255,0.95);
+	text-align: left;
+}
+
+.footer-content #main ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+.footer-content #main ul li{
+	padding: 0px 0;
+	display: inline;
+	text-align: left;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.footer-content #main ul li a{
+	color: rgba(255,255,255,0.75);
+	text-decoration: none;
+}
+
+li + li::before {
+	content: "  |  ";
+}
+
+.footer-content #map {
+	height: 300px;
+	width: 300px;
+}
+
+.footer-end:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#footer-end-text {
+	padding-top: 35px;
+}
+
+#social-media-icons {
+	text-align: left;
 }
 
 #social-media-icons a{
 	font-size: 24px;
-	padding: 10px;
+	padding: 10px 10px 10px 0;
 	cursor: pointer;
 	color: #4a4444;
 	text-decoration: none;
@@ -458,7 +518,12 @@ footer {
 		padding-top: 3%;
 	}
 
+	.footer-content {
+		display: inline-block;
+	}
+
 	#map {
+		padding-top: 75px;
 		width: calc(100% - 10px);
 	}
 }

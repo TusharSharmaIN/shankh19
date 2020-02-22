@@ -175,8 +175,10 @@ function changeBrochureURL(x) {
 	if (x.matches) {
 		//	compressed version
 		document.getElementById("brochure").href = "https://drive.google.com/file/d/1yWHvFuxK3XA9F_jDrT-2_z-cKGIRPjph/view?usp=sharing";
+		document.getElementById("footer-brochure").href = "https://drive.google.com/file/d/1yWHvFuxK3XA9F_jDrT-2_z-cKGIRPjph/view?usp=sharing";
 	} else {
 		document.getElementById("brochure").href = "https://drive.google.com/file/d/1_yhtfiNugNTBvbuuTxWp1SOBCelP267s/view?usp=sharing";
+		document.getElementById("footer-brochure").href = "https://drive.google.com/file/d/1_yhtfiNugNTBvbuuTxWp1SOBCelP267s/view?usp=sharing";
 	}
 }
   

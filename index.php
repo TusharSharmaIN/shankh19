@@ -14,12 +14,13 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="stylesheet" href="/assets/css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/png" href="img/shankh-black.png"/>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/6c05aa3d79.js" crossorigin="anonymous"></script>
 	<script defer src="/assets/scripts/index.js"></script>
-	<link rel="shortcut icon" type="image/png" href="img/shankh-black.png" />
 </head>
 
 <body>
@@ -92,16 +93,22 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 				<img src="img/technical.jpg">
 				<h3>Technical</h3>
 				<p>Technology helps us to step into this new era with ease and engineers are known as the wizard of technology. So a shout out to all the technocrats out there here, it is big feed for all of you as you'll get a blow of microflora art to PC gaming. Check your expertise with us and adore these festivities.</p>
+				<a class="event-button" href="/events/technical/" target="_blank">See Technical Events</a>
+				<!--button onclick="window.location.href = '/events/technical/';">See Events</button-->
 			</section>
 			<section class="one-third">
 				<img src="img/literature.jpg">
 				<h3>Literary</h3>
 				<p>We all somewhere empty our way too filled mind with our artistic qualities hidden somewhere within us. So it's high time to do it more skillfully. Process, nothing much shows the grace of eloquent mindset and content you have, and that's it. Come with us to this beautiful expedition of model United Nation to mockshashatkar and manifest your finesse.</p>
+				<a class="event-button" href="events/literary/" target="_blank">See Literary Events</a>
+				<!--button onclick="window.location.href = 'events/literary/'; window.location.target = '_blank';">See Events</button-->
 			</section>
 			<section class="one-third">
 				<img src="img/cultural.jpg">
 				<h3>Cultural</h3>
-				<p>It will be very sketchy without a touch of music, dance and some adventure. So to give this trip an extra dose of happiness and enthusiasm, we present you the elegance of the cultural interlude. From classical dance to hip hop, from rap to all sorts of mimicry and stand up comedies and to the chapter of mock CID it just contains each and everything to palliate you. So Gather to the arena and play a part in this delight.</p>
+				<p>It will be very sketchy without a touch of music, dance and some adventure. So to give this trip an extra dose of happiness and enthusiasm, we present you the elegance of the cultural interlude. From classical dance to hip hop, it just contains each and everything to palliate you. So Gather to the arena and play a part in this delight.</p>
+				<a class="event-button" href="/events/cultural/" target="_blank">See Cultural Events</a>
+				<!--button onclick="window.location.href = 'events/cultural/';">See Events</button-->
 			</section>
 		</div>
 		<!--End Banner Wrapper-->
@@ -260,24 +267,50 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 
 	<!--Start Footer-->
 	<footer>
-		<div id="map">
-			<iframe width="100%" height="100%" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Dr.%20Ambedkar%20Institute%20of%20Technology%20for%20Handicapped+(Dr.%20Ambedkar%20Institute%20of%20Technology%20for%20Handicapped)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+		<div class="footer-content">
+			<div class="col" id="main">
+				<h3>Team</a></h3>
+				<ul>
+					<li><a href="#">Management</a></li>
+					<li><a href="#">Developer</a></li>
+					<li><a href="#">Content Creator</a></li>
+				</ul>
+				<br>
+				<h3>Media</h3>
+				<ul>
+					<li><a id="footer-brochure" href="" target="_blank">Brochure</a></li>
+					<li><a href="gallery.html" target="_blank">Gallery</a></li>
+					<!--li><a href="#">After Movie</a></li-->
+				</ul>
+				<br>
+				<h3>Contact Us</h3>
+				<ul>
+					<li><a href="mailto:shankhnaad@aith.ac.in" style="color: rgba(255,255,255,0.75);">shankhnaad@aith.ac.in</a></li>
+					<!--li><li-->
+				</ul>
+				<br>
+				<h3>Connect With US</h3>
+				<div id="social-media-icons">
+				<a class="fab fa-facebook-f" href="https://www.facebook.com/shankhnaadAITH" target="_blank"></a>
+				<a class="fab fa-instagram" href="https://www.instagram.com/shankhnaadAITH/" target="_blank"></a>
+				<a class="fab fa-youtube" href="https://www.youtube.com/shankhnaadAITH" target="_blank"></a>
+			</div>
+			</div>
+			<div class="col" id="map">
+				<iframe width="100%" height="100%" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Dr.%20Ambedkar%20Institute%20of%20Technology%20for%20Handicapped+(Dr.%20Ambedkar%20Institute%20of%20Technology%20for%20Handicapped)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 				<style>
 					#gmap_canvas img {
 						max-width: none !important;
 						background: none !important
 					}
 				</style>
-		</div>
-		<div id="footer-text">
-			Developed by HumbleFool Club.<br>
-			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br>
-			Contact - shankhnaad@aith.ac.in
-			<div id="social-media-icons">
-				<a class="fab fa-facebook-f" href="https://www.facebook.com/shankhnaadAITH" target="_blank"></a>
-				<a class="fab fa-instagram" href="https://www.instagram.com/shankhnaadAITH/" target="_blank"></a>
-				<a class="fab fa-youtube" href="https://www.youtube.com/shankhnaadAITH" target="_blank"></a>
 			</div>
+		</div>
+		<div id="footer-end-text">
+			Developed by HumbleFool Club.<br>
+			Copyright &copy; 2020 Shankhnaad. All rights reserved.<br><br>
+			Dr. Ambedkar Institute Of Technology For Handicapped,<br>
+			Awadhpuri, Kanpur - 208024
 		</div>
 	</footer>
 </body>
