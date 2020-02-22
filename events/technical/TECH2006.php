@@ -56,23 +56,22 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Unleash the creativity in yourself. The heat of this competition is purely based on the intensity of the participant‟s imagination. If the team has someone who‟s hands are skilled at designing logos with Corel Draw and team consists of a bunch of creative guys, they‟re welcome!</p>
+                <p>Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives. Unfortunately, the one who wrote these lines of code didn't had a sense for these qualities. Let's see how better you are. </p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The decision will be purely based on how accurately the logo is able to define its organization.</li>
-                    <li>Each judge will individually rate the logos, then they will rank each team based on the ratings. </li>
+                    <li>The type of error, and also an explanation.</li>
+                    <li>Number of errors caught.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team can be solo, duo or trio.</li>
-                    <li>The event will be of 1.5 hour.</li>
-                    <li>Participants must only use the software provided by us for designing purpose.</li>
+                    <li>Self-reliance is the highest expression of self-respect, so only solo participations are al-lowed.</li>
+                    <li>The event will be of 1 hour.</li>
+                    <li>All the participants must submit their cell phones and are not allowed to use the internet during the event.</li>
                     <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
-                    <li>The teams must explain their logos if asked.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

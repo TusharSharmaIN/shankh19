@@ -56,23 +56,43 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Unleash the creativity in yourself. The heat of this competition is purely based on the intensity of the participant‟s imagination. If the team has someone who‟s hands are skilled at designing logos with Corel Draw and team consists of a bunch of creative guys, they‟re welcome!</p>
+                <p>The ultimate face off open for all expert coders and code enthusiasts.It is a three phase round in which participants will code for a given problems statements. The participants who will clear first two phases and will solve the problem in minimum time in third phase by clearing all the test cases will be the winner.</p>
+            </div>
+            <div class="event-phase">
+                <h4>Phase 1</h4>
+                <ul>
+                    <li>This phase will contain 5 coding problems of beginner level.</li>
+                    <li>The participants who will solve 3 problems by satisfying all respective test cases will clear the round and will attempt the next phase.</li>
+                </ul>
+            </div>
+            <div class="event-phase">
+                <h4>Phase 2</h4>
+                <ul>
+                    <li>This phase will contain 3 coding problems of medium level.</li>
+                    <li>The participants who will solve 2 problems by satisfying all respective test cases will clear the round and will attempt the next phase</li>
+                </ul>
+            </div>
+            <div class="event-phase">
+                <h4>Phase 3</h4>
+                <ul>
+                    <li>This phase will contain 2 coding problems of hard level.</li>
+                    <li>The participants who will solve 1 problems by satisfying all respective test cases will clear the round and will attempt the next phase</li>
+                </ul>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The decision will be purely based on how accurately the logo is able to define its organization.</li>
-                    <li>Each judge will individually rate the logos, then they will rank each team based on the ratings. </li>
+                    <li>The team which solves a problem the fastest will get better multiplier.</li>
+                    <li>The total score will be calculated by multiplying the number of test cases successfully run multiplied by the multiplier.</li>
+                    <li>If the total score of two teams are equal, then the team with a greater number of problem statements attempted will be prioritized.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team can be solo, duo or trio.</li>
-                    <li>The event will be of 1.5 hour.</li>
-                    <li>Participants must only use the software provided by us for designing purpose.</li>
-                    <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
-                    <li>The teams must explain their logos if asked.</li>
+                    <li>It will be a solo event based on pure coding.</li>
+                    <li>Each participants is allowed to carry a sheet and pen with them.</li>
+                    <li>Disturbing other participants and arguing with the coordinators may result in disqualification.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

@@ -56,23 +56,23 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Unleash the creativity in yourself. The heat of this competition is purely based on the intensity of the participant‟s imagination. If the team has someone who‟s hands are skilled at designing logos with Corel Draw and team consists of a bunch of creative guys, they‟re welcome!</p>
+                <p>Let's dive deep into the web. Create a simple website, no backend, no front end, mainly design-ing and maintaining the hyperlinks and sitemap. Anyone who is smooth at webpage designing and exuberant with colors is eligible.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The decision will be purely based on how accurately the logo is able to define its organization.</li>
-                    <li>Each judge will individually rate the logos, then they will rank each team based on the ratings. </li>
+                    <li>All the requested pages and features must be fully implemented.</li>
+                    <li>The second criteria is the hyperlinks and overall website integrity should be intact.</li>
+                    <li>Color pallet is third criteria for judging and probably the most decisive one.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team can be solo, duo or trio.</li>
-                    <li>The event will be of 1.5 hour.</li>
-                    <li>Participants must only use the software provided by us for designing purpose.</li>
+                    <li>A team can be solo or duo.</li>
+                    <li>The event will be of 1.5 hour. </li>
+                    <li>All the participants must submit their cell phones and are not allowed to use the internet dur-ing the event. </li>
                     <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
-                    <li>The teams must explain their logos if asked.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>
