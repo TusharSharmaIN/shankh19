@@ -88,7 +88,7 @@ class Event
     }
 
     // Function to return all details of an event in JSON format
-    public function getEventJSON()
+    public function getEvent()
     {
         $event = array(
             "eid" => $this->eid,
@@ -99,8 +99,7 @@ class Event
             "type" => $this->type,
             "status" => $this->status
         );
-        $eventJSON = json_encode($event);
-        return $eventJSON;
+        return $event;
     }
 
     // Function to fill all remaining variables from database
@@ -191,7 +190,8 @@ class Event
         return true;
     }
 
-    public static function getAllEventsByType($type) {
+    public static function getAllEventsByType($type)
+    {
         // Create a db instance
         $db = new Database();
         // Create an admin DB connection to get data from Events_Details table

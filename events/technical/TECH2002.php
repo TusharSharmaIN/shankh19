@@ -7,7 +7,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="literary">
+<html lang="en" class="technical">
 
 <head>
     <meta charset="UTF-8">
@@ -15,9 +15,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/events-index.css">
-    <script defer src="/assets/scripts/literary-index.js"></script>
-    <title>Shankhnaad'20 - Literary Events</title>
+    <link rel="stylesheet" href="/assets/css/events-desc.css">
+    <script defer src="/assets/scripts/events-desc.js"></script>
+    <title>Shankhnaad'20 - Technical Events</title>
 </head>
 
 <body>
@@ -47,11 +47,26 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
         </div>
     </nav>
     <!--- End Navigation -->
-    <section class="events-container">
-        <div class="events-list-container">
-            <table class="events-list-table">
-                <caption>Literary Events</caption>
-            </table>
+    <section class="event-desc">
+        <div class="event-desc-container">
+            <div>
+                <h2 class="event-name"></h2>
+                <div class="event-venue">
+                </div>
+            </div>
+            <div class="event-intro">
+                <h4>Introduction</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, culpa?</p>
+            </div>
+            <div class="event-criteria">
+                <h4>Judging Criteria</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, culpa?</p>
+            </div>
+            <div class="event-rules">
+                <h4>Rules and Regulations</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, culpa?</p>
+            </div>
+            <button class="event-register-btn">Register</button>
         </div>
     </section>
     <div class="overlay"></div>

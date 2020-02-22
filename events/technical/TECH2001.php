@@ -7,7 +7,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="literary">
+<html lang="en" class="technical">
 
 <head>
     <meta charset="UTF-8">
@@ -15,9 +15,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/events-index.css">
-    <script defer src="/assets/scripts/literary-index.js"></script>
-    <title>Shankhnaad'20 - Literary Events</title>
+    <link rel="stylesheet" href="/assets/css/events-desc.css">
+    <script defer src="/assets/scripts/events-desc.js"></script>
+    <title>Shankhnaad'20 - Technical Events</title>
 </head>
 
 <body>
@@ -47,11 +47,36 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
         </div>
     </nav>
     <!--- End Navigation -->
-    <section class="events-container">
-        <div class="events-list-container">
-            <table class="events-list-table">
-                <caption>Literary Events</caption>
-            </table>
+    <section class="event-desc">
+        <div class="event-desc-container">
+            <div>
+                <h2 class="event-name"></h2>
+                <div class="event-venue">
+                </div>
+            </div>
+            <div class="event-intro">
+                <h4>Introduction</h4>
+                <p>The ultimate face off open for all expert coders and code enthusiasts. This grand competition features five problem statements, each having their own weightage. The team having most points will stand victorious.</p>
+            </div>
+            <div class="event-criteria">
+                <h4>Judging Criteria</h4>
+                <ul>
+                    <li>The team which solves a problem the fastest will get better multiplier.</li>
+                    <li>The total score will be calculated by multiplying the number of test cases successfully run multiplied by the multiplier.</li>
+                    <li>If the total score of two teams are equal, then the team with a greater number of problem statements attempted will be prioritized.</li>
+                </ul>
+            </div>
+            <div class="event-rules">
+                <h4>Rules and Regulations</h4>
+                <ul>
+                    <li>A team can be solo or duo.</li>
+                    <li>The event will be 3 hours of pure coding.</li>
+                    <li>Each team member of the team is allowed to carry a sheet and pen with them.</li>
+                    <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
+                    <li>Round 2 will be real time problem solving.</li>
+                </ul>
+            </div>
+            <button class="event-register-btn">Register</button>
         </div>
     </section>
     <div class="overlay"></div>

@@ -33,23 +33,24 @@ x.addListener(changeBrochureURL); // Attach listener function on state changes
 /* REST CODE HERE */
 
 // EID of the event for which the user wants to register
-var eid = null;
+var eid = window.location.href.substr(window.location.href.length - 8);
 
-// Make AJAX request to get all cultural events list from DB which are active
+// Make AJAX request to get all technical events list from DB which are active
 $.ajax({
 	url: "/bin/event/process-event",
 	method: "GET",
 	dataType: "json",
 	contentType: "application/json",
 	data: {
-		getAllCulturalEvents: true
+		getEvent: true,
+		EID: eid
 	},
 	success: function(response) {
 		if (response.status == 1) {
-			events = response.data;
-			let i = 1;
-			events.forEach(event => {
-				let d = new Date(event.DOE + " " + event.TOE);
+			event = response.data;
+			$(".event-name").text(event.name);
+			if (event.date) {
+				let d = new Date(event.date + " " + event.time);
 				let date = d.toLocaleDateString("en-IN", {
 					year: "numeric",
 					month: "short",
@@ -58,64 +59,39 @@ $.ajax({
 				let time = d.toLocaleTimeString("en-IN", {
 					timeStyle: "short"
 				});
-				let html = `<tr id="row-${event.EID}" class="event-list">
-								<td class="event-doe">${date}</td>
-								<td class="event-toe">${time}</td>
-								<td class="event-name">${event.Name}</td>
-                                <td class="event-details"><a href = "./${event.EID}" id="${event.EID}-details-btn" class="event-details-btn">Details</a></td>
-								<td class="event-register"><button id="${event.EID}-register-btn" class="event-register-btn">Register</button></td>
-							</tr>`;
-				setTimeout(() => {
-					$(".events-list-table").append(html);
-					$(`#row-${event.EID}`)
-						.css("opacity", 0)
-						.animate(
-							{
-								opacity: 1
-							},
-							50
-						);
-				}, 50 * i);
-				i++;
+				$(".event-venue").text(`${time}, ${date} at ${event.venue}`);
+			}
+			// Add event handler to register button
+			$(".event-register-btn").on("click", event => {
+				$(".dialog").addClass("active");
+				$(".overlay").toggle();
+				$("#dialog-confirm-btn").focus();
 			});
-			// Add event handler to all event register buttons after 2 seconds
-			setTimeout(() => {
-				$(".event-register-btn").on("click", event => {
-					eid = event.target.id.substr(0, 8);
-					$(".dialog").addClass("active");
-					$(".overlay").toggle();
-					$("#dialog-confirm-btn").focus();
-				});
-			}, 2000);
 		}
 	}
 }).then(() => {
-	// Make AJAX request to get all cultural events list from DB which to which user is registered
+	// Make AJAX request to get all technical events list from DB which to which user is registered
 	$.ajax({
 		url: "/bin/event/process-event",
 		method: "GET",
 		dataType: "json",
 		contentType: "application/json",
 		data: {
-			getUserEvents: true,
-			type: "Cultural"
+			isUserRegistered: true,
+			EID: eid
 		},
 		success: function(response) {
 			if (response.status == 0 && !response.loggedIn) {
 				showError(
-					"You're not logged in. Please login to register to any event."
+					"You're not logged in. Please login to register to this event."
 				);
 			}
 			if (response.status == 1) {
-				events = response.data;
-				events.forEach(event => {
-					$(`#row-${event.EID}`).addClass("registered");
-					$(`#${event.EID}-register-btn`)
-						.addClass("registered")
-						.attr("disabled", true)
-						.text("Registered")
-						.off("click");
-				});
+				$(".event-register-btn")
+					.addClass("registered")
+					.attr("disabled", true)
+					.text("Registered")
+					.off("click");
 			}
 		}
 	});
@@ -143,8 +119,7 @@ function registerEvent() {
 				showError("You're already registered for this event.");
 			} else if (response.status == 1) {
 				showSuccess("Registration successful.");
-				$(`#row-${eid}`).addClass("registered");
-				$(`#${eid}-register-btn`)
+				$(".event-register-btn")
 					.addClass("registered")
 					.attr("disabled", true)
 					.text("Registered")
@@ -152,7 +127,6 @@ function registerEvent() {
 			} else {
 				showError("Oops! Something went wrong.");
 			}
-			eid = null;
 		}
 	});
 }

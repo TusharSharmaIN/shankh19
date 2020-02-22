@@ -188,7 +188,7 @@ html.nav-active {
 
 /* CSS FOR BODY OF THE PAGE */
 
-.events-container {
+.event-desc {
 	min-height: calc(100vh - 50px - 10vh);
 	display: flex;
 	justify-content: center;
@@ -202,96 +202,61 @@ h2 {
 	width: 100%;
 }
 
-.events-list-container {
+.event-desc-container {
 	background-color: white;
 	width: 100%;
 	padding: 10px 25px 10px 10px;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
-.events-list-table {
-	width: 100%;
-	border-collapse: separate;
-	border-spacing: 0 10px;
-}
-
-caption {
-	font-size: 24px;
-}
-
-.event-list {
-	border: 1px solid #000;
+.event-desc-container > div {
+	width: 90%;
 	padding: 10px;
-	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-	margin: 5px 0px;
-	cursor: default;
-	background: rgba(255, 255, 255, 0.7);
-	transition: box-shadow 0.5s;
 }
 
-.event-list:hover {
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+.event-desc ul {
+	max-width: 80%;
+	font-size: 14px;
 }
 
-.event-list.registered {
-	background: #67b26f; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#4ca2cd,
-		#67b26f
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#4ca2cd,
-		#67b26f
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	opacity: 1;
-	animation: show 0.5s;
+.event-name {
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 32px;
 }
 
-td {
-	padding: 10px;
-	border-top: 1px solid #bbb;
-	border-bottom: 1px solid #bbb;
-}
-
-td:nth-child(1) {
-	border-left: 1px solid #bbb;
-}
-
-td:nth-last-child(1) {
-	border-right: 1px solid #bbb;
-}
-
-a {
-	text-decoration: none;
-}
-
-.event-doe,
-.event-details,
-.event-register {
+.event-venue {
+	font-size: 14px;
+	padding-top: 5px;
 	text-align: center;
 }
 
-.event-details-btn,
+.event-intro > p {
+	font-size: 14px;
+}
+
 .event-register-btn {
 	padding: 5px 10px;
 	color: black;
 	border: 2px solid black;
 	background-color: rgba(255, 255, 255, 0);
 	cursor: pointer;
-	font-size: 13px;
+	font-size: 16px;
 }
 
-.event-details-btn:hover,
 .event-register-btn:hover {
 	color: white;
 	background-color: #000;
 }
 
 .event-register-btn.registered {
-	border-color: #fff;
-	color: #fff;
+	border-color: #67b26f;
+	color: #67b26f;
 	cursor: default;
 	background: none;
 }
@@ -419,17 +384,8 @@ footer {
 		font-size: 16px;
 	}
 
-	.events-list-container {
+	.event-desc-container {
 		padding: 10px;
-	}
-
-	caption {
-		font-size: 20px;
-	}
-
-	td,
-	button {
-		font-size: 12px;
 	}
 
 	.dialog {
