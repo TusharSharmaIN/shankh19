@@ -79,7 +79,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<!--Start Parallax 1 Section-->
 	<section class="parallax" id="parallax-intro">
 		<div class="parallax-inner">
-			<blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. <i>SHANKHNAAD</i>. This will be a feast to your soul and mind. With all novice jamboree, it will be a memorable episode. With the adventure of treasure hunt, to the humour of stand-up comedy and wrapped with the grace of soulful music it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote>
+			<blockquote id="shankhnaad-intro">The blare of the conch shell, herald victory, embarking the start of a new venture, with this ethos, we the people of AITH welcome you to our sumptuous Annual Techno-Cultural and Literary fest. SHANKHNAAD. This will be a feast to your soul and mind. With all the novice celebration, it will be a memorable episode. With the adventure of treasure hunt, to the humor of stand-up comedy, and wrapped with the grace of soulful music, it will be an extravaganza experience. Do join us to celebrate your joy to the fullest and give a try to this happening occurrence.</blockquote>
 		</div>
 	</section>
 	<!--End Parallax 1 Section-->
@@ -88,18 +88,18 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<a id="events" name="events">
 		<!--Start Banner Wrapper For Events-->
 		<div class="banner-wrapper">
-			<h1>This year Events</h1>
+			<h1>This Year's Events</h1>
 			<section class="one-third">
 				<img src="img/technical.jpg">
 				<h3>Technical</h3>
-				<p>Technology helps us to step into this new era with ease and engineers are known as the wizard of technology. So a shout out to all the technocrats out there here, it is big feed for all of you as you'll get a blow of microflora art to PC gaming. Check your expertise with us and adore these festivities.</p>
+				<p>Technology helps us to step into this new era with ease, and engineers are known as the wizard of technology. So a shout out to all the technocrats out there here, it is big feed for all of you as you'll get a blow of microflora art to PC gaming. Check your expertise with us and adore these festivities.</p>
 				<a class="event-button" href="/events/technical/" target="_blank">See Technical Events</a>
 				<!--button onclick="window.location.href = '/events/technical/';">See Events</button-->
 			</section>
 			<section class="one-third">
 				<img src="img/literature.jpg">
 				<h3>Literary</h3>
-				<p>We all somewhere empty our way too filled mind with our artistic qualities hidden somewhere within us. So it's high time to do it more skillfully. Process, nothing much shows the grace of eloquent mindset and content you have, and that's it. Come with us to this beautiful expedition of model United Nation to mockshashatkar and manifest your finesse.</p>
+				<p>We all somewhere empty our way too filled mind with our artistic qualities hidden somewhere within us. So it's high time to do it more skillfully. Process, nothing much shows the grace of eloquent mindset and content you have, and that's it. Come with us to this beautiful expedition of model United Nation to mock-shashatkar and manifest your finesse.</p>
 				<a class="event-button" href="events/literary/" target="_blank">See Literary Events</a>
 				<!--button onclick="window.location.href = 'events/literary/'; window.location.target = '_blank';">See Events</button-->
 			</section>
@@ -140,7 +140,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 				<figcaption>Dr. Anuj Srivastva<br>(Cultural Convenor)</figcaption>
 			</div>
 			<div class="one-third">
-				<img src="img/man.png" alt="" width="100px" height="auto">
+				<img src="img/mentor-3.png" alt="" width="100px" height="auto" style="border-radius: 50%;">
 				<figcaption>Kapil Kumar Pandey<br>(Technical and Literary Convenor)</figcaption>
 			</div>
 		</div>
@@ -190,7 +190,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 						</div>
 
 						<div class="testimonial" id="test-3">
-							<p>"To see this joyous  gathering even instrument beats are most elated. Thank you for a top musical experience and a wonderful night!"</p>
+							<p>"To see this joyous gathering, even instrument beats are most elated. Thank you for the top musical experience and a wonderful night!"</p>
 							<span class="description">
 								<h3 class="name">Ankesh Jha</h3>
 								<h6>Lead Singer<br>The Mixtape Band</h6>
@@ -251,7 +251,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 		<section class="left-col">
 			<h1>About Us</h1>
 			<p>Dr. Ambedkar Institute of Technology for Handicapped, Kanpur with the motto of "न दैन्यम् न पलायनम्" is again ready to bring along all of you and rejuvenate you with an extreme amount of pure happiness and ecstasy. The annual socio-cultural event Shankhnaad 2020 is waiting at your doorstep to incarnate the memories which last a lifetime.</p>
-			<p>So, let us give to ourselves this everlasting essence of incredible human experience with an enchanting fusion of a 3 day long literary, musical and artistic events and have an escape from all the bitterness in life. Embrace yourself for another cultural extravaganza.</p>
+			<p>So, let us give ourselves this eternal essence of incredible human experience with an enchanting fusion of a three-day-long literary, musical, and artistic events and have an escape from all the bitterness in life. Embrace yourself for another cultural extravaganza.</p>
 			<div class="quotation">
 				<h4>"उठे जो स्वर तो अच्छा है,<br>पर उठे, आज धीमे ही सही,<br>मिलकर जो आएगी आवाज़,<br>तो गूंजेगा शंखनाद भी यहीं।"</h4>
 			</div>
