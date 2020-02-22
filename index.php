@@ -18,6 +18,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<link rel="shortcut icon" type="image/png" href="img/shankh-black.png"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	<script src="https://kit.fontawesome.com/6c05aa3d79.js" crossorigin="anonymous"></script>
 	<script defer src="/assets/scripts/index.js"></script>
@@ -136,7 +137,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 			<section class="one-third">
 				<img src="img/literature.jpg">
 				<h3>Literary</h3>
-				<p>We all somewhere empty our way too filled mind with our artistic qualities hidden somewhere within us. So it's high time to do it more skillfully. Process, nothing much shows the grace of eloquent mindset and content you have, and that's it. Come with us to this beautiful expedition of model United Nation to mock-shashatkar and manifest your finesse.</p>
+				<p>We all somewhere empty our way too filled mind with our artistic qualities hidden somewhere within us. So it's high time to do it more skillfully. Process, nothing much shows the grace of eloquent mindset and content you have, and that's it. Come with us to this beautiful expedition and manifest your finesse.</p>
 				<a class="event-button" href="events/literary/" target="_blank">See Literary Events</a>
 				<!--button onclick="window.location.href = 'events/literary/'; window.location.target = '_blank';">See Events</button-->
 			</section>
