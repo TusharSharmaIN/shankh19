@@ -51,6 +51,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
         <div class="events-list-container">
             <table class="events-list-table">
                 <caption>Technical Events</caption>
+                <tr id="biofest-row" class="event-list">
+                    <td colspan=5><a href="/biofest">CLICK HERE FOR BIO-FEST 2020 EVENTS</a></td>
+                </tr>
             </table>
         </div>
     </section>

@@ -414,6 +414,38 @@ footer {
 	display: block;
 }
 
+#biofest-row {
+	background: #348f50; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#56b4d3,
+		#348f50
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#56b4d3,
+		#348f50
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#biofest-row > td {
+	text-align: center;
+	color: #000;
+	padding: 0;
+}
+
+#biofest-row > td > a {
+	text-decoration: none;
+	color: #fff;
+	width: 100%;
+	display: block;
+	height: 100%;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
@@ -445,5 +477,9 @@ footer {
 		top: calc(50% - 75px);
 		width: calc(100% - 20px);
 		left: 10px;
+	}
+
+	#biofest-row > td > a {
+		font-size: 14px;
 	}
 }
