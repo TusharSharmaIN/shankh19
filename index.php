@@ -18,7 +18,6 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 	<link rel="shortcut icon" type="image/png" href="img/shankh-black.png"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	<script src="https://kit.fontawesome.com/6c05aa3d79.js" crossorigin="anonymous"></script>
 	<script defer src="/assets/scripts/index.js"></script>
