@@ -54,7 +54,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <div class="event-venue">
                 </div>
             </div>
-
+            <div class="event-intro">
+            </div>
+            <div class="event-rules">
+            </div>
             <button class="event-register-btn">Register</button>
         </div>
     </section>
