@@ -518,7 +518,7 @@ class User
         // Create an admin DB connection to get data from Events_Details table
         $adminDB = $db->getAdminDBConnection();
         // Query database for eid and get all details
-        $query = "SELECT * FROM Event_Details WHERE Type='" . $type . "' AND " . $joinedEID . ";";
+        $query = "SELECT * FROM Event_Details WHERE Type='" . $type . "' AND (" . $joinedEID . ");";
         // Prepare query statement
         $stmt = $adminDB->prepare($query);
         // Execute query
