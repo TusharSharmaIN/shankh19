@@ -56,39 +56,20 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>We are lucky enough to be born in era where hovercrafts are a thing, there is no other such vehicle as stylish, royal, thrilling to be rode on, maybe you have watched in movies an adventurous ride on Hovercraft by the protagonist. Now its time to witness in the real miniature world with your own model!<br>
-                    With your hovercrafts ready on the start line, it is time to test the best master slave pair. Can you command your machine to travel over the difficult terrain we have set for it in the minimum time possible?
-                </p>
-            </div>
-            <div class="event-intro">
-                <h4>Problem Statement</h4>
-                <p>Build a wireless remote controlled hovercraft (air cushion vehicle) which travels on various terrains like sand, mud, water, gravel and concrete and complete the specified track in the least possible time.</p>
+                <p>It is a typical application and practical approach of fluid mechanics. </p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li><strong>Round 1:</strong><br><br>
-                        Teams have to make their way to the top-15 best lap time. The lap time will be calculated as follows:<br><br>
-                        Lap time = t + 2*n<br><br>
-                        Where t is actual time taken to complete the track.<br><br>
-                        n is no. of times the hovercraft is realigned on the track.</li><br>
-                    <li><strong>Round 2:</strong><br><br>
-                        The first to cross the finish line wins.<br><br>
-                        The decision of the event coordinators will be bounding in case of any conflicts.</li>
+                    <li>Team which put maximum cubes in basket in limited time will be regarded as winner. </li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>Length: 30 to 50 cm’s</li>
-                    <li>Breadth: 20 to 30 cm’s</li>
-                    <li>Height: no restriction</li>
-                    <li>Maximum number of participants per team is 4</li>
-                    <li>Ready to use kits and readymade building kits are strictly prohibited.</li>
-                    <li>No limitation on the number of motors or type of motors or servos used.</li>
-                    <li>During the event only one member per team is allowed to run the hovercraft.</li>
-                    <li>The arena is subject to changes during the event depending on level of participation.</li>
-                    <li>Event coordinators reserve the exclusive rights to disqualify any team indulging in misbehavior</li>
+                    <li>The competition s open to all the students.</li>
+                    <li>Each team have maximum four members.</li>
+                    <li>Competition of putting cubes in basket.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>
