@@ -108,14 +108,16 @@ $.ajax({
 			}
 			if (response.status == 1) {
 				events = response.data;
-				events.forEach(event => {
-					$(`#row-${event.EID}`).addClass("registered");
-					$(`#${event.EID}-register-btn`)
-						.addClass("registered")
-						.attr("disabled", true)
-						.text("Registered")
-						.off("click");
-				});
+				setTimeout(() => {
+					events.forEach(event => {
+						$(`#row-${event.EID}`).addClass("registered");
+						$(`#${event.EID}-register-btn`)
+							.addClass("registered")
+							.attr("disabled", true)
+							.text("Registered")
+							.off("click");
+					});
+				}, 1000);
 			}
 		}
 	});

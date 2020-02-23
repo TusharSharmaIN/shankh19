@@ -65,28 +65,28 @@ $.ajax({
 								<td class="event-details"><a href = "./${event.EID}" id="${event.EID}-details-btn" class="event-details-btn">Details</a></td>
 								<td class="event-register"><button id="${event.EID}-register-btn" class="event-register-btn">Register</button></td>
 							</tr>`;
+				$(".events-list-table").append(html);
+				$(`#row-${event.EID}`).css("opacity", 0);
 				setTimeout(() => {
-					$(".events-list-table").append(html);
-					$(`#row-${event.EID}`)
-						.css("opacity", 0)
-						.animate(
-							{
-								opacity: 1
-							},
-							50
-						);
+					$(`#row-${event.EID}`).animate(
+						{
+							opacity: 1
+						},
+						50
+					);
 				}, 50 * i);
 				i++;
 			});
+
 			// Add event handler to all event register buttons after 2 seconds
-			setTimeout(() => {
-				$(".event-register-btn").on("click", event => {
-					eid = event.target.id.substr(0, 8);
-					$(".dialog").addClass("active");
-					$(".overlay").toggle();
-					$("#dialog-confirm-btn").focus();
-				});
-			}, 2000);
+			// setTimeout(() => {
+			$(".event-register-btn").on("click", event => {
+				eid = event.target.id.substr(0, 8);
+				$(".dialog").addClass("active");
+				$(".overlay").toggle();
+				$("#dialog-confirm-btn").focus();
+			});
+			// }, 2000);
 		}
 	}
 }).then(() => {
