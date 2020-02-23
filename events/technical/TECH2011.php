@@ -56,27 +56,50 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Technothlon is a tech event under Shankhnaad'20 which is an annual techno-cultural event of Dr. Ambedkar Institute of Technology for Handicap (Dr. AITH), Kanpur, Uttar Pradesh. Its main aim is to develop a good knowledge of technology in students. We are also planning to do 3rd round which includes a small hackathon to develop communication and programming skills.
-                </p>
+                <p>Design a manually controlled ROBOT wired or wireless within a specified dimension mentioned as below. The ROBOT that will demolish the other robot in minimum time or mini-mum parts damaged of the robot will be the winner. </p>
+            </div>
+            <div class="event-phase">
+                <h4>Category 1</h4>
+                <ul>
+                    <li>In this category robots up-to 8 kg will compete.</li>
+                    <li>It will be knockout round and only one team will be a winner in this category.</li>
+
+                </ul>
+            </div>
+            <div class="event-phase">
+                <h4>Category 2</h4>
+                <ul>
+                    <li>In this category robots up-to 15 kg will compete.</li>
+                    <li>It will be knockout round and only one team will be a winner in this category.</li>
+
+                </ul>
+            </div>
+            <div class="event-specs">
+                <h4>Arena Specifications</h4>
+                <ul>
+                    <li>First round of the war will be on a closed arena.</li>
+                    <li>Second round of the war will be on rectangular based closed arena.</li>
+                    <li>Third round of the war will be on the rectangular based closed arena and the dimension for rectangular arena will be 250*180(l*b).</li>
+
+                </ul>
             </div>
             <div class="event-criteria">
-                <h4>How to participate?</h4>
+                <h4>Judging Criteria</h4>
                 <ul>
-                    <li>To participate, register on the link <a href="https://d2c.pw/eJvdQB" target="_blank">here</a></li>
-                    <li><strong>Note:</strong> Mandatory to participate in pair</li>
+                    <li>War will be held in three rounds and each round has 10 minutes.</li>
+                    <li>The aim of every match is to demolish and immobile the other robot completely.</li>
+
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>There will be 20 Questions, which you have to solve in 20 Minutes in Tech.</li>
-                    <li>There will be 15 Questions, which you have to solve in 30 Minutes in Aptitude.</li>
-                    <li>You can participate in Mobile but it is preferable to do in Laptop or in PC. Bring your laptop if you have.</li>
-                    <li>It is mandatory to be present both team members in Dr. AITH to participate. Otherwise registration will be cancel. </li>
-                    <li>Shortlist teams will get mail after quiz.</li>
-                    <li>Stage 2 will be a theme solving round, where you have to solve  the given problem.</li>
-                    <li>The decision of the judges is final and incontestable.</li>
-                    <li>Organizers reserve the right to change the timeline.</li>
+                    <li>Each team has to make their robots under the specifications given below.</li>
+                    <li>Each team can have maximum 5 members. students from different institute can form a team.</li>
+                    <li>No practice will be allowed on the arena.</li>
+                    <li>The robot should not damage the arena else it will lead to penalty.</li>
+                    <li>Each member of the team must have identity card of his /her respective institute.</li>
+
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

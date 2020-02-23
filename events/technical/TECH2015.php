@@ -55,29 +55,27 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 </div>
             </div>
             <div class="event-intro">
-                <h4>Introduction</h4>
-                <p>Technothlon is a tech event under Shankhnaad'20 which is an annual techno-cultural event of Dr. Ambedkar Institute of Technology for Handicap (Dr. AITH), Kanpur, Uttar Pradesh. Its main aim is to develop a good knowledge of technology in students. We are also planning to do 3rd round which includes a small hackathon to develop communication and programming skills.
-                </p>
+                <!-- <h4>Introduction</h4>
+                <p>The circuit design contest is a student hardware design competition open to all students who are passionate about electronics, digital design and electrical engineering in general.</p> -->
             </div>
+
             <div class="event-criteria">
-                <h4>How to participate?</h4>
+                <!-- <h4>Judging Criteria</h4>
                 <ul>
-                    <li>To participate, register on the link <a href="https://d2c.pw/eJvdQB" target="_blank">here</a></li>
-                    <li><strong>Note:</strong> Mandatory to participate in pair</li>
-                </ul>
+                    <li>Each contestant will receive the feedback from judges during the final contest judging.</li>
+                    <li>General judging criteria is listed below.</li>
+                    <li>Circuit should be minimize and coherent.</li>
+                    <li>Hardwired should be structured well and parts are grouped in a logical manner for different functionalities.</li>
+
+                </ul> -->
             </div>
             <div class="event-rules">
-                <h4>Rules and Regulations</h4>
+                <!-- <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>There will be 20 Questions, which you have to solve in 20 Minutes in Tech.</li>
-                    <li>There will be 15 Questions, which you have to solve in 30 Minutes in Aptitude.</li>
-                    <li>You can participate in Mobile but it is preferable to do in Laptop or in PC. Bring your laptop if you have.</li>
-                    <li>It is mandatory to be present both team members in Dr. AITH to participate. Otherwise registration will be cancel. </li>
-                    <li>Shortlist teams will get mail after quiz.</li>
-                    <li>Stage 2 will be a theme solving round, where you have to solve  the given problem.</li>
-                    <li>The decision of the judges is final and incontestable.</li>
-                    <li>Organizers reserve the right to change the timeline.</li>
-                </ul>
+                    <li>A team has maximum four members are allowed.</li>
+                    <li>Only component given by digital team can be used by participants.</li>
+                    <li>Judge decision will be final and binding to all.</li>
+                </ul> -->
             </div>
             <button class="event-register-btn">Register</button>
         </div>
