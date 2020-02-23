@@ -47,6 +47,14 @@ $.ajax({
 	success: function(response) {
 		if (response.status == 1) {
 			events = response.data;
+			// Sort events list by date and time in ascending order
+			events.sort((a, b) => {
+				let d_a = new Date(a.DOE + " " + a.TOE);
+				let d_b = new Date(b.DOE + " " + b.TOE);
+				if (d_a < d_b) return -1;
+				else if (d_a > d_b) return 1;
+				else return 0;
+			});
 			let i = 1;
 			events.forEach(event => {
 				let d = new Date(event.DOE + " " + event.TOE);
