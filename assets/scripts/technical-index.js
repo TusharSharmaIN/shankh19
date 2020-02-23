@@ -77,16 +77,13 @@ $.ajax({
 				}, 50 * i);
 				i++;
 			});
-
-			// Add event handler to all event register buttons after 2 seconds
-			// setTimeout(() => {
+			// Add event handler to all event register buttons
 			$(".event-register-btn").on("click", event => {
 				eid = event.target.id.substr(0, 8);
 				$(".dialog").addClass("active");
 				$(".overlay").toggle();
 				$("#dialog-confirm-btn").focus();
 			});
-			// }, 2000);
 		}
 	}
 }).then(() => {
