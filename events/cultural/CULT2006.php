@@ -57,9 +57,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>TIME LIMIT – 30 SEC.</li>
-                    <li>HAND SHOULD BE HOLD PROPERLY.</li>
-                    <li>OTHER HAND WILL BE BEHIND AT YOUR BACK (NOT COMPULSORY).</li>
+                    <li>TEAM SIZE 10-30 PERSONS.</li>
+                    <li>TIME LIMIT 10-20 MIN. (POINTS WILL BE DEDUCTED ON EXCEEDING THE TIME LIMIT)</li>
+                    <li>TEAM SIZE REPRESENTED THE NUMBER OF PEOPLE REGISTERED AS A TEAM ONLY THESE SHALL BE ALLOWED TO PERFORM.</li>
+                    <li>TEAMS ARE EXPECTED TO THE PERFORMANCE SHOULD BE HINDI/ENGLISH OR BOTH.</li>
+                    <li>JUDGING CRITERIA:- ACTING, VOICE(MODULATION & DICTION) SCREEN PLAY, SCRIPT, AUDIENCE INTERACTION & OVERALL IMPACT.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

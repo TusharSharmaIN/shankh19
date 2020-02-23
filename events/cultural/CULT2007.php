@@ -57,9 +57,17 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>TIME LIMIT – 30 SEC.</li>
-                    <li>HAND SHOULD BE HOLD PROPERLY.</li>
-                    <li>OTHER HAND WILL BE BEHIND AT YOUR BACK (NOT COMPULSORY).</li>
+                    <li>Maximum of four members per team.</li>
+                    <li>The Treasure Hunt consists of 8 clues, each one leading to the next clue. Each correctly solved clue carries 10 points. And final Treasure carries 50 points.</li>
+                    <li>The clues are to be found in a particular order. A team cannot skip a clue. Skipping a clue leads to disqualification of the team.</li>
+                    <li>Do not search for clues in off-limit areas.</li>
+                    <li>If you found other team’s clue by any chance never tamper it. A violation of this rule could cause disqualification of your team.</li>
+                    <li>You move any object to search the clue, kindly replace it back.</li>
+                    <li>All the clues of the teams are different and located at different places but the final destination i.e. the treasure is same. The team which finds the treasure wins first.</li>
+                    <li>Bikes are allowed (maximum 160CC)</li>
+                    <li>The Management shall not be held responsible for any kind of injury caused in the course of this event.</li>
+                    <li>Use of expletives or aggressive behavior will result in immediate disqualification.</li>
+                    <li>The Organizing committee reserves the right to change the venue, time and rules, if desired.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

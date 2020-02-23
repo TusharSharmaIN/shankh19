@@ -7,7 +7,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="literary">
+<html lang="en" class="cultural">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/events-desc.css">
     <script defer src="/assets/scripts/events-desc.js"></script>
-    <title>Shankhnaad'20 - Literary Events</title>
+    <title>Shankhnaad'20 - Cultural Events</title>
 </head>
 
 <body>
@@ -56,10 +56,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>The night is dark and full of terrors, so is the case. Solve the case, perform the tasks and find the Murderer.</p>
+                <p>The night is dark and full of terrors, so is the case. Solve the case, perform the tasks and find the Murderer. </p>
             </div>
             <div class="event-rules">
-                <h4>Rules and regulations<br></h4>
+                <h4>Rules and Regulations</h4>
                 <ul>
                     <li>Each team shall comprise of 3 Participants only.</li>
                     <li>Participants will have to solve cases with the help of clues and tasks. (similar to Treasure Hunt).</li>
@@ -71,6 +71,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                     <li>Use of expletives or aggressive behavior will result in immediate disqualification.</li>
                     <li>The participants are strictly advised not to disclose the name of their College/Institution to the Jury members/audience.</li>
                     <li>The Organizing committee reserves the right to change the venue, time and rules, if desired.</li>
+
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

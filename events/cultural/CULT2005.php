@@ -57,9 +57,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>TIME LIMIT – 30 SEC.</li>
-                    <li>HAND SHOULD BE HOLD PROPERLY.</li>
-                    <li>OTHER HAND WILL BE BEHIND AT YOUR BACK (NOT COMPULSORY).</li>
+                    <li>ALL DANCE FORMS ARE ALLOWED.</li>
+                    <li>2 ROUND PRESENT IN COMPETITION.</li>
+                    <li>IN FIRST ROUND ,PARTICIPANTS WILL PERFORM FOR NOT MORE THAN 3 MIN(MAXIMUM).</li>
+                    <li>IN 2ND ROUND THAN WILL BE A SPACE OF COMPETITION IN WHICH THE FINALIST WILL PERFORMS ON THE SPOT IS A MUSIC PEACE RANDOMLY SELECTED.</li>
+                    <li>PARTICIPANTS ARE REQUIRED TO GIVE THERE CORRESPONDING EDITED AUDIO SONGS IN .MP3 FORMAT IN DRIVES ONLY.</li>
+
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>
