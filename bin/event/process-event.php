@@ -67,70 +67,64 @@ if (isset($_GET['registerEvent'])) {
 	$event->fillDetailsFromDB();
 	// Create SesApi object to send email
 	$ses = new SesApi();
-	// $html = "
-	// 		<table class=\"heading\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
-	// 			<tr>
-	// 				<td align=\"center\" style=\"background:#000;color:#fff;padding:20px;font-size:36px;text-transform:uppercase;font-family:'Poppins',sans-serif;letter-spacing:10px;font-weight:100;\">
-	// 					Shankhnaad'20
-	// 				</td>
-	// 			</tr>
-	// 		</table>
-	// 		<table class=\"content\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;background:#ffd89b;background:linear-gradient(to right, #ffeeee, #ddefbb);\">
-	// 			<tr>
-	// 				<td align=\"center\" style=\"padding:50px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
-	// 					You've been successfully registered for the event <strong>{$event->getName()}</strong>.
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
-	// 					Please go through the rules and regulations of the event.
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
-	// 					We'll keep you informed in case there is any update in the schedule of the event.
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"padding:100px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
-	// 					This is a system generated mail. Please do not reply to this email.
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"padding:5px 10px 20px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
-	// 					We reserve rights to cancel the event without any prior information.
-	// 				</td>
-	// 			</tr>
-	// 		</table>
-	// 		<table class=\"footer\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
-	// 			<tr>
-	// 				<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:30px 5px 5px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
-	// 						<a href=\"https://www.shankhnaad.org\" style=\"color:#aaa;text-decoration:none;\">www.shankhnaad.org</a>
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:0px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
-	// 					Copyright &copy; 2020 Shankhnaad. All rights reserved.
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 0 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
-	// 					Dr. Ambedkar Institute of Technology for Handicapped, Kanpur, U.P., India - 208024
-	// 				</td>
-	// 			</tr>
-	// 			<tr>
-	// 				<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 30px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
-	// 					<a href=\"mailto:shankhnaad@aith.ac.in\" style=\"color:#aaa;text-decoration:none;\">shankhnaad@aith.ac.in</a>
-	// 				</td>
-	// 			</tr>
-	// 		</table>
-	// 		";
-	// $html = "
-	// 	<table class=\"heading\" width=\"100%\" cellpadding=\"0\" border=\"0\" cellspacing=\"0\" style=\"border-spacing:0;\"><tr><td align=\"center\" style="background:#fff;color:#fff;padding:0px;font-size:36px;text-transform:uppercase;font-family:'Poppins',sans-serif;letter-spacing:10px;font-weight:100;" ><img src="https://shankhnaad-cdn.s3.ap-south-1.amazonaws.com/shankhnaad.png" alt="Shankhnaad'20" height="200px"/></td></tr></table>
-	// 	<table class="content" width="100%" cellpadding="0" border="0" cellspacing="0" style="border-spacing:0;letter-spacing:1px;"><tr><td align="left" style="padding:50px 10px 5px 10px;font-family:sans-serif;font-size:18px">This verification email is valid for 24 hours. If you failed to verify the email within 24 hours then you may resend the verification email by logging in<a href="https://shankhnaad.org/login" target="_blank">here</a>.</td></tr><tr><td align="left" style="padding:50px 10px 5px 10px;font-family:sans-serif;font-size:18px">Click on the link below to verify your email address:</td></tr></table>
-	// "
-	$html = '<table class="heading" width="100%" cellpadding="0" border="0" cellspacing="0" style="border-spacing:0;"><tr><td align="center" style="background:#fff;color:#fff;padding:0px;font-size:36px;text-transform:uppercase;font-family:"Poppins",sans-serif;letter-spacing:10px;font-weight:100;"><img src="https://shankhnaad-cdn.s3.ap-south-1.amazonaws.com/shankhnaad.png" alt="Shankhnaad\'20" height="200px"/></td></tr></table>
-		<table class="content" width="100%" cellpadding="0" border="0" cellspacing="0" style="border-spacing:0;letter-spacing:1px;"><tr><td align="left" style="padding:50px 10px 5px 10px;font-family:sans-serif;font-size:18px">This verification email is valid for 24 hours. If you failed to verify the email within 24 hours then you may resend the verification email by logging in <a href="https://shankhnaad.org/login" target="_blank">here</a>.</td></tr><tr><td align="left" style="padding:50px 10px 5px 10px;font-family:sans-serif;font-size:18px">Click on the link below to verify your email address:</td></tr></table>';
+	$html = "
+			<table class=\"heading\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
+				<tr>
+					<td align=\"center\" style=\"background:#000;color:#fff;padding:20px;font-size:36px;text-transform:uppercase;font-family:'Poppins',sans-serif;letter-spacing:10px;font-weight:100;\">
+						Shankhnaad'20
+					</td>
+				</tr>
+			</table>
+			<table class=\"content\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;background:#ffd89b;background:linear-gradient(to right, #ffeeee, #ddefbb);\">
+				<tr>
+					<td align=\"center\" style=\"padding:50px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
+						You've been successfully registered for the event <strong>{$event->getName()}</strong>.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
+						Please go through the rules and regulations of the event.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"padding:5px 10px;font-family:'Poppins',sans-serif;font-size:18px\">
+						We'll keep you informed in case there is any update in the schedule of the event.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"padding:100px 10px 5px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
+						This is a system generated mail. Please do not reply to this email.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"padding:5px 10px 20px 10px;font-family:'Poppins',sans-serif;font-size:14px\">
+						We reserve rights to cancel the event without any prior information.
+					</td>
+				</tr>
+			</table>
+			<table class=\"footer\" width=\"100%\" cellpadding=0 border=0 cellspacing=0 style=\"border-spacing:0;\">
+				<tr>
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:30px 5px 5px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+							<a href=\"https://www.shankhnaad.org\" style=\"color:#aaa;text-decoration:none;\">www.shankhnaad.org</a>
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:0px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+						Copyright &copy; 2020 Shankhnaad. All rights reserved.
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 0 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+						Dr. Ambedkar Institute of Technology for Handicapped, Kanpur, U.P., India - 208024
+					</td>
+				</tr>
+				<tr>
+					<td align=\"center\" style=\"background:#000;color:#aaa;letter-spacing:1px;padding:5px 5px 30px 5px;font-family:Helvetica,Arial,sans-serif;font-size:12px;\">
+						<a href=\"mailto:shankhnaad@aith.ac.in\" style=\"color:#aaa;text-decoration:none;\">shankhnaad@aith.ac.in</a>
+					</td>
+				</tr>
+			</table>
+			";
 	$text = "You've successfully registered for {$event->getName()}.";
 
 	// Register user for the event and send email

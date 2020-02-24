@@ -129,7 +129,7 @@ class User
         if ($stmt->execute()) {
             // Send an email verification link
             $ses = new SesApi();
-            if ($ses->sendCustomVerificationEmail($this->email, 'template-email-verification')) {
+            if ($ses->sendCustomVerificationEmail($this->email, 'template-email-verification-prod-0')) {
                 // Query to insert email, fname and lname into records table
                 $per_query = "INSERT INTO " . $this->user_per_details . "(Email, First_Name, Last_Name) VALUES(:email, :fname, :lname)";
                 $clg_query = "INSERT INTO " . $this->user_clg_details . "(Email) VALUES(:email)";
@@ -272,7 +272,7 @@ class User
             // User has not verified the email yet
             // Send an email verification link
             $ses = new SesApi();
-            if ($ses->sendCustomVerificationEmail($this->email, 'template-email-verification'))
+            if ($ses->sendCustomVerificationEmail($this->email, 'template-email-verification-prod-0'))
                 return 'EMAIL_SENT';
             else
                 return 'SERVER_ERROR';
