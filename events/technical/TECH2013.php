@@ -56,27 +56,23 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Technothlon is a tech event under Shankhnaad'20 which is an annual techno-cultural event of Dr. Ambedkar Institute of Technology for Handicap (Dr. AITH), Kanpur, Uttar Pradesh. Its main aim is to develop a good knowledge of technology in students. We are also planning to do 3rd round which includes a small hackathon to develop communication and programming skills.
-                </p>
+                <p>For all the techiest as well as soccer fans out there, having desire to showcasing their on football but also too lazy to actually play football here comes an event meant for you.</p>
             </div>
+
             <div class="event-criteria">
-                <h4>How to participate?</h4>
+                <h4>Judging Criteria</h4>
                 <ul>
-                    <li>To participate, register on the link <a href="https://d2c.pw/eJvdQB" target="_blank">here</a></li>
-                    <li><strong>Note:</strong> Mandatory to participate in pair</li>
+                    <li>Each team is allowed to maximum have two boats.</li>
+                    <li>The boats is controlled manually by using laptop or pc.</li>
+                    <li>The boats can have on board as well as off board supply.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>There will be 20 Questions, which you have to solve in 20 Minutes in Tech.</li>
-                    <li>There will be 15 Questions, which you have to solve in 30 Minutes in Aptitude.</li>
-                    <li>You can participate in Mobile but it is preferable to do in Laptop or in PC. Bring your laptop if you have.</li>
-                    <li>It is mandatory to be present both team members in Dr. AITH to participate. Otherwise registration will be cancel. </li>
-                    <li>Shortlist teams will get mail after quiz.</li>
-                    <li>Stage 2 will be a theme solving round, where you have to solve  the given problem.</li>
-                    <li>The decision of the judges is final and incontestable.</li>
-                    <li>Organizers reserve the right to change the timeline.</li>
+                    <li>A team may consist maximum of 5 students from different institute may form a team.</li>
+                    <li>Ready made Lego kit are not allowed. However ready made gear can be assembles and development board may be used.</li>
+                    <li>No last minute will be allowed in the arena. However each team can take time out of 2 minutes once during a match.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

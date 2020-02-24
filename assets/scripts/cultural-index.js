@@ -47,6 +47,14 @@ $.ajax({
 	success: function(response) {
 		if (response.status == 1) {
 			events = response.data;
+			// Sort events list by date and time in ascending order
+			events.sort((a, b) => {
+				let d_a = new Date(a.DOE + " " + a.TOE);
+				let d_b = new Date(b.DOE + " " + b.TOE);
+				if (d_a < d_b) return -1;
+				else if (d_a > d_b) return 1;
+				else return 0;
+			});
 			let i = 1;
 			events.forEach(event => {
 				let d = new Date(event.DOE + " " + event.TOE);
@@ -65,28 +73,25 @@ $.ajax({
                                 <td class="event-details"><a href = "./${event.EID}" id="${event.EID}-details-btn" class="event-details-btn">Details</a></td>
 								<td class="event-register"><button id="${event.EID}-register-btn" class="event-register-btn">Register</button></td>
 							</tr>`;
+				$(".events-list-table").append(html);
+				$(`#row-${event.EID}`).css("opacity", 0);
 				setTimeout(() => {
-					$(".events-list-table").append(html);
-					$(`#row-${event.EID}`)
-						.css("opacity", 0)
-						.animate(
-							{
-								opacity: 1
-							},
-							50
-						);
+					$(`#row-${event.EID}`).animate(
+						{
+							opacity: 1
+						},
+						50
+					);
 				}, 50 * i);
 				i++;
 			});
-			// Add event handler to all event register buttons after 2 seconds
-			setTimeout(() => {
-				$(".event-register-btn").on("click", event => {
-					eid = event.target.id.substr(0, 8);
-					$(".dialog").addClass("active");
-					$(".overlay").toggle();
-					$("#dialog-confirm-btn").focus();
-				});
-			}, 2000);
+			// Add event handler to all event register buttons
+			$(".event-register-btn").on("click", event => {
+				eid = event.target.id.substr(0, 8);
+				$(".dialog").addClass("active");
+				$(".overlay").toggle();
+				$("#dialog-confirm-btn").focus();
+			});
 		}
 	}
 }).then(() => {

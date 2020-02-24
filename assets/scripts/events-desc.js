@@ -35,7 +35,7 @@ x.addListener(changeBrochureURL); // Attach listener function on state changes
 // EID of the event for which the user wants to register
 var eid = window.location.href.substr(window.location.href.length - 8);
 
-// Make AJAX request to get all technical events list from DB which are active
+// Make AJAX request to get all details of an event
 $.ajax({
 	url: "/bin/event/process-event",
 	method: "GET",
@@ -48,6 +48,7 @@ $.ajax({
 	success: function(response) {
 		if (response.status == 1) {
 			event = response.data;
+			$("title").text(`Shankhnaad'20 - ${event.name}`);
 			$(".event-name").text(event.name);
 			if (event.date) {
 				let d = new Date(event.date + " " + event.time);
@@ -70,7 +71,7 @@ $.ajax({
 		}
 	}
 }).then(() => {
-	// Make AJAX request to get all technical events list from DB which to which user is registered
+	// Make AJAX request to check if user is registered to a particular EID or not
 	$.ajax({
 		url: "/bin/event/process-event",
 		method: "GET",

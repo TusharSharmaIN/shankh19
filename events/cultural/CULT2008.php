@@ -7,7 +7,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="technical">
+<html lang="en" class="cultural">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/events-desc.css">
     <script defer src="/assets/scripts/events-desc.js"></script>
-    <title>Shankhnaad'20 - Technical Events</title>
+    <title>Shankhnaad'20 - Cultural Events</title>
 </head>
 
 <body>
@@ -56,27 +56,22 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Technothlon is a tech event under Shankhnaad'20 which is an annual techno-cultural event of Dr. Ambedkar Institute of Technology for Handicap (Dr. AITH), Kanpur, Uttar Pradesh. Its main aim is to develop a good knowledge of technology in students. We are also planning to do 3rd round which includes a small hackathon to develop communication and programming skills.
-                </p>
-            </div>
-            <div class="event-criteria">
-                <h4>How to participate?</h4>
-                <ul>
-                    <li>To participate, register on the link <a href="https://d2c.pw/eJvdQB" target="_blank">here</a></li>
-                    <li><strong>Note:</strong> Mandatory to participate in pair</li>
-                </ul>
+                <p>The night is dark and full of terrors, so is the case. Solve the case, perform the tasks and find the Murderer. </p>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>There will be 20 Questions, which you have to solve in 20 Minutes in Tech.</li>
-                    <li>There will be 15 Questions, which you have to solve in 30 Minutes in Aptitude.</li>
-                    <li>You can participate in Mobile but it is preferable to do in Laptop or in PC. Bring your laptop if you have.</li>
-                    <li>It is mandatory to be present both team members in Dr. AITH to participate. Otherwise registration will be cancel. </li>
-                    <li>Shortlist teams will get mail after quiz.</li>
-                    <li>Stage 2 will be a theme solving round, where you have to solve  the given problem.</li>
-                    <li>The decision of the judges is final and incontestable.</li>
-                    <li>Organizers reserve the right to change the timeline.</li>
+                    <li>Each team shall comprise of 3 Participants only.</li>
+                    <li>Participants will have to solve cases with the help of clues and tasks. (similar to Treasure Hunt).</li>
+                    <li>Use of cell phones or any other device for communication is strictly prohibited.</li>
+                    <li>No team shall try to communicate with any other team or take any help from the volunteers.</li>
+                    <li>The event will be held within the college premises only.</li>
+                    <li>The decisions of the organizing committee will be final and binding.</li>
+                    <li>The Management shall not be held responsible for any kind of injury caused in the course of this event.</li>
+                    <li>Use of expletives or aggressive behavior will result in immediate disqualification.</li>
+                    <li>The participants are strictly advised not to disclose the name of their College/Institution to the Jury members/audience.</li>
+                    <li>The Organizing committee reserves the right to change the venue, time and rules, if desired.</li>
+
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

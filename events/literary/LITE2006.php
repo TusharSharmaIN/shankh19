@@ -7,7 +7,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="technical">
+<html lang="en" class="literary">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/css/events-desc.css">
     <script defer src="/assets/scripts/events-desc.js"></script>
-    <title>Shankhnaad'20 - Technical Events</title>
+    <title>Shankhnaad'20 - Literary Events</title>
 </head>
 
 <body>
@@ -54,29 +54,19 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <div class="event-venue">
                 </div>
             </div>
-            <div class="event-intro">
-                <h4>Introduction</h4>
-                <p>Technothlon is a tech event under Shankhnaad'20 which is an annual techno-cultural event of Dr. Ambedkar Institute of Technology for Handicap (Dr. AITH), Kanpur, Uttar Pradesh. Its main aim is to develop a good knowledge of technology in students. We are also planning to do 3rd round which includes a small hackathon to develop communication and programming skills.
-                </p>
-            </div>
             <div class="event-criteria">
-                <h4>How to participate?</h4>
+                <h4>Judging Criteria</h4>
                 <ul>
-                    <li>To participate, register on the link <a href="https://d2c.pw/eJvdQB" target="_blank">here</a></li>
-                    <li><strong>Note:</strong> Mandatory to participate in pair</li>
-                </ul>
-            </div>
-            <div class="event-rules">
-                <h4>Rules and Regulations</h4>
-                <ul>
-                    <li>There will be 20 Questions, which you have to solve in 20 Minutes in Tech.</li>
-                    <li>There will be 15 Questions, which you have to solve in 30 Minutes in Aptitude.</li>
-                    <li>You can participate in Mobile but it is preferable to do in Laptop or in PC. Bring your laptop if you have.</li>
-                    <li>It is mandatory to be present both team members in Dr. AITH to participate. Otherwise registration will be cancel. </li>
-                    <li>Shortlist teams will get mail after quiz.</li>
-                    <li>Stage 2 will be a theme solving round, where you have to solve  the given problem.</li>
-                    <li>The decision of the judges is final and incontestable.</li>
-                    <li>Organizers reserve the right to change the timeline.</li>
+                    <li>This event will be conducted in three (3) phases.</li>
+                    <li>The first round will be a general knowledge quiz (Aptitude Test).</li>
+                    <li>The second round will be a picture perception & group discussion test.</li>
+                    <li>Some blurred images will be shown to the participants and they will have to build a story based on that image.</li>
+                    <li>Those images will be shown for a limited period of time i.e. 30 seconds and then 5 minutes will be given to them to write down their story on a provided sheet.</li>
+                    <li>After that the participants will be clubbed in groups of 10 members and they will be asked to discuss their story and come to a conclusion.</li>
+                    <li>The final phase of the competition will be a mock interview round.</li>
+                    <li>There will be an interview committee of 3 judges. First the candidates have to submit their resume a day before the commencement of the event.</li>
+                    <li>These resumes will also be evaluated by the judges. After the submission of resumes the candidates will be notified about the timing of interview. The interview committee will judge the candidates on the basis of their overall personality, linguistic skills, speaking ability and subjective knowledge.</li>
+                    <li>Out of all candidates only three (3) will be awarded as 1st, 2rd and 3rd.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>
