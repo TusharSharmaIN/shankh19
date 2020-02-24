@@ -62,20 +62,20 @@ nav {
 	flex-direction: column;
 	margin: 0;
 	position: absolute;
-	height: 0vh;
+	height: 100vh;
 	top: 0px;
-	background-color: rgba(0, 0, 0, 0.9);
+	right: 0px;
+	background-color: rgba(0, 0, 0, 1);
 	align-items: center;
-	width: 100%;
-	transition: 0.5s;
+	width: 0;
 	padding: 0px;
 	z-index: 1;
 }
 
 .nav-ul.active {
-	display: flex;
-	animation: fadeIn 0.5s;
-	height: 100vh;
+	animation: fadeIn 0.3s;
+	transform-origin: right top;
+	animation-fill-mode: forwards;
 }
 
 html.nav-active {
@@ -108,11 +108,11 @@ html.nav-active {
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		height: 0;
+		width: 0;
 	}
 	to {
 		opacity: 1;
-		height: 100vh;
+		width: 100vw;
 	}
 }
 

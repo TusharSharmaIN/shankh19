@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Hind"); /*--- Body Font --*/
 @import url("https://fonts.googleapis.com/css?family=Nobile"); /*--- Heading Font --*/
 @import url("https://fonts.googleapis.com/css?family=Martel");
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
 
 * {
 	outline: none;
@@ -39,73 +39,72 @@ body {
 }
 
 #logo path:nth-child(1) {
-
 }
 
 #logo path:nth-child(2) {
-    stroke-dasharray: 493.9128112792969;
-    stroke-dashoffset: 493.9128112792969;
-    animation: line-anim 2s ease forwards;
+	stroke-dasharray: 493.9128112792969;
+	stroke-dashoffset: 493.9128112792969;
+	animation: line-anim 2s ease forwards;
 }
 
 #logo path:nth-child(3) {
-    stroke-dasharray: 477.7687683105469;
-    stroke-dashoffset: 477.7687683105469;
-    animation: line-anim 2s ease forwards 0.25s;
+	stroke-dasharray: 477.7687683105469;
+	stroke-dashoffset: 477.7687683105469;
+	animation: line-anim 2s ease forwards 0.25s;
 }
 
 #logo path:nth-child(4) {
-    stroke-dasharray: 506.44561767578125;
-    stroke-dashoffset: 506.44561767578125;
-    animation: line-anim 2s ease forwards 0.5s;
+	stroke-dasharray: 506.44561767578125;
+	stroke-dashoffset: 506.44561767578125;
+	animation: line-anim 2s ease forwards 0.5s;
 }
 
 #logo path:nth-child(5) {
-    stroke-dasharray: 422.4999084472656;
-    stroke-dashoffset: 422.4999084472656;
-    animation: line-anim 2s ease forwards 0.75s;
+	stroke-dasharray: 422.4999084472656;
+	stroke-dashoffset: 422.4999084472656;
+	animation: line-anim 2s ease forwards 0.75s;
 }
 
 #logo path:nth-child(6) {
-    stroke-dasharray: 467.8448181152344;
-    stroke-dashoffset: 467.8448181152344;
-    animation: line-anim 2s ease forwards 1s;
+	stroke-dasharray: 467.8448181152344;
+	stroke-dashoffset: 467.8448181152344;
+	animation: line-anim 2s ease forwards 1s;
 }
 
 #logo path:nth-child(7) {
-    stroke-dasharray: 477.7682189941406;
-    stroke-dashoffset: 477.7682189941406;
-    animation: line-anim 2s ease forwards 1.25s;
+	stroke-dasharray: 477.7682189941406;
+	stroke-dashoffset: 477.7682189941406;
+	animation: line-anim 2s ease forwards 1.25s;
 }
 
 #logo path:nth-child(8) {
-    stroke-dasharray: 422.5007019042969;
-    stroke-dashoffset: 422.5007019042969;
-    animation: line-anim 2s ease forwards 1.5s;
+	stroke-dasharray: 422.5007019042969;
+	stroke-dashoffset: 422.5007019042969;
+	animation: line-anim 2s ease forwards 1.5s;
 }
 
 #logo path:nth-child(9) {
-    stroke-dasharray: 506.4461669921875;
-    stroke-dashoffset: 506.4461669921875;
-    animation: line-anim 2s ease forwards 1.75s;
+	stroke-dasharray: 506.4461669921875;
+	stroke-dashoffset: 506.4461669921875;
+	animation: line-anim 2s ease forwards 1.75s;
 }
 
 #logo path:nth-child(10) {
-    stroke-dasharray: 506.4463195800781;
-    stroke-dashoffset: 506.4463195800781;
-    animation: line-anim 2s ease forwards 2s;
+	stroke-dasharray: 506.4463195800781;
+	stroke-dashoffset: 506.4463195800781;
+	animation: line-anim 2s ease forwards 2s;
 }
 
 #logo path:nth-child(11) {
-    stroke-dasharray: 561.4005126953125;
-    stroke-dashoffset: 561.4005126953125;
-    animation: line-anim 2s ease forwards 2.25s;
+	stroke-dasharray: 561.4005126953125;
+	stroke-dashoffset: 561.4005126953125;
+	animation: line-anim 2s ease forwards 2.25s;
 }
 
-@keyframes line-anim{
-    to{
-        stroke-dashoffset: -10;
-    }
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: -10;
+	}
 }
 
 /* CSS FOR NAV STARTS HERE */
@@ -150,20 +149,20 @@ nav {
 	flex-direction: column;
 	margin: 0;
 	position: absolute;
-	height: 0vh;
+	height: 100vh;
 	top: 0px;
-	background-color: rgba(0, 0, 0, .9);
+	right: 0px;
+	background-color: rgba(0, 0, 0, 1);
 	align-items: center;
-	width: 100%;
-	transition: 0.5s;
+	width: 0;
 	padding: 0px;
 	z-index: 1;
 }
 
 .nav-ul.active {
-	display: flex;
-	animation: fadeIn 0.5s;
-	height: 100vh;
+	animation: fadeIn 0.3s;
+	transform-origin: right top;
+	animation-fill-mode: forwards;
 }
 
 html.nav-active {
@@ -190,16 +189,17 @@ html.nav-active {
 	display: flex;
 	cursor: pointer;
 	font-weight: bold;
+	font-family: "Hind", sans-serif;
 }
 
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		height: 0;
+		width: 0;
 	}
 	to {
 		opacity: 1;
-		height: 100vh;
+		width: 100vw;
 	}
 }
 
@@ -241,7 +241,7 @@ body {
 }
 
 h1 {
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 400;
 	padding: 3% 0;
 	text-align: center;
@@ -368,7 +368,7 @@ img {
 	padding: 4px 20px;
 	margin: 0 auto;
 	margin-top: 20px;
-	background: #0C1D2F;
+	background: #0c1d2f;
 	border-radius: 10px;
 	color: white;
 	font-weight: bold;
@@ -380,13 +380,12 @@ img {
 	padding: 20px 0;
 	text-align: center;
 }
-  
+
 .testimonial-section .inner-width {
 	width: 80%;
 	margin: auto;
 	padding: 0 20px;
 }
-
 
 .testimonial-section h1 {
 	font-weight: 400;
@@ -405,13 +404,14 @@ img {
 	border-radius: 50%;
 	margin: 0 40px;
 	filter: grayscale(100%);
-	transition: .3s;
+	transition: 0.3s;
 	cursor: pointer;
 }
 
-.testimonial-pics img:hover, .testimonial-pics img.active {
+.testimonial-pics img:hover,
+.testimonial-pics img.active {
 	filter: none;
-}  
+}
 
 .testimonial-contents {
 	max-width: 80%;
@@ -461,7 +461,8 @@ img {
 	padding: 50px 10%;
 }
 
-.parallax-inner h3, .parallax-inner p {
+.parallax-inner h3,
+.parallax-inner p {
 	color: #f1f1f1;
 }
 /*  End Parallax Section    */
@@ -496,8 +497,8 @@ footer {
 	text-decoration: none;
 }
 
-.footer-content #main h3{
-	color: rgba(255,255,255,0.95);
+.footer-content #main h3 {
+	color: rgba(255, 255, 255, 0.95);
 	text-align: left;
 }
 
@@ -506,7 +507,7 @@ footer {
 	text-align: left;
 }
 
-.footer-content #main ul li{
+.footer-content #main ul li {
 	padding: 0px 0;
 	display: inline;
 	text-align: left;
@@ -514,8 +515,8 @@ footer {
 	cursor: pointer;
 }
 
-.footer-content #main ul li a{
-	color: rgba(255,255,255,0.75);
+.footer-content #main ul li a {
+	color: rgba(255, 255, 255, 0.75);
 	text-decoration: none;
 }
 
@@ -542,7 +543,7 @@ li + li::before {
 	text-align: left;
 }
 
-#social-media-icons a{
+#social-media-icons a {
 	font-size: 24px;
 	padding: 10px 10px 10px 0;
 	cursor: pointer;
@@ -550,7 +551,7 @@ li + li::before {
 	text-decoration: none;
 }
 
-#social-media-icons a:hover{
+#social-media-icons a:hover {
 	color: white;
 }
 
@@ -558,12 +559,11 @@ li + li::before {
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	#logo {
-	  width: 400px;
+		width: 400px;
 	}
 }
 
 @media screen and (max-width: 768px) {
-
 	.nav-logo h1 {
 		font-size: 22px;
 	}
@@ -652,5 +652,3 @@ li + li::before {
 }
 
 /*  End Document Media  */
-
-
