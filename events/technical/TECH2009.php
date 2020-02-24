@@ -56,12 +56,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>The ultimate face off open for all expert coders and code enthusiasts.It is a three phase round in which participants will code for a given problems statements. The participants who will clear first two phases and will solve the problem in minimum time in third phase by clearing all the test cases will be the winner.</p>
+                <p>The ultimate face-off open for all expert coders and code enthusiasts. It is a three-phase round in which participants will code for a given problems statements. The participants who will clear the first two phases and will solve the problem in minimum time in the third phase by clearing all the test cases will be the winner.</p>
             </div>
             <div class="event-phase">
                 <h4>Phase 1</h4>
                 <ul>
-                    <li>This phase will contain 5 coding problems of beginner level.</li>
+                    <li>This phase will contain 5 coding problems of the beginner level.</li>
                     <li>The participants who will solve 3 problems by satisfying all respective test cases will clear the round and will attempt the next phase.</li>
                 </ul>
             </div>
@@ -69,20 +69,20 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <h4>Phase 2</h4>
                 <ul>
                     <li>This phase will contain 3 coding problems of medium level.</li>
-                    <li>The participants who will solve 2 problems by satisfying all respective test cases will clear the round and will attempt the next phase</li>
+                    <li>The participants who will solve 2 problems by satisfying all respective test cases will clear the round and will attempt the next phase.</li>
                 </ul>
             </div>
             <div class="event-phase">
                 <h4>Phase 3</h4>
                 <ul>
-                    <li>This phase will contain 2 coding problems of hard level.</li>
-                    <li>The participants who will solve 1 problems by satisfying all respective test cases will clear the round and will attempt the next phase</li>
+                    <li>This phase will contain 2 coding problems of the hard level.</li>
+                    <li>The participants who will solve 1 problem by satisfying all respective test cases will clear the round and will attempt the next phase.</li>
                 </ul>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The team which solves a problem the fastest will get better multiplier.</li>
+                    <li>The team which solves a problem the fastest will get a better multiplier.</li>
                     <li>The total score will be calculated by multiplying the number of test cases successfully run multiplied by the multiplier.</li>
                     <li>If the total score of two teams are equal, then the team with a greater number of problem statements attempted will be prioritized.</li>
                 </ul>

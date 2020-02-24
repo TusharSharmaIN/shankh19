@@ -56,14 +56,14 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>The ultimate face off open for all expert coders and code enthusiasts. This grand competition features five problem statements, each having their own weightage. The team having most points will stand victorious.</p>
+                <p>The ultimate face-off open for all expert coders and code enthusiasts. This grand competition features five problem statements, each having their own weightage. The team having most points will stand victorious.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The team which solves a problem the fastest will get better multiplier.</li>
+                    <li>The team which solves a problem the fastest will get a better multiplier.</li>
                     <li>The total score will be calculated by multiplying the number of test cases successfully run multiplied by the multiplier.</li>
-                    <li>If the total score of two teams are equal, then the team with a greater number of problem statements attempted will be prioritized.</li>
+                    <li>If the total score of two teams is equal, then the team with a greater number of problem statements attempted will be prioritized.</li>
                 </ul>
             </div>
             <div class="event-rules">

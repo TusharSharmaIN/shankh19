@@ -61,9 +61,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>The app must be able to efficiently solve the problem.</li>
-                    <li>The usefulness of any extra feature the app has which was not mentioned in the problem statement directly would play a pivotal role in selecting the winner. </li>
-                    <li>In case a tie, the UI design will be taken into consideration to pick the winner.</li>
+                    <li>The app must be able to solve the problem efficiently.</li>
+                    <li>The usefulness of any extra feature the app has, which was not mentioned in the problem statement directly, would play a pivotal role in selecting the winner.</li>
+                    <li>In case of a tie, the UI design will be taken into consideration to pick the winner.</li>
                 </ul>
             </div>
             <div class="event-rules">

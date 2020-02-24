@@ -63,8 +63,8 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <h4>Judging Criteria</h4>
                 <ul>
                     <li>Each contestant will receive the feedback from judges during the final contest judging.</li>
-                    <li>General judging criteria is listed below.</li>
-                    <li>Circuit should be minimize and coherent.</li>
+                    <li>The general judging criteria is listed below.</li>
+                    <li>The circuit should be minimized and coherent.</li>
                     <li>Hardwired should be structured well and parts are grouped in a logical manner for different functionalities.</li>
 
                 </ul>
@@ -72,9 +72,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team has maximum four members are allowed.</li>
-                    <li>Only component given by digital team can be used by participants.</li>
-                    <li>Judge decision will be final and binding to all.</li>
+                    <li>A team has a maximum four members are allowed.</li>
+                    <li>The only components given by the digital team can be used by participants.</li>
+                    <li>The judge's decision will be final and binding to all.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

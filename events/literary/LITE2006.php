@@ -60,13 +60,13 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                     <li>This event will be conducted in three (3) phases.</li>
                     <li>The first round will be a general knowledge quiz (Aptitude Test).</li>
                     <li>The second round will be a picture perception & group discussion test.</li>
-                    <li>Some blurred images will be shown to the participants and they will have to build a story based on that image.</li>
-                    <li>Those images will be shown for a limited period of time i.e. 30 seconds and then 5 minutes will be given to them to write down their story on a provided sheet.</li>
-                    <li>After that the participants will be clubbed in groups of 10 members and they will be asked to discuss their story and come to a conclusion.</li>
+                    <li>Some blurred images will be shown to the participants, and they will have to build a story based on that image.</li>
+                    <li>Those images will be shown for a limited period of time i.e., 30 seconds, and then 5 minutes will be given to them to write down their story on a provided sheet.</li>
+                    <li>After that, the participants will be clubbed in groups of 10 members, and they will be asked to discuss their story and come to a conclusion.</li>
                     <li>The final phase of the competition will be a mock interview round.</li>
-                    <li>There will be an interview committee of 3 judges. First the candidates have to submit their resume a day before the commencement of the event.</li>
-                    <li>These resumes will also be evaluated by the judges. After the submission of resumes the candidates will be notified about the timing of interview. The interview committee will judge the candidates on the basis of their overall personality, linguistic skills, speaking ability and subjective knowledge.</li>
-                    <li>Out of all candidates only three (3) will be awarded as 1st, 2rd and 3rd.</li>
+                    <li>There will be an interview committee of 3 judges. First, the candidates have to submit their resume a day before the commencement of the event.</li>
+                    <li>The judges will also evaluate these resumes. After the submission of resumes, the candidates will be notified about the timing of the interview. The interview committee will judge the candidates based on their overall personality, linguistic skills, speaking ability, and subjective knowledge.</li>
+                    <li>Out of all candidates, only three (3) will be awarded as 1st, 2nd, and 3rd.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

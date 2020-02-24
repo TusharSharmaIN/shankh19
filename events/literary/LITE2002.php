@@ -57,9 +57,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>This will be an inter-branch competition. All the branches will be given a theme and they have to make a Rangoli related to that.<br></li>
-                    <li>Also they have to represent the Rangoli in front of the judges.<br></li>
-                    <li>The judges will make their decision on the basis of the attractiveness of the Rangoli, the way in which it is associated to the given theme and its representation.<br></li>
+                    <li>This will be an inter-branch competition. All the branches will be given a theme, and they have to make a Rangoli related to that.<br></li>
+                    <li>Also, they have to represent the Rangoli in front of the judges.<br></li>
+                    <li>The judges will make their decision based on the attractiveness of the Rangoli, how it is associated with the given theme and its representation.<br></li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

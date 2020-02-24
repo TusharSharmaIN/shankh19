@@ -58,9 +58,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-criteria">
                 <h4>Judging Criteria<br></h4>
                 <ul>
-                    <li>The extempore will be of two (2) minutes duration. The topics for the extempore will be given one day before the event. There will be three (3) topics out of which the participants have to choose any one and prepare for that.</li>
-                    <li>There will be a judging panel of three (3) faculty members to examine, evaluate and judge the speech given by the participants. The speech is intended to reveal the competitor’s ability to develop a point of view on a general topic and deliver speech within limited time duration.</li>
-                    <li>Speech notes or palm cards are not to be used by the competitors in the presentation of their speeches.</li>
+                    <li>The extempore will be of two (2) minutes duration. The topics for the extempore will be given one day before the event. There will be three (3) topics out of which the participants have to choose anyone and prepare for that.</li>
+                    <li>There will be a judging panel of three (3) faculty members to examine, evaluate, and judge the speech given by the participants. The speech is intended to reveal the competitor’s ability to develop a point of view on a general topic and deliver a speech within a limited time duration.</li>
+                    <li>Speech notes or palm cards are not to be used by the competitors in the presentation of their speeches. Three (3) best deserving candidates will be awarded.</li>
                     <li>Three (3) best deserving candidates will be awarded.</li>
                 </ul>
             </div>

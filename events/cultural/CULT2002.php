@@ -57,12 +57,12 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>TIME LIMIT:- 3 MIN(MAXIMUM).</li>
-                    <li>GENRE:- SEMI-CLASSICAL, LIGHT INDIAN MUSIC, BOLLYWOOD & WESTERN ENG.</li>
-                    <li>ALL LANGUAGES MUSIC ARE ALLOWED.</li>
-                    <li>MASHUP & MEDLEYS ARE ALLOWED.</li>
-                    <li>BACKGROUND TRACKS ARE PERMITTED.</li>
-                    <li>JUDGING CRITERIA:- VOICE QUALITY, VOICE MODULATION, SUR, TAAL & CHOICE OF SONGS.</li>
+                    <li>Time limit:- 3 min(maximum).</li>
+                    <li>Genre:- Semi-Classical, Classical, Bollywood & Western.</li>
+                    <li>All languages are allowed.</li>
+                    <li>Mashup & medleys are allowed.</li>
+                    <li>Background tracks are permitted.</li>
+                    <li>Judging criteria:- voice quality, voice modulation, sur, taal & choice of songs.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

@@ -56,7 +56,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>The participants will have to write as well as recite a poem based on engineering lifestyle. They are also allowed to share their personal views, opinions and experience related to engineering.</p>
+                <p>The participants will have to write as well as recite a poem based on the engineering lifestyle. They are also allowed to share their personal views, opinions, and experience related to engineering.</p>
             </div>
             <div class="event-rules">
                 <h4>Rules and regulations<br></h4>
@@ -64,9 +64,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                     <li>Each poem must be an original piece performed by the participant/group.</li>
                     <li>Performances will be timed and should not exceed three (3) minutes of time duration.</li>
                     <li>There will be a random draw for performance order.</li>
-                    <li>There will be no restriction for language. Participants can use whatever language they are comfortable with but it should be understandable by the audience.</li>
+                    <li>There will be no restriction for language. Participants can use whatever style they are comfortable with, but it should be understandable by the audience.</li>
                     <li>Heckling or disrupting of another performer's performance results in disqualification.</li>
-                    <li>Use of abusive words during performance will result in immediate disqualification.</li>
+                    <li>The use of abusive words during the performance will result in immediate disqualification.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

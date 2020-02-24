@@ -56,20 +56,20 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives. Unfortunately, the one who wrote these lines of code didn't had a sense for these qualities. Let's see how better you are. </p>
+                <p>Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction, and skillful execution; it represents the wise choice of many alternatives. Unfortunately, the one who wrote these lines of code didn't have a sense for these qualities. Let's see how better you are.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
                     <li>The type of error, and also an explanation.</li>
-                    <li>Number of errors caught.</li>
+                    <li>The number of errors caught.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>Self-reliance is the highest expression of self-respect, so only solo participations are al-lowed.</li>
-                    <li>The event will be of 1 hour.</li>
+                    <li>Self-reliance is the highest expression of self-respect, so only solo participation is allowed.</li>
+                    <li>The event will be for 1 hour.</li>
                     <li>All the participants must submit their cell phones and are not allowed to use the internet during the event.</li>
                     <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
                 </ul>

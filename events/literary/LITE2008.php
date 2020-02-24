@@ -59,10 +59,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <h4>Judging Criteria<br></h4>
                 <ul>
                     <li>This event will be conducted in three stages.</li>
-                    <li>The very first round will be a quiz which will be based on memes.</li>
-                    <li>The second round will be a meme making competition. The participants will be shown an image or they will be given some kind of clue and we will ask them to make a meme related to that in a limited duration of 5 minutes.</li>
-                    <li>The final round will be conducted on stage. Only 5 participants will be selected from round 2. These participants will be called upon the stage one by one they will play the main round which will be a game similar to ‘KBC’.</li>
-                    <li>After the end of last round, the participants will be ranked on the basis of number of correct answers given by them and the winner will be awarded.</li>
+                    <li>The very first round will be a quiz that will be based on memes.</li>
+                    <li>The second round will be a meme making competition. The participants will be shown an image, or they will be given some clue, and we will ask them to make a meme related to that in a limited duration of 5 minutes.</li>
+                    <li>The final round will be conducted on stage. Only 5 participants will be selected from round 2. These participants will be called upon the stage one by one. They will play the main round, which will be a game similar to ‘KBC’.</li>
+                    <li>After the end of the last round, the participants will be ranked on the basis of a number of correct answers given by them, and the winner will be awarded.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

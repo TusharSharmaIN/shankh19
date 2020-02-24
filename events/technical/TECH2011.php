@@ -56,31 +56,28 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Design a manually controlled ROBOT wired or wireless within a specified dimension mentioned as below. The ROBOT that will demolish the other robot in minimum time or mini-mum parts damaged of the robot will be the winner. </p>
+                <p>Design a manually controlled ROBOT wired or wireless within a specified dimension mentioned as below. The ROBOT that will demolish the other robot in minimum time or minimum parts damaged by the robot will be the winner.</p>
             </div>
             <div class="event-phase">
                 <h4>Category 1</h4>
                 <ul>
-                    <li>In this category robots up-to 8 kg will compete.</li>
-                    <li>It will be knockout round and only one team will be a winner in this category.</li>
-
+                    <li>In this category robots, up-to 8 kg will compete.</li>
+                    <li>It will be knockout round, and only one team will be a winner in this category.</li>
                 </ul>
             </div>
             <div class="event-phase">
                 <h4>Category 2</h4>
                 <ul>
-                    <li>In this category robots up-to 15 kg will compete.</li>
-                    <li>It will be knockout round and only one team will be a winner in this category.</li>
-
+                    <li>In this category robots, up-to 15 kg will compete.</li>
+                    <li>It will be knockout round, and only one team will be a winner in this category.</li>
                 </ul>
             </div>
             <div class="event-specs">
                 <h4>Arena Specifications</h4>
                 <ul>
-                    <li>First round of the war will be on a closed arena.</li>
-                    <li>Second round of the war will be on rectangular based closed arena.</li>
-                    <li>Third round of the war will be on the rectangular based closed arena and the dimension for rectangular arena will be 250*180(l*b).</li>
-
+                    <li>The first round of the war will be in a closed arena.</li>
+                    <li>The second round of the war will be on the rectangular based closed arena.</li>
+                    <li>The third round of the war will be on the rectangular based closed arena, and the dimension for the rectangular arena will be 250*180(cm).</li>
                 </ul>
             </div>
             <div class="event-criteria">
@@ -88,18 +85,16 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <ul>
                     <li>War will be held in three rounds and each round has 10 minutes.</li>
                     <li>The aim of every match is to demolish and immobile the other robot completely.</li>
-
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>Each team has to make their robots under the specifications given below.</li>
-                    <li>Each team can have maximum 5 members. students from different institute can form a team.</li>
-                    <li>No practice will be allowed on the arena.</li>
-                    <li>The robot should not damage the arena else it will lead to penalty.</li>
-                    <li>Each member of the team must have identity card of his /her respective institute.</li>
-
+                    <li>Each team can have a maximum of 5 members. Students from different institutes can form a team.</li>
+                    <li>No practice will be allowed in the arena.</li>
+                    <li>The robot should not damage the arena else it will lead to a penalty.</li>
+                    <li>Each member of the team must have an identity card of his /her respective institute.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

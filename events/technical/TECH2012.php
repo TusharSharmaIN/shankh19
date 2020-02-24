@@ -56,24 +56,24 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>For all the techiest as well as robo fans out there, having desire to showcase their racing spirit but also too lazy to go to track, here comes an event meant for you.</p>
+                <p>For all the techies as well as robo fans out there, having a desire to showcase their racing spirit but also too lazy to go to the track, here comes an event meant for you.</p>
             </div>
 
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>Each team is allowed to bring one robo.</li>
-                    <li>The robo is controlled manually by using remote.</li>
-                    <li>The robo can have an on-board as well as off-board supply.</li>
-                    <li>During competition of all the competing robos, the one who reaches the finish point in minimum time will be declared as winner.</li>
+                    <li>Each team is allowed to bring one robot.</li>
+                    <li>The robo is controlled manually by using the remote.</li>
+                    <li>The robot can have an on-board as well as off-board supply.</li>
+                    <li>During the competition of all the competing robots, the one who reaches the finish point in minimum time will be declared as the winner.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team may consist maximum of 5 students from different institute may form a team.</li>
-                    <li>Ready –made Lego kit are not allowed. however ready made gear can be assembles and development board may be used.</li>
-                    <li>No last minute will be allowed in the arena. However each team can take time out of 2 minutes once during a match.</li>
+                    <li>A team may consist of a maximum of 5 students from the different institute may form a team.</li>
+                    <li>A ready-made Lego kit is not allowed. however ready-made gear can be assembled and development board may be used.</li>
+                    <li>No last minute will be allowed in the arena. However, each team can take time out of 2 minutes once during a match.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

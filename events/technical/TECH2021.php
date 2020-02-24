@@ -56,7 +56,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Topics should be decided by the participants by their own.</p>
+                <p>Topics should be decided by the participants on their own.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
@@ -69,7 +69,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>The competition is open to all the students.</li>
-                    <li>Only maximum of four students are allowed for a model.</li>
+                    <li>Only a maximum of four students is allowed for a model.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

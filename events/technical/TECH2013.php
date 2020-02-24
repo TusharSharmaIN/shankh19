@@ -56,23 +56,23 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>For all the techiest as well as soccer fans out there, having desire to showcasing their on football but also too lazy to actually play football here comes an event meant for you.</p>
+                <p>For all the techies as well as soccer fans out there, having a desire to showcasing their on football but also too lazy to actually play football here comes an event meant for you.</p>
             </div>
 
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
                     <li>Each team is allowed to maximum have two boats.</li>
-                    <li>The boats is controlled manually by using laptop or pc.</li>
-                    <li>The boats can have on board as well as off board supply.</li>
+                    <li>The boats are controlled manually by using a laptop or pc.</li>
+                    <li>The boats can have on board as well as off-board supply.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team may consist maximum of 5 students from different institute may form a team.</li>
-                    <li>Ready made Lego kit are not allowed. However ready made gear can be assembles and development board may be used.</li>
-                    <li>No last minute will be allowed in the arena. However each team can take time out of 2 minutes once during a match.</li>
+                    <li>A team may consist of a maximum of 5 students from the different institute may form a team.</li>
+                    <li>A ready-made Lego kit is not allowed. However ready-made gear can be assembled and development board may be used.</li>
+                    <li>No last minute will be allowed in the arena. However, each team can take time out of 2 minutes once during a match.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

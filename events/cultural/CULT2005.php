@@ -57,11 +57,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>ALL DANCE FORMS ARE ALLOWED.</li>
-                    <li>2 ROUND PRESENT IN COMPETITION.</li>
-                    <li>IN FIRST ROUND ,PARTICIPANTS WILL PERFORM FOR NOT MORE THAN 3 MIN(MAXIMUM).</li>
-                    <li>IN 2ND ROUND THAN WILL BE A SPACE OF COMPETITION IN WHICH THE FINALIST WILL PERFORMS ON THE SPOT IS A MUSIC PEACE RANDOMLY SELECTED.</li>
-                    <li>PARTICIPANTS ARE REQUIRED TO GIVE THERE CORRESPONDING EDITED AUDIO SONGS IN .MP3 FORMAT IN DRIVES ONLY.</li>
+                    <li>All dance forms are allowed.</li>
+                    <li>2 round present in the competition.</li>
+                    <li>In the first round, participants will perform for not more than 3 min(maximum).</li>
+                    <li>In 2nd round then will be a space of competition in which the finalist will perform on the spot is a music peace randomly selected.</li>
+                    <li>Participants are required to give there corresponding edited audio songs in .mp3 format only.</li>
 
                 </ul>
             </div>

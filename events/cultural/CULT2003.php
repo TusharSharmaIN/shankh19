@@ -57,11 +57,10 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>TIME LIMIT :- 3 MIN (MAXIMUM).</li>
-                    <li>THERE SHOULD BE NO ABUSIVE CONTENT.</li>
-                    <li>SOLO PATICIPANTS.</li>
-                    <li>THESE SHOULD BE NO VULGARITY IN THE JOKES.</li>
-
+                    <li>Time limit:- 3 min (maximum).</li>
+                    <li>There should be no abusive content.</li>
+                    <li>Solo participants.</li>
+                    <li>These should be no vulgarity in the jokes.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

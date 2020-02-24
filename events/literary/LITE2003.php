@@ -57,9 +57,9 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>In this event the participants will be given some random products and they will be asked to convince the audience to purchase it by telling them about the qualities and benefits of the product.<br></li>
+                    <li>In this event, the participants will be given some random products, and they will be asked to convince the audience to purchase it by telling them about the qualities and benefits of the product.<br></li>
                     <li>The participants will be given a time period of 5 minutes for advertising.<br></li>
-                    <li>At the end of the event the participant with maximum number of buyers will be declared as the winner.<br></li>
+                    <li>At the end of the event, the participant with a maximum number of buyers will be declared as the winner.<br></li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

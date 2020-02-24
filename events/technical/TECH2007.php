@@ -56,20 +56,20 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>We are the creatures of darkness and the Dracula itself when it comes to cyber world. Who are we? The hackers. Let's pick a fight and see who has what it takes to be a crafty deceiver. </p>
+                <p>We are the creatures of darkness and the Dracula itself when it comes to the cyber world. Who are we? The hackers. Let's pick a fight and see who has what it takes to be a crafty deceiver.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
                     <li>The team who has got most numbers of kills will win.</li>
-                    <li>In case of a tie, both the teams will be given an additional game play; the team which scores more will be crowned victorious.</li>
+                    <li>In case of a tie, both the teams will be given additional gameplay; the team which scores more will be crowned victorious.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>A team can be solo or duo.</li>
-                    <li>The event will be a knock-out round and the last survivor will be the winner.</li>
+                    <li>The event will be a knock-out round, and the last survivor will be the winner.</li>
                     <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
                 </ul>
             </div>

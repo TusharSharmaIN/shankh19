@@ -56,13 +56,13 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>The participants can choose any novel of their choice and prepare a review of that. They have to present their review in front of the audience as well as the judging panel. </p>
+                <p>The participants can choose any novel of their choice and prepare a review of that. They have to present their review in front of the audience as well as the judging panel.</p>
             </div>
             <div class="event-rules">
                 <h4>The review should contain:<br></h4>
                 <ul>
                     <li>An introduction to the author(s), including the author's title and place of work, and some indication of who the author is.<br></li>
-                    <li>A brief summary of the novel along with an introduction to the main theme of the novel and description of its content.<br></li>
+                    <li>A summary of the novel, along with an introduction to the central theme and a description of its content.<br></li>
                     <li>An evaluation of the novel's merits, usefulness, and special contributions, along with shortcomings you think are necessary to point out.<br></li>
                     <li>The review should be short but descriptive. Each participant will be given 10 minutes for his review.<br></li>
                     <li>The review should introduce the audience to the book's content and focus on the subject of the book being reviewed.<br></li>

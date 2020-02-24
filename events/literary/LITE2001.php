@@ -58,11 +58,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>This event will be conducted in two rounds.<br></li>
-                    <li>The first one will be a team based round. We will give entries to the participants in a team of 3 members.<br></li>
-                    <li>Each team will be given a buzzer and the team which presses the buzzer first after the question is asked will get the chance to answer first. If their answer is incorrect then the question will be passed to the next team.<br></li>
-                    <li>The teams will be awarded 5 marks for each correct answer and no marks will be deducted for a wrong answer.<br></li>
-                    <li>At the end of first round 3 top scoring teams will be selected for the second round.<br></li>
-                    <li>In the second round the participants will answer individually and at the end of this round the maximum scoring individual will be declared as winner.<br></li>
+                    <li>The first one will be a team-based round. We will give entries to the participants in a team of 3 members.<br></li>
+                    <li>Each team will be given a buzzer, and the team which presses the buzzer first after the question is asked will get the chance to answer first. If their answer is incorrect, then the question will be passed to the next team.<br></li>
+                    <li>The teams will be awarded five marks for each correct answer, and no marks will be deducted for a wrong answer.<br></li>
+                    <li>At the end of the first round, 3 top scoring teams will be selected for the second round.<br></li>
+                    <li>In the second round, the participants will answer individually, and at the end of this round, the maximum scoring individual will be declared as the winner.<br></li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

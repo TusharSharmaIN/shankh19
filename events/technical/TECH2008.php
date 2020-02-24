@@ -61,7 +61,8 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>In case of a tie, both the teams will be given an additional game play; the team which scores more will be crowned victorious.</li>
+                    <li>In case of a tie, both the teams will be given additional gameplay; the team which scores more will be crowned victorious.
+The team who has got most numbers of kills will win.</li>
                     <li>The team who has got most numbers of kills will win.</li>
                 </ul>
             </div>

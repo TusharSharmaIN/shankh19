@@ -57,11 +57,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>TEAM SIZE 10-30 PERSONS.</li>
-                    <li>TIME LIMIT 10-20 MIN. (POINTS WILL BE DEDUCTED ON EXCEEDING THE TIME LIMIT)</li>
-                    <li>TEAM SIZE REPRESENTED THE NUMBER OF PEOPLE REGISTERED AS A TEAM ONLY THESE SHALL BE ALLOWED TO PERFORM.</li>
-                    <li>TEAMS ARE EXPECTED TO THE PERFORMANCE SHOULD BE HINDI/ENGLISH OR BOTH.</li>
-                    <li>JUDGING CRITERIA:- ACTING, VOICE(MODULATION & DICTION) SCREEN PLAY, SCRIPT, AUDIENCE INTERACTION & OVERALL IMPACT.</li>
+                    <li>Team size 10-30 persons.</li>
+                    <li>Time limit 10-20 min. (points will be deducted on exceeding the time limit).</li>
+                    <li>Team size represented the number of people registered as a team only these shall be allowed to perform.</li>
+                    <li>Teams are expected to the performance should be Hindi/English or both.</li>
+                    <li>Judging criteria:- acting, voice(modulation & diction) screen play, script, audience interaction & overall impact.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

@@ -56,20 +56,20 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>It is a typical application and practical approach of fluid mechanics. </p>
+                <p>It is a typical application and practical approach to fluid mechanics.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
-                    <li>Team which put maximum cubes in basket in limited time will be regarded as winner. </li>
+                    <li>The team which puts maximum cubes in a basket in a limited time will be regarded as the winner.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>The competition s open to all the students.</li>
-                    <li>Each team have maximum four members.</li>
-                    <li>Competition of putting cubes in basket.</li>
+                    <li>EEach team has a maximum of four members.</li>
+                    <li>Competition of putting cubes in the basket.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>

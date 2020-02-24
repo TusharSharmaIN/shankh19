@@ -56,21 +56,21 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>The night is dark and full of terrors, so is the case. Solve the case, perform the tasks and find the Murderer. </p>
+                <p>The night is dark and full of terrors, so is the case. Solve the case, perform the tasks, and find the Murderer.</p>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>Each team shall comprise of 3 Participants only.</li>
                     <li>Participants will have to solve cases with the help of clues and tasks. (similar to Treasure Hunt).</li>
-                    <li>Use of cell phones or any other device for communication is strictly prohibited.</li>
+                    <li>The use of cell phones or any other device for communication is strictly prohibited.</li>
                     <li>No team shall try to communicate with any other team or take any help from the volunteers.</li>
                     <li>The event will be held within the college premises only.</li>
                     <li>The decisions of the organizing committee will be final and binding.</li>
-                    <li>The Management shall not be held responsible for any kind of injury caused in the course of this event.</li>
-                    <li>Use of expletives or aggressive behavior will result in immediate disqualification.</li>
+                    <li>The Management shall not be held responsible for any injury caused in the course of this event.</li>
+                    <li>The use of expletives or aggressive behavior will result in immediate disqualification.</li>
                     <li>The participants are strictly advised not to disclose the name of their College/Institution to the Jury members/audience.</li>
-                    <li>The Organizing committee reserves the right to change the venue, time and rules, if desired.</li>
+                    <li>The Organizing Committee reserves the right to change the venue, time, and rules if desired.</li>
 
                 </ul>
             </div>

@@ -56,23 +56,23 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
             </div>
             <div class="event-intro">
                 <h4>Introduction</h4>
-                <p>Chemo car is a type of chemical fuel car like vinegar and baking soda.</p>
+                <p>Chemo car is a type of chemical fuel car-like vinegar and baking soda.</p>
             </div>
             <div class="event-criteria">
                 <h4>Judging Criteria</h4>
                 <ul>
                     <li>There can be at most two members.</li>
-                    <li>The car run only with help of chemicals reactions not with the help of ant another source.</li>
-                    <li>Cheating will be directly resulted in disqualification of participation.</li>
+                    <li>The car must run only with the help of chemicals reactions, not with the help of ant another source.</li>
+                    <li>Cheating will directly result in a disqualification of participation.</li>
                     <li>The bottle size for chemo-e-car is specified as 250ml strictly.</li>
-                    <li>The longest distance will be considered as winner.</li>
+                    <li>The longest distance will be considered as a winner.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
                     <li>On the longest displacement.</li>
-                    <li>Best of three attempts will be considered.</li>
+                    <li>The best of three attempts will be considered.</li>
                 </ul>
             </div>
             <button class="event-register-btn">Register</button>
