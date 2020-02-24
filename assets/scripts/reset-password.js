@@ -98,11 +98,12 @@ $(".submit-btn").on("click", function(e) {
 				$("#password").val("");
 				$("#cpassword").val("");
 				if (response == "PASSWORD_CHANGED") {
+					showSuccess(
+						"Passwords changed successfully. Redirecting to login page..."
+					);
 					setTimeout(() => {
-						showSuccess(
-							"Passwords changed successfully. Redirecting to login page..."
-						);
-					}, 1000);
+						window.location.href = "https://shankhnaad.org/login";
+					}, 2000);
 				} else if (response == "EMPTY_FIELDS") {
 					showError("Passwords cannot be empty!");
 				} else if (response == "PASSWORDS_DO_NOT_MATCH") {
