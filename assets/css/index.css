@@ -449,13 +449,11 @@ img {
 /*  Start Parallax Section */
 .parallax {
 	text-align: center;
-	/*background: #17182f;*/
-	/*background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;*/
 	background-image: url("../../img/background.png");
 	background-attachment: fixed;
 	background-position: center;
-	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .parallax-inner {
@@ -633,16 +631,6 @@ li + li::before {
 	#shankhnaad-intro {
 		font-size: 15px;
 	}
-/*
-	.parallax {
-		text-align: center;
-		background-image: url("../../img/background.png");
-		background-attachment: fixed;
-		background-position: center;
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-	}
-*/
 }
 
 @media screen and (max-width: 540px) {
