@@ -165,7 +165,7 @@ if (!$user->hasFilledDetailsForm()) {
 					<h1>Shankhnaad'20</h1>
 				</div>
 				<ul class="nav-ul" id="nav">
-					<li><a class="nav-ul-a" href="/dashboard">Dashboard</a></li>
+					<li><a class="nav-ul-a" href="/">Home</a></li>
 					<li><a class="nav-ul-a" href="/biofest">Bio-Fest 2020</a></li>
 					<li><a class="nav-ul-a" href="/#events">Events</a></li>
 					<li><a id="brochure" class="nav-ul-a" href="" target="_blank">Brochure</a></li>

@@ -144,6 +144,13 @@ function registerEvent() {
 				setTimeout(() => {
 					window.location.href = "/login";
 				}, 1000);
+			} else if (response.status == 0 && response.detailsNotFilled) {
+				showError(
+					"Please complete your profile. Redirecting to dashboard..."
+				);
+				setTimeout(() => {
+					window.location.href = "/dashboard";
+				}, 1000);
 			} else if (response.status == 0 && response.alreadyRegistered) {
 				showError("You're already registered for this event.");
 			} else if (response.status == 1) {
