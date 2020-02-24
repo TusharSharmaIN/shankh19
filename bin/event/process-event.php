@@ -43,9 +43,21 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION
 if (isset($_GET['registerEvent'])) {
 	// Email of the user
 	$email = $_SESSION['email'];
+	// Check if user has filled his personal and college details or not
+	// Create a db instance
+	$db = new Database();
+	// Connect to Shankhnaad_User db
+	$userDB = $db->getUserDBConnection();
+	// Create a user instance
+	$user = new User($userDB);
+	// Get user data from session variable
+	$user->setEmail($email);
+	if (!$user->hasFilledDetailsForm()) {
+		exit(json_encode(array("status" => 0, "loggedIn" => true, "detailsNotFilled" => true)));
+	}
+
 	// Event ID
 	$eid = $_GET['EID'];
-
 	// Create an event instance
 	$event = new Event($eid);
 	// Check if user is already registered to this event
