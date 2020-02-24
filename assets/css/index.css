@@ -449,14 +449,12 @@ img {
 /*  Start Parallax Section */
 .parallax {
 	text-align: center;
-}
-
-#parallax-intro {
-	background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;
-}
-
-#parallax-empty {
-	background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;
+	/*background: #17182f;*/
+	/*background: url("https://images.pexels.com/photos/169789/pexels-photo-169789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") repeat fixed 100%;*/
+	background-image: url("../../img/background.png");
+	background-attachment: fixed;
+	background-position: center;
+	
 }
 
 .parallax-inner {
@@ -464,8 +462,7 @@ img {
 	padding: 50px 10%;
 }
 
-.parallax-inner h3,
-.parallax-inner p {
+.parallax-inner h3, .parallax-inner p {
 	color: #f1f1f1;
 }
 /*  End Parallax Section    */

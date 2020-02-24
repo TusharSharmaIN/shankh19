@@ -186,8 +186,3 @@ var x = window.matchMedia("(max-width: 768px)")
 changeBrochureURL(x) // Call listener function at run time
 x.addListener(changeBrochureURL) // Attach listener function on state changes
 /*	Ends Here	*/
-
-/*	Testimonials	*/
-
-
-/* Google maps API code */
