@@ -63,15 +63,11 @@ if (isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['l
                 <ul>
                     <li>In case of a tie, both the teams will be given an additional game play; the team which scores more will be crowned victorious.</li>
                     <li>The team who has got most numbers of kills will win.</li>
-                    <li>In case of a tie, both the teams will be given an additional game play; the team which scores more will be crowned victorious.</li>
                 </ul>
             </div>
             <div class="event-rules">
                 <h4>Rules and Regulations</h4>
                 <ul>
-                    <li>A team can be solo or duo.</li>
-                    <li>The event will be a knock-out round and the last survivor will be the winner.</li>
-                    <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
                     <li>A team can be solo or duo.</li>
                     <li>The event will be a knock-out round and the last survivor will be the winner.</li>
                     <li>Disturbing other teams and arguing with the coordinators may result in disqualification.</li>
