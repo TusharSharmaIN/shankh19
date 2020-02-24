@@ -114,7 +114,7 @@ nav {
 	align-items: center;
 	height: 50px;
 	background-color: rgba(0, 0, 0, 0.8);
-	width: 100%;
+	width: 100vw;
 	z-index: 1;
 	position: fixed;
 	top: 0;
@@ -469,7 +469,7 @@ img {
 
 footer {
 	margin: 0;
-	padding: 35px 100px;
+	padding: 0 auto;
 	min-height: 10vh;
 	font-size: 14px;
 	text-align: center;
@@ -486,7 +486,7 @@ footer {
 }
 
 .footer-content .col {
-	padding: 0px 0;
+	padding: 50px 0;
 	margin: 0 auto;
 	height: 300px;
 }
@@ -525,8 +525,8 @@ li + li::before {
 }
 
 .footer-content #map {
-	height: 300px;
 	width: 300px;
+	height: 300px;
 }
 
 .footer-end:after {
@@ -648,6 +648,20 @@ li + li::before {
 	}
 	#shankhnaad-intro {
 		font-size: 14px;
+	}
+
+	.footer {
+		font-size: 12px;
+	}
+
+	.footer-content .col {
+		height: 200px;
+	}
+
+	.footer-content #map {
+		padding-top: 115px;
+		width: 200px;
+		height: 200px;
 	}
 }
 
