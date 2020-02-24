@@ -33,7 +33,7 @@ style="border:none;border-spacing:0;letter-spacing:1px;"
         style="padding:50px 10px 5px 10px;font-family:sans-serif;font-size:16px"
     >
         This verification email is valid for 24 hours. To resend the
-        verification email, after 24 hours, login again on the
+        verification email, after 24 hours, login on the
         website.
     </td>
 </tr>
